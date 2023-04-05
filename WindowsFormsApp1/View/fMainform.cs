@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FontAwesome.Sharp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,40 @@ namespace WindowsFormsApp1.View
 {
     public partial class fMainform : Form
     {
+        private IconButton currentBtn;
+        private IconButton BtnChild;
         public fMainform()
         {
             InitializeComponent();
+            this.Text = string.Empty;
+            this.ControlBox = false;
+            this.DoubleBuffered = true;
+            customizeDesig();
         }
+        //custom panelBaoCao
+        private void customizeDesig()
+        {
+            panelBaoCao.Visible = false;
+        }
+        private void HidepanelBaoCao()
+        {
+            if(panelBaoCao.Visible==true) 
+            {
+                panelBaoCao.Visible = false;
+            }
 
+        }
+        private void showSubPanel(Panel subMenu)
+        {
+            if (subMenu.Visible == false)
+            {
+                HidepanelBaoCao();
+                subMenu.Visible = true;
+            }
+            else
+                subMenu.Visible = false;
+        }
+        //btnExit,btnMinimize,btnMaximize
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -35,5 +65,97 @@ namespace WindowsFormsApp1.View
             }
             else { WindowState = FormWindowState.Normal; }
         }
+        //changeColor
+        private struct RGBColor
+        {
+            public static Color color1 = Color.FromArgb(255, 138, 0);
+            public static Color color2 = Color.FromArgb(255, 175, 81);
+            
+        }
+        private void ActivateButtonPanel(object sender)
+        {
+            if (sender != null)
+            {
+                DisableButton(BtnChild);
+                BtnChild = (IconButton)sender;
+                BtnChild.BackColor = Color.FromArgb(255, 175, 81);
+            }
+        }
+        private void ActivateButton(object sender)
+        {
+            if (sender != null)
+            {
+                DisableButton(currentBtn);
+                currentBtn=(IconButton)sender;
+                currentBtn.BackColor = Color.FromArgb(255, 138, 0);
+                iconChild.IconChar = currentBtn.IconChar;
+                lbChild.Text = currentBtn.Text;
+            }
+        }
+        private void DisableButton(IconButton btn)
+        {
+            if (btn != null)
+            {
+                btn.BackColor =Color.FromArgb(255, 249, 242);
+            }
+        }
+
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+            showSubPanel(panelBaoCao);
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnCaLamViec_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnHoaDon_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+
+        private void btnSanPham_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
+        //btn cua panel bao cao
+
+        private void btnBCKhachHang_Click(object sender, EventArgs e)
+        {
+            ActivateButtonPanel(sender);
+        }
+
+        private void btnBCSanPham_Click(object sender, EventArgs e)
+        {
+            ActivateButtonPanel(sender);
+        }
+
+        private void btnBCDoanhThu_Click(object sender, EventArgs e)
+        {
+            ActivateButtonPanel(sender);
+        }
+
     }
 }
