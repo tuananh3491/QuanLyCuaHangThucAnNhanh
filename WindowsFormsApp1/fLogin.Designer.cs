@@ -268,9 +268,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(146, 300);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 13);
+            this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 5;
-            this.label1.Text = "push testing";
+            this.label1.Text = "push testing kkkk";
             // 
             // fLogin
             // 
