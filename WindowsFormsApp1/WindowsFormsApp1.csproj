@@ -79,6 +79,20 @@
     <Compile Include="View\fMainform.Designer.cs">
       <DependentUpon>fMainform.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChu\fTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\fTrangChu.Designer.cs">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </Compile>
+    <None Include="Resources\imageThucDon.png" />
+    <None Include="Resources\imageThucDon.jpg" />
+    <None Include="Resources\iconPizza.png" />
+    <None Include="Resources\32b417e287516369937846dc960cca86.jpg" />
+    <None Include="Resources\185102_receipt_shopping_icon1.png" />
+    <EmbeddedResource Include="View\TrangChu\fTrangChu.resx">
+      <DependentUpon>fTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\185102_receipt_shopping_icon.png" />
     <EmbeddedResource Include="View\fMainform.resx">
       <DependentUpon>fMainform.cs</DependentUpon>
