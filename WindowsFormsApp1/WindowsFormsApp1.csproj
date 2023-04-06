@@ -85,6 +85,35 @@
     <Compile Include="View\TrangChu\fTrangChu.Designer.cs">
       <DependentUpon>fTrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChu\panelMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\panelMonAn.Designer.cs">
+      <DependentUpon>panelMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrangChu\panelOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\panelOrder.Designer.cs">
+      <DependentUpon>panelOrder.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\TrangChu\panelOrder.resx">
+      <DependentUpon>panelOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\pizza xúc xích.jpg" />
+    <None Include="Resources\pizza nấm.jpg" />
+    <None Include="Resources\korean hotdog 4.jpg" />
+    <None Include="Resources\khooai tây chiên 3.jpg" />
+    <None Include="Resources\khoai lang kén.jpg" />
+    <None Include="Resources\kem vani.jpg" />
+    <None Include="Resources\kem sôcla.jpg" />
+    <None Include="Resources\kem matcha.jpg" />
+    <None Include="Resources\kem ly.jpg" />
+    <None Include="Resources\hamburger gà.png" />
+    <None Include="Resources\gà sốt cay.jpg" />
+    <EmbeddedResource Include="View\TrangChu\panelMonAn.resx">
+      <DependentUpon>panelMonAn.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\imageThucDon.png" />
     <None Include="Resources\imageThucDon.jpg" />
     <None Include="Resources\iconPizza.png" />

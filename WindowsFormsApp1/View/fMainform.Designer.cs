@@ -38,9 +38,9 @@
             this.btnHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnBaoCao = new FontAwesome.Sharp.IconButton();
             this.panelBaoCao = new System.Windows.Forms.Panel();
-            this.btnBCDoanhThu = new FontAwesome.Sharp.IconButton();
-            this.btnBCSanPham = new FontAwesome.Sharp.IconButton();
             this.btnBCKhachHang = new FontAwesome.Sharp.IconButton();
+            this.btnBCSanPham = new FontAwesome.Sharp.IconButton();
+            this.btnBCDoanhThu = new FontAwesome.Sharp.IconButton();
             this.btnCaiDat = new FontAwesome.Sharp.IconButton();
             this.panelbutton = new System.Windows.Forms.Panel();
             this.btnExit = new FontAwesome.Sharp.IconButton();
@@ -48,12 +48,12 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelTimKiem = new System.Windows.Forms.Panel();
+            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.panelBaoCao.SuspendLayout();
             this.panelbutton.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,7 +68,7 @@
             this.pnForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.pnForm.Location = new System.Drawing.Point(245, 138);
             this.pnForm.Name = "pnForm";
-            this.pnForm.Size = new System.Drawing.Size(939, 577);
+            this.pnForm.Size = new System.Drawing.Size(939, 580);
             this.pnForm.TabIndex = 7;
             // 
             // panelLogo
@@ -240,24 +240,24 @@
             this.panelBaoCao.Size = new System.Drawing.Size(236, 140);
             this.panelBaoCao.TabIndex = 8;
             // 
-            // btnBCDoanhThu
+            // btnBCKhachHang
             // 
-            this.btnBCDoanhThu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBCDoanhThu.FlatAppearance.BorderSize = 0;
-            this.btnBCDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBCDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBCDoanhThu.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnBCDoanhThu.IconColor = System.Drawing.Color.Black;
-            this.btnBCDoanhThu.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBCDoanhThu.Location = new System.Drawing.Point(0, 0);
-            this.btnBCDoanhThu.Name = "btnBCDoanhThu";
-            this.btnBCDoanhThu.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnBCDoanhThu.Size = new System.Drawing.Size(236, 44);
-            this.btnBCDoanhThu.TabIndex = 3;
-            this.btnBCDoanhThu.Text = "Báo cáo doanh thu\r\n";
-            this.btnBCDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBCDoanhThu.UseVisualStyleBackColor = false;
-            this.btnBCDoanhThu.Click += new System.EventHandler(this.btnBCDoanhThu_Click);
+            this.btnBCKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBCKhachHang.FlatAppearance.BorderSize = 0;
+            this.btnBCKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBCKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBCKhachHang.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBCKhachHang.IconColor = System.Drawing.Color.Black;
+            this.btnBCKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBCKhachHang.Location = new System.Drawing.Point(0, 88);
+            this.btnBCKhachHang.Name = "btnBCKhachHang";
+            this.btnBCKhachHang.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnBCKhachHang.Size = new System.Drawing.Size(236, 44);
+            this.btnBCKhachHang.TabIndex = 5;
+            this.btnBCKhachHang.Text = "Báo cáo khách hàng";
+            this.btnBCKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBCKhachHang.UseVisualStyleBackColor = false;
+            this.btnBCKhachHang.Click += new System.EventHandler(this.btnBCKhachHang_Click);
             // 
             // btnBCSanPham
             // 
@@ -278,24 +278,24 @@
             this.btnBCSanPham.UseVisualStyleBackColor = false;
             this.btnBCSanPham.Click += new System.EventHandler(this.btnBCSanPham_Click);
             // 
-            // btnBCKhachHang
+            // btnBCDoanhThu
             // 
-            this.btnBCKhachHang.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBCKhachHang.FlatAppearance.BorderSize = 0;
-            this.btnBCKhachHang.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBCKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBCKhachHang.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnBCKhachHang.IconColor = System.Drawing.Color.Black;
-            this.btnBCKhachHang.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBCKhachHang.Location = new System.Drawing.Point(0, 88);
-            this.btnBCKhachHang.Name = "btnBCKhachHang";
-            this.btnBCKhachHang.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
-            this.btnBCKhachHang.Size = new System.Drawing.Size(236, 44);
-            this.btnBCKhachHang.TabIndex = 5;
-            this.btnBCKhachHang.Text = "Báo cáo khách hàng";
-            this.btnBCKhachHang.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBCKhachHang.UseVisualStyleBackColor = false;
-            this.btnBCKhachHang.Click += new System.EventHandler(this.btnBCKhachHang_Click);
+            this.btnBCDoanhThu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBCDoanhThu.FlatAppearance.BorderSize = 0;
+            this.btnBCDoanhThu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBCDoanhThu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBCDoanhThu.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnBCDoanhThu.IconColor = System.Drawing.Color.Black;
+            this.btnBCDoanhThu.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBCDoanhThu.Location = new System.Drawing.Point(0, 0);
+            this.btnBCDoanhThu.Name = "btnBCDoanhThu";
+            this.btnBCDoanhThu.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
+            this.btnBCDoanhThu.Size = new System.Drawing.Size(236, 44);
+            this.btnBCDoanhThu.TabIndex = 3;
+            this.btnBCDoanhThu.Text = "Báo cáo doanh thu\r\n";
+            this.btnBCDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBCDoanhThu.UseVisualStyleBackColor = false;
+            this.btnBCDoanhThu.Click += new System.EventHandler(this.btnBCDoanhThu_Click);
             // 
             // btnCaiDat
             // 
@@ -415,6 +415,26 @@
             this.panelTimKiem.Size = new System.Drawing.Size(251, 40);
             this.panelTimKiem.TabIndex = 0;
             // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(53, 3);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
+            this.rjTextBox1.Size = new System.Drawing.Size(175, 35);
+            this.rjTextBox1.TabIndex = 1;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
             // pcbTimKiem
             // 
             this.pcbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
@@ -469,26 +489,6 @@
             this.label1.Size = new System.Drawing.Size(196, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Chào mừng đến với";
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(53, 3);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(175, 35);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
             // 
             // fMainform
             // 
