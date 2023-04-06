@@ -88,8 +88,6 @@ namespace WindowsFormsApp1.View
                 DisableButton(currentBtn);
                 currentBtn=(IconButton)sender;
                 currentBtn.BackColor = Color.FromArgb(255, 138, 0);
-                iconChild.IconChar = currentBtn.IconChar;
-                lbChild.Text = currentBtn.Text;
             }
         }
         private void DisableButton(IconButton btn)
@@ -103,11 +101,13 @@ namespace WindowsFormsApp1.View
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelBaoCao.Visible = false;
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelBaoCao.Visible = false;
         }
 
         private void btnBaoCao_Click(object sender, EventArgs e)
@@ -119,26 +119,31 @@ namespace WindowsFormsApp1.View
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelBaoCao.Visible = false;
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelBaoCao.Visible = false;
         }
 
         private void btnCaLamViec_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelBaoCao.Visible = false;
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelBaoCao.Visible = false;
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+            panelBaoCao.Visible = false;
         }
         //btn cua panel bao cao
 
@@ -157,5 +162,5 @@ namespace WindowsFormsApp1.View
             ActivateButtonPanel(sender);
         }
 
-    }
-}
+        
+}}
