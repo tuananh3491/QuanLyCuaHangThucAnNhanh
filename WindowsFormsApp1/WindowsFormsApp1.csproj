@@ -73,12 +73,48 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\fCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fCustomer.Designer.cs">
+      <DependentUpon>fCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fCustomer_History.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fCustomer_History.Designer.cs">
+      <DependentUpon>fCustomer_History.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fCustomer_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fCustomer_Update.Designer.cs">
+      <DependentUpon>fCustomer_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\fMainform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\fMainform.Designer.cs">
       <DependentUpon>fMainform.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fNhanVien.Designer.cs">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\fCustomer.resx">
+      <DependentUpon>fCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fCustomer_History.resx">
+      <DependentUpon>fCustomer_History.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fCustomer_Update.resx">
+      <DependentUpon>fCustomer_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fNhanVien.resx">
+      <DependentUpon>fNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\185102_receipt_shopping_icon.png" />
     <EmbeddedResource Include="View\fMainform.resx">
       <DependentUpon>fMainform.cs</DependentUpon>
@@ -125,6 +161,8 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
