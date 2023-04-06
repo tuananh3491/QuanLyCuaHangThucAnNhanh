@@ -97,13 +97,34 @@
     <Compile Include="View\fMainform.Designer.cs">
       <DependentUpon>fMainform.cs</DependentUpon>
     </Compile>
-
     <Compile Include="View\TrangChu\fTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\TrangChu\fTrangChu.Designer.cs">
       <DependentUpon>fTrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChu\panelMonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\panelMonAn.Designer.cs">
+      <DependentUpon>panelMonAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrangChu\panelOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\panelOrder.Designer.cs">
+      <DependentUpon>panelOrder.cs</DependentUpon>
+    </Compile>
+    <Content Include="Resources\hamburger gà 2.jpg" />
+    <Content Include="Resources\hamburger gà.png" />
+    <Content Include="Resources\hotdog.jpg" />
+    <Content Include="Resources\kem ly.jpg" />
+    <Content Include="Resources\khoaitaychien.jpg" />
+    <Content Include="Resources\pizza xúc xích.jpg" />
+    <Content Include="Resources\pizzanam.jpg" />
+    <EmbeddedResource Include="View\TrangChu\panelMonAn.resx">
+      <DependentUpon>panelMonAn.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\imageThucDon.png" />
     <None Include="Resources\imageThucDon.jpg" />
     <None Include="Resources\iconPizza.png" />
@@ -129,7 +150,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fNhanVien.resx">
       <DependentUpon>fNhanVien.cs</DependentUpon>
-
     </EmbeddedResource>
     <None Include="Resources\185102_receipt_shopping_icon.png" />
     <EmbeddedResource Include="View\fMainform.resx">
