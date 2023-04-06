@@ -73,9 +73,59 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _185102_receipt_shopping_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("185102_receipt_shopping_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _32b417e287516369937846dc960cca86 {
+            get {
+                object obj = ResourceManager.GetObject("32b417e287516369937846dc960cca86", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3671803_closed_lock_icon {
             get {
                 object obj = ResourceManager.GetObject("3671803_closed_lock_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconPizza {
+            get {
+                object obj = ResourceManager.GetObject("iconPizza", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imageThucDon {
+            get {
+                object obj = ResourceManager.GetObject("imageThucDon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imageThucDon1 {
+            get {
+                object obj = ResourceManager.GetObject("imageThucDon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

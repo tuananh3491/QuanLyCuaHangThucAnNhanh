@@ -15,6 +15,7 @@ namespace WindowsFormsApp1.View
     {
         private IconButton currentBtn;
         private IconButton BtnChild;
+        private Form activeForm;
         public fMainform()
         {
             InitializeComponent();
@@ -97,10 +98,27 @@ namespace WindowsFormsApp1.View
                 btn.BackColor = Color.FromArgb(255, 249, 242);
             }
         }
+        //open form
+        private void openChildForm(Form active, object btn)
+        {
+            if (activeForm != null) { activeForm.Close(); }
+            ActivateButton(btn);
+            activeForm = active;
+            active.TopLevel = false;
+            active.FormBorderStyle = FormBorderStyle.None;
+            active.Dock = DockStyle.Fill;
+            this.pnForm.Controls.Add(active);
+            this.pnForm.Tag = active;
+            active.BringToFront();
+            active.Show();
+        }
+
+            
+        //evenclick
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            openChildForm(new TrangChu.fTrangChu(), sender);
             panelBaoCao.Visible = false;
         }
 
