@@ -111,7 +111,7 @@
     <None Include="Resources\185102_receipt_shopping_icon1.png" />
     <EmbeddedResource Include="View\TrangChu\fTrangChu.resx">
       <DependentUpon>fTrangChu.cs</DependentUpon>
-
+    </EmbeddedResource>
     <Compile Include="View\fNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
