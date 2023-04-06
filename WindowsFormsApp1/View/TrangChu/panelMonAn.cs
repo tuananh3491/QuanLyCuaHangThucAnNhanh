@@ -30,6 +30,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 lbTenMonAn.Text = "Pizza xúc xích";
                 tbTien.Text = "50.000đ";
             }
+
             if (s == "Pizza nấm")
             {
                 pcbMonAn.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Resources\\pizzanam.jpg");
