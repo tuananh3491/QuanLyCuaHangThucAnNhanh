@@ -17,9 +17,25 @@ namespace WindowsFormsApp1.View.TrangChu
             InitializeComponent();
         }
 
-        private void ptnPizza_Click(object sender, EventArgs e)
+        private void btnPizza_Click(object sender, EventArgs e)
         {
+            flpnThucDon.Controls.Clear();
+            flpnThucDon.Controls.Add(new panelMonAn("Pizza nấm"));
+            flpnThucDon.Controls.Add(new panelMonAn("Pizza xúc xích"));
+        }
 
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            flpnThucDon.Controls.Clear();
+            flpnThucDon.Controls.Add(new panelMonAn("Xúc xích"));
+            flpnThucDon.Controls.Add(new panelMonAn("Khoai tây chiên"));
+
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            flpnThucDon.Controls.Clear();
+            flpnThucDon.Controls.Add(new panelMonAn("Hamburger"));
         }
     }
 }
