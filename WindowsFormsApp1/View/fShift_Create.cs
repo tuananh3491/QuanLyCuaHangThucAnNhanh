@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.View
 {
-    public partial class fNhanVien : Form
+    public partial class fShift_Create : Form
     {
-        public fNhanVien()
+        public fShift_Create()
         {
             InitializeComponent();
         }
+
+       
     }
 }
