@@ -15,6 +15,7 @@ namespace WindowsFormsApp1.View
     {
         private IconButton currentBtn;
         private IconButton BtnChild;
+        private Form activeForm;
         public fMainform()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace WindowsFormsApp1.View
         }
         private void HidepanelBaoCao()
         {
-            if(panelBaoCao.Visible==true) 
+            if (panelBaoCao.Visible == true)
             {
                 panelBaoCao.Visible = false;
             }
@@ -70,7 +71,7 @@ namespace WindowsFormsApp1.View
         {
             public static Color color1 = Color.FromArgb(255, 138, 0);
             public static Color color2 = Color.FromArgb(255, 175, 81);
-            
+
         }
         private void ActivateButtonPanel(object sender)
         {
@@ -86,7 +87,7 @@ namespace WindowsFormsApp1.View
             if (sender != null)
             {
                 DisableButton(currentBtn);
-                currentBtn=(IconButton)sender;
+                currentBtn = (IconButton)sender;
                 currentBtn.BackColor = Color.FromArgb(255, 138, 0);
             }
         }
@@ -94,13 +95,30 @@ namespace WindowsFormsApp1.View
         {
             if (btn != null)
             {
-                btn.BackColor =Color.FromArgb(255, 249, 242);
+                btn.BackColor = Color.FromArgb(255, 249, 242);
             }
         }
+        //open form
+        private void openChildForm(Form active, object btn)
+        {
+            if (activeForm != null) { activeForm.Close(); }
+            ActivateButton(btn);
+            activeForm = active;
+            active.TopLevel = false;
+            active.FormBorderStyle = FormBorderStyle.None;
+            active.Dock = DockStyle.Fill;
+            this.pnForm.Controls.Add(active);
+            this.pnForm.Tag = active;
+            active.BringToFront();
+            active.Show();
+        }
+
+            
+        //evenclick
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            openChildForm(new TrangChu.fTrangChu(), sender);
             panelBaoCao.Visible = false;
         }
 
@@ -162,5 +180,6 @@ namespace WindowsFormsApp1.View
             ActivateButtonPanel(sender);
         }
 
-        
-}}
+
+    }
+}
