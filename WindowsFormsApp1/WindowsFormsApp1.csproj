@@ -191,14 +191,6 @@
       <DependentUpon>fTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     
-
-
-    <Compile Include="View\fNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\fNhanVien.Designer.cs">
-      <DependentUpon>fNhanVien.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="View\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
     </EmbeddedResource>
