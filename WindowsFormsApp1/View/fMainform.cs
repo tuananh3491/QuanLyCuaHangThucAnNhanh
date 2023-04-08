@@ -124,7 +124,7 @@ namespace WindowsFormsApp1.View
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            openChildForm(new fStaff(), sender);
             panelBaoCao.Visible = false;
         }
 
@@ -136,7 +136,7 @@ namespace WindowsFormsApp1.View
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            openChildForm(new fCustomer(), sender);
             panelBaoCao.Visible = false;
         }
 
@@ -148,13 +148,13 @@ namespace WindowsFormsApp1.View
 
         private void btnCaLamViec_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            openChildForm(new fShift(), sender);
             panelBaoCao.Visible = false;
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            openChildForm(new fBill(), sender);
             panelBaoCao.Visible = false;
         }
 

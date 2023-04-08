@@ -8,18 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.View.TrangChu
+namespace WindowsFormsApp1.View
 {
-    public partial class panelOrder : UserControl
+    public partial class fBill_Detail : Form
     {
-        public panelOrder()
+        public fBill_Detail()
         {
             InitializeComponent();
         }
 
-        private void panel1_MouseClick(object sender, MouseEventArgs e)
-        {
 
-        }
     }
 }
