@@ -121,7 +121,6 @@
     <Compile Include="View\fMainform.Designer.cs">
       <DependentUpon>fMainform.cs</DependentUpon>
     </Compile>
-
     <Compile Include="View\fShift.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +176,9 @@
     <EmbeddedResource Include="View\TrangChu\panelMonAn.resx">
       <DependentUpon>panelMonAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChu\panelOrder.resx">
+      <DependentUpon>panelOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Resources\imageThucDon.png" />
     <None Include="Resources\imageThucDon.jpg" />
     <None Include="Resources\iconPizza.png" />
@@ -185,9 +187,6 @@
     <EmbeddedResource Include="View\TrangChu\fTrangChu.resx">
       <DependentUpon>fTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <Compile Include="View\fNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="View\fStaff_Salary.Designer.cs">
       <DependentUpon>fStaff_Salary.cs</DependentUpon>
     </Compile>

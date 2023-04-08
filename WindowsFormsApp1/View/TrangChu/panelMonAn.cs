@@ -66,7 +66,8 @@ namespace WindowsFormsApp1.View.TrangChu
         private void btnAdd_Click(object sender, EventArgs e)
         {
             panelOrder p = new panelOrder();
-            fTrangChu form = new fTrangChu();
+            ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
+            
         }
     }
 }

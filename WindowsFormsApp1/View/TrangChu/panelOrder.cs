@@ -16,5 +16,10 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
         }
+
+        private void panel1_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
     }
 }
