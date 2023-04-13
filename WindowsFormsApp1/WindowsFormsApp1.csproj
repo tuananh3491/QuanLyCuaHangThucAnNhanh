@@ -109,17 +109,47 @@
     <Compile Include="View\fCustomer_Update.Designer.cs">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fFoodDrink.cs">
+    <Compile Include="View\Product\fProduct.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fFoodDrink.Designer.cs">
-      <DependentUpon>fFoodDrink.cs</DependentUpon>
+    <Compile Include="View\Product\fProduct.Designer.cs">
+      <DependentUpon>fProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fMainform.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\fMainform.Designer.cs">
       <DependentUpon>fMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fReport_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fReport_Customer.Designer.cs">
+      <DependentUpon>fReport_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fReport_CustomerChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fReport_CustomerChart.Designer.cs">
+      <DependentUpon>fReport_CustomerChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fReport_Product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fReport_Product.Designer.cs">
+      <DependentUpon>fReport_Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fReport_ProductChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fReport_ProductChart.Designer.cs">
+      <DependentUpon>fReport_ProductChart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fReport_Revenue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fReport_Revenue.Designer.cs">
+      <DependentUpon>fReport_Revenue.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fShift.cs">
       <SubType>Form</SubType>
@@ -151,6 +181,30 @@
     <Compile Include="View\fStaff_Salary.Designer.cs">
       <DependentUpon>fStaff_Salary.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Product\panelProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Product\panelProduct.Designer.cs">
+      <DependentUpon>panelProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product\panelProduct_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Product\panelProduct_Update.Designer.cs">
+      <DependentUpon>panelProduct_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product\pnProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Product\pnProduct.Designer.cs">
+      <DependentUpon>pnProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product\pnProduct_Update.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Product\pnProduct_Update.Designer.cs">
+      <DependentUpon>pnProduct_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TrangChu\fTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +230,33 @@
     <Content Include="Resources\khoaitaychien.jpg" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
+    <EmbeddedResource Include="View\fReport_Customer.resx">
+      <DependentUpon>fReport_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fReport_CustomerChart.resx">
+      <DependentUpon>fReport_CustomerChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fReport_Product.resx">
+      <DependentUpon>fReport_Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fReport_ProductChart.resx">
+      <DependentUpon>fReport_ProductChart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fReport_Revenue.resx">
+      <DependentUpon>fReport_Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product\panelProduct.resx">
+      <DependentUpon>panelProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product\panelProduct_Update.resx">
+      <DependentUpon>panelProduct_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product\pnProduct.resx">
+      <DependentUpon>pnProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product\pnProduct_Update.resx">
+      <DependentUpon>pnProduct_Update.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\panelMonAn.resx">
       <DependentUpon>panelMonAn.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,7 +271,6 @@
     <EmbeddedResource Include="View\TrangChu\fTrangChu.resx">
       <DependentUpon>fTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    
     <EmbeddedResource Include="View\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,8 +289,8 @@
     <EmbeddedResource Include="View\fCustomer_Update.resx">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fFoodDrink.resx">
-      <DependentUpon>fFoodDrink.cs</DependentUpon>
+    <EmbeddedResource Include="View\Product\fProduct.resx">
+      <DependentUpon>fProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fShift.resx">
       <DependentUpon>fShift.cs</DependentUpon>
