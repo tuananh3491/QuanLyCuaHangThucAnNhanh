@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.View;
+using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1
 {
@@ -33,6 +35,20 @@ namespace WindowsFormsApp1
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            txtPassWord.Text = "";
+            txtUsername.Text = "";
+        }
+
+        private void btLogIn_Click(object sender, EventArgs e)
+        {
+            fMainform fMainform = new fMainform();  
+            this.Hide();
+            fMainform.ShowDialog(); 
+            //this.Show();
         }
     }
 }
