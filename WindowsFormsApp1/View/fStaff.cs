@@ -17,6 +17,13 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
         }
 
-        
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            fStaff_Salary f = new fStaff_Salary();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }

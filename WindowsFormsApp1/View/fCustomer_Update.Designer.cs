@@ -128,7 +128,7 @@
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(165, 49);
+            this.panel1.Location = new System.Drawing.Point(165, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(593, 361);
             this.panel1.TabIndex = 11;
@@ -144,7 +144,7 @@
             this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vbButton2.ForeColor = System.Drawing.Color.White;
-            this.vbButton2.Location = new System.Drawing.Point(555, 474);
+            this.vbButton2.Location = new System.Drawing.Point(565, 469);
             this.vbButton2.Margin = new System.Windows.Forms.Padding(5);
             this.vbButton2.Name = "vbButton2";
             this.vbButton2.Size = new System.Drawing.Size(160, 40);
@@ -152,6 +152,7 @@
             this.vbButton2.Text = "Hủy";
             this.vbButton2.TextColor = System.Drawing.Color.White;
             this.vbButton2.UseVisualStyleBackColor = false;
+            this.vbButton2.Click += new System.EventHandler(this.vbButton2_Click);
             // 
             // vbButton1
             // 
@@ -164,7 +165,7 @@
             this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(204, 474);
+            this.vbButton1.Location = new System.Drawing.Point(214, 469);
             this.vbButton1.Margin = new System.Windows.Forms.Padding(5);
             this.vbButton1.Name = "vbButton1";
             this.vbButton1.Size = new System.Drawing.Size(160, 40);

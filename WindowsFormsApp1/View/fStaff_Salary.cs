@@ -17,6 +17,13 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
         }
 
-   
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            fStaff f = new fStaff();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }

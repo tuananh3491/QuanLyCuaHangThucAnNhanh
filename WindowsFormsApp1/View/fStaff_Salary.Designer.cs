@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vbButton2 = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnBack = new WindowsFormsApp1.CustomControl.VBButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -37,25 +37,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // vbButton2
+            // btnBack
             // 
-            this.vbButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton2.BorderRadius = 10;
-            this.vbButton2.BorderSize = 0;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton2.ForeColor = System.Drawing.Color.White;
-            this.vbButton2.Location = new System.Drawing.Point(734, 506);
-            this.vbButton2.Margin = new System.Windows.Forms.Padding(5);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(134, 40);
-            this.vbButton2.TabIndex = 13;
-            this.vbButton2.Text = "Quay lại";
-            this.vbButton2.TextColor = System.Drawing.Color.White;
-            this.vbButton2.UseVisualStyleBackColor = false;
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnBack.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnBack.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBack.BorderRadius = 10;
+            this.btnBack.BorderSize = 0;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(734, 506);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(5);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(134, 40);
+            this.btnBack.TabIndex = 13;
+            this.btnBack.Text = "Quay lại";
+            this.btnBack.TextColor = System.Drawing.Color.White;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // textBox1
             // 
@@ -102,7 +103,7 @@
             this.ClientSize = new System.Drawing.Size(930, 560);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.vbButton2);
+            this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fStaff_Salary";
             this.Text = "fStaff_Salary";
@@ -114,7 +115,7 @@
         }
 
         #endregion
-        private CustomControl.VBButton vbButton2;
+        private CustomControl.VBButton btnBack;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Panel panel1;

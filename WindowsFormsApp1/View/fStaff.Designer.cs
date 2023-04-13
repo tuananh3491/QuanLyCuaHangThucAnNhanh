@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vbButton2 = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnCapNhat = new WindowsFormsApp1.CustomControl.VBButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // vbButton2
+            // btnCapNhat
             // 
-            this.vbButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton2.BorderRadius = 10;
-            this.vbButton2.BorderSize = 0;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton2.ForeColor = System.Drawing.Color.White;
-            this.vbButton2.Location = new System.Drawing.Point(647, 497);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(216, 40);
-            this.vbButton2.TabIndex = 1;
-            this.vbButton2.Text = "Cập nhật trạng thái";
-            this.vbButton2.TextColor = System.Drawing.Color.White;
-            this.vbButton2.UseVisualStyleBackColor = false;
+            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCapNhat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCapNhat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCapNhat.BorderRadius = 10;
+            this.btnCapNhat.BorderSize = 0;
+            this.btnCapNhat.FlatAppearance.BorderSize = 0;
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhat.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.Location = new System.Drawing.Point(647, 497);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(216, 40);
+            this.btnCapNhat.TabIndex = 1;
+            this.btnCapNhat.Text = "Cập nhật trạng thái";
+            this.btnCapNhat.TextColor = System.Drawing.Color.White;
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // dataGridView1
             // 
@@ -70,7 +71,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.vbButton2);
+            this.Controls.Add(this.btnCapNhat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fStaff";
             this.Text = "fStaff";
@@ -80,7 +81,7 @@
         }
 
         #endregion
-        private CustomControl.VBButton vbButton2;
+        private CustomControl.VBButton btnCapNhat;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
