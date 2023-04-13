@@ -112,6 +112,18 @@ namespace WindowsFormsApp1.View
             active.BringToFront();
             active.Show();
         }
+        public void openChildForm1(Form active)
+        {
+
+            this.pnForm.Controls.Clear();
+            active.TopLevel = false;
+            active.FormBorderStyle = FormBorderStyle.None;
+            active.Dock = DockStyle.Fill;
+            this.pnForm.Controls.Add(active);
+            this.pnForm.Tag = active;
+            active.BringToFront();
+            active.Show();
+        }
 
             
         //evenclick
@@ -167,16 +179,19 @@ namespace WindowsFormsApp1.View
 
         private void btnBCKhachHang_Click(object sender, EventArgs e)
         {
+            openChildForm(new fReport_Customer(), sender);
             ActivateButtonPanel(sender);
         }
 
         private void btnBCSanPham_Click(object sender, EventArgs e)
         {
+            openChildForm(new fReport_Product(), sender);
             ActivateButtonPanel(sender);
         }
 
         private void btnBCDoanhThu_Click(object sender, EventArgs e)
         {
+            openChildForm(new fReport_Revenue(), sender);
             ActivateButtonPanel(sender);
         }
 

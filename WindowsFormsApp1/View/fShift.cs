@@ -16,5 +16,14 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
         }
+
+        private void btnTaoCa_Click(object sender, EventArgs e)
+        {
+            fShift_Create f = new fShift_Create();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }

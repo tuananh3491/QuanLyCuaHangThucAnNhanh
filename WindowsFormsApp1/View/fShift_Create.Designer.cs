@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vbButton2 = new WindowsFormsApp1.CustomControl.VBButton();
-            this.vbButton1 = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnHuy = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnXacNhan = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -42,45 +42,46 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // vbButton2
+            // btnHuy
             // 
-            this.vbButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton2.BorderRadius = 10;
-            this.vbButton2.BorderSize = 0;
-            this.vbButton2.FlatAppearance.BorderSize = 0;
-            this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton2.ForeColor = System.Drawing.Color.White;
-            this.vbButton2.Location = new System.Drawing.Point(553, 426);
-            this.vbButton2.Margin = new System.Windows.Forms.Padding(5);
-            this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(160, 40);
-            this.vbButton2.TabIndex = 8;
-            this.vbButton2.Text = "Hủy";
-            this.vbButton2.TextColor = System.Drawing.Color.White;
-            this.vbButton2.UseVisualStyleBackColor = false;
+            this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnHuy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuy.BorderRadius = 10;
+            this.btnHuy.BorderSize = 0;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(553, 426);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(5);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(160, 40);
+            this.btnHuy.TabIndex = 8;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextColor = System.Drawing.Color.White;
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // vbButton1
+            // btnXacNhan
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 10;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(202, 426);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(160, 40);
-            this.vbButton1.TabIndex = 7;
-            this.vbButton1.Text = "Xác nhận";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btnXacNhan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXacNhan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXacNhan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXacNhan.BorderRadius = 10;
+            this.btnXacNhan.BorderSize = 0;
+            this.btnXacNhan.FlatAppearance.BorderSize = 0;
+            this.btnXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXacNhan.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXacNhan.ForeColor = System.Drawing.Color.White;
+            this.btnXacNhan.Location = new System.Drawing.Point(202, 426);
+            this.btnXacNhan.Margin = new System.Windows.Forms.Padding(5);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(160, 40);
+            this.btnXacNhan.TabIndex = 7;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.TextColor = System.Drawing.Color.White;
+            this.btnXacNhan.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
@@ -182,8 +183,8 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(912, 513);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.vbButton2);
-            this.Controls.Add(this.vbButton1);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnXacNhan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fShift_Create";
             this.Text = "fShift_Create";
@@ -194,8 +195,8 @@
         }
 
         #endregion
-        private CustomControl.VBButton vbButton2;
-        private CustomControl.VBButton vbButton1;
+        private CustomControl.VBButton btnHuy;
+        private CustomControl.VBButton btnXacNhan;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
