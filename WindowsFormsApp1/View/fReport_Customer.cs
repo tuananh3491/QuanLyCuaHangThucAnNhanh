@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.View
 {
-    public partial class fFoodDrink : Form
+    public partial class fReport_Customer : Form
     {
-        public fFoodDrink()
+        public fReport_Customer()
         {
             InitializeComponent();
         }
-
-
     }
 }
