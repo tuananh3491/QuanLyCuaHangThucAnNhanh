@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1.View
 {
@@ -23,6 +24,7 @@ namespace WindowsFormsApp1.View
             this.ControlBox = false;
             this.DoubleBuffered = true;
             customizeDesig();
+            openChildForm1(new fTrangChu());
         }
         //custom panelBaoCao
         private void customizeDesig()
@@ -172,7 +174,7 @@ namespace WindowsFormsApp1.View
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            openChildForm(new fProduct(), sender);
             panelBaoCao.Visible = false;
         }
         //btn cua panel bao cao

@@ -31,11 +31,18 @@
             this.pnForm = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelBaoCao = new System.Windows.Forms.Panel();
+            this.panelbutton = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelTimKiem = new System.Windows.Forms.Panel();
+            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnCaiDat = new FontAwesome.Sharp.IconButton();
             this.btnBCKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnBCSanPham = new FontAwesome.Sharp.IconButton();
             this.btnBCDoanhThu = new FontAwesome.Sharp.IconButton();
-            this.panelbutton = new System.Windows.Forms.Panel();
-            this.btnCaiDat = new FontAwesome.Sharp.IconButton();
             this.btnBaoCao = new FontAwesome.Sharp.IconButton();
             this.btnHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnSanPham = new FontAwesome.Sharp.IconButton();
@@ -43,24 +50,17 @@
             this.btnCaLamViec = new FontAwesome.Sharp.IconButton();
             this.btnNhanVien = new FontAwesome.Sharp.IconButton();
             this.btnTrangChu = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.panelTimKiem = new System.Windows.Forms.Panel();
-            this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.panelBaoCao.SuspendLayout();
             this.panelbutton.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTimKiem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).BeginInit();
             this.SuspendLayout();
             // 
             // pnForm
@@ -93,6 +93,136 @@
             this.panelBaoCao.Name = "panelBaoCao";
             this.panelBaoCao.Size = new System.Drawing.Size(236, 140);
             this.panelBaoCao.TabIndex = 8;
+            // 
+            // panelbutton
+            // 
+            this.panelbutton.BackColor = System.Drawing.Color.White;
+            this.panelbutton.Controls.Add(this.btnCaiDat);
+            this.panelbutton.Controls.Add(this.panelBaoCao);
+            this.panelbutton.Controls.Add(this.btnBaoCao);
+            this.panelbutton.Controls.Add(this.btnHoaDon);
+            this.panelbutton.Controls.Add(this.btnSanPham);
+            this.panelbutton.Controls.Add(this.btnKhachHang);
+            this.panelbutton.Controls.Add(this.btnCaLamViec);
+            this.panelbutton.Controls.Add(this.btnNhanVien);
+            this.panelbutton.Controls.Add(this.btnTrangChu);
+            this.panelbutton.Controls.Add(this.panelLogo);
+            this.panelbutton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelbutton.Location = new System.Drawing.Point(0, 32);
+            this.panelbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelbutton.Name = "panelbutton";
+            this.panelbutton.Size = new System.Drawing.Size(236, 695);
+            this.panelbutton.TabIndex = 5;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.btnMaximize);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1196, 32);
+            this.panel1.TabIndex = 4;
+            // 
+            // panelTimKiem
+            // 
+            this.panelTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.panelTimKiem.Controls.Add(this.rjTextBox1);
+            this.panelTimKiem.Controls.Add(this.pcbTimKiem);
+            this.panelTimKiem.Location = new System.Drawing.Point(485, 21);
+            this.panelTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTimKiem.Name = "panelTimKiem";
+            this.panelTimKiem.Size = new System.Drawing.Size(251, 39);
+            this.panelTimKiem.TabIndex = 0;
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(49, 3);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
+            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
+            this.rjTextBox1.TabIndex = 1;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.panelTimKiem);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(236, 32);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(960, 100);
+            this.panel2.TabIndex = 6;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(9, 6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(449, 94);
+            this.panel3.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Rage Italic", 38F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(228, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(219, 79);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Slowly";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Chào mừng đến với";
+            // 
+            // btnCaiDat
+            // 
+            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnCaiDat.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCaiDat.FlatAppearance.BorderSize = 0;
+            this.btnCaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaiDat.IconChar = FontAwesome.Sharp.IconChar.Gear;
+            this.btnCaiDat.IconColor = System.Drawing.Color.Black;
+            this.btnCaiDat.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCaiDat.Location = new System.Drawing.Point(0, 641);
+            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCaiDat.Name = "btnCaiDat";
+            this.btnCaiDat.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
+            this.btnCaiDat.Size = new System.Drawing.Size(236, 55);
+            this.btnCaiDat.TabIndex = 10;
+            this.btnCaiDat.Text = "Cài đặt";
+            this.btnCaiDat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCaiDat.UseVisualStyleBackColor = false;
+            this.btnCaiDat.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnBCKhachHang
             // 
@@ -153,48 +283,6 @@
             this.btnBCDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBCDoanhThu.UseVisualStyleBackColor = false;
             this.btnBCDoanhThu.Click += new System.EventHandler(this.btnBCDoanhThu_Click);
-            // 
-            // panelbutton
-            // 
-            this.panelbutton.BackColor = System.Drawing.Color.White;
-            this.panelbutton.Controls.Add(this.btnCaiDat);
-            this.panelbutton.Controls.Add(this.panelBaoCao);
-            this.panelbutton.Controls.Add(this.btnBaoCao);
-            this.panelbutton.Controls.Add(this.btnHoaDon);
-            this.panelbutton.Controls.Add(this.btnSanPham);
-            this.panelbutton.Controls.Add(this.btnKhachHang);
-            this.panelbutton.Controls.Add(this.btnCaLamViec);
-            this.panelbutton.Controls.Add(this.btnNhanVien);
-            this.panelbutton.Controls.Add(this.btnTrangChu);
-            this.panelbutton.Controls.Add(this.panelLogo);
-            this.panelbutton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelbutton.Location = new System.Drawing.Point(0, 32);
-            this.panelbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelbutton.Name = "panelbutton";
-            this.panelbutton.Size = new System.Drawing.Size(236, 695);
-            this.panelbutton.TabIndex = 5;
-            // 
-            // btnCaiDat
-            // 
-            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.btnCaiDat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCaiDat.FlatAppearance.BorderSize = 0;
-            this.btnCaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaiDat.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.btnCaiDat.IconColor = System.Drawing.Color.Black;
-            this.btnCaiDat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 641);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCaiDat.Name = "btnCaiDat";
-            this.btnCaiDat.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnCaiDat.Size = new System.Drawing.Size(236, 55);
-            this.btnCaiDat.TabIndex = 10;
-            this.btnCaiDat.Text = "Cài đặt";
-            this.btnCaiDat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCaiDat.UseVisualStyleBackColor = false;
-            this.btnCaiDat.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnBaoCao
             // 
@@ -352,22 +440,24 @@
             this.btnTrangChu.UseVisualStyleBackColor = false;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
-            // panel1
+            // pcbTimKiem
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.btnMaximize);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1196, 32);
-            this.panel1.TabIndex = 4;
+            this.pcbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.pcbTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.pcbTimKiem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.pcbTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.pcbTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pcbTimKiem.Location = new System.Drawing.Point(11, 5);
+            this.pcbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbTimKiem.Name = "pcbTimKiem";
+            this.pcbTimKiem.Size = new System.Drawing.Size(32, 32);
+            this.pcbTimKiem.TabIndex = 0;
+            this.pcbTimKiem.TabStop = false;
             // 
             // btnMinimize
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(33)))));
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
@@ -376,7 +466,7 @@
             this.btnMinimize.IconColor = System.Drawing.Color.WhiteSmoke;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMinimize.IconSize = 25;
-            this.btnMinimize.Location = new System.Drawing.Point(1035, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1040, 0);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(52, 32);
@@ -388,6 +478,7 @@
             // btnMaximize
             // 
             this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(33)))));
+            this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(33)))));
@@ -395,7 +486,7 @@
             this.btnMaximize.IconColor = System.Drawing.Color.WhiteSmoke;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnMaximize.IconSize = 25;
-            this.btnMaximize.Location = new System.Drawing.Point(1091, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(1092, 0);
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(52, 32);
@@ -407,6 +498,7 @@
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(33)))));
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
@@ -423,95 +515,6 @@
             this.btnExit.Text = " ";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // panelTimKiem
-            // 
-            this.panelTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.panelTimKiem.Controls.Add(this.rjTextBox1);
-            this.panelTimKiem.Controls.Add(this.pcbTimKiem);
-            this.panelTimKiem.Location = new System.Drawing.Point(499, 27);
-            this.panelTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTimKiem.Name = "panelTimKiem";
-            this.panelTimKiem.Size = new System.Drawing.Size(251, 39);
-            this.panelTimKiem.TabIndex = 0;
-            // 
-            // pcbTimKiem
-            // 
-            this.pcbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.pcbTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.pcbTimKiem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.pcbTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.pcbTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbTimKiem.Location = new System.Drawing.Point(11, 5);
-            this.pcbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcbTimKiem.Name = "pcbTimKiem";
-            this.pcbTimKiem.Size = new System.Drawing.Size(32, 32);
-            this.pcbTimKiem.TabIndex = 0;
-            this.pcbTimKiem.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panelTimKiem);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(236, 32);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 100);
-            this.panel2.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(9, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(449, 94);
-            this.panel3.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Rage Italic", 38F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(228, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 79);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Slowly";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Chào mừng đến với";
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(53, 2);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
             // 
             // fMainform
             // 
@@ -532,10 +535,10 @@
             this.panelbutton.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelTimKiem.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -37,7 +37,8 @@
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -45,6 +46,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -238,6 +240,7 @@
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
     <Content Include="Resources\hotdog.jpg" />
+    <None Include="Resources\iconGlass1.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
     <Content Include="Resources\pizza xúc xích.jpg" />
