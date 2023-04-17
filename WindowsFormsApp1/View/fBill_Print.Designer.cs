@@ -50,6 +50,7 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -255,7 +256,7 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label14);
-            this.panel1.Location = new System.Drawing.Point(222, 7);
+            this.panel1.Location = new System.Drawing.Point(222, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 546);
             this.panel1.TabIndex = 25;
@@ -269,15 +270,34 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Số hóa đơn:";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowDown;
+            this.btnBack.IconColor = System.Drawing.Color.Black;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.IconSize = 30;
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Rotation = 90D;
+            this.btnBack.Size = new System.Drawing.Size(61, 39);
+            this.btnBack.TabIndex = 26;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // fBill_Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fBill_Print";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fBill_Print";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -310,5 +330,6 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
+        private FontAwesome.Sharp.IconButton btnBack;
     }
 }

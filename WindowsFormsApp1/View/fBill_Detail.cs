@@ -25,5 +25,11 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show(); ;
         }
+
+        private void vbButton1_Click(object sender, EventArgs e)
+        {
+            fBill_Print f=new fBill_Print();
+            f.ShowDialog();
+        }
     }
 }

@@ -17,6 +17,10 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
         }
 
-   
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
