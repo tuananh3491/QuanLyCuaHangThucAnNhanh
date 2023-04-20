@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.View
             this.ControlBox = false;
             this.DoubleBuffered = true;
             customizeDesig();
-            openChildForm1(new fTrangChu());
+            openChildForm(new fTrangChu(),pnForm);
         }
         //custom panelBaoCao
         private void customizeDesig()
@@ -101,44 +101,45 @@ namespace WindowsFormsApp1.View
             }
         }
         //open form
-        private void openChildForm(Form active, object btn)
+        public void openChildForm(Form active, Panel p )
         {
             if (activeForm != null) { activeForm.Close(); }
-            ActivateButton(btn);
             activeForm = active;
             active.TopLevel = false;
             active.FormBorderStyle = FormBorderStyle.None;
             active.Dock = DockStyle.Fill;
-            this.pnForm.Controls.Add(active);
-            this.pnForm.Tag = active;
+            p.Controls.Add(active);
+            p.Tag = active;
             active.BringToFront();
             active.Show();
         }
-        public void openChildForm1(Form active)
+        public void openChildForm1(Form active, Panel p)
         {
-
-            this.pnForm.Controls.Clear();
+            p.Dispose();
             active.TopLevel = false;
             active.FormBorderStyle = FormBorderStyle.None;
             active.Dock = DockStyle.Fill;
-            this.pnForm.Controls.Add(active);
-            this.pnForm.Tag = active;
+            p.Controls.Add(active);
+            p.Tag = active;
             active.BringToFront();
             active.Show();
         }
 
-            
+
+
         //evenclick
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            openChildForm(new TrangChu.fTrangChu(), sender);
+            ActivateButton(sender);
+            openChildForm(new TrangChu.fTrangChu(), pnForm);
             panelBaoCao.Visible = false;
         }
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            openChildForm(new fStaff(), sender);
+            ActivateButton(sender);
+            openChildForm(new fStaff(), pnForm);
             panelBaoCao.Visible = false;
         }
 
@@ -150,7 +151,8 @@ namespace WindowsFormsApp1.View
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-            openChildForm(new fCustomer(), sender);
+            ActivateButton(sender);
+            openChildForm(new fCustomer(), pnForm);
             panelBaoCao.Visible = false;
         }
 
@@ -162,38 +164,41 @@ namespace WindowsFormsApp1.View
 
         private void btnCaLamViec_Click(object sender, EventArgs e)
         {
-            openChildForm(new fShift(), sender);
+            ActivateButton(sender);
+            openChildForm(new fShift(), pnForm);
             panelBaoCao.Visible = false;
         }
 
         private void btnHoaDon_Click(object sender, EventArgs e)
         {
-            openChildForm(new fBill(), sender);
+            ActivateButton(sender);
+            openChildForm(new fBill(), pnForm);
             panelBaoCao.Visible = false;
         }
 
         private void btnSanPham_Click(object sender, EventArgs e)
         {
-            openChildForm(new fProduct(), sender);
+            ActivateButton(sender);
+            openChildForm(new fProduct(), pnForm);
             panelBaoCao.Visible = false;
         }
         //btn cua panel bao cao
 
         private void btnBCKhachHang_Click(object sender, EventArgs e)
         {
-            openChildForm(new fReport_Customer(), sender);
+            openChildForm(new fReport_Customer(), pnForm);
             ActivateButtonPanel(sender);
         }
 
         private void btnBCSanPham_Click(object sender, EventArgs e)
         {
-            openChildForm(new fReport_Product(), sender);
+            openChildForm(new fReport_Product(), pnForm);
             ActivateButtonPanel(sender);
         }
 
         private void btnBCDoanhThu_Click(object sender, EventArgs e)
         {
-            openChildForm(new fReport_Revenue(), sender);
+            openChildForm(new fReport_Revenue(), pnForm);
             ActivateButtonPanel(sender);
         }
 

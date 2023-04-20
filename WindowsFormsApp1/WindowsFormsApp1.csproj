@@ -219,6 +219,12 @@
     <Compile Include="View\Product\pnProduct_Update.Designer.cs">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChu\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TrangChu\fTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,6 +280,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\pnProduct_Update.resx">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChu\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\panelMonAn.resx">
       <DependentUpon>panelMonAn.cs</DependentUpon>

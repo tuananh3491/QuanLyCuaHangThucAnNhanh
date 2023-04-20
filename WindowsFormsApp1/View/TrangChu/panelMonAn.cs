@@ -69,5 +69,7 @@ namespace WindowsFormsApp1.View.TrangChu
             ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
             
         }
+
+
     }
 }

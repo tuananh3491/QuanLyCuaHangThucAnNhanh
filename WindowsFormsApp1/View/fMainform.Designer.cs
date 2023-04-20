@@ -69,7 +69,7 @@
             this.pnForm.Location = new System.Drawing.Point(251, 148);
             this.pnForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnForm.Name = "pnForm";
-            this.pnForm.Size = new System.Drawing.Size(931, 568);
+            this.pnForm.Size = new System.Drawing.Size(930, 560);
             this.pnForm.TabIndex = 7;
             // 
             // panelLogo

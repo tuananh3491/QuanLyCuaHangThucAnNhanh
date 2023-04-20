@@ -17,15 +17,12 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
         }
-        fMainform tc = new fMainform();
+
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            fBill_Detail f=new fBill_Detail();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            fMainform tc = new fMainform();
+            tc.openChildForm(new fBill_Detail() ,tc.pnForm);
             
         }
     }
