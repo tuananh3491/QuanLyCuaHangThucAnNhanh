@@ -17,7 +17,17 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
         }
 
-        private void vbButton2_Click(object sender, EventArgs e)
+        private void btnXacNhan_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cập nhật thành công");
+            fCustomer f = new fCustomer();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
         {
             fCustomer f = new fCustomer();
             f.TopLevel = false;

@@ -42,6 +42,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.btnEdit);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button3);

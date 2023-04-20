@@ -96,6 +96,7 @@
             this.btnTaoDon.Text = "Tạo đơn";
             this.btnTaoDon.TextColor = System.Drawing.Color.White;
             this.btnTaoDon.UseVisualStyleBackColor = false;
+            this.btnTaoDon.Click += new System.EventHandler(this.btnTaoDon_Click);
             // 
             // btnHuy
             // 

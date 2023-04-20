@@ -20,7 +20,12 @@ namespace WindowsFormsApp1.View
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            this.Close();
+            fBill_Detail f = new fBill_Detail();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
         }
     }
+    
 }

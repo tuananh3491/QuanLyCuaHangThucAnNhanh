@@ -21,9 +21,11 @@ namespace WindowsFormsApp1.View
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            fMainform tc = new fMainform();
-            tc.openChildForm(new fBill_Detail() ,tc.pnForm);
-            
+            fBill_Detail f=new fBill_Detail();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
         }
     }
 }

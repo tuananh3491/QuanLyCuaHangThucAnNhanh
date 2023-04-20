@@ -29,90 +29,71 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fProduct_Add));
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbTenSP = new System.Windows.Forms.TextBox();
+            this.tbLoaiSP = new System.Windows.Forms.TextBox();
+            this.tbDonGia = new System.Windows.Forms.TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbS = new System.Windows.Forms.CheckBox();
+            this.cbL = new System.Windows.Forms.CheckBox();
+            this.cbM = new System.Windows.Forms.CheckBox();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Button1
+            // btnAdd
             // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button1.Location = new System.Drawing.Point(242, 488);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(0)))));
-            this.guna2Button1.Size = new System.Drawing.Size(115, 40);
-            this.guna2Button1.TabIndex = 46;
-            this.guna2Button1.Text = " Lưu";
+            this.btnAdd.BorderRadius = 10;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnAdd.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnAdd.Location = new System.Drawing.Point(242, 488);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(0)))));
+            this.btnAdd.Size = new System.Drawing.Size(115, 40);
+            this.btnAdd.TabIndex = 46;
+            this.btnAdd.Text = " Lưu";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // guna2Button2
+            // btnCancel
             // 
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
-            this.guna2Button2.ImageSize = new System.Drawing.Size(28, 28);
-            this.guna2Button2.Location = new System.Drawing.Point(562, 488);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(0)))));
-            this.guna2Button2.Size = new System.Drawing.Size(115, 40);
-            this.guna2Button2.TabIndex = 47;
-            this.guna2Button2.Text = " Hủy";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 16);
-            this.label1.TabIndex = 48;
-            this.label1.Text = "thêm dấu quay lại ở đây";
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
-            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton1.ImageRotate = 0F;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(18, 60);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton1.Size = new System.Drawing.Size(244, 187);
-            this.guna2ImageButton1.TabIndex = 49;
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCancel.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageSize = new System.Drawing.Size(28, 28);
+            this.btnCancel.Location = new System.Drawing.Point(562, 488);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(0)))));
+            this.btnCancel.Size = new System.Drawing.Size(115, 40);
+            this.btnCancel.TabIndex = 47;
+            this.btnCancel.Text = " Hủy";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 278);
+            this.label2.Location = new System.Drawing.Point(33, 281);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 24);
             this.label2.TabIndex = 50;
@@ -158,42 +139,48 @@
             this.label6.TabIndex = 54;
             this.label6.Text = "Size:";
             // 
-            // textBox1
+            // tbTenSP
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBox1.Location = new System.Drawing.Point(470, 54);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(204, 30);
-            this.textBox1.TabIndex = 55;
+            this.tbTenSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTenSP.Font = new System.Drawing.Font("Arial", 12F);
+            this.tbTenSP.Location = new System.Drawing.Point(470, 54);
+            this.tbTenSP.Multiline = true;
+            this.tbTenSP.Name = "tbTenSP";
+            this.tbTenSP.Size = new System.Drawing.Size(200, 25);
+            this.tbTenSP.TabIndex = 55;
             // 
-            // textBox2
+            // tbLoaiSP
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBox2.Location = new System.Drawing.Point(470, 132);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 30);
-            this.textBox2.TabIndex = 56;
+            this.tbLoaiSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbLoaiSP.Font = new System.Drawing.Font("Arial", 12F);
+            this.tbLoaiSP.Location = new System.Drawing.Point(470, 132);
+            this.tbLoaiSP.Multiline = true;
+            this.tbLoaiSP.Name = "tbLoaiSP";
+            this.tbLoaiSP.Size = new System.Drawing.Size(200, 25);
+            this.tbLoaiSP.TabIndex = 56;
             // 
-            // textBox3
+            // tbDonGia
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 12F);
-            this.textBox3.Location = new System.Drawing.Point(470, 204);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(204, 30);
-            this.textBox3.TabIndex = 57;
+            this.tbDonGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbDonGia.Font = new System.Drawing.Font("Arial", 12F);
+            this.tbDonGia.Location = new System.Drawing.Point(470, 204);
+            this.tbDonGia.Multiline = true;
+            this.tbDonGia.Name = "tbDonGia";
+            this.tbDonGia.Size = new System.Drawing.Size(200, 25);
+            this.tbDonGia.TabIndex = 57;
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.checkBox3);
-            this.guna2Panel1.Controls.Add(this.checkBox2);
-            this.guna2Panel1.Controls.Add(this.checkBox1);
-            this.guna2Panel1.Controls.Add(this.guna2ImageButton1);
+            this.guna2Panel1.Controls.Add(this.pictureBox1);
+            this.guna2Panel1.Controls.Add(this.cbS);
+            this.guna2Panel1.Controls.Add(this.cbL);
+            this.guna2Panel1.Controls.Add(this.cbM);
             this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.textBox3);
+            this.guna2Panel1.Controls.Add(this.tbDonGia);
             this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.textBox2);
+            this.guna2Panel1.Controls.Add(this.tbLoaiSP);
             this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.textBox1);
+            this.guna2Panel1.Controls.Add(this.tbTenSP);
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.label6);
             this.guna2Panel1.Location = new System.Drawing.Point(122, 80);
@@ -201,38 +188,63 @@
             this.guna2Panel1.Size = new System.Drawing.Size(691, 358);
             this.guna2Panel1.TabIndex = 59;
             // 
-            // checkBox1
+            // pictureBox1
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Arial", 12F);
-            this.checkBox1.Location = new System.Drawing.Point(550, 277);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(49, 27);
-            this.checkBox1.TabIndex = 59;
-            this.checkBox1.Text = "M";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.pictureBox1.Location = new System.Drawing.Point(52, 43);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(210, 210);
+            this.pictureBox1.TabIndex = 62;
+            this.pictureBox1.TabStop = false;
             // 
-            // checkBox2
+            // cbS
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Arial", 12F);
-            this.checkBox2.Location = new System.Drawing.Point(621, 277);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(43, 27);
-            this.checkBox2.TabIndex = 60;
-            this.checkBox2.Text = "L";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.cbS.AutoSize = true;
+            this.cbS.Font = new System.Drawing.Font("Arial", 12F);
+            this.cbS.Location = new System.Drawing.Point(480, 278);
+            this.cbS.Name = "cbS";
+            this.cbS.Size = new System.Drawing.Size(45, 27);
+            this.cbS.TabIndex = 61;
+            this.cbS.Text = "S";
+            this.cbS.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // cbL
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Arial", 12F);
-            this.checkBox3.Location = new System.Drawing.Point(480, 278);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(45, 27);
-            this.checkBox3.TabIndex = 61;
-            this.checkBox3.Text = "S";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.cbL.AutoSize = true;
+            this.cbL.Font = new System.Drawing.Font("Arial", 12F);
+            this.cbL.Location = new System.Drawing.Point(621, 277);
+            this.cbL.Name = "cbL";
+            this.cbL.Size = new System.Drawing.Size(43, 27);
+            this.cbL.TabIndex = 60;
+            this.cbL.Text = "L";
+            this.cbL.UseVisualStyleBackColor = true;
+            // 
+            // cbM
+            // 
+            this.cbM.AutoSize = true;
+            this.cbM.Font = new System.Drawing.Font("Arial", 12F);
+            this.cbM.Location = new System.Drawing.Point(550, 277);
+            this.cbM.Name = "cbM";
+            this.cbM.Size = new System.Drawing.Size(49, 27);
+            this.cbM.TabIndex = 59;
+            this.cbM.Text = "M";
+            this.cbM.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowDown;
+            this.btnBack.IconColor = System.Drawing.Color.Black;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.IconSize = 30;
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Rotation = 90D;
+            this.btnBack.Size = new System.Drawing.Size(61, 39);
+            this.btnBack.TabIndex = 62;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // fProduct_Add
             // 
@@ -240,37 +252,37 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.guna2Button2);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fProduct_Add";
             this.Text = "fProduct_Add";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
+        private Guna.UI2.WinForms.Guna2Button btnCancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbTenSP;
+        private System.Windows.Forms.TextBox tbLoaiSP;
+        private System.Windows.Forms.TextBox tbDonGia;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbS;
+        private System.Windows.Forms.CheckBox cbL;
+        private System.Windows.Forms.CheckBox cbM;
+        private FontAwesome.Sharp.IconButton btnBack;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

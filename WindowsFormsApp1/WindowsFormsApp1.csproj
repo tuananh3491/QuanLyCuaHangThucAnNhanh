@@ -177,12 +177,6 @@
     <Compile Include="View\fStaff.Designer.cs">
       <DependentUpon>fStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fPersonal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\fPersonal.Designer.cs">
-      <DependentUpon>fPersonal.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\fStaff_Salary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,18 +188,6 @@
     </Compile>
     <Compile Include="View\Product\fProduct_Add.Designer.cs">
       <DependentUpon>fProduct_Add.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Product\panelProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Product\panelProduct.Designer.cs">
-      <DependentUpon>panelProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Product\panelProduct_Update.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Product\panelProduct_Update.Designer.cs">
-      <DependentUpon>panelProduct_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Product\pnProduct.cs">
       <SubType>UserControl</SubType>
@@ -269,12 +251,6 @@
     <EmbeddedResource Include="View\Product\fProduct_Add.resx">
       <DependentUpon>fProduct_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Product\panelProduct.resx">
-      <DependentUpon>panelProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Product\panelProduct_Update.resx">
-      <DependentUpon>panelProduct_Update.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Product\pnProduct.resx">
       <DependentUpon>pnProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,9 +303,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fStaff.resx">
       <DependentUpon>fStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\fPersonal.resx">
-      <DependentUpon>fPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fStaff_Salary.resx">
       <DependentUpon>fStaff_Salary.cs</DependentUpon>
