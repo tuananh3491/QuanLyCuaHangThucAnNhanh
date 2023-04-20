@@ -82,6 +82,7 @@
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.TextColor = System.Drawing.Color.White;
             this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // panel1
             // 

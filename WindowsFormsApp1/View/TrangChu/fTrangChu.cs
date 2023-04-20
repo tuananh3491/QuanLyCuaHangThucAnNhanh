@@ -47,5 +47,14 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             flpnOrder.Controls.Clear();
         }
+
+        private void btnTaoDon_Click(object sender, EventArgs e)
+        {
+            Bill f = new Bill();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }

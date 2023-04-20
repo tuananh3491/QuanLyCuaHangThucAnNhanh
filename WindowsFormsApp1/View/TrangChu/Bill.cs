@@ -16,5 +16,19 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("In thành công");
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            fTrangChu f = new fTrangChu();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }
