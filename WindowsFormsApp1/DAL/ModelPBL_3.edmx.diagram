@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b1a60306707c454981eb71981b087505" Name="Diagram1">
+        <EntityTypeShape EntityType="PBL_3Model.Ca_lam_viec" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.Chi_tiet_hoa_don" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.Hoa_don" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.Khach_hang" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.Ma_loai" Width="1.5" PointX="3" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.Nhan_vien" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.San_pham" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PBL_3Model.Tai_khoan" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <AssociationConnector Association="PBL_3Model.FK_Chi_tiet_hoa_don_Hoa_don" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL_3Model.FK_Chi_tiet_hoa_don_San_pham" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL_3Model.FK_Hoa_don_Khach_hang" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL_3Model.FK_Hoa_don_Tai_khoan" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL_3Model.FK_San_pham_Ma_loai" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL_3Model.FK_Tai_khoan_Nhan_vien" ManuallyRouted="false" />
+        <AssociationConnector Association="PBL_3Model.Phan_cong" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

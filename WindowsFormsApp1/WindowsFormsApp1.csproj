@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
@@ -43,10 +49,12 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +69,14 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Ca_lam_viecBLL.cs" />
+    <Compile Include="BLL\Chi_tiet_hoa_donBLL.cs" />
+    <Compile Include="BLL\Hoa_donBLL.cs" />
+    <Compile Include="BLL\Khach_hangBLL.cs" />
+    <Compile Include="BLL\Ma_loaiBLL.cs" />
+    <Compile Include="BLL\Nhan_vienBLL.cs" />
+    <Compile Include="BLL\San_phamBLL.cs" />
+    <Compile Include="BLL\Tai_khoanBLL.cs" />
     <Compile Include="CustomControl\RJRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -72,6 +88,48 @@
     </Compile>
     <Compile Include="CustomControl\VBButton.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\Ca_lam_viec.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Chi_tiet_hoa_don.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Hoa_don.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Khach_hang.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Ma_loai.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ModelPBL_3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPBL_3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ModelPBL_3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ModelPBL_3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Nhan_vien.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\San_pham.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sysdiagrams.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Tai_khoan.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -225,9 +283,26 @@
     <Compile Include="View\TrangChu\panelOrder.Designer.cs">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </Compile>
+    <Content Include="DAL\ModelPBL_3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+      <LastGenOutput>ModelPBL_3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\ModelPBL_3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+      <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
     <Content Include="Resources\hotdog.jpg" />
+    <EntityDeploy Include="DAL\ModelPBL_3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\ModelPBL_3.edmx.diagram">
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+    </None>
     <None Include="Resources\iconGlass1.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
@@ -355,6 +430,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
