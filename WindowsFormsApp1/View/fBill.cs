@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1.View
@@ -17,7 +18,7 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
         }
-        fMainform tc = new fMainform();
+
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
@@ -26,7 +27,15 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
-            
+        }
+
+        private void fBill_Load(object sender, EventArgs e)
+        {
+            Hoa_donBLL bll = new Hoa_donBLL();
+            dataGridView1.DataSource = bll.GetAllHD();
+            dataGridView1.Columns["Chi_tiet_hoa_don"].Visible = false;
+            dataGridView1.Columns["Khach_hang"].Visible = false;
+            dataGridView1.Columns["Tai_khoan"].Visible = false;
         }
     }
 }

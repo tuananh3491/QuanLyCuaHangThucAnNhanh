@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
 
 namespace WindowsFormsApp1.View
 {
@@ -38,6 +39,13 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
 
+        }
+
+        private void fCustomer_Load(object sender, EventArgs e)
+        {
+            Khach_hangBLL bll = new Khach_hangBLL();
+            dataGridView.DataSource = bll.GetAllKH();
+            dataGridView.Columns["Hoa_don"].Visible = false;
         }
     }
  }

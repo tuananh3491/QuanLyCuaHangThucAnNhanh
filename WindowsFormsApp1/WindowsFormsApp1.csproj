@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,20 +36,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -61,6 +71,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Ca_lam_viecBLL.cs" />
+    <Compile Include="BLL\Chi_tiet_hoa_donBLL.cs" />
+    <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\Hoa_donBLL.cs" />
+    <Compile Include="BLL\Khach_hangBLL.cs" />
+    <Compile Include="BLL\Ma_loaiBLL.cs" />
+    <Compile Include="BLL\Nhan_vienBLL.cs" />
+    <Compile Include="BLL\San_phamBLL.cs" />
+    <Compile Include="BLL\Tai_khoanBLL.cs" />
     <Compile Include="CustomControl\RJRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -72,6 +91,49 @@
     </Compile>
     <Compile Include="CustomControl\VBButton.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\Ca_lam_viec.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Chi_tiet_hoa_don.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DangNhapDAL.cs" />
+    <Compile Include="DAL\Hoa_don.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Khach_hang.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Ma_loai.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ModelPBL_3.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPBL_3.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ModelPBL_3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\ModelPBL_3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Nhan_vien.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\San_pham.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\sysdiagrams.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Tai_khoan.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
@@ -177,12 +239,6 @@
     <Compile Include="View\fStaff.Designer.cs">
       <DependentUpon>fStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fPersonal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\fPersonal.Designer.cs">
-      <DependentUpon>fPersonal.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\fStaff_Salary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,18 +251,6 @@
     <Compile Include="View\Product\fProduct_Add.Designer.cs">
       <DependentUpon>fProduct_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Product\panelProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Product\panelProduct.Designer.cs">
-      <DependentUpon>panelProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Product\panelProduct_Update.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Product\panelProduct_Update.Designer.cs">
-      <DependentUpon>panelProduct_Update.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Product\pnProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -218,6 +262,12 @@
     </Compile>
     <Compile Include="View\Product\pnProduct_Update.Designer.cs">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\TrangChu\Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\Bill.Designer.cs">
+      <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
     <Compile Include="View\TrangChu\fTrangChu.cs">
       <SubType>Form</SubType>
@@ -237,12 +287,32 @@
     <Compile Include="View\TrangChu\panelOrder.Designer.cs">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </Compile>
+    <Content Include="DAL\ModelPBL_3.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+      <LastGenOutput>ModelPBL_3.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DAL\ModelPBL_3.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+      <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\anhCaNhan.png" />
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
     <Content Include="Resources\hotdog.jpg" />
+    <EntityDeploy Include="DAL\ModelPBL_3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\ModelPBL_3.edmx.diagram">
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+    </None>
     <None Include="Resources\iconGlass1.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
+    <None Include="Resources\mo-cua-hang-thuc-an-nhanh.jpg" />
+    <None Include="Resources\mo-cua-hang-thuc-an-nhanh1.jpg" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
     <EmbeddedResource Include="View\fReport_Customer.resx">
@@ -263,17 +333,14 @@
     <EmbeddedResource Include="View\Product\fProduct_Add.resx">
       <DependentUpon>fProduct_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Product\panelProduct.resx">
-      <DependentUpon>panelProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Product\panelProduct_Update.resx">
-      <DependentUpon>panelProduct_Update.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Product\pnProduct.resx">
       <DependentUpon>pnProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\pnProduct_Update.resx">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChu\Bill.resx">
+      <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\panelMonAn.resx">
       <DependentUpon>panelMonAn.cs</DependentUpon>
@@ -318,9 +385,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fStaff.resx">
       <DependentUpon>fStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\fPersonal.resx">
-      <DependentUpon>fPersonal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fStaff_Salary.resx">
       <DependentUpon>fStaff_Salary.cs</DependentUpon>
@@ -374,5 +438,16 @@
   <ItemGroup>
     <Folder Include="images\" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

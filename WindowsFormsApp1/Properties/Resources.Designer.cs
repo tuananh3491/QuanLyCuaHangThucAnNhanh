@@ -103,6 +103,16 @@ namespace WindowsFormsApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anhCaNhan {
+            get {
+                object obj = ResourceManager.GetObject("anhCaNhan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap iconGlass1 {
             get {
                 object obj = ResourceManager.GetObject("iconGlass1", resourceCulture);
@@ -146,6 +156,26 @@ namespace WindowsFormsApp1.Properties {
         internal static System.Drawing.Bitmap Logo {
             get {
                 object obj = ResourceManager.GetObject("Logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mo_cua_hang_thuc_an_nhanh {
+            get {
+                object obj = ResourceManager.GetObject("mo-cua-hang-thuc-an-nhanh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mo_cua_hang_thuc_an_nhanh1 {
+            get {
+                object obj = ResourceManager.GetObject("mo-cua-hang-thuc-an-nhanh1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

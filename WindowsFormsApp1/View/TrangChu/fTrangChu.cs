@@ -42,5 +42,19 @@ namespace WindowsFormsApp1.View.TrangChu
             flpnThucDon.Controls.Clear();
             flpnThucDon.Controls.Add(new panelMonAn("Hamburger"));
         }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            flpnOrder.Controls.Clear();
+        }
+
+        private void btnTaoDon_Click(object sender, EventArgs e)
+        {
+            Bill f = new Bill();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }

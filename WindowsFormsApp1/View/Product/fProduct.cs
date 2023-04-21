@@ -24,5 +24,14 @@ namespace WindowsFormsApp1.View
             pnProduct p=new pnProduct();
             flpnMonAn.Controls.Add(p);
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            fProduct_Add f = new fProduct_Add();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }

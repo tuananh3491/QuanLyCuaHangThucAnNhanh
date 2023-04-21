@@ -17,9 +17,30 @@ namespace WindowsFormsApp1.View.TrangChu
             InitializeComponent();
         }
 
-        private void panel1_MouseClick(object sender, MouseEventArgs e)
-        {
 
+
+
+
+        private void btnSub_Click(object sender, EventArgs e)
+        {
+            int count;
+            count = Convert.ToInt32(tbSoLuong.Text);
+            if (count == 0) return;
+            else count--;
+            tbSoLuong.Text = count.ToString();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            int count;
+            count = Convert.ToInt32(tbSoLuong.Text);
+            count++;
+            tbSoLuong.Text = count.ToString();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

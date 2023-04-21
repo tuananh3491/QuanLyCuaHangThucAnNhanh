@@ -63,6 +63,7 @@
             this.vbButton1.Text = "In hóa đơn";
             this.vbButton1.TextColor = System.Drawing.Color.White;
             this.vbButton1.UseVisualStyleBackColor = false;
+            this.vbButton1.Click += new System.EventHandler(this.vbButton1_Click);
             // 
             // panel1
             // 

@@ -37,9 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.flpnThucDon = new System.Windows.Forms.FlowLayoutPanel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
             this.btnCombo = new Guna.UI2.WinForms.Guna2Button();
             this.btnKem = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +44,9 @@
             this.btnBurger = new Guna.UI2.WinForms.Guna2Button();
             this.btnGa = new Guna.UI2.WinForms.Guna2Button();
             this.btnPizza = new Guna.UI2.WinForms.Guna2Button();
+            this.flpnThucDon = new System.Windows.Forms.FlowLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnChonMon.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -62,18 +62,19 @@
             this.pnChonMon.Controls.Add(this.label2);
             this.pnChonMon.Controls.Add(this.label1);
             this.pnChonMon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnChonMon.Location = new System.Drawing.Point(584, 0);
+            this.pnChonMon.Location = new System.Drawing.Point(583, 0);
             this.pnChonMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnChonMon.Name = "pnChonMon";
-            this.pnChonMon.Size = new System.Drawing.Size(363, 572);
+            this.pnChonMon.Size = new System.Drawing.Size(364, 572);
             this.pnChonMon.TabIndex = 1;
             // 
             // flpnOrder
             // 
-            this.flpnOrder.Location = new System.Drawing.Point(7, 86);
+            this.flpnOrder.AutoScroll = true;
+            this.flpnOrder.Location = new System.Drawing.Point(-1, 82);
             this.flpnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpnOrder.Name = "flpnOrder";
-            this.flpnOrder.Size = new System.Drawing.Size(345, 367);
+            this.flpnOrder.Size = new System.Drawing.Size(361, 367);
             this.flpnOrder.TabIndex = 5;
             // 
             // btnTaoDon
@@ -95,6 +96,7 @@
             this.btnTaoDon.Text = "Tạo đơn";
             this.btnTaoDon.TextColor = System.Drawing.Color.White;
             this.btnTaoDon.UseVisualStyleBackColor = false;
+            this.btnTaoDon.Click += new System.EventHandler(this.btnTaoDon_Click);
             // 
             // btnHuy
             // 
@@ -115,6 +117,7 @@
             this.btnHuy.Text = "Hủy";
             this.btnHuy.TextColor = System.Drawing.Color.White;
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // tbTongTien
             // 
@@ -173,35 +176,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(565, 572);
             this.panel2.TabIndex = 6;
-            // 
-            // flpnThucDon
-            // 
-            this.flpnThucDon.Location = new System.Drawing.Point(3, 154);
-            this.flpnThucDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.flpnThucDon.Name = "flpnThucDon";
-            this.flpnThucDon.Size = new System.Drawing.Size(559, 391);
-            this.flpnThucDon.TabIndex = 16;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(13, 124);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 24);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Thực đơn";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.imageThucDon1;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(131, 121);
-            this.pictureBox3.TabIndex = 4;
-            this.pictureBox3.TabStop = false;
             // 
             // btnKhac
             // 
@@ -339,6 +313,36 @@
             this.btnPizza.TabIndex = 32;
             this.btnPizza.Text = "Pizza";
             this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click_1);
+            // 
+            // flpnThucDon
+            // 
+            this.flpnThucDon.AutoScroll = true;
+            this.flpnThucDon.Location = new System.Drawing.Point(3, 154);
+            this.flpnThucDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.flpnThucDon.Name = "flpnThucDon";
+            this.flpnThucDon.Size = new System.Drawing.Size(559, 391);
+            this.flpnThucDon.TabIndex = 16;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label4.Location = new System.Drawing.Point(13, 124);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 24);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Thực đơn";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.imageThucDon1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(131, 121);
+            this.pictureBox3.TabIndex = 4;
+            this.pictureBox3.TabStop = false;
             // 
             // fTrangChu
             // 
