@@ -28,16 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
             this.btnTaoCa = new WindowsFormsApp1.CustomControl.VBButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(24, 23);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 466);
-            this.panel1.TabIndex = 0;
             // 
             // btnTaoCa
             // 
@@ -50,34 +44,46 @@
             this.btnTaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoCa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoCa.ForeColor = System.Drawing.Color.White;
-            this.btnTaoCa.Location = new System.Drawing.Point(698, 506);
-            this.btnTaoCa.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTaoCa.Location = new System.Drawing.Point(524, 411);
+            this.btnTaoCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTaoCa.Name = "btnTaoCa";
-            this.btnTaoCa.Size = new System.Drawing.Size(160, 40);
+            this.btnTaoCa.Size = new System.Drawing.Size(120, 32);
             this.btnTaoCa.TabIndex = 7;
             this.btnTaoCa.Text = "Tạo ca mới";
             this.btnTaoCa.TextColor = System.Drawing.Color.White;
             this.btnTaoCa.UseVisualStyleBackColor = false;
             this.btnTaoCa.Click += new System.EventHandler(this.btnTaoCa_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(35, 41);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(618, 341);
+            this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            // 
             // fShift
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(930, 560);
+            this.ClientSize = new System.Drawing.Size(698, 455);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnTaoCa);
-            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fShift";
             this.Text = "fShift";
+            this.Load += new System.EventHandler(this.fShift_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel1;
         private CustomControl.VBButton btnTaoCa;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
