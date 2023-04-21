@@ -297,6 +297,7 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
       <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\anhCaNhan.png" />
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
     <Content Include="Resources\hotdog.jpg" />
@@ -310,6 +311,8 @@
     <None Include="Resources\iconGlass1.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
+    <None Include="Resources\mo-cua-hang-thuc-an-nhanh.jpg" />
+    <None Include="Resources\mo-cua-hang-thuc-an-nhanh1.jpg" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
     <EmbeddedResource Include="View\fReport_Customer.resx">
