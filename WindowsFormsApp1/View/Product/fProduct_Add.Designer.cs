@@ -41,11 +41,11 @@
             this.cbL = new System.Windows.Forms.CheckBox();
             this.cbM = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -183,6 +183,25 @@
             this.panel1.Size = new System.Drawing.Size(764, 391);
             this.panel1.TabIndex = 63;
             // 
+            // btnHuy
+            // 
+            this.btnHuy.BorderRadius = 10;
+            this.btnHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Image = global::WindowsFormsApp1.Properties.Resources.iconCancel;
+            this.btnHuy.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnHuy.Location = new System.Drawing.Point(548, 491);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(135, 45);
+            this.btnHuy.TabIndex = 65;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // btnLuu
             // 
             this.btnLuu.BorderRadius = 10;
@@ -239,25 +258,6 @@
             this.btnBack.TabIndex = 62;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BorderRadius = 10;
-            this.btnHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Image = global::WindowsFormsApp1.Properties.Resources.iconSave;
-            this.btnHuy.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHuy.Location = new System.Drawing.Point(548, 491);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(135, 45);
-            this.btnHuy.TabIndex = 65;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // fProduct_Add
             // 

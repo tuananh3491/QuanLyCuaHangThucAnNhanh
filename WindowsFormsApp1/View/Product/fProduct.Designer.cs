@@ -30,6 +30,7 @@
         {
             this.pnChinhSua = new System.Windows.Forms.Panel();
             this.flpnMonAn = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnThem = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.btnPizza = new Guna.UI2.WinForms.Guna2Button();
@@ -38,12 +39,11 @@
             this.btnNuoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnKem = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // pnChinhSua
             // 
-            this.pnChinhSua.Location = new System.Drawing.Point(596, 85);
+            this.pnChinhSua.Location = new System.Drawing.Point(595, 74);
             this.pnChinhSua.Name = "pnChinhSua";
             this.pnChinhSua.Size = new System.Drawing.Size(312, 452);
             this.pnChinhSua.TabIndex = 24;
@@ -54,6 +54,13 @@
             this.flpnMonAn.Name = "flpnMonAn";
             this.flpnMonAn.Size = new System.Drawing.Size(513, 452);
             this.flpnMonAn.TabIndex = 33;
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(585, 73);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(328, 452);
+            this.panel1.TabIndex = 42;
             // 
             // btnThem
             // 
@@ -197,20 +204,13 @@
             this.btnKhac.TabIndex = 34;
             this.btnKhac.Text = "Khác";
             // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(585, 73);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 452);
-            this.panel1.TabIndex = 42;
-            // 
             // fProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnChinhSua);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.btnPizza);

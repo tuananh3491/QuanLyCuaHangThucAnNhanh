@@ -26,6 +26,16 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
+
+        private void btnInHoaDon_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("In thành công");
+            fBill_Detail f = new fBill_Detail();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
     
 }

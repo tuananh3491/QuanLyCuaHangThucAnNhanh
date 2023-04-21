@@ -264,6 +264,12 @@
     <Compile Include="View\Product\pnProduct_Update.Designer.cs">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChu\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\AddCustomer.Designer.cs">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TrangChu\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -320,6 +326,7 @@
     <None Include="Resources\iconCong.png" />
     <None Include="Resources\iconSave1.png" />
     <None Include="Resources\iconSave.png" />
+    <None Include="Resources\iconCancel.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
     <None Include="Resources\mo-cua-hang-thuc-an-nhanh.jpg" />
@@ -350,6 +357,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\pnProduct_Update.resx">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChu\AddCustomer.resx">
+      <DependentUpon>AddCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
