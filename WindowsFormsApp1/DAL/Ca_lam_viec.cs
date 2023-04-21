@@ -17,15 +17,15 @@ namespace WindowsFormsApp1.DAL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Ca_lam_viec()
         {
-            this.Tai_khoan = new HashSet<Tai_khoan>();
+            this.Phan_cong = new HashSet<Phan_cong>();
         }
     
         public int Ma_ca { get; set; }
-        public System.DateTime Ngay { get; set; }
-        public System.TimeSpan Thoigianbatdau { get; set; }
-        public System.TimeSpan Thoigianketthuc { get; set; }
+        public string Ten_ca { get; set; }
+        public Nullable<System.TimeSpan> Thoigianbatdau { get; set; }
+        public Nullable<System.TimeSpan> Thoigianketthuc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Tai_khoan> Tai_khoan { get; set; }
+        public virtual ICollection<Phan_cong> Phan_cong { get; set; }
     }
 }
