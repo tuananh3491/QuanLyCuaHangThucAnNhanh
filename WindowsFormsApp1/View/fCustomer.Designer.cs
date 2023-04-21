@@ -45,6 +45,7 @@
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.Size = new System.Drawing.Size(663, 348);
             this.dataGridView.TabIndex = 2;
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             // 
             // btnViewHtr
             // 
