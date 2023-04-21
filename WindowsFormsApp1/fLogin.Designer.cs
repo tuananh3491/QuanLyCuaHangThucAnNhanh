@@ -241,6 +241,7 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(266, 48);
             this.txtUsername.TabIndex = 1;
+
             // 
             // txtPassWord
             // 
