@@ -73,11 +73,11 @@
   <ItemGroup>
     <Compile Include="BLL\Ca_lam_viecBLL.cs" />
     <Compile Include="BLL\Chi_tiet_hoa_donBLL.cs" />
-    <Compile Include="BLL\DangNhapBLL.cs" />
     <Compile Include="BLL\Hoa_donBLL.cs" />
     <Compile Include="BLL\Khach_hangBLL.cs" />
     <Compile Include="BLL\Ma_loaiBLL.cs" />
     <Compile Include="BLL\Nhan_vienBLL.cs" />
+    <Compile Include="BLL\Phan_congBLL.cs" />
     <Compile Include="BLL\San_phamBLL.cs" />
     <Compile Include="BLL\Tai_khoanBLL.cs" />
     <Compile Include="CustomControl\RJRadioButton.cs">
@@ -98,7 +98,6 @@
     <Compile Include="DAL\Chi_tiet_hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\DangNhapDAL.cs" />
     <Compile Include="DAL\Hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
@@ -124,6 +123,9 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
     </Compile>
     <Compile Include="DAL\Nhan_vien.cs">
+      <DependentUpon>ModelPBL_3.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\Phan_cong.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\San_pham.cs">
@@ -287,6 +289,14 @@
     <Compile Include="View\TrangChu\panelOrder.Designer.cs">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </Compile>
+    <EntityDeploy Include="DAL\ModelPBL_3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\ModelPBL_3.edmx.diagram">
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+    </None>
+    <None Include="Resources\anhCaNhan.png" />
     <Content Include="DAL\ModelPBL_3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
@@ -297,17 +307,9 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
       <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\anhCaNhan.png" />
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
     <Content Include="Resources\hotdog.jpg" />
-    <EntityDeploy Include="DAL\ModelPBL_3.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DAL\ModelPBL_3.edmx.diagram">
-      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
-    </None>
     <None Include="Resources\iconGlass1.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
