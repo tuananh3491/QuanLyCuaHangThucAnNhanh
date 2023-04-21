@@ -31,6 +31,7 @@ namespace WindowsFormsApp1.View
         {
             Nhan_vienBLL bll = new Nhan_vienBLL();
             dataGridView1.DataSource = bll.GetAllNV();
+            
             dataGridView1.Columns["Tai_khoan"].Visible = false;
         }
     }
