@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.View;
 using WindowsFormsApp1.View.TrangChu;
 
@@ -45,10 +46,22 @@ namespace WindowsFormsApp1
 
         private void btLogIn_Click(object sender, EventArgs e)
         {
-            fMainform fMainform = new fMainform();  
-            this.Hide();
-            fMainform.ShowDialog(); 
-            //this.Show();
+            if(txtUsername.Text != "" && txtPassWord.Text != "")
+            {
+                DangNhapBLL dn = new DangNhapBLL();
+                if (dn.checkLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
+                {
+                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    fMainform fMainform = new fMainform();
+                    this.Hide();
+                    fMainform.ShowDialog();
+                    //this.Show();
+                }
+                else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
         }
+
+  
     }
 }
