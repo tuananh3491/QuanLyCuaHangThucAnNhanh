@@ -46,7 +46,8 @@
       <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net48\FontAwesome.Sharp.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
-      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net48\Guna.UI2.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -297,6 +298,12 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
       <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\SP_Combo.png" />
+    <None Include="Resources\SP_Icream.png" />
+    <None Include="Resources\SP_drink.png" />
+    <None Include="Resources\SP_burger.png" />
+    <None Include="Resources\SP_chicken.png" />
+    <None Include="Resources\SP_Pizza.png" />
     <None Include="Resources\anhCaNhan.png" />
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
@@ -309,10 +316,15 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
     </None>
     <None Include="Resources\iconGlass1.png" />
+    <None Include="Resources\iconDots.png" />
+    <None Include="Resources\iconCong.png" />
+    <None Include="Resources\iconSave1.png" />
+    <None Include="Resources\iconSave.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
     <None Include="Resources\mo-cua-hang-thuc-an-nhanh.jpg" />
     <None Include="Resources\mo-cua-hang-thuc-an-nhanh1.jpg" />
+    <None Include="Resources\nước.png" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
     <EmbeddedResource Include="View\fReport_Customer.resx">
