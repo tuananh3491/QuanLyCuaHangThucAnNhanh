@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fTrangChu));
             this.pnChonMon = new System.Windows.Forms.Panel();
             this.flpnOrder = new System.Windows.Forms.FlowLayoutPanel();
             this.btnTaoDon = new WindowsFormsApp1.CustomControl.VBButton();
@@ -37,15 +36,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCombo = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKem = new Guna.UI2.WinForms.Guna2Button();
-            this.btnNuoc = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBurger = new Guna.UI2.WinForms.Guna2Button();
-            this.btnGa = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPizza = new Guna.UI2.WinForms.Guna2Button();
             this.flpnThucDon = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPizza = new Guna.UI2.WinForms.Guna2Button();
+            this.btnGa = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNuoc = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKem = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnChonMon.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -160,13 +159,13 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.panel2.Controls.Add(this.btnKhac);
-            this.panel2.Controls.Add(this.btnCombo);
-            this.panel2.Controls.Add(this.btnKem);
-            this.panel2.Controls.Add(this.btnNuoc);
-            this.panel2.Controls.Add(this.btnBurger);
-            this.panel2.Controls.Add(this.btnGa);
+            this.panel2.Controls.Add(this.guna2Button7);
             this.panel2.Controls.Add(this.btnPizza);
+            this.panel2.Controls.Add(this.btnGa);
+            this.panel2.Controls.Add(this.guna2Button4);
+            this.panel2.Controls.Add(this.btnNuoc);
+            this.panel2.Controls.Add(this.btnKem);
+            this.panel2.Controls.Add(this.btnKhac);
             this.panel2.Controls.Add(this.flpnThucDon);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox3);
@@ -176,143 +175,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(565, 572);
             this.panel2.TabIndex = 6;
-            // 
-            // btnKhac
-            // 
-            this.btnKhac.BorderRadius = 15;
-            this.btnKhac.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhac.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKhac.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKhac.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKhac.FillColor = System.Drawing.Color.White;
-            this.btnKhac.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKhac.ForeColor = System.Drawing.Color.Black;
-            this.btnKhac.Image = ((System.Drawing.Image)(resources.GetObject("btnKhac.Image")));
-            this.btnKhac.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnKhac.Location = new System.Drawing.Point(365, 86);
-            this.btnKhac.Name = "btnKhac";
-            this.btnKhac.PressedColor = System.Drawing.Color.Silver;
-            this.btnKhac.Size = new System.Drawing.Size(99, 36);
-            this.btnKhac.TabIndex = 38;
-            this.btnKhac.Text = "Khác";
-            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click);
-            // 
-            // btnCombo
-            // 
-            this.btnCombo.BorderRadius = 15;
-            this.btnCombo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCombo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCombo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCombo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCombo.FillColor = System.Drawing.Color.White;
-            this.btnCombo.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCombo.ForeColor = System.Drawing.Color.Black;
-            this.btnCombo.Image = ((System.Drawing.Image)(resources.GetObject("btnCombo.Image")));
-            this.btnCombo.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCombo.Location = new System.Drawing.Point(463, 44);
-            this.btnCombo.Name = "btnCombo";
-            this.btnCombo.PressedColor = System.Drawing.Color.Silver;
-            this.btnCombo.Size = new System.Drawing.Size(99, 36);
-            this.btnCombo.TabIndex = 37;
-            this.btnCombo.Text = "Combo";
-            // 
-            // btnKem
-            // 
-            this.btnKem.BorderRadius = 15;
-            this.btnKem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKem.FillColor = System.Drawing.Color.White;
-            this.btnKem.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKem.ForeColor = System.Drawing.Color.Black;
-            this.btnKem.Image = ((System.Drawing.Image)(resources.GetObject("btnKem.Image")));
-            this.btnKem.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnKem.Location = new System.Drawing.Point(243, 86);
-            this.btnKem.Name = "btnKem";
-            this.btnKem.PressedColor = System.Drawing.Color.Silver;
-            this.btnKem.Size = new System.Drawing.Size(99, 36);
-            this.btnKem.TabIndex = 36;
-            this.btnKem.Text = "Kem";
-            // 
-            // btnNuoc
-            // 
-            this.btnNuoc.BorderRadius = 15;
-            this.btnNuoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnNuoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnNuoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnNuoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnNuoc.FillColor = System.Drawing.Color.White;
-            this.btnNuoc.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuoc.ForeColor = System.Drawing.Color.Black;
-            this.btnNuoc.Image = ((System.Drawing.Image)(resources.GetObject("btnNuoc.Image")));
-            this.btnNuoc.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnNuoc.Location = new System.Drawing.Point(130, 85);
-            this.btnNuoc.Name = "btnNuoc";
-            this.btnNuoc.PressedColor = System.Drawing.Color.Silver;
-            this.btnNuoc.Size = new System.Drawing.Size(99, 36);
-            this.btnNuoc.TabIndex = 34;
-            this.btnNuoc.Text = "Nước";
-            // 
-            // btnBurger
-            // 
-            this.btnBurger.BorderRadius = 15;
-            this.btnBurger.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnBurger.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnBurger.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnBurger.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnBurger.FillColor = System.Drawing.Color.White;
-            this.btnBurger.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBurger.ForeColor = System.Drawing.Color.Black;
-            this.btnBurger.Image = ((System.Drawing.Image)(resources.GetObject("btnBurger.Image")));
-            this.btnBurger.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBurger.Location = new System.Drawing.Point(356, 44);
-            this.btnBurger.Name = "btnBurger";
-            this.btnBurger.PressedColor = System.Drawing.Color.Silver;
-            this.btnBurger.Size = new System.Drawing.Size(99, 36);
-            this.btnBurger.TabIndex = 35;
-            this.btnBurger.Text = "Burger";
-            this.btnBurger.Click += new System.EventHandler(this.btnBurger_Click);
-            // 
-            // btnGa
-            // 
-            this.btnGa.BorderRadius = 15;
-            this.btnGa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGa.FillColor = System.Drawing.Color.White;
-            this.btnGa.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGa.ForeColor = System.Drawing.Color.Black;
-            this.btnGa.Image = ((System.Drawing.Image)(resources.GetObject("btnGa.Image")));
-            this.btnGa.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnGa.Location = new System.Drawing.Point(251, 43);
-            this.btnGa.Name = "btnGa";
-            this.btnGa.PressedColor = System.Drawing.Color.Silver;
-            this.btnGa.Size = new System.Drawing.Size(99, 36);
-            this.btnGa.TabIndex = 33;
-            this.btnGa.Text = "Gà";
-            this.btnGa.Click += new System.EventHandler(this.btnGa_Click);
-            // 
-            // btnPizza
-            // 
-            this.btnPizza.BorderRadius = 15;
-            this.btnPizza.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPizza.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPizza.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPizza.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPizza.FillColor = System.Drawing.Color.White;
-            this.btnPizza.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPizza.ForeColor = System.Drawing.Color.Black;
-            this.btnPizza.Image = ((System.Drawing.Image)(resources.GetObject("btnPizza.Image")));
-            this.btnPizza.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPizza.Location = new System.Drawing.Point(135, 43);
-            this.btnPizza.Name = "btnPizza";
-            this.btnPizza.PressedColor = System.Drawing.Color.Silver;
-            this.btnPizza.Size = new System.Drawing.Size(99, 36);
-            this.btnPizza.TabIndex = 32;
-            this.btnPizza.Text = "Pizza";
-            this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click_1);
             // 
             // flpnThucDon
             // 
@@ -332,6 +194,136 @@
             this.label4.Size = new System.Drawing.Size(104, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "Thực đơn";
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.BorderRadius = 10;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.White;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button7.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button7.Image = global::WindowsFormsApp1.Properties.Resources.SP_Combo;
+            this.guna2Button7.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button7.Location = new System.Drawing.Point(341, 81);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(107, 35);
+            this.guna2Button7.TabIndex = 23;
+            this.guna2Button7.Text = "Combo";
+            // 
+            // btnPizza
+            // 
+            this.btnPizza.BorderRadius = 10;
+            this.btnPizza.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPizza.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPizza.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPizza.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPizza.FillColor = System.Drawing.Color.White;
+            this.btnPizza.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPizza.ForeColor = System.Drawing.Color.Black;
+            this.btnPizza.Image = global::WindowsFormsApp1.Properties.Resources.SP_Pizza;
+            this.btnPizza.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnPizza.Location = new System.Drawing.Point(142, 28);
+            this.btnPizza.Name = "btnPizza";
+            this.btnPizza.Size = new System.Drawing.Size(87, 35);
+            this.btnPizza.TabIndex = 22;
+            this.btnPizza.Text = "Pizza";
+            this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click_1);
+            // 
+            // btnGa
+            // 
+            this.btnGa.BorderRadius = 10;
+            this.btnGa.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGa.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGa.FillColor = System.Drawing.Color.White;
+            this.btnGa.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGa.ForeColor = System.Drawing.Color.Black;
+            this.btnGa.Image = global::WindowsFormsApp1.Properties.Resources.SP_chicken;
+            this.btnGa.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnGa.Location = new System.Drawing.Point(235, 28);
+            this.btnGa.Name = "btnGa";
+            this.btnGa.Size = new System.Drawing.Size(87, 35);
+            this.btnGa.TabIndex = 21;
+            this.btnGa.Text = "Gà";
+            this.btnGa.Click += new System.EventHandler(this.btnGa_Click);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BorderRadius = 10;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.White;
+            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button4.Image = global::WindowsFormsApp1.Properties.Resources.SP_burger;
+            this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
+            this.guna2Button4.Location = new System.Drawing.Point(341, 28);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(87, 35);
+            this.guna2Button4.TabIndex = 20;
+            this.guna2Button4.Text = "Burger";
+            this.guna2Button4.Click += new System.EventHandler(this.btnBurger_Click);
+            // 
+            // btnNuoc
+            // 
+            this.btnNuoc.BorderRadius = 10;
+            this.btnNuoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNuoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNuoc.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNuoc.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNuoc.FillColor = System.Drawing.Color.White;
+            this.btnNuoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuoc.ForeColor = System.Drawing.Color.Black;
+            this.btnNuoc.Image = global::WindowsFormsApp1.Properties.Resources.SP_drink;
+            this.btnNuoc.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnNuoc.Location = new System.Drawing.Point(142, 81);
+            this.btnNuoc.Name = "btnNuoc";
+            this.btnNuoc.Size = new System.Drawing.Size(87, 35);
+            this.btnNuoc.TabIndex = 19;
+            this.btnNuoc.Text = "Nước";
+            // 
+            // btnKem
+            // 
+            this.btnKem.BorderRadius = 10;
+            this.btnKem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKem.FillColor = System.Drawing.Color.White;
+            this.btnKem.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKem.ForeColor = System.Drawing.Color.Black;
+            this.btnKem.Image = global::WindowsFormsApp1.Properties.Resources.SP_Icream;
+            this.btnKem.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnKem.Location = new System.Drawing.Point(235, 81);
+            this.btnKem.Name = "btnKem";
+            this.btnKem.Size = new System.Drawing.Size(87, 35);
+            this.btnKem.TabIndex = 18;
+            this.btnKem.Text = "Kem";
+            // 
+            // btnKhac
+            // 
+            this.btnKhac.BorderRadius = 10;
+            this.btnKhac.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhac.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKhac.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKhac.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKhac.FillColor = System.Drawing.Color.White;
+            this.btnKhac.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhac.ForeColor = System.Drawing.Color.Black;
+            this.btnKhac.Image = global::WindowsFormsApp1.Properties.Resources.iconDots;
+            this.btnKhac.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnKhac.Location = new System.Drawing.Point(439, 28);
+            this.btnKhac.Name = "btnKhac";
+            this.btnKhac.Size = new System.Drawing.Size(87, 35);
+            this.btnKhac.TabIndex = 17;
+            this.btnKhac.Text = "Khác";
+            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click);
             // 
             // pictureBox3
             // 
@@ -378,11 +370,11 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.FlowLayoutPanel flpnOrder;
         private Guna.UI2.WinForms.Guna2Button btnKhac;
-        private Guna.UI2.WinForms.Guna2Button btnCombo;
-        private Guna.UI2.WinForms.Guna2Button btnKem;
-        private Guna.UI2.WinForms.Guna2Button btnNuoc;
-        private Guna.UI2.WinForms.Guna2Button btnBurger;
-        private Guna.UI2.WinForms.Guna2Button btnGa;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button btnPizza;
+        private Guna.UI2.WinForms.Guna2Button btnGa;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnNuoc;
+        private Guna.UI2.WinForms.Guna2Button btnKem;
     }
 }

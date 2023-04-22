@@ -25,7 +25,7 @@ namespace WindowsFormsApp1.View
             flpnMonAn.Controls.Add(p);
         }
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             fProduct_Add f = new fProduct_Add();
             f.TopLevel = false;
