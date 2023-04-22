@@ -18,12 +18,12 @@ namespace WindowsFormsApp1.View.Product
         }
 
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnLuu_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Thêm thành công");
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
             tbDonGia.Text = null;
             tbLoaiSP.Text = null;
@@ -41,6 +41,8 @@ namespace WindowsFormsApp1.View.Product
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
+
+
     }
 }
 

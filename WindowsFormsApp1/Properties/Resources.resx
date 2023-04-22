@@ -118,40 +118,76 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="imageThucDon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imageThucDon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nước" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nước.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="3671803_closed_lock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\3671803_closed_lock_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="32b417e287516369937846dc960cca86" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\32b417e287516369937846dc960cca86.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="imageThucDon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imageThucDon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mo-cua-hang-thuc-an-nhanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mo-cua-hang-thuc-an-nhanh1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="185102_receipt_shopping_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\185102_receipt_shopping_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="iconGlass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconGlass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="185102_receipt_shopping_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\185102_receipt_shopping_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="iconSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconSave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="mo-cua-hang-thuc-an-nhanh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mo-cua-hang-thuc-an-nhanh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="iconPizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\iconPizza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SP_chicken" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SP_chicken.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconGlass1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconGlass1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anhCaNhan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anhCaNhan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SP_drink" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SP_drink.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="185102_receipt_shopping_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\185102_receipt_shopping_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="anhCaNhan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anhCaNhan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="185102_receipt_shopping_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\185102_receipt_shopping_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SP_Icream" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SP_Icream.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mo-cua-hang-thuc-an-nhanh1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mo-cua-hang-thuc-an-nhanh1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconPizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconPizza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imageThucDon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imageThucDon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconSave1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconSave1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SP_Combo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SP_Combo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SP_Pizza" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SP_Pizza.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconDots" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconDots.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imageThucDon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imageThucDon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3671803_closed_lock_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3671803_closed_lock_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCong" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCong.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="32b417e287516369937846dc960cca86" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32b417e287516369937846dc960cca86.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SP_burger" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SP_burger.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iconCancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\iconCancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
