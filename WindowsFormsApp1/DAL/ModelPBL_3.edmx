@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PBL_3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PBL_3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ca_lam_viec">
           <Key>
             <PropertyRef Name="Ma_ca" />
@@ -24,7 +24,7 @@
           <Property Name="Ma_SP" Type="int" Nullable="false" />
           <Property Name="Kich_thuoc" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Soluong_SP" Type="int" />
-          <Property Name="Gia" Type="int" />
+          <Property Name="Gia" Type="float" />
         </EntityType>
         <EntityType Name="Hoa_don">
           <Key>
@@ -35,7 +35,7 @@
           <Property Name="Ma_KH" Type="int" Nullable="false" />
           <Property Name="Trang_thai" Type="bit" />
           <Property Name="Ngay_mua" Type="datetime" />
-          <Property Name="Tong_tien" Type="int" />
+          <Property Name="Tong_tien" Type="float" />
         </EntityType>
         <EntityType Name="Khach_hang">
           <Key>
@@ -80,7 +80,7 @@
           </Key>
           <Property Name="Ma_SP" Type="int" Nullable="false" />
           <Property Name="Ten_SP" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Don_gia" Type="int" Nullable="false" />
+          <Property Name="Don_gia" Type="float" Nullable="false" />
           <Property Name="Ma_loai" Type="int" Nullable="false" />
           <Property Name="Trang_thai" Type="bit" />
           <Property Name="Hinh_anh" Type="varbinary(max)" />
@@ -244,8 +244,7 @@
             <End Role="Tai_khoan" EntitySet="Tai_khoan" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PBL_3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
