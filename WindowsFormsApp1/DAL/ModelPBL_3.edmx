@@ -269,7 +269,7 @@
           <Property Name="Ma_SP" Type="Int32" Nullable="false" />
           <Property Name="Kich_thuoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Soluong_SP" Type="Int32" />
-          <Property Name="Gia" Type="Int32" />
+          <Property Name="Gia" Type="Double" />
           <NavigationProperty Name="Hoa_don" Relationship="Self.FK_Chi_tiet_hoa_don_Hoa_don" FromRole="Chi_tiet_hoa_don" ToRole="Hoa_don" />
           <NavigationProperty Name="San_pham" Relationship="Self.FK_Chi_tiet_hoa_don_San_pham" FromRole="Chi_tiet_hoa_don" ToRole="San_pham" />
         </EntityType>
@@ -282,7 +282,7 @@
           <Property Name="Ma_KH" Type="Int32" Nullable="false" />
           <Property Name="Trang_thai" Type="Boolean" />
           <Property Name="Ngay_mua" Type="DateTime" Precision="3" />
-          <Property Name="Tong_tien" Type="Int32" />
+          <Property Name="Tong_tien" Type="Double" />
           <NavigationProperty Name="Chi_tiet_hoa_don" Relationship="Self.FK_Chi_tiet_hoa_don_Hoa_don" FromRole="Hoa_don" ToRole="Chi_tiet_hoa_don" />
           <NavigationProperty Name="Khach_hang" Relationship="Self.FK_Hoa_don_Khach_hang" FromRole="Hoa_don" ToRole="Khach_hang" />
           <NavigationProperty Name="Tai_khoan" Relationship="Self.FK_Hoa_don_Tai_khoan" FromRole="Hoa_don" ToRole="Tai_khoan" />
@@ -335,7 +335,7 @@
           </Key>
           <Property Name="Ma_SP" Type="Int32" Nullable="false" />
           <Property Name="Ten_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Don_gia" Type="Int32" Nullable="false" />
+          <Property Name="Don_gia" Type="Double" Nullable="false" />
           <Property Name="Ma_loai" Type="Int32" Nullable="false" />
           <Property Name="Trang_thai" Type="Boolean" />
           <Property Name="Hinh_anh" Type="Binary" MaxLength="Max" FixedLength="false" />

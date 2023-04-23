@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.View
         {
             Ca_lam_viecBLL bll = new Ca_lam_viecBLL();
             dataGridView1.DataSource = bll.GetAllCLV();
-            dataGridView1.Columns["Tai_khoan"].Visible = false;
+            dataGridView1.Columns["Phan_cong"].Visible = false;
         }
     }
 }
