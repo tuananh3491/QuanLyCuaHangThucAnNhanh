@@ -14,9 +14,11 @@ namespace WindowsFormsApp1.View
 {
     public partial class fBill : Form
     {
+        Hoa_donBLL bll;
         public fBill()
         {
             InitializeComponent();
+            bll = new Hoa_donBLL();
         }
 
 
@@ -31,11 +33,8 @@ namespace WindowsFormsApp1.View
 
         private void fBill_Load(object sender, EventArgs e)
         {
-            Hoa_donBLL bll = new Hoa_donBLL();
-            dataGridView1.DataSource = bll.GetAllHD();
-            dataGridView1.Columns["Chi_tiet_hoa_don"].Visible = false;
-            dataGridView1.Columns["Khach_hang"].Visible = false;
-            dataGridView1.Columns["Tai_khoan"].Visible = false;
+            dataGridView1.DataSource = null;
+            bll.ShowDGV(dataGridView1);
         }
     }
 }

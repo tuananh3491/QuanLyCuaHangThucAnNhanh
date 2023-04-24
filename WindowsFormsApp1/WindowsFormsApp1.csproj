@@ -96,18 +96,23 @@
     <Compile Include="DAL\Ca_lam_viec.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Ca_lam_viec_DAL.cs" />
     <Compile Include="DAL\Chi_tiet_hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Chi_tiet_hoa_don_DAL.cs" />
     <Compile Include="DAL\Hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Hoa_don_DAL.cs" />
     <Compile Include="DAL\Khach_hang.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Khack_hang_DAL.cs" />
     <Compile Include="DAL\Ma_loai.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Ma_loai_DAL.cs" />
     <Compile Include="DAL\ModelPBL_3.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,18 +131,22 @@
     <Compile Include="DAL\Nhan_vien.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Nhan_vien_DAL.cs" />
     <Compile Include="DAL\Phan_cong.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Phan_cong_DAL.cs" />
     <Compile Include="DAL\San_pham.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\San_pham_DAL.cs" />
     <Compile Include="DAL\sysdiagrams.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Tai_khoan.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Tai_khoan_DAL.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +190,12 @@
     </Compile>
     <Compile Include="View\fCustomer_Update.Designer.cs">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fShift_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fShift_Detail.Designer.cs">
+      <DependentUpon>fShift_Detail.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Product\fProduct.cs">
       <SubType>Form</SubType>
@@ -314,7 +329,6 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
       <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
     </Content>
-
     <None Include="Resources\SP_Combo.png" />
     <None Include="Resources\SP_Icream.png" />
     <None Include="Resources\SP_drink.png" />
@@ -352,6 +366,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fReport_Revenue.resx">
       <DependentUpon>fReport_Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fShift_Detail.resx">
+      <DependentUpon>fShift_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fProduct_Add.resx">
       <DependentUpon>fProduct_Add.cs</DependentUpon>
