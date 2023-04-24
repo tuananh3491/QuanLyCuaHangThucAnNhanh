@@ -13,9 +13,11 @@ namespace WindowsFormsApp1.View
 {
     public partial class fStaff : Form
     {
+        Nhan_vienBLL bll;
         public fStaff()
         {
             InitializeComponent();
+            bll = new Nhan_vienBLL();
         }
 
         private void btnCapNhat_Click(object sender, EventArgs e)
@@ -29,10 +31,8 @@ namespace WindowsFormsApp1.View
 
         private void fStaff_Load(object sender, EventArgs e)
         {
-            Nhan_vienBLL bll = new Nhan_vienBLL();
-            dataGridView1.DataSource = bll.GetAllNV();
-            
-            dataGridView1.Columns["Tai_khoan"].Visible = false;
+            dataGridView1.DataSource = null;
+            bll.ShowDGV(dataGridView1);
         }
     }
 }

@@ -96,18 +96,23 @@
     <Compile Include="DAL\Ca_lam_viec.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Ca_lam_viec_DAL.cs" />
     <Compile Include="DAL\Chi_tiet_hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Chi_tiet_hoa_don_DAL.cs" />
     <Compile Include="DAL\Hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Hoa_don_DAL.cs" />
     <Compile Include="DAL\Khach_hang.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Khack_hang_DAL.cs" />
     <Compile Include="DAL\Ma_loai.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Ma_loai_DAL.cs" />
     <Compile Include="DAL\ModelPBL_3.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -126,18 +131,22 @@
     <Compile Include="DAL\Nhan_vien.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Nhan_vien_DAL.cs" />
     <Compile Include="DAL\Phan_cong.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Phan_cong_DAL.cs" />
     <Compile Include="DAL\San_pham.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\San_pham_DAL.cs" />
     <Compile Include="DAL\sysdiagrams.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Tai_khoan.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
+    <Compile Include="DAL\Tai_khoan_DAL.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -314,7 +323,6 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
       <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
     </Content>
-
     <None Include="Resources\SP_Combo.png" />
     <None Include="Resources\SP_Icream.png" />
     <None Include="Resources\SP_drink.png" />
