@@ -34,5 +34,23 @@ namespace WindowsFormsApp1.View
             dataGridView1.DataSource = null;
             bll.ShowDGV(dataGridView1);
         }
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                fShift_Detail f = new fShift_Detail(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()));
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
+            }
+        }
+
+        private void datagridview1_RowHeaderMouseClicked(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count == 1) btnDetail.Enabled = true;
+            else btnDetail.Enabled = false;
+        }
     }
 }

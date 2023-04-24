@@ -28,6 +28,13 @@ namespace WindowsFormsApp1.DAL
                 return s;
             }
         }
+        public dynamic GetNVPC(int Ma_ca)
+        {
+            {
+                var s = et.Phan_cong.Where(p => p.Ma_ca == Ma_ca).Select(p => new {p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV}).ToList();
+                return s;
+            }
+        }
         public void AddPC(Phan_cong pc)
         {
             {
