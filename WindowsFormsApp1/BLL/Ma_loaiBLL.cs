@@ -26,6 +26,14 @@ namespace WindowsFormsApp1.BLL
                 return s;
             }
         }
+        public Ma_loai GetML_Category(string m)
+        {
+            using (PBL_3Entities et = new PBL_3Entities())
+            {
+                var s = et.Ma_loai.Find(m);
+                return s;
+            }
+        }
         public void AddML(Ma_loai ca)
         {
             using (PBL_3Entities et = new PBL_3Entities())

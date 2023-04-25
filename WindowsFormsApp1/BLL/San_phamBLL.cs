@@ -50,5 +50,16 @@ namespace WindowsFormsApp1.BLL
                 et.SaveChanges();
             }
         }
+        public List<San_pham> GetSPCategory(string s)
+        {
+
+            
+            using(PBL_3Entities et=new PBL_3Entities())
+            {
+                var sp=et.San_pham.Where(p => p.Ma_loai1.Ten == s).ToList();
+                return sp;
+            }
+            
+        }
     }
 }

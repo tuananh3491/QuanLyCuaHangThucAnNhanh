@@ -29,31 +29,57 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbKichThuoc = new System.Windows.Forms.Label();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.tbSoLuong = new System.Windows.Forms.TextBox();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.btnSub = new FontAwesome.Sharp.IconButton();
             this.tbTien = new System.Windows.Forms.TextBox();
             this.lbTenMonAn = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
+            this.pcbMonAn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMonAn)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbKichThuoc);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.tbSoLuong);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnSub);
             this.panel1.Controls.Add(this.tbTien);
             this.panel1.Controls.Add(this.lbTenMonAn);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pcbMonAn);
             this.panel1.Location = new System.Drawing.Point(2, 4);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 94);
             this.panel1.TabIndex = 1;
+            // 
+            // lbKichThuoc
+            // 
+            this.lbKichThuoc.AutoSize = true;
+            this.lbKichThuoc.Location = new System.Drawing.Point(103, 36);
+            this.lbKichThuoc.Name = "lbKichThuoc";
+            this.lbKichThuoc.Size = new System.Drawing.Size(70, 16);
+            this.lbKichThuoc.TabIndex = 9;
+            this.lbKichThuoc.Text = "Kích thước:";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.X;
+            this.btnDelete.IconColor = System.Drawing.Color.Black;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
+            this.btnDelete.IconSize = 15;
+            this.btnDelete.Location = new System.Drawing.Point(305, 6);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(30, 24);
+            this.btnDelete.TabIndex = 8;
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // tbSoLuong
             // 
@@ -70,7 +96,7 @@
             this.tbSoLuong.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbSoLuong.Size = new System.Drawing.Size(37, 27);
             this.tbSoLuong.TabIndex = 7;
-            this.tbSoLuong.Text = "0";
+            this.tbSoLuong.Text = "1";
             this.tbSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnAdd
@@ -123,35 +149,20 @@
             // 
             // lbTenMonAn
             // 
-            this.lbTenMonAn.Location = new System.Drawing.Point(100, 14);
+            this.lbTenMonAn.Location = new System.Drawing.Point(100, 12);
             this.lbTenMonAn.Name = "lbTenMonAn";
-            this.lbTenMonAn.Size = new System.Drawing.Size(121, 25);
+            this.lbTenMonAn.Size = new System.Drawing.Size(121, 24);
             this.lbTenMonAn.TabIndex = 2;
-            this.lbTenMonAn.Text = "label6";
+            this.lbTenMonAn.Text = "Tên món ăn";
             // 
-            // pictureBox1
+            // pcbMonAn
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(91, 89);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.X;
-            this.btnDelete.IconColor = System.Drawing.Color.Black;
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnDelete.IconSize = 15;
-            this.btnDelete.Location = new System.Drawing.Point(305, 6);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(30, 24);
-            this.btnDelete.TabIndex = 8;
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.pcbMonAn.Location = new System.Drawing.Point(3, 2);
+            this.pcbMonAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbMonAn.Name = "pcbMonAn";
+            this.pcbMonAn.Size = new System.Drawing.Size(91, 89);
+            this.pcbMonAn.TabIndex = 0;
+            this.pcbMonAn.TabStop = false;
             // 
             // panelOrder
             // 
@@ -163,7 +174,7 @@
             this.Size = new System.Drawing.Size(348, 100);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbMonAn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -171,12 +182,13 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcbMonAn;
         private System.Windows.Forms.Label lbTenMonAn;
         private FontAwesome.Sharp.IconButton btnSub;
         private System.Windows.Forms.TextBox tbTien;
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.TextBox tbSoLuong;
         private FontAwesome.Sharp.IconButton btnDelete;
+        private System.Windows.Forms.Label lbKichThuoc;
     }
 }
