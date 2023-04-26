@@ -25,7 +25,7 @@ namespace WindowsFormsApp1.DAL
         public int Ma_KH { get; set; }
         public Nullable<bool> Trang_thai { get; set; }
         public Nullable<System.DateTime> Ngay_mua { get; set; }
-        public Nullable<int> Tong_tien { get; set; }
+        public Nullable<double> Tong_tien { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Chi_tiet_hoa_don> Chi_tiet_hoa_don { get; set; }

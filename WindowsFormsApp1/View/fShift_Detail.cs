@@ -11,28 +11,33 @@ using WindowsFormsApp1.BLL;
 
 namespace WindowsFormsApp1.View
 {
-    public partial class fStaff : Form
+    public partial class fShift_Detail : Form
     {
-        Nhan_vienBLL bll;
-        public fStaff()
+        Phan_congBLL bll; int x;
+        public fShift_Detail()
         {
             InitializeComponent();
-            bll = new Nhan_vienBLL();
+            bll = new Phan_congBLL();
+        }
+        public fShift_Detail(int x)
+        {
+            InitializeComponent();
+            bll = new Phan_congBLL();
+            this.x = x;
         }
 
-        private void btnCapNhat_Click(object sender, EventArgs e)
+        private void btnHuy_Click(object sender, EventArgs e)
         {
-            fStaff_Salary f = new fStaff_Salary();
+            fShift f = new fShift();
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
 
-        private void fStaff_Load(object sender, EventArgs e)
+        private void fShift_Detail_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            bll.ShowDGV(dataGridView1);
+            bll.ShowDGV(dataGridView1, x);
         }
     }
 }

@@ -13,9 +13,11 @@ namespace WindowsFormsApp1.View
 {
     public partial class fCustomer : Form
     {
+        Khach_hangBLL bll;
         public fCustomer()
         {
             InitializeComponent();
+            bll = new Khach_hangBLL();
         }
 
 
@@ -43,9 +45,8 @@ namespace WindowsFormsApp1.View
 
         private void fCustomer_Load(object sender, EventArgs e)
         {
-            Khach_hangBLL bll = new Khach_hangBLL();
-            dataGridView.DataSource = bll.GetAllKH();
-            dataGridView.Columns["Hoa_don"].Visible = false;
+            dataGridView.DataSource = null;
+            bll.ShowDGV(dataGridView);
         }
     }
  }
