@@ -19,5 +19,17 @@ namespace WindowsFormsApp1.BLL
         {
             return dal.GetTK(m);
         }
+        public void AddTK(Tai_khoan a)
+        {
+            dal.AddTK(a);
+        }
+        public void UpdateTK(Tai_khoan a)
+        {
+            dal.UpdateTK(a);
+        }
+        public void DeleteTK(Tai_khoan a)
+        {
+            dal.DeleteTK(a);
+        }
     }
 }

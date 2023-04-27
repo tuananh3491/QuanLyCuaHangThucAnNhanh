@@ -28,21 +28,21 @@ namespace WindowsFormsApp1.DAL
                 return s;
             }
         }
-        public void AddNV(Tai_khoan ca)
+        public void AddTK(Tai_khoan ca)
         {
             {
                 et.Tai_khoan.Add(ca);
                 et.SaveChanges();
             }
         }
-        public void UpdateNV(Tai_khoan ca)
+        public void UpdateTK(Tai_khoan ca)
         {
             {
                 et.Tai_khoan.AddOrUpdate(ca);
                 et.SaveChanges();
             }
         }
-        public void DeleteNV(Tai_khoan ca)
+        public void DeleteTK(Tai_khoan ca)
         {
             {
                 et.Tai_khoan.Remove(ca);
