@@ -157,6 +157,7 @@
             // 
             // pcbMonAn
             // 
+            this.pcbMonAn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbMonAn.Location = new System.Drawing.Point(3, 2);
             this.pcbMonAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbMonAn.Name = "pcbMonAn";

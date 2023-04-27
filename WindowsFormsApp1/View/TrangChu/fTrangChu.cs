@@ -17,8 +17,8 @@ namespace WindowsFormsApp1.View.TrangChu
         public fTrangChu()
         {
             InitializeComponent();
-        }
 
+        }
 
         private void btnPizza_Click_1(object sender, EventArgs e)
         {
@@ -26,7 +26,6 @@ namespace WindowsFormsApp1.View.TrangChu
             San_phamBLL san_PhamBLL = new San_phamBLL();
             List<San_pham> l=new List<San_pham>();
             l=san_PhamBLL.GetSPCategory(btnPizza.Text);
-            flpnOrder.Controls.Clear();
             foreach(San_pham i in l)
             {
                 flpnThucDon.Controls.Add(new panelMonAn(i));
@@ -39,7 +38,6 @@ namespace WindowsFormsApp1.View.TrangChu
             San_phamBLL san_PhamBLL = new San_phamBLL();
             List<San_pham> l = new List<San_pham>();
             l = san_PhamBLL.GetSPCategory(btnGa.Text);
-            flpnOrder.Controls.Clear();
             foreach (San_pham i in l)
             {
                 flpnThucDon.Controls.Add(new panelMonAn(i));
@@ -52,7 +50,6 @@ namespace WindowsFormsApp1.View.TrangChu
             San_phamBLL san_PhamBLL = new San_phamBLL();
             List<San_pham> l = new List<San_pham>();
             l = san_PhamBLL.GetSPCategory(btnKhac.Text);
-            flpnOrder.Controls.Clear();
             foreach (San_pham i in l)
             {
                 flpnThucDon.Controls.Add(new panelMonAn(i));
@@ -65,7 +62,6 @@ namespace WindowsFormsApp1.View.TrangChu
             San_phamBLL san_PhamBLL = new San_phamBLL();
             List<San_pham> l = new List<San_pham>();
             l = san_PhamBLL.GetSPCategory(btnBurger.Text);
-            flpnOrder.Controls.Clear();
             foreach (San_pham i in l)
             {
                 flpnThucDon.Controls.Add(new panelMonAn(i));
@@ -73,8 +69,10 @@ namespace WindowsFormsApp1.View.TrangChu
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
-        {
+        {   
             flpnOrder.Controls.Clear();
+            Button p=new Button();
+            flpnOrder.Controls.Add(p);
         }
 
         private void btnTaoDon_Click(object sender, EventArgs e)
@@ -86,5 +84,9 @@ namespace WindowsFormsApp1.View.TrangChu
             f.Show();
         }
 
+        private void fTrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

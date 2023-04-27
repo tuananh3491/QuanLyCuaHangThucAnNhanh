@@ -20,13 +20,14 @@ namespace WindowsFormsApp1.View.TrangChu
             InitializeComponent();
             san_Pham = s;
             setGUI();
+
         }
         public void setGUI()
         {
             pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(san_Pham.Hinh_anh));
-            pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
             lbTenMonAn.Text = san_Pham.Ten_SP;
             tbTien.Text = san_Pham.Don_gia.ToString() + "đ";
+            
         }
 
 
@@ -40,7 +41,6 @@ namespace WindowsFormsApp1.View.TrangChu
             if (count == 0) return;
             else count--;
             tbSoLuong.Text = count.ToString();
- //           san_Pham.Don_gia = count;
             tbTien.Text = san_Pham.Don_gia.ToString()+"đ";
         }
 
@@ -50,7 +50,6 @@ namespace WindowsFormsApp1.View.TrangChu
             count = Convert.ToInt32(tbSoLuong.Text);
             count++;
             tbSoLuong.Text = count.ToString();
- //           san_Pham.Don_gia = count;
             tbTien.Text = san_Pham.Don_gia.ToString()+"đ";
         }
 

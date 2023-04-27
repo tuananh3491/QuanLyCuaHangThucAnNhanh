@@ -61,19 +61,20 @@
             this.pnChonMon.Controls.Add(this.label2);
             this.pnChonMon.Controls.Add(this.label1);
             this.pnChonMon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnChonMon.Location = new System.Drawing.Point(583, 0);
+            this.pnChonMon.Location = new System.Drawing.Point(582, 0);
             this.pnChonMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnChonMon.Name = "pnChonMon";
-            this.pnChonMon.Size = new System.Drawing.Size(364, 572);
+            this.pnChonMon.Size = new System.Drawing.Size(365, 572);
             this.pnChonMon.TabIndex = 1;
             // 
             // flpnOrder
             // 
             this.flpnOrder.AutoScroll = true;
-            this.flpnOrder.Location = new System.Drawing.Point(-1, 82);
+            this.flpnOrder.BackColor = System.Drawing.Color.DarkGray;
+            this.flpnOrder.Location = new System.Drawing.Point(3, 82);
             this.flpnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpnOrder.Name = "flpnOrder";
-            this.flpnOrder.Size = new System.Drawing.Size(361, 367);
+            this.flpnOrder.Size = new System.Drawing.Size(362, 367);
             this.flpnOrder.TabIndex = 5;
             // 
             // btnTaoDon
@@ -348,6 +349,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fTrangChu";
             this.Text = "fTrangChu";
+            this.Load += new System.EventHandler(this.fTrangChu_Load);
             this.pnChonMon.ResumeLayout(false);
             this.pnChonMon.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -365,7 +367,6 @@
         private CustomControl.VBButton btnHuy;
         private CustomControl.VBButton btnTaoDon;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flpnThucDon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.FlowLayoutPanel flpnOrder;
@@ -376,5 +377,6 @@
         private Guna.UI2.WinForms.Guna2Button btnBurger;
         private Guna.UI2.WinForms.Guna2Button btnNuoc;
         private Guna.UI2.WinForms.Guna2Button btnKem;
+        public System.Windows.Forms.FlowLayoutPanel flpnThucDon;
     }
 }

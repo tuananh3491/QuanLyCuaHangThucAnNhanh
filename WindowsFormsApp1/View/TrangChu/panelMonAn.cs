@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class panelMonAn : UserControl
     {
-        private static San_pham MonAn;
+        private San_pham MonAn;
         public panelMonAn(San_pham s)
         {
             InitializeComponent();
@@ -32,16 +32,21 @@ namespace WindowsFormsApp1.View.TrangChu
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
-            {
-            if (cbbKichThuoc.Text == null)
+        {
+            if (cbbKichThuoc.Text == "")
             {
                 MessageBox.Show("vui lòng chọn kích cỡ!");
                 return;
             }
             else
             {
+                MessageBox.Show(MonAn.Ten_SP);
                 panelOrder p = new panelOrder(MonAn);
+                ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(new Button());
                 ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
+                p.Show();
+
+                
             }
         }
 
