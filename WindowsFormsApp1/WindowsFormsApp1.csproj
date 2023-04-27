@@ -197,6 +197,18 @@
     <Compile Include="View\fShift_Detail.Designer.cs">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fStaff_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fStaff_Add.Designer.cs">
+      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fStaff_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fStaff_View.Designer.cs">
+      <DependentUpon>fStaff_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Product\fProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -369,6 +381,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fShift_Detail.resx">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fStaff_Add.resx">
+      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fStaff_View.resx">
+      <DependentUpon>fStaff_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fProduct_Add.resx">
       <DependentUpon>fProduct_Add.cs</DependentUpon>

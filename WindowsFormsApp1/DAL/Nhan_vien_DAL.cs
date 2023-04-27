@@ -38,10 +38,17 @@ namespace WindowsFormsApp1.DAL
         }
         public void UpdateNV(Nhan_vien ca)
         {
-            
-                et.Nhan_vien.AddOrUpdate(ca);
-                et.SaveChanges();
-            
+            var s = et.Nhan_vien.Find(ca.Ma_NV);
+            s.Ten_NV = ca.Ten_NV;
+            s.SDT = ca.SDT;
+            s.Gioi_tinh = ca.Gioi_tinh;
+            s.Ngay_sinh = ca.Ngay_sinh;
+            s.SDT = ca.SDT;
+            s.Luong = ca.Luong;
+            s.Tai_khoan.Ten_TK = ca.Tai_khoan.Ten_TK;
+            s.Tai_khoan.Mat_khau = ca.Tai_khoan.Mat_khau;
+            et.SaveChanges();
+
         }
         public void DeleteNV(Nhan_vien ca)
         {
