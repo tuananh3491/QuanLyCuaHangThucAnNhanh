@@ -7,17 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
 
 namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class fTrangChu : Form
     {
+        San_phamBLL bll;
         public fTrangChu()
         {
             InitializeComponent();
+            bll = new San_phamBLL();
+           
+            
         }
-
-
         private void btnPizza_Click_1(object sender, EventArgs e)
         {
             flpnThucDon.Controls.Clear();
@@ -57,5 +60,14 @@ namespace WindowsFormsApp1.View.TrangChu
             f.Show();
         }
 
+        
+
+        private void fTrangChu_Load(object sender, EventArgs e)
+        {
+            foreach(var i in bll.GetListSP())
+            {
+                flpnThucDon.Controls.Add(new panelMonAn(i));
+            }
+        }
     }
 }

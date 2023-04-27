@@ -15,6 +15,9 @@ namespace WindowsFormsApp1.BLL
         {
             dal = new San_pham_DAL();
         }
-
+        public List<San_pham> GetListSP()
+        {
+            return dal.GetAllSP();
+        }
     }
 }

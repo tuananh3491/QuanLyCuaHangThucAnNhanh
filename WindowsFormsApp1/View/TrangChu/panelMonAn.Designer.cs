@@ -103,6 +103,8 @@
             this.pcbMonAn.Size = new System.Drawing.Size(97, 102);
             this.pcbMonAn.TabIndex = 0;
             this.pcbMonAn.TabStop = false;
+            this.pcbMonAn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            
             // 
             // printDialog1
             // 

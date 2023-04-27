@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.Properties;
 
 namespace WindowsFormsApp1.View.TrangChu
@@ -15,12 +17,20 @@ namespace WindowsFormsApp1.View.TrangChu
     public partial class panelMonAn : UserControl
     {
         private static string TenMon;
+        private static San_pham sp;
         public panelMonAn(string s)
         {
             InitializeComponent();
             TenMon = s;
             setGUI(TenMon);
         }
+        public panelMonAn(San_pham x)
+        {
+            InitializeComponent();
+            sp = x;
+            SetGUI(sp);
+        }
+        
         void setGUI(string s)
         {
             if (s == "Pizza xúc xích")
@@ -63,6 +73,16 @@ namespace WindowsFormsApp1.View.TrangChu
 
         }
 
+        public void SetGUI(San_pham x)
+        {
+            if (x != null)
+            {
+                pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(x.Hinh_anh));
+                lbTenMonAn.Text = x.Ten_SP;
+                tbTien.Text = x.Don_gia.ToString();
+            }
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             panelOrder p = new panelOrder();
@@ -70,6 +90,5 @@ namespace WindowsFormsApp1.View.TrangChu
             
         }
         
-
     }
 }

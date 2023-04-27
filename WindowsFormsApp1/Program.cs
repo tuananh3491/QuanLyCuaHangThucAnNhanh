@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.View;
+using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1
 {
@@ -18,7 +19,7 @@ namespace WindowsFormsApp1
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fLogin());
+            Application.Run(new fMainform());
         }
     }
 }
