@@ -39,7 +39,7 @@
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.btnPizza = new Guna.UI2.WinForms.Guna2Button();
             this.btnGa = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnBurger = new Guna.UI2.WinForms.Guna2Button();
             this.btnNuoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnKem = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
@@ -61,19 +61,21 @@
             this.pnChonMon.Controls.Add(this.label2);
             this.pnChonMon.Controls.Add(this.label1);
             this.pnChonMon.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnChonMon.Location = new System.Drawing.Point(437, 0);
-            this.pnChonMon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+
+            this.pnChonMon.Location = new System.Drawing.Point(582, 0);
+            this.pnChonMon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnChonMon.Name = "pnChonMon";
-            this.pnChonMon.Size = new System.Drawing.Size(273, 465);
+            this.pnChonMon.Size = new System.Drawing.Size(365, 572);
             this.pnChonMon.TabIndex = 1;
             // 
             // flpnOrder
             // 
             this.flpnOrder.AutoScroll = true;
-            this.flpnOrder.Location = new System.Drawing.Point(-1, 67);
-            this.flpnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpnOrder.BackColor = System.Drawing.Color.DarkGray;
+            this.flpnOrder.Location = new System.Drawing.Point(3, 82);
+            this.flpnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpnOrder.Name = "flpnOrder";
-            this.flpnOrder.Size = new System.Drawing.Size(271, 298);
+            this.flpnOrder.Size = new System.Drawing.Size(362, 367);
             this.flpnOrder.TabIndex = 5;
             // 
             // btnTaoDon
@@ -164,7 +166,7 @@
             this.panel2.Controls.Add(this.guna2Button7);
             this.panel2.Controls.Add(this.btnPizza);
             this.panel2.Controls.Add(this.btnGa);
-            this.panel2.Controls.Add(this.guna2Button4);
+            this.panel2.Controls.Add(this.btnBurger);
             this.panel2.Controls.Add(this.btnNuoc);
             this.panel2.Controls.Add(this.btnKem);
             this.panel2.Controls.Add(this.btnKhac);
@@ -237,25 +239,24 @@
             this.btnGa.Text = "Gà";
             this.btnGa.Click += new System.EventHandler(this.btnGa_Click);
             // 
-            // guna2Button4
+            // btnBurger
             // 
-            this.guna2Button4.BorderRadius = 10;
-            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button4.FillColor = System.Drawing.Color.White;
-            this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button4.Image = global::WindowsFormsApp1.Properties.Resources.SP_burger;
-            this.guna2Button4.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button4.Location = new System.Drawing.Point(256, 23);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(65, 28);
-            this.guna2Button4.TabIndex = 20;
-            this.guna2Button4.Text = "Burger";
-            this.guna2Button4.Click += new System.EventHandler(this.btnBurger_Click);
+            this.btnBurger.BorderRadius = 10;
+            this.btnBurger.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBurger.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBurger.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBurger.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBurger.FillColor = System.Drawing.Color.White;
+            this.btnBurger.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBurger.ForeColor = System.Drawing.Color.Black;
+            this.btnBurger.Image = global::WindowsFormsApp1.Properties.Resources.SP_burger;
+            this.btnBurger.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnBurger.Location = new System.Drawing.Point(341, 28);
+            this.btnBurger.Name = "btnBurger";
+            this.btnBurger.Size = new System.Drawing.Size(87, 35);
+            this.btnBurger.TabIndex = 20;
+            this.btnBurger.Text = "Burger";
+            this.btnBurger.Click += new System.EventHandler(this.btnBurger_Click);
             // 
             // btnNuoc
             // 
@@ -318,20 +319,19 @@
             // flpnThucDon
             // 
             this.flpnThucDon.AutoScroll = true;
-            this.flpnThucDon.Location = new System.Drawing.Point(2, 125);
-            this.flpnThucDon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpnThucDon.Location = new System.Drawing.Point(3, 154);
+            this.flpnThucDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpnThucDon.Name = "flpnThucDon";
-            this.flpnThucDon.Size = new System.Drawing.Size(419, 318);
+            this.flpnThucDon.Size = new System.Drawing.Size(559, 391);
             this.flpnThucDon.TabIndex = 16;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label4.Location = new System.Drawing.Point(10, 101);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(13, 124);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(85, 19);
+            this.label4.Size = new System.Drawing.Size(104, 24);
             this.label4.TabIndex = 5;
             this.label4.Text = "Thực đơn";
             // 
@@ -376,7 +376,6 @@
         private CustomControl.VBButton btnHuy;
         private CustomControl.VBButton btnTaoDon;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.FlowLayoutPanel flpnThucDon;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox3;
         public System.Windows.Forms.FlowLayoutPanel flpnOrder;
@@ -384,8 +383,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button btnPizza;
         private Guna.UI2.WinForms.Guna2Button btnGa;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
+        private Guna.UI2.WinForms.Guna2Button btnBurger;
         private Guna.UI2.WinForms.Guna2Button btnNuoc;
         private Guna.UI2.WinForms.Guna2Button btnKem;
+        public System.Windows.Forms.FlowLayoutPanel flpnThucDon;
     }
 }

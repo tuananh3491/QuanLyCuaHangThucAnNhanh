@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1.View.TrangChu
+﻿using System.Windows.Forms;
+
+namespace WindowsFormsApp1.View.TrangChu
 {
     partial class panelMonAn
     {
@@ -29,13 +31,13 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbbKichThuoc = new System.Windows.Forms.ComboBox();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.tbTien = new System.Windows.Forms.TextBox();
             this.lbTenMonAn = new System.Windows.Forms.Label();
             this.pcbMonAn = new System.Windows.Forms.PictureBox();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMonAn)).BeginInit();
             this.SuspendLayout();
@@ -44,7 +46,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.comboBox1);
+            this.panel4.Controls.Add(this.cbbKichThuoc);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.tbTien);
             this.panel4.Controls.Add(this.lbTenMonAn);
@@ -54,6 +56,28 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(255, 110);
             this.panel4.TabIndex = 8;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(106, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(70, 16);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Kích thước:";
+            // 
+            // cbbKichThuoc
+            // 
+            this.cbbKichThuoc.FormattingEnabled = true;
+            this.cbbKichThuoc.Items.AddRange(new object[] {
+            "S",
+            "M",
+            "L"});
+            this.cbbKichThuoc.Location = new System.Drawing.Point(203, 37);
+            this.cbbKichThuoc.Name = "cbbKichThuoc";
+            this.cbbKichThuoc.Size = new System.Drawing.Size(45, 24);
+            this.cbbKichThuoc.TabIndex = 5;
+            this.cbbKichThuoc.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btnAdd
             // 
@@ -89,7 +113,7 @@
             // 
             // lbTenMonAn
             // 
-            this.lbTenMonAn.Location = new System.Drawing.Point(111, 9);
+            this.lbTenMonAn.Location = new System.Drawing.Point(107, 9);
             this.lbTenMonAn.Name = "lbTenMonAn";
             this.lbTenMonAn.Size = new System.Drawing.Size(121, 25);
             this.lbTenMonAn.TabIndex = 1;
@@ -104,32 +128,10 @@
             this.pcbMonAn.TabIndex = 0;
             this.pcbMonAn.TabStop = false;
             this.pcbMonAn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            
             // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "S",
-            "M ",
-            "L"});
-            this.comboBox1.Location = new System.Drawing.Point(202, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(45, 24);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(111, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Kích thước";
             // 
             // panelMonAn
             // 
@@ -155,6 +157,6 @@
         private System.Windows.Forms.TextBox tbTien;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbKichThuoc;
     }
 }

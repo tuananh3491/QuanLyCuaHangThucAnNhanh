@@ -16,79 +16,58 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class panelMonAn : UserControl
     {
-        private static string TenMon;
-        private static San_pham sp;
-        public panelMonAn(string s)
+
+        private San_pham MonAn;
+        public panelMonAn(San_pham s)
         {
             InitializeComponent();
-            TenMon = s;
-            setGUI(TenMon);
-        }
-        public panelMonAn(San_pham x)
-        {
-            InitializeComponent();
-            sp = x;
-            SetGUI(sp);
-        }
-        
-        void setGUI(string s)
-        {
-            if (s == "Pizza xúc xích")
-            {
-                pcbMonAn.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Resources\\pizza xúc xích.jpg");
-                pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
-                lbTenMonAn.Text = "Pizza xúc xích";
-                tbTien.Text = "50.000đ";
-            }
-
-            if (s == "Pizza nấm")
-            {
-                pcbMonAn.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Resources\\pizzanam.jpg");
-                pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
-                lbTenMonAn.Text = "Pizza nấm";
-                tbTien.Text = "50.000đ";
-            }
-
-            if (s == "Hamburger")
-            {
-                pcbMonAn.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Resources\\hamburger gà.png");
-                pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
-                lbTenMonAn.Text = "Hamburger";
-                tbTien.Text = "40.000đ";
-            }
-            if (s == "Xúc xích")
-            {
-                pcbMonAn.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Resources\\hotdog.jpg");
-                pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
-                lbTenMonAn.Text = "Xúc xích";
-                tbTien.Text = "20.000đ";
-            }
-            if (s == "Khoai tây chiên")
-            {
-                pcbMonAn.BackgroundImage = Image.FromFile(Application.StartupPath + "\\Resources\\khoaitaychien.jpg");
-                pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
-                lbTenMonAn.Text = "Khoai tây chiên";
-                tbTien.Text = "20.000đ";
-            }
-
+            MonAn = s;
+            setGUI(MonAn);
         }
 
-        public void SetGUI(San_pham x)
-        {
-            if (x != null)
-            {
-                pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(x.Hinh_anh));
-                lbTenMonAn.Text = x.Ten_SP;
-                tbTien.Text = x.Don_gia.ToString();
-            }
+        void setGUI(San_pham sp)
+        {          
+                pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(sp.Hinh_anh));
+                pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
+                lbTenMonAn.Text = sp.Ten_SP;
+                tbTien.Text = sp.Don_gia.ToString()+"đ"; 
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            panelOrder p = new panelOrder();
-            ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
-            
+            if (cbbKichThuoc.Text == "")
+            {
+                MessageBox.Show("vui lòng chọn kích cỡ!");
+                return;
+            }
+            else
+            {
+                MessageBox.Show(MonAn.Ten_SP);
+                panelOrder p = new panelOrder(MonAn);
+                ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(new Button());
+                ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
+                p.Show();
+
+                
+            }
         }
-        
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbbKichThuoc.Text == "M")
+            {
+                tbTien.Text= (MonAn.Don_gia*1.1).ToString() + "đ";
+            }
+            else if (cbbKichThuoc.Text == "L")
+            {
+                tbTien.Text = (MonAn.Don_gia*1.3).ToString() + "đ";
+            }
+            else
+            {
+                tbTien.Text = MonAn.Don_gia.ToString() + "đ";
+            }
+        }
+
     }
+    
 }
