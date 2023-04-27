@@ -40,9 +40,7 @@ namespace WindowsFormsApp1.View.TrangChu
             }
             else
             {
-                MessageBox.Show(MonAn.Ten_SP);
                 panelOrder p = new panelOrder(MonAn);
-                ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(new Button());
                 ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
                 p.Show();
 
