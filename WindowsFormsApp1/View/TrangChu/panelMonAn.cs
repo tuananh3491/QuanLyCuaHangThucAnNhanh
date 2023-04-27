@@ -16,6 +16,7 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class panelMonAn : UserControl
     {
+
         private San_pham MonAn;
         public panelMonAn(San_pham s)
         {
@@ -23,6 +24,7 @@ namespace WindowsFormsApp1.View.TrangChu
             MonAn = s;
             setGUI(MonAn);
         }
+
         void setGUI(San_pham sp)
         {          
                 pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(sp.Hinh_anh));
@@ -65,6 +67,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 tbTien.Text = MonAn.Don_gia.ToString() + "đ";
             }
         }
+
     }
     
 }

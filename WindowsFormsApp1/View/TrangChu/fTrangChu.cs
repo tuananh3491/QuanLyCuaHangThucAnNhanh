@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
-using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class fTrangChu : Form
     {
+        San_phamBLL bll;
         public fTrangChu()
         {
             InitializeComponent();
-
+            bll = new San_phamBLL();
         }
 
         private void btnPizza_Click_1(object sender, EventArgs e)
@@ -83,10 +83,12 @@ namespace WindowsFormsApp1.View.TrangChu
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
-
         private void fTrangChu_Load(object sender, EventArgs e)
         {
-
+            foreach(var i in bll.GetListSP())
+            {
+                flpnThucDon.Controls.Add(new panelMonAn(i));
+            }
         }
     }
 }

@@ -19,7 +19,6 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
         }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             fShift f = new fShift();
