@@ -54,16 +54,19 @@ namespace WindowsFormsApp1.View
             x.SDT = textBox2.Text;
             x.Ten_NV = textBox3.Text;
             x.Ngay_sinh = dateTimePicker1.Value;
-            x.Tai_khoan.Ten_TK = textBox5.Text;
-            x.Tai_khoan.Mat_khau = textBox6.Text;
             if (radioButton1.Checked) x.Gioi_tinh = true;
             else x.Gioi_tinh = false;
-            if (radioButton4.Checked) x.Tai_khoan.Loai_TK = true;
-            else x.Tai_khoan.Loai_TK = false;
+            x.Luong = int.Parse(textBox1.Text);
 
+            Tai_khoan t = new Tai_khoan()
+            {
+                Ten_TK = textBox5.Text,
+                Mat_khau = textBox6.Text,
+                Loai_TK = (radioButton4.Checked) ? true : false,
+            };      
 
             bll.AddNV(x);
             changeForm();
         }
-    }
+    }   
 }

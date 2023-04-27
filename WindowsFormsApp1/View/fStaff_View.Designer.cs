@@ -51,6 +51,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.vbButton1 = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnBack = new WindowsFormsApp1.CustomControl.VBButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -69,6 +72,9 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label8);
@@ -328,6 +334,35 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(389, 220);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(62, 19);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Lương";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.textBox4.Location = new System.Drawing.Point(476, 214);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(138, 26);
+            this.textBox4.TabIndex = 43;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(619, 220);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(19, 19);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "đ";
+            // 
             // fStaff_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,5 +411,8 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label10;
     }
 }
