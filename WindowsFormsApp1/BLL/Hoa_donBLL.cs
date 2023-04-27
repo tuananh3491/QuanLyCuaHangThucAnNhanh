@@ -24,5 +24,12 @@ namespace WindowsFormsApp1.BLL
             dg.Columns["Khach_hang"].Visible = false;
             dg.Columns["Tai_khoan"].Visible = false;
         }
+        public void ShowDGV(DataGridView dg, int index)
+        {
+            dg.DataSource = dal.GetHDs(index);
+            dg.Columns["Chi_tiet_hoa_don"].Visible = false;
+            dg.Columns["Khach_hang"].Visible = false;
+            dg.Columns["Tai_khoan"].Visible = false;
+        }
     }
 }

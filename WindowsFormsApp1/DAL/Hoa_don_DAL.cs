@@ -21,10 +21,15 @@ namespace WindowsFormsApp1.DAL
                 return s;
             }
         }
-        public Hoa_don GetHD(int m)
+        public List<Hoa_don> GetHDs(int Ma_KH)
+        {
+            var s = et.Hoa_don.Where(p => p.Ma_KH == Ma_KH).ToList();
+            return s;
+        }
+        public Hoa_don GetHD(int Ma_hd)
         {
             {
-                var s = et.Hoa_don.Find(m);
+                var s = et.Hoa_don.Find(Ma_hd);
                 return s;
             }
         }
