@@ -49,6 +49,7 @@ namespace WindowsFormsApp1.View
             textBox1.Text = x.Ma_NV.ToString();
             textBox2.Text = x.SDT;
             textBox3.Text = x.Ten_NV;
+            textBox4.Text = x.Luong.ToString();
             dateTimePicker1.Value = x.Ngay_sinh.Value;
             textBox5.Text = x.Tai_khoan.Ten_TK;
             textBox6.Text = x.Tai_khoan.Mat_khau;
@@ -66,6 +67,7 @@ namespace WindowsFormsApp1.View
             x.Ngay_sinh = dateTimePicker1.Value;
             x.Tai_khoan.Ten_TK = textBox5.Text;
             x.Tai_khoan.Mat_khau = textBox6.Text;
+            x.Luong = Convert.ToInt32(textBox4.Text);
             if (radioButton1.Checked) x.Gioi_tinh = true;
             else x.Gioi_tinh = false;
             if (radioButton4.Checked) x.Tai_khoan.Loai_TK = true;
