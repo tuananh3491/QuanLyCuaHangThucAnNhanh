@@ -25,9 +25,17 @@ namespace WindowsFormsApp1.BLL
         {
             return dal.GetNV(NV);
         }
+        public Nhan_vien GetNV(string s)
+        {
+            return dal.GetNV(s);
+        }
         public void AddNV(Nhan_vien nv)
         {
             dal.AddNV(nv);
+        }
+        public int addNV(Nhan_vien nv)
+        {
+            return dal.addNV(nv);
         }
         public void UpdateNV(Nhan_vien nv)
         {

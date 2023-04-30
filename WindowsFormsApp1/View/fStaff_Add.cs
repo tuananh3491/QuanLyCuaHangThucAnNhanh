@@ -15,19 +15,14 @@ namespace WindowsFormsApp1.View
 {
     public partial class fStaff_Add : Form
     {
-        private Nhan_vien x;
+        
         Nhan_vienBLL bll;
+        Tai_khoanBLL bll1;
         public fStaff_Add()
         {
             InitializeComponent();
             bll = new Nhan_vienBLL();
-        }
-
-        public fStaff_Add(Nhan_vien x)
-        {
-            InitializeComponent();
-            bll = new Nhan_vienBLL();
-            this.x = x;
+            bll1 = new Tai_khoanBLL();
         }
 
         private void changeForm()
@@ -51,22 +46,34 @@ namespace WindowsFormsApp1.View
 
         private void vbButton1_Click(object sender, EventArgs e)
         {
-            x.SDT = textBox2.Text;
-            x.Ten_NV = textBox3.Text;
-            x.Ngay_sinh = dateTimePicker1.Value;
-            if (radioButton1.Checked) x.Gioi_tinh = true;
-            else x.Gioi_tinh = false;
-            x.Luong = int.Parse(textBox1.Text);
-
-            Tai_khoan t = new Tai_khoan()
+            /*Nhan_vien x = new Nhan_vien
             {
+                Luong = Convert.ToInt32(textBox1.Text),
+                SDT = textBox2.Text,
+                Ten_NV = textBox3.Text,
+                Gioi_tinh = (radioButton1.Checked),
+                Ngay_sinh = dateTimePicker1.Value,
+                Trang_thai = (checkBox1.Checked),
+            };
+            bll.AddNV(x);*/
+
+            int x = bll.addNV(new Nhan_vien
+            {
+                Luong = Convert.ToInt32(textBox1.Text),
+                SDT = textBox2.Text,
+                Ten_NV = textBox3.Text,
+                Gioi_tinh = (radioButton1.Checked),
+                Ngay_sinh = dateTimePicker1.Value,
+                Trang_thai = (checkBox1.Checked),
+            });
+
+            bll1.AddTK(new Tai_khoan
+            {
+                Ma_TK = x,
                 Ten_TK = textBox5.Text,
                 Mat_khau = textBox6.Text,
-                Loai_TK = (radioButton4.Checked) ? true : false,
-            };      
-
-            bll.AddNV(x);
-            changeForm();
+                Loai_TK = radioButton4.Checked
+            }) ;
         }
     }   
 }

@@ -29,12 +29,23 @@ namespace WindowsFormsApp1.DAL
                 return s;
             
         }
+        public Nhan_vien GetNV(string sdt)
+        {
+            var s = et.Nhan_vien.Where(p => p.SDT == sdt).FirstOrDefault();
+            return s;
+        }
         public void AddNV(Nhan_vien ca)
         {
-            
-                et.Nhan_vien.Add(ca);
-                et.SaveChanges();
-            
+
+            et.Nhan_vien.Add(ca);
+            et.SaveChanges();
+        }
+        public int addNV(Nhan_vien ca)
+        {
+            et.Nhan_vien.Add(ca);
+            et.SaveChanges();
+            int i = ca.Ma_NV;
+            return i;
         }
         public void UpdateNV(Nhan_vien ca)
         {
@@ -46,14 +57,14 @@ namespace WindowsFormsApp1.DAL
             s.SDT = ca.SDT;
             s.Luong = ca.Luong;
             s.Tai_khoan.Ten_TK = ca.Tai_khoan.Ten_TK;
-            s.Tai_khoan.Mat_khau = ca.Tai_khoan.Mat_khau;
+            s.Tai_khoan.Mat_khau = ca.Tai_khoan .Mat_khau;
             et.SaveChanges();
-
         }
         public void DeleteNV(Nhan_vien ca)
         {
             
                 et.Nhan_vien.Remove(ca);
+            
                 et.SaveChanges();
            
         }
