@@ -20,6 +20,7 @@ namespace WindowsFormsApp1.View.Product
         private void btnEdit_Click(object sender, EventArgs e)
         {
             pnProduct_Update p=new pnProduct_Update();
+            ((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Clear();
             ((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Add(p);
          
         }

@@ -4,51 +4,32 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.BLL
 {
     internal class Hoa_donBLL
     {
-        public List<Hoa_don> GetAllHD()
+        Hoa_don_DAL dal;
+        public Hoa_donBLL()
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Hoa_don.ToList();
-                return s;
-            }
+            dal = new Hoa_don_DAL();
         }
-        public Hoa_don GetHD(int m)
+
+        public void ShowDGV(DataGridView dg)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Hoa_don.Find(m);
-                return s;
-            }
+            dg.DataSource = dal.GetAllHD();
+            dg.Columns["Chi_tiet_hoa_don"].Visible = false;
+            dg.Columns["Khach_hang"].Visible = false;
+            dg.Columns["Tai_khoan"].Visible = false;
         }
-        public void AddHD(Hoa_don ca)
+        public void ShowDGV(DataGridView dg, int index)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Hoa_don.Add(ca);
-                et.SaveChanges();
-            }
-        }
-        public void UpdateHD(Hoa_don ca)
-        {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Hoa_don.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
-        }
-        public void DeleteHD(Hoa_don ca)
-        {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Hoa_don.Remove(ca);
-                et.SaveChanges();
-            }
+            dg.DataSource = dal.GetHDs(index);
+            dg.Columns["Chi_tiet_hoa_don"].Visible = false;
+            dg.Columns["Khach_hang"].Visible = false;
+            dg.Columns["Tai_khoan"].Visible = false;
         }
     }
 }

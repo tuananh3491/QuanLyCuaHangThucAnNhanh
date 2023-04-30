@@ -18,7 +18,7 @@ namespace WindowsFormsApp1.DAL
         public Tai_khoan()
         {
             this.Hoa_don = new HashSet<Hoa_don>();
-            this.Ca_lam_viec = new HashSet<Ca_lam_viec>();
+            this.Phan_cong = new HashSet<Phan_cong>();
         }
     
         public int Ma_TK { get; set; }
@@ -30,6 +30,6 @@ namespace WindowsFormsApp1.DAL
         public virtual ICollection<Hoa_don> Hoa_don { get; set; }
         public virtual Nhan_vien Nhan_vien { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ca_lam_viec> Ca_lam_viec { get; set; }
+        public virtual ICollection<Phan_cong> Phan_cong { get; set; }
     }
 }

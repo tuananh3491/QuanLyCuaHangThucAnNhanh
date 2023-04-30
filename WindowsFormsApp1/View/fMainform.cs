@@ -1,4 +1,4 @@
-﻿using FontAwesome.Sharp;
+﻿    using FontAwesome.Sharp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +24,7 @@ namespace WindowsFormsApp1.View
             this.ControlBox = false;
             this.DoubleBuffered = true;
             customizeDesig();
+            ActivateButton(btnTrangChu);
             openChildForm(new fTrangChu(),pnForm);
         }
         //custom panelBaoCao

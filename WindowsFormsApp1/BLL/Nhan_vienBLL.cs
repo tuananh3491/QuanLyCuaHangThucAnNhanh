@@ -4,51 +4,46 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.BLL
 {
     internal class Nhan_vienBLL
     {
-        public List<Nhan_vien> GetAllNV()
+        Nhan_vien_DAL dal;
+        public Nhan_vienBLL()
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Nhan_vien.ToList();
-                return s;
-            }
+            dal = new Nhan_vien_DAL();
         }
-        public Nhan_vien GetNV(int m)
+        public void ShowDGV(DataGridView dg)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Nhan_vien.Find(m);
-                return s;
-            }
+            dg.DataSource = dal.GetAllNV();
+            dg.Columns["Tai_khoan"].Visible = false;
         }
-        public void AddNV(Nhan_vien ca)
+        public Nhan_vien GetNV(int NV)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Nhan_vien.Add(ca);
-                et.SaveChanges();
-            }
+            return dal.GetNV(NV);
         }
-        public void UpdateNV(Nhan_vien ca)
+        public Nhan_vien GetNV(string s)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Nhan_vien.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
+            return dal.GetNV(s);
         }
-        public void DeleteNV(Nhan_vien ca)
+        public void AddNV(Nhan_vien nv)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Nhan_vien.Remove(ca);
-                et.SaveChanges();
-            }
+            dal.AddNV(nv);
+        }
+        public int addNV(Nhan_vien nv)
+        {
+            return dal.addNV(nv);
+        }
+        public void UpdateNV(Nhan_vien nv)
+        {
+            dal.UpdateNV(nv);
+        }
+        public void DeleteNV(Nhan_vien nv)
+        {
+            dal.DeleteNV(nv);
         }
     }
 }

@@ -10,45 +10,26 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Tai_khoanBLL
     {
-        public List<Tai_khoan> GetAllTK()
+        Tai_khoan_DAL dal;
+        public Tai_khoanBLL() 
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Tai_khoan.ToList();
-                return s;
-            }
+            dal = new Tai_khoan_DAL();
         }
         public Tai_khoan GetTK(int m)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Tai_khoan.Find(m);
-                return s;
-            }
+            return dal.GetTK(m);
         }
-        public void AddNV(Tai_khoan ca)
+        public void AddTK(Tai_khoan a)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Tai_khoan.Add(ca);
-                et.SaveChanges();
-            }
+            dal.AddTK(a);
         }
-        public void UpdateNV(Tai_khoan ca)
+        public void UpdateTK(Tai_khoan a)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Tai_khoan.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
+            dal.UpdateTK(a);
         }
-        public void DeleteNV(Tai_khoan ca)
+        public void DeleteTK(Tai_khoan a)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Tai_khoan.Remove(ca);
-                et.SaveChanges();
-            }
+            dal.DeleteTK(a);
         }
     }
 }

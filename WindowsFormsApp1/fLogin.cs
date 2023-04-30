@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.View;
 using WindowsFormsApp1.View.TrangChu;
 
@@ -15,9 +16,11 @@ namespace WindowsFormsApp1
 {
     public partial class fLogin : Form
     {
+        Tai_khoanBLL bll;
         public fLogin()
         {
             InitializeComponent();
+            bll = new Tai_khoanBLL();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -46,22 +49,19 @@ namespace WindowsFormsApp1
 
         private void btLogIn_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text != "" && txtPassWord.Text != "")
+            Tai_khoan tk = bll.GetTK(int.Parse(txtUsername.Text));
+            if(tk != null)
             {
-                DangNhapBLL dn = new DangNhapBLL();
-                if (dn.checkLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
-                {
-                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
-                    fMainform fMainform = new fMainform();
-                    this.Hide();
-                    fMainform.ShowDialog();
-                    //this.Show();
-                }
-                else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                fMainform mainform = new fMainform();
+                mainform.ShowDialog();
             }
-
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-  
     }
 }

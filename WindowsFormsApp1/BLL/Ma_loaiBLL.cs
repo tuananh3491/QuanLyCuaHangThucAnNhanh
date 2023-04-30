@@ -10,15 +10,27 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Ma_loaiBLL
     {
+        Ma_loai_DAL dal;
+        public Ma_loaiBLL()
+        {
+            dal = new Ma_loai_DAL();
+        }
         public List<Ma_loai> GetAllML()
         {
-            using (PBL_3Entities et = new PBL_3Entities())
+
             {
-                var s = et.Ma_loai.ToList();
+                var s = dal.GetAllML();
                 return s;
             }
         }
         public Ma_loai GetML(int m)
+        {
+            {
+                var s = dal.GetML(m);
+                return s;
+            }
+        }
+        public Ma_loai GetML_Category(string m)
         {
             using (PBL_3Entities et = new PBL_3Entities())
             {
@@ -28,26 +40,20 @@ namespace WindowsFormsApp1.BLL
         }
         public void AddML(Ma_loai ca)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
             {
-                et.Ma_loai.Add(ca);
-                et.SaveChanges();
+                dal.AddML(ca);
             }
         }
         public void UpdateML(Ma_loai ca)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
             {
-                et.Ma_loai.AddOrUpdate(ca);
-                et.SaveChanges();
+                dal.UpdateML(ca);
             }
         }
         public void DeleteCLV(Ma_loai ca)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
             {
-                et.Ma_loai.Remove(ca);
-                et.SaveChanges();
+                dal.DeleteCLV(ca);
             }
         }
     }
