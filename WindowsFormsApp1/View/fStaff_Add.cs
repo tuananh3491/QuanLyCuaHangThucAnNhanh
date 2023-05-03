@@ -46,17 +46,6 @@ namespace WindowsFormsApp1.View
 
         private void vbButton1_Click(object sender, EventArgs e)
         {
-            /*Nhan_vien x = new Nhan_vien
-            {
-                Luong = Convert.ToInt32(textBox1.Text),
-                SDT = textBox2.Text,
-                Ten_NV = textBox3.Text,
-                Gioi_tinh = (radioButton1.Checked),
-                Ngay_sinh = dateTimePicker1.Value,
-                Trang_thai = (checkBox1.Checked),
-            };
-            bll.AddNV(x);*/
-
             int x = bll.addNV(new Nhan_vien
             {
                 Luong = Convert.ToInt32(textBox1.Text),

@@ -12,10 +12,10 @@ using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View
 {
-    public partial class fShift_Create : Form
+    public partial class fShift_AddStaff : Form
     {
         Ca_lam_viecBLL bll;
-        public fShift_Create()
+        public fShift_AddStaff()
         {
             InitializeComponent();
             bll = new Ca_lam_viecBLL();
