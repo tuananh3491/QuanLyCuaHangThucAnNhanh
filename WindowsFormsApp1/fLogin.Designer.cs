@@ -36,6 +36,7 @@ namespace WindowsFormsApp1
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -53,6 +54,7 @@ namespace WindowsFormsApp1
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -141,6 +143,7 @@ namespace WindowsFormsApp1
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.pictureBox4);
             this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox8);
@@ -152,6 +155,16 @@ namespace WindowsFormsApp1
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(619, 618);
             this.panel3.TabIndex = 21;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources._005_min;
+            this.pictureBox1.Location = new System.Drawing.Point(25, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(571, 570);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // pictureBox4
             // 
@@ -239,7 +252,7 @@ namespace WindowsFormsApp1
             this.txtPassWord.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.txtPassWord.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtPassWord.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtPassWord.ForeColor = System.Drawing.Color.Black;
             this.txtPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassWord.Location = new System.Drawing.Point(127, 202);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -266,7 +279,7 @@ namespace WindowsFormsApp1
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.txtUsername.FocusedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtUsername.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Location = new System.Drawing.Point(127, 140);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -405,6 +418,7 @@ namespace WindowsFormsApp1
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -442,6 +456,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassWord;
+        private PictureBox pictureBox1;
     }
 }
 

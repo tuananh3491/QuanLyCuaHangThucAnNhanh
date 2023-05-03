@@ -49,17 +49,17 @@ namespace WindowsFormsApp1
 
         private void btLogIn_Click(object sender, EventArgs e)
         {
-            Tai_khoan tk = bll.GetTK(int.Parse(txtUsername.Text));
-            if(tk != null)
+            if (txtUsername.Text != "" && txtPassWord.Text != "")
             {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                fMainform mainform = new fMainform();
-                mainform.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                TaiKhoan tkBLL = new TaiKhoan();
+                if(tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
+                {
+                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    fMainform fMainform = new fMainform();
+                    this.Hide();
+                    fMainform.ShowDialog();
+                }
+                else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
