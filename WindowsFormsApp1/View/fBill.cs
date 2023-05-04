@@ -24,11 +24,16 @@ namespace WindowsFormsApp1.View
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            fBill_Detail f=new fBill_Detail();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                int maHD = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                MessageBox.Show(maHD.ToString());
+                fBill_Detail f = new fBill_Detail(maHD);
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
+            }
         }
 
         private void fBill_Load(object sender, EventArgs e)
@@ -36,5 +41,6 @@ namespace WindowsFormsApp1.View
             dataGridView1.DataSource = null;
             bll.ShowDGV(dataGridView1);
         }
+
     }
 }
