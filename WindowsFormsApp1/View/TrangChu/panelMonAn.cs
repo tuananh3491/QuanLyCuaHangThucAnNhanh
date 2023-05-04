@@ -19,8 +19,10 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private San_pham MonAn;
         public delegate void Add(Chi_tiet_hoa_don t);
-        public Add callback;
+        public Add callbackMonAn;
         public double gia;
+        double gia_M;
+        double gia_L;
         public panelMonAn(San_pham s)
         {
             InitializeComponent();
@@ -47,28 +49,29 @@ namespace WindowsFormsApp1.View.TrangChu
             else
             {
                 MonAn.Don_gia = gia;
-                panelOrder p = new panelOrder(MonAn,cbbKichThuoc.Text);
-                if (p.Visible == true)
-                {
-                    ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
-                    p.Show();
-                }
                 Chi_tiet_hoa_don ct = new Chi_tiet_hoa_don
                 {
                     Ma_SP = MonAn.Ma_SP,
                     Kich_thuoc = cbbKichThuoc.Text,
                     Soluong_SP = 1,
-                    Gia = MonAn.Don_gia
+                    Gia = (cbbKichThuoc.Text == "S") ? gia : (cbbKichThuoc.Text == "M") ? gia_M : gia_L,
                 };
-                callback(ct);
+                callbackMonAn(ct);
+                panelOrder p = new panelOrder(MonAn,cbbKichThuoc.Text);
+                if (p.Visible == true)
+                {
+                    ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
+                    p.callback += new panelOrder.update(this.callbackMonAn);
+                    p.Show();
+                }
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             gia = MonAn.Don_gia;
-            double gia_M = gia*1.1;
-            double gia_L = gia * 1.3;
+            gia_M = gia*1.1;
+            gia_L = gia * 1.3;
            
             
             if (cbbKichThuoc.Text == "M")
@@ -89,5 +92,4 @@ namespace WindowsFormsApp1.View.TrangChu
         }
 
     }
-    
 }

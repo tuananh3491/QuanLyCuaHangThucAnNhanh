@@ -25,6 +25,7 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
             bll = new Hoa_donBLL();
+            ct = a;
         }
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
@@ -43,6 +44,14 @@ namespace WindowsFormsApp1.View.TrangChu
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
+        }
+
+        private void Bill_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = ct.ToArray();
+            dataGridView1.Columns["Ma_HD"].Visible = false;
+            dataGridView1.Columns["Hoa_don"].Visible = false;
+            dataGridView1.Columns["San_pham"].Visible = false;
         }
     }
 }

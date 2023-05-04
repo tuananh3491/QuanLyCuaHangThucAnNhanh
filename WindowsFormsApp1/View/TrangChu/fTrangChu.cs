@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View.TrangChu
 {
@@ -25,57 +26,33 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             hoa_Don = new Hoa_don();
         }
-
-        private void UpdateList(Chi_tiet_hoa_don t)
-        {
-            var s = ct.Find(x => x.San_pham == t.San_pham && x.Kich_thuoc == t.Kich_thuoc);
-            if(s != null) { s.Soluong_SP = t.Soluong_SP; }
-        }
         private void AddList(Chi_tiet_hoa_don t)
         {
             var s = ct.Find(x => x.San_pham == t.San_pham && x.Kich_thuoc == t.Kich_thuoc);
             if (s == null) { ct.Add(t); }
+            else
+            {
+                s.Soluong_SP = t.Soluong_SP;
+                if (s.Soluong_SP == 0) ct.Remove(s);
+            }
         }
-         
         private void btnPizza_Click_1(object sender, EventArgs e)
         {
-            flpnThucDon.Controls.Clear();
-            San_phamBLL san_PhamBLL = new San_phamBLL();
-            List<San_pham> l=new List<San_pham>();
-            l=san_PhamBLL.GetSPCategory(btnPizza.Text);
-            foreach(San_pham i in l)
-            {
-                flpnThucDon.Controls.Add(new panelMonAn(i));
-            }
+            openPanel(btnPizza.Text);
         }
 
         private void btnGa_Click(object sender, EventArgs e)
         {
             openPanel(btnGa.Text);
         }
-
         private void btnKhac_Click(object sender, EventArgs e)
         {
-            flpnThucDon.Controls.Clear();
-            San_phamBLL san_PhamBLL = new San_phamBLL();
-            List<San_pham> l = new List<San_pham>();
-            l = san_PhamBLL.GetSPCategory(btnKhac.Text);
-            foreach (San_pham i in l)
-            {
-                flpnThucDon.Controls.Add(new panelMonAn(i));
-            }
+            openPanel(btnKhac.Text);
         }
 
         private void btnBurger_Click(object sender, EventArgs e)
         {
-            flpnThucDon.Controls.Clear();
-            San_phamBLL san_PhamBLL = new San_phamBLL();
-            List<San_pham> l = new List<San_pham>();
-            l = san_PhamBLL.GetSPCategory(btnBurger.Text);
-            foreach (San_pham i in l)
-            {
-                flpnThucDon.Controls.Add(new panelMonAn(i));
-            }
+            openPanel(btnBurger.Text);
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -83,12 +60,11 @@ namespace WindowsFormsApp1.View.TrangChu
             flpnOrder.Controls.Clear();
             Button p=new Button();
             flpnOrder.Controls.Add(p);
-
         }
 
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill();
+            Bill f = new Bill(ct);
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
@@ -97,10 +73,7 @@ namespace WindowsFormsApp1.View.TrangChu
         }
         private void fTrangChu_Load(object sender, EventArgs e)
         {
-            foreach(var i in bll.GetListSP())
-            {
-                flpnThucDon.Controls.Add(new panelMonAn(i));
-            }
+            
         }
         private void openPanel(string s)
         {
@@ -112,7 +85,7 @@ namespace WindowsFormsApp1.View.TrangChu
             {
                 panelMonAn a = new panelMonAn(i);
                 flpnThucDon.Controls.Add(a);
-                a.callback += new panelMonAn.Add(this.AddList);
+                a.callbackMonAn += new panelMonAn.Add(this.AddList);
             }
         }
     }
