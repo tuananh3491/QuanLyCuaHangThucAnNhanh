@@ -62,7 +62,9 @@ namespace WindowsFormsApp1.View
                 Ten_TK = textBox5.Text,
                 Mat_khau = textBox6.Text,
                 Loai_TK = radioButton4.Checked
-            }) ;
+            });
+            MessageBox.Show("thêm nv thành công.");
+            changeForm();
         }
     }   
 }
