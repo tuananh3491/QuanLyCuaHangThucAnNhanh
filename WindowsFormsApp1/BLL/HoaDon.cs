@@ -15,8 +15,8 @@ namespace WindowsFormsApp1.BLL
             PBL_3Entities cnn = new PBL_3Entities();
             int demLap;
             Hashtable htMaKH = new Hashtable();
-            var MaKHInTime = cnn.Hoa_don.Where(p => p.Ngay_mua.Value.Year == nam && p.Ngay_mua.Value.Month == thang).Select(p => new { p.Ma_KH }).ToList();
-            var MaKHByTime = cnn.Hoa_don.Where(p => p.Ngay_mua.Value.Year < nam || p.Ngay_mua.Value.Year == nam && p.Ngay_mua.Value.Month <= thang).Select(p => new { p.Ma_KH }).ToList();
+            var MaKHInTime = cnn.Hoa_don.Where(p => p.Ngay_mua.Year == nam && p.Ngay_mua.Month == thang).Select(p => new { p.Ma_KH }).ToList();
+            var MaKHByTime = cnn.Hoa_don.Where(p => p.Ngay_mua.Year < nam || p.Ngay_mua.Year == nam && p.Ngay_mua.Month <= thang).Select(p => new { p.Ma_KH }).ToList();
 
             foreach (var d in MaKHByTime)
             {
@@ -36,6 +36,27 @@ namespace WindowsFormsApp1.BLL
             }
             return htMaKH;
         }
-        
+        public decimal GetTotalMoney(int thang, int nam)
+        {
+            decimal total = 0;
+            PBL_3Entities cnn = new PBL_3Entities();
+            var list = cnn.Hoa_don.Where(p => p.Ngay_mua.Year == nam && p.Ngay_mua.Month == thang);
+            foreach(var i in list) 
+            { 
+                total += i.Tong_tien; 
+            }   
+            return total;
+        }
+        public List<int> GetIDBill(int thang, int nam)
+        {
+            List<int> listIDBill = new List<int>();
+            PBL_3Entities cnn = new PBL_3Entities();
+            var listBill = cnn.Hoa_don.Where(p => p.Ngay_mua.Year == nam && p.Ngay_mua.Month == thang).ToList();
+            foreach(var i in listBill)
+            {
+                listIDBill.Add(Convert.ToInt32(i.Ma_HD));
+            }
+            return listIDBill;
+        }
     }
 }

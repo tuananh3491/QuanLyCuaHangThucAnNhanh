@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -36,12 +35,12 @@
             this.btnSoLieu = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbbNam = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ccbLoc = new System.Windows.Forms.ComboBox();
             this.bieuDoKH = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.cbbNam = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -90,6 +89,25 @@
             this.panel2.Size = new System.Drawing.Size(930, 67);
             this.panel2.TabIndex = 23;
             // 
+            // cbbNam
+            // 
+            this.cbbNam.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbNam.FormattingEnabled = true;
+            this.cbbNam.Location = new System.Drawing.Point(719, 19);
+            this.cbbNam.Name = "cbbNam";
+            this.cbbNam.Size = new System.Drawing.Size(79, 31);
+            this.cbbNam.TabIndex = 72;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(653, 24);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 20);
+            this.label4.TabIndex = 73;
+            this.label4.Text = "Năm";
+            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
@@ -103,6 +121,7 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(50, 38);
             this.iconPictureBox1.TabIndex = 64;
             this.iconPictureBox1.TabStop = false;
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
             // 
             // label1
             // 
@@ -130,24 +149,20 @@
             // 
             // bieuDoKH
             // 
-            chartArea2.Name = "ChartArea1";
-            this.bieuDoKH.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.bieuDoKH.Legends.Add(legend2);
             this.bieuDoKH.Location = new System.Drawing.Point(0, 0);
             this.bieuDoKH.Name = "bieuDoKH";
-            series3.ChartArea = "ChartArea1";
             series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(119)))));
             series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series3.Legend = "Legend1";
             series3.LegendText = "Khách hàng quay trở lại quán";
-            series3.Name = "bieuDoKH";
-            series4.ChartArea = "ChartArea1";
+            series3.Name = "series1";
             series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(227)))), ((int)(((byte)(98)))));
             series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series4.Legend = "Legend1";
             series4.LegendText = "Khách hàng mua lần đầu";
-            series4.Name = "Series2";
+            series4.Name = "series2";
             this.bieuDoKH.Series.Add(series3);
             this.bieuDoKH.Series.Add(series4);
             this.bieuDoKH.Size = new System.Drawing.Size(885, 412);
@@ -156,26 +171,6 @@
             title2.Name = "Title1";
             title2.Text = "BIỂU ĐỒ THỐNG KÊ VỀ KHÁCH HÀNG";
             this.bieuDoKH.Titles.Add(title2);
-            // 
-            // cbbNam
-            // 
-            this.cbbNam.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbNam.FormattingEnabled = true;
-            this.cbbNam.Location = new System.Drawing.Point(719, 19);
-            this.cbbNam.Name = "cbbNam";
-            this.cbbNam.Size = new System.Drawing.Size(79, 31);
-            this.cbbNam.TabIndex = 72;
-
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(653, 24);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 20);
-            this.label4.TabIndex = 73;
-            this.label4.Text = "Năm";
             // 
             // fReport_CustomerChart
             // 
@@ -189,7 +184,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fReport_CustomerChart";
             this.Text = "fReport_CustomerChart";
-            
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -207,8 +201,8 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ccbLoc;
-        private System.Windows.Forms.DataVisualization.Charting.Chart bieuDoKH;
         private System.Windows.Forms.ComboBox cbbNam;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart bieuDoKH;
     }
 }

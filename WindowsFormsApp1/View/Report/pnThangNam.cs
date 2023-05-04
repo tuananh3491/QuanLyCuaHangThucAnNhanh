@@ -25,7 +25,7 @@ namespace WindowsFormsApp1
         public void setCbbNam()
         {
             PBL_3Entities cnn = new PBL_3Entities();
-            var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Value.Year).Distinct().ToList();
+            var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
             foreach( int i in dsNam )
             {
                 cbbNam.Items.Add(i);
