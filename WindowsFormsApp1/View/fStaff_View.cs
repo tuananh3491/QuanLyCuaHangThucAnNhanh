@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -57,6 +58,7 @@ namespace WindowsFormsApp1.View
             else radioButton2.Checked = true;
             if (x.Tai_khoan.Loai_TK == true) radioButton4.Checked = true;
             else radioButton3.Checked = true;
+            checkBox1.Checked = (x.Trang_thai == true);
         }
 
         private void vbButton1_Click(object sender, EventArgs e)
@@ -68,11 +70,12 @@ namespace WindowsFormsApp1.View
             x.Tai_khoan.Ten_TK = textBox5.Text;
             x.Tai_khoan.Mat_khau = textBox6.Text;
             x.Luong = Convert.ToInt32(textBox4.Text);
+            
             if (radioButton1.Checked) x.Gioi_tinh = true;
             else x.Gioi_tinh = false;
             if (radioButton4.Checked) x.Tai_khoan.Loai_TK = true;
             else x.Tai_khoan.Loai_TK = false;
-
+            x.Trang_thai = checkBox1.Checked;
 
             bll.UpdateNV(x);
             changeForm();
