@@ -56,6 +56,7 @@ namespace WindowsFormsApp1.DAL
             s.Ngay_sinh = ca.Ngay_sinh;
             s.SDT = ca.SDT;
             s.Luong = ca.Luong;
+            s.Trang_thai = ca.Trang_thai;
             s.Tai_khoan.Ten_TK = ca.Tai_khoan.Ten_TK;
             s.Tai_khoan.Mat_khau = ca.Tai_khoan .Mat_khau;
             et.SaveChanges();
