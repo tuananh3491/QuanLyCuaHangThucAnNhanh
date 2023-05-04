@@ -16,6 +16,7 @@ namespace WindowsFormsApp1.View.TrangChu
     {
         public static Hoa_don hoa_Don;
         List<Chi_tiet_hoa_don> ct;
+        double tongtien;
         public fTrangChu()
         {
             InitializeComponent();
@@ -33,8 +34,20 @@ namespace WindowsFormsApp1.View.TrangChu
             else
             {
                 s.Soluong_SP = t.Soluong_SP;
+                s.Gia = t.Gia;
                 if (s.Soluong_SP == 0) ct.Remove(s);
             }
+            TinhTongTien();
+        }
+        private void TinhTongTien()
+        {
+            tbTongTien.Text = "0";
+            tongtien = 0;
+            foreach (Chi_tiet_hoa_don i in ct)
+            {
+                tongtien += Convert.ToDouble(i.Gia);
+            }
+            tbTongTien.Text = tongtien.ToString();
         }
         private void btnPizza_Click_1(object sender, EventArgs e)
         {

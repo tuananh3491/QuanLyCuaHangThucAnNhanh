@@ -46,6 +46,7 @@
             this.flpnThucDon = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnChonMon.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -54,6 +55,7 @@
             // pnChonMon
             // 
             this.pnChonMon.BackColor = System.Drawing.SystemColors.Window;
+            this.pnChonMon.Controls.Add(this.textBox1);
             this.pnChonMon.Controls.Add(this.flpnOrder);
             this.pnChonMon.Controls.Add(this.btnTaoDon);
             this.pnChonMon.Controls.Add(this.btnHuy);
@@ -74,7 +76,7 @@
             this.flpnOrder.Location = new System.Drawing.Point(18, 66);
             this.flpnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpnOrder.Name = "flpnOrder";
-            this.flpnOrder.Size = new System.Drawing.Size(269, 179);
+            this.flpnOrder.Size = new System.Drawing.Size(269, 285);
             this.flpnOrder.TabIndex = 5;
             // 
             // btnTaoDon
@@ -134,7 +136,7 @@
             this.tbTongTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tbTongTien.Size = new System.Drawing.Size(82, 18);
             this.tbTongTien.TabIndex = 2;
-            this.tbTongTien.Text = "0đ";
+            this.tbTongTien.Text = "0";
             this.tbTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
@@ -345,6 +347,24 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
+            this.textBox1.Location = new System.Drawing.Point(252, 370);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.textBox1.Size = new System.Drawing.Size(10, 18);
+            this.textBox1.TabIndex = 6;
+            this.textBox1.Text = "đ";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // fTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -386,5 +406,6 @@
         private Guna.UI2.WinForms.Guna2Button btnNuoc;
         private Guna.UI2.WinForms.Guna2Button btnKem;
         public System.Windows.Forms.FlowLayoutPanel flpnThucDon;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

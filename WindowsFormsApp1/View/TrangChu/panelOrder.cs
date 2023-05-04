@@ -43,14 +43,7 @@ namespace WindowsFormsApp1.View.TrangChu
             count = Convert.ToInt32(tbSoLuong.Text);
             if (count == 0) return;
             else count--;
-            Chi_tiet_hoa_don chi_Tiet_Hoa_Don = new Chi_tiet_hoa_don
-            {
-                Ma_SP = san_Pham.Ma_SP,
-                Kich_thuoc = KichCo,
-                Soluong_SP = count,
-                Gia = san_Pham.Don_gia * count
-            };
-            callback(chi_Tiet_Hoa_Don);
+            setPanel(count);
             tbSoLuong.Text = count.ToString();
         }
         private void btnAdd_Click(object sender, EventArgs e)
@@ -58,22 +51,26 @@ namespace WindowsFormsApp1.View.TrangChu
             int count;
             count = Convert.ToInt32(tbSoLuong.Text);
             count++;
-            
-            Chi_tiet_hoa_don chi_Tiet_Hoa_Don = new Chi_tiet_hoa_don
-            {
-                Ma_SP = san_Pham.Ma_SP,
-                Kich_thuoc = KichCo,
-                Soluong_SP = count,
-                Gia = san_Pham.Don_gia * count
-            };
-            callback(chi_Tiet_Hoa_Don);
+
+            setPanel(count);
             tbSoLuong.Text = count.ToString();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            
+            setPanel(0);   
             this.Dispose();
+        }
+        private void setPanel(int x)
+        {
+            Chi_tiet_hoa_don chi_Tiet_Hoa_Don = new Chi_tiet_hoa_don
+            {
+                Ma_SP = san_Pham.Ma_SP,
+                Kich_thuoc = KichCo,
+                Soluong_SP = x,
+                Gia = san_Pham.Don_gia * x
+            };
+            callback(chi_Tiet_Hoa_Don);
         }
     }
 }
