@@ -30,8 +30,9 @@
         {
             this.pnChinhSua = new System.Windows.Forms.Panel();
             this.flpnMonAn = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddPro = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnThem = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.btnAddCategory = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.btnPizza = new Guna.UI2.WinForms.Guna2Button();
             this.btnGa = new Guna.UI2.WinForms.Guna2Button();
@@ -39,6 +40,7 @@
             this.btnNuoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnKem = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
+            this.flpnMonAn.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnChinhSua
@@ -50,10 +52,26 @@
             // 
             // flpnMonAn
             // 
+            this.flpnMonAn.Controls.Add(this.btnAddPro);
             this.flpnMonAn.Location = new System.Drawing.Point(43, 73);
             this.flpnMonAn.Name = "flpnMonAn";
             this.flpnMonAn.Size = new System.Drawing.Size(513, 452);
             this.flpnMonAn.TabIndex = 33;
+            // 
+            // btnAddPro
+            // 
+            this.btnAddPro.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddPro.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddPro.Image = global::WindowsFormsApp1.Properties.Resources.iconCong;
+            this.btnAddPro.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAddPro.ImageRotate = 0F;
+            this.btnAddPro.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAddPro.Location = new System.Drawing.Point(3, 3);
+            this.btnAddPro.Name = "btnAddPro";
+            this.btnAddPro.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddPro.Size = new System.Drawing.Size(42, 38);
+            this.btnAddPro.TabIndex = 42;
+            this.btnAddPro.Click += new System.EventHandler(this.btnAddPro_Click);
             // 
             // panel1
             // 
@@ -62,20 +80,20 @@
             this.panel1.Size = new System.Drawing.Size(328, 452);
             this.panel1.TabIndex = 42;
             // 
-            // btnThem
+            // btnAddCategory
             // 
-            this.btnThem.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnThem.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnThem.Image = global::WindowsFormsApp1.Properties.Resources.iconCong;
-            this.btnThem.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnThem.ImageRotate = 0F;
-            this.btnThem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnThem.Location = new System.Drawing.Point(839, 9);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnThem.Size = new System.Drawing.Size(42, 38);
-            this.btnThem.TabIndex = 41;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnAddCategory.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddCategory.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddCategory.Image = global::WindowsFormsApp1.Properties.Resources.iconCong;
+            this.btnAddCategory.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnAddCategory.ImageRotate = 0F;
+            this.btnAddCategory.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnAddCategory.Location = new System.Drawing.Point(839, 9);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnAddCategory.Size = new System.Drawing.Size(42, 38);
+            this.btnAddCategory.TabIndex = 41;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCate_Click);
             // 
             // guna2Button7
             // 
@@ -94,6 +112,7 @@
             this.guna2Button7.Size = new System.Drawing.Size(107, 35);
             this.guna2Button7.TabIndex = 40;
             this.guna2Button7.Text = "Combo";
+            this.guna2Button7.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnPizza
             // 
@@ -112,7 +131,7 @@
             this.btnPizza.Size = new System.Drawing.Size(87, 35);
             this.btnPizza.TabIndex = 39;
             this.btnPizza.Text = "Pizza";
-            this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click);
+            this.btnPizza.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnGa
             // 
@@ -131,6 +150,7 @@
             this.btnGa.Size = new System.Drawing.Size(87, 35);
             this.btnGa.TabIndex = 38;
             this.btnGa.Text = "Gà";
+            this.btnGa.Click += new System.EventHandler(this.btn_Click);
             // 
             // guna2Button4
             // 
@@ -149,6 +169,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(87, 35);
             this.guna2Button4.TabIndex = 37;
             this.guna2Button4.Text = "Burger";
+            this.guna2Button4.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnNuoc
             // 
@@ -167,6 +188,7 @@
             this.btnNuoc.Size = new System.Drawing.Size(87, 35);
             this.btnNuoc.TabIndex = 36;
             this.btnNuoc.Text = "Nước";
+            this.btnNuoc.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnKem
             // 
@@ -185,6 +207,7 @@
             this.btnKem.Size = new System.Drawing.Size(87, 35);
             this.btnKem.TabIndex = 35;
             this.btnKem.Text = "Kem";
+            this.btnKem.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnKhac
             // 
@@ -203,6 +226,7 @@
             this.btnKhac.Size = new System.Drawing.Size(87, 35);
             this.btnKhac.TabIndex = 34;
             this.btnKhac.Text = "Khác";
+            this.btnKhac.Click += new System.EventHandler(this.btn_Click);
             // 
             // fProduct
             // 
@@ -211,7 +235,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
             this.Controls.Add(this.pnChinhSua);
-            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.btnPizza);
             this.Controls.Add(this.btnGa);
@@ -223,6 +247,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fProduct";
             this.Text = "fFoodDrink";
+            this.flpnMonAn.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -237,7 +262,8 @@
         private Guna.UI2.WinForms.Guna2Button btnNuoc;
         private Guna.UI2.WinForms.Guna2Button btnKem;
         private Guna.UI2.WinForms.Guna2Button btnKhac;
-        private Guna.UI2.WinForms.Guna2ImageButton btnThem;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAddCategory;
         private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2ImageButton btnAddPro;
     }
 }

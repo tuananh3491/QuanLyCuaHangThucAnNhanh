@@ -25,13 +25,23 @@ namespace WindowsFormsApp1.View
             flpnMonAn.Controls.Add(p);
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
+        private void btnAddCate_Click(object sender, EventArgs e)
         {
             fProduct_Add f = new fProduct_Add();
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
+        }
+
+        private void btnAddPro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

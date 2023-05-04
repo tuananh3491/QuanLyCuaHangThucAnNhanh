@@ -41,6 +41,16 @@ namespace WindowsFormsApp1.View
             //    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             //    f.Show();
             //}
+            if (dataGridView.SelectedRows.Count == 1)
+            {
+                int m = int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                fCustomer_History f = new fCustomer_History(m);
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
+            }
+            else MessageBox.Show("Lỗi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
         }
         private void fCustomer_Load(object sender, EventArgs e)
         {

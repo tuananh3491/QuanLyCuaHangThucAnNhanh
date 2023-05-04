@@ -34,15 +34,14 @@ namespace WindowsFormsApp1.View
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            maKH = int.Parse(txtMaKH.Text.ToString());//? cần có ko
+           // maKH = int.Parse(txtMaKH.Text.ToString());//? cần có ko
             PBL_3Entities cnn = new PBL_3Entities();
-            KhachHang khBLL = new KhachHang();
-            var kh = khBLL.GetKHById(maKH);
+            //KhachHang khBLL = new KhachHang();
+            Khach_hang kh = cnn.Khach_hang.Find(maKH);
            
             if (kh.SDT != txtSDT.Text)
             {
-                string newSDT = txtSDT.Text.ToString();
-                kh.SDT = newSDT;
+                kh.SDT = txtSDT.Text.ToString();
                 cnn.SaveChanges();
                 MessageBox.Show("Cập nhật thành công");
                 fCustomer f = new fCustomer();
@@ -69,8 +68,8 @@ namespace WindowsFormsApp1.View
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            KhachHang khBLL = new KhachHang();
-            var kh = khBLL.GetKHById(maKH);
+            PBL_3Entities cnn = new PBL_3Entities();
+            Khach_hang kh = cnn.Khach_hang.Find(maKH);
             txtSDT.Text = "";
             //fCustomer f = new fCustomer();
             //f.TopLevel = false;
