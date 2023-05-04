@@ -31,13 +31,14 @@ namespace WindowsFormsApp1.View.Product
             txtName.Text = sp.Ten_SP.ToString();
             txtName.Enabled = false;
             txtPrice.Text = sp.Don_gia.ToString();
-            checkCo.Checked = true;
+            checkCo.Checked = (bool)sp.Trang_thai;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
             PBL_3Entities cnn = new PBL_3Entities();
             San_pham sp = cnn.San_pham.Find(maSP);
             sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
+            sp.Trang_thai = checkCo.Checked;
             cnn.SaveChanges();
             MessageBox.Show("Đã lưu","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
             fProduct fProduct = new fProduct();
@@ -51,7 +52,14 @@ namespace WindowsFormsApp1.View.Product
 
         private void btnDel_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Bạn có chắc muốn xóa sản phẩm khỏi menu?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm khỏi menu?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.OK)
+            {
+                PBL_3Entities cnn = new PBL_3Entities();
+                San_pham sp = cnn.San_pham.Find(maSP);
+                sp.Trang_thai = false;
+                cnn.SaveChanges();
+            }
         }
     }
 }

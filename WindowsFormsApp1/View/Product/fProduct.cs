@@ -34,11 +34,14 @@ namespace WindowsFormsApp1.View
 
         private void btnAddCate_Click(object sender, EventArgs e)
         {
-            //fProduct_Add f = new fProduct_Add();
-            //f.TopLevel = false;
-            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            //f.Show();
+            flpnMonAn.Controls.Clear();
+          
+            fAddCategory f = new fAddCategory();
+            f.TopLevel = false;
+            ((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Clear();
+            ((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Add(f);
+            f.Show();
+         
         }
 
 
@@ -70,6 +73,7 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
+            this.Dispose();
         }
     }
 }

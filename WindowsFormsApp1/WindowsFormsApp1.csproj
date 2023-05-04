@@ -159,6 +159,12 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fBill_PrePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fBill_PrePrint.Designer.cs">
+      <DependentUpon>fBill_PrePrint.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Product\fAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -401,6 +407,9 @@
     <None Include="Resources\nước.png" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
+    <EmbeddedResource Include="View\fBill_PrePrint.resx">
+      <DependentUpon>fBill_PrePrint.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fAddCategory.resx">
       <DependentUpon>fAddCategory.cs</DependentUpon>
     </EmbeddedResource>

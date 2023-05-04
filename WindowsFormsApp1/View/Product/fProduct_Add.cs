@@ -26,30 +26,45 @@ namespace WindowsFormsApp1.View.Product
             List<Ma_loai> list = maLoaiBLL.GetListCategory();
             foreach(Ma_loai item in list)
             {
-                cbbCategory.Items.Add(item);
+                cbbCategory.Items.Add(item.Ten);
             }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            San_pham sp = new San_pham();
-            sp.Ten_SP = txtName.Text.ToString();
-            sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
-            sp.Ma_loai = int.Parse(cbbCategory.SelectedItem.ToString());
-            sp.Trang_thai = true;
-
-            //ảnh
-            //byte[] image = (byte[])txtLink.Text.ToString();
-            //MemoryStream ms = new MemoryStream(image);
-            //sp.Hinh_anh = Image.FromStream(ms);
-
-            using (PBL_3Entities cnn = new PBL_3Entities())
+            if(txtLink.Text == "" || txtName.Text == "" || txtPrice.Text == "")
             {
-                cnn.San_pham.Add(sp);
-                cnn.SaveChanges();
+                MessageBox.Show("Lỗi","Cảnh báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
             }
-                
-            MessageBox.Show("Thêm thành công","Thông báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Information);
+            else
+            {
+                //Tạo 1 đối tượng image từ file
+                Image image = Image.FromFile(txtLink.Text.ToString());
+                //tạo 1 memorystream
+                var ms = new MemoryStream();//this is where we are going to deposit the bytes 
+                                            //lưu bytes to ms
+                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                //to get the bytes we type
+                var bytes = ms.ToArray();
+                //
+                var sp = new San_pham()
+                {
+                    Ten_SP = txtName.Text.ToString(),
+                    Don_gia = Convert.ToDouble(txtPrice.Text.ToString()),
+                    Ma_loai = maLoaiBLL.GetIdCategory(cbbCategory.SelectedItem.ToString()),
+                    Trang_thai = true,
+                    Hinh_anh = bytes
+                };
+                using (PBL_3Entities cnn = new PBL_3Entities())
+                {
+                    cnn.San_pham.Add(sp);
+                    cnn.SaveChanges();
+                }
+
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+            
+
         }
 
         private void btnHuy_Click(object sender, EventArgs e)

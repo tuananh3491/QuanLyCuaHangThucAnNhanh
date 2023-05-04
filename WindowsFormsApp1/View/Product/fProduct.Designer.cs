@@ -44,7 +44,7 @@
             // 
             // pnChinhSua
             // 
-            this.pnChinhSua.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnChinhSua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnChinhSua.Location = new System.Drawing.Point(601, 74);
             this.pnChinhSua.Name = "pnChinhSua";
             this.pnChinhSua.Size = new System.Drawing.Size(312, 474);
@@ -53,7 +53,7 @@
             // flpnMonAn
             // 
             this.flpnMonAn.AutoScroll = true;
-            this.flpnMonAn.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.flpnMonAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpnMonAn.Location = new System.Drawing.Point(21, 74);
             this.flpnMonAn.Name = "flpnMonAn";
             this.flpnMonAn.Size = new System.Drawing.Size(532, 474);
