@@ -16,6 +16,7 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class panelMonAn : UserControl
     {
+
         private San_pham MonAn;
         public delegate void Add(Chi_tiet_hoa_don t);
         public Add callback;
@@ -86,6 +87,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 tbTien.Text = gia.ToString() + "đ";
             }
         }
+
     }
     
 }

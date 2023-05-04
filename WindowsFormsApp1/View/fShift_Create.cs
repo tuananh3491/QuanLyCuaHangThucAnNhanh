@@ -20,7 +20,6 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
             bll = new Ca_lam_viecBLL();
         }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             fShift f = new fShift();

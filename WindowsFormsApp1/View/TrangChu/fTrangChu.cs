@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
-using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View.TrangChu
 {
@@ -96,10 +95,12 @@ namespace WindowsFormsApp1.View.TrangChu
             f.Show();
             this.Dispose();
         }
-
         private void fTrangChu_Load(object sender, EventArgs e)
         {
-
+            foreach(var i in bll.GetListSP())
+            {
+                flpnThucDon.Controls.Add(new panelMonAn(i));
+            }
         }
         private void openPanel(string s)
         {
