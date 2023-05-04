@@ -30,8 +30,6 @@
         {
             this.pnChonMon = new System.Windows.Forms.Panel();
             this.flpnOrder = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnTaoDon = new WindowsFormsApp1.CustomControl.VBButton();
-            this.btnHuy = new WindowsFormsApp1.CustomControl.VBButton();
             this.tbTongTien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -46,6 +44,8 @@
             this.flpnThucDon = new System.Windows.Forms.FlowLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.btnTaoDon = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnHuy = new WindowsFormsApp1.CustomControl.VBButton();
             this.pnChonMon.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -70,54 +70,12 @@
             // flpnOrder
             // 
             this.flpnOrder.AutoScroll = true;
-            this.flpnOrder.BackColor = System.Drawing.Color.DarkGray;
+            this.flpnOrder.BackColor = System.Drawing.Color.Transparent;
             this.flpnOrder.Location = new System.Drawing.Point(3, 82);
             this.flpnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpnOrder.Name = "flpnOrder";
             this.flpnOrder.Size = new System.Drawing.Size(362, 367);
             this.flpnOrder.TabIndex = 5;
-            // 
-            // btnTaoDon
-            // 
-            this.btnTaoDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnTaoDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnTaoDon.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnTaoDon.BorderRadius = 10;
-            this.btnTaoDon.BorderSize = 0;
-            this.btnTaoDon.FlatAppearance.BorderSize = 0;
-            this.btnTaoDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTaoDon.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnTaoDon.ForeColor = System.Drawing.Color.White;
-            this.btnTaoDon.Location = new System.Drawing.Point(211, 505);
-            this.btnTaoDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTaoDon.Name = "btnTaoDon";
-            this.btnTaoDon.Size = new System.Drawing.Size(109, 41);
-            this.btnTaoDon.TabIndex = 4;
-            this.btnTaoDon.Text = "Tạo đơn";
-            this.btnTaoDon.TextColor = System.Drawing.Color.White;
-            this.btnTaoDon.UseVisualStyleBackColor = false;
-            this.btnTaoDon.Click += new System.EventHandler(this.btnTaoDon_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnHuy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnHuy.BorderRadius = 10;
-            this.btnHuy.BorderSize = 0;
-            this.btnHuy.FlatAppearance.BorderSize = 0;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(27, 505);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(109, 41);
-            this.btnHuy.TabIndex = 3;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.TextColor = System.Drawing.Color.White;
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // tbTongTien
             // 
@@ -336,6 +294,48 @@
             this.pictureBox3.Size = new System.Drawing.Size(131, 121);
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
+            // 
+            // btnTaoDon
+            // 
+            this.btnTaoDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnTaoDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnTaoDon.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnTaoDon.BorderRadius = 10;
+            this.btnTaoDon.BorderSize = 0;
+            this.btnTaoDon.FlatAppearance.BorderSize = 0;
+            this.btnTaoDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaoDon.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnTaoDon.ForeColor = System.Drawing.Color.White;
+            this.btnTaoDon.Location = new System.Drawing.Point(211, 505);
+            this.btnTaoDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTaoDon.Name = "btnTaoDon";
+            this.btnTaoDon.Size = new System.Drawing.Size(109, 41);
+            this.btnTaoDon.TabIndex = 4;
+            this.btnTaoDon.Text = "Tạo đơn";
+            this.btnTaoDon.TextColor = System.Drawing.Color.White;
+            this.btnTaoDon.UseVisualStyleBackColor = false;
+            this.btnTaoDon.Click += new System.EventHandler(this.btnTaoDon_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnHuy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnHuy.BorderRadius = 10;
+            this.btnHuy.BorderSize = 0;
+            this.btnHuy.FlatAppearance.BorderSize = 0;
+            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHuy.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(27, 505);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(109, 41);
+            this.btnHuy.TabIndex = 3;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.TextColor = System.Drawing.Color.White;
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // fTrangChu
             // 

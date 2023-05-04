@@ -24,5 +24,13 @@ namespace WindowsFormsApp1.BLL
             dg.Columns["Khach_hang"].Visible = false;
             dg.Columns["Tai_khoan"].Visible = false;
         }
+        public void ShowDGVList(DataGridView dg)
+        {
+
+        }
+        public int Add_HD(Hoa_don x)
+        {
+            return dal.Add_HD(x);
+        }
     }
 }

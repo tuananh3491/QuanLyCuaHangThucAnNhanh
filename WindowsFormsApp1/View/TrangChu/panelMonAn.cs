@@ -17,12 +17,17 @@ namespace WindowsFormsApp1.View.TrangChu
     public partial class panelMonAn : UserControl
     {
         private San_pham MonAn;
+        public delegate void Add(Chi_tiet_hoa_don t);
+        public Add callback;
+        public double gia;
         public panelMonAn(San_pham s)
         {
             InitializeComponent();
             MonAn = s;
             setGUI(MonAn);
+            
         }
+        
         void setGUI(San_pham sp)
         {          
                 pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(sp.Hinh_anh));
@@ -40,27 +45,45 @@ namespace WindowsFormsApp1.View.TrangChu
             }
             else
             {
-                panelOrder p = new panelOrder(MonAn);
-                ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
-                p.Show();
-
-                
+                MonAn.Don_gia = gia;
+                panelOrder p = new panelOrder(MonAn,cbbKichThuoc.Text);
+                if (p.Visible == true)
+                {
+                    ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
+                    p.Show();
+                }
+                Chi_tiet_hoa_don ct = new Chi_tiet_hoa_don
+                {
+                    Ma_SP = MonAn.Ma_SP,
+                    Kich_thuoc = cbbKichThuoc.Text,
+                    Soluong_SP = 1,
+                    Gia = MonAn.Don_gia
+                };
+                callback(ct);
             }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            gia = MonAn.Don_gia;
+            double gia_M = gia*1.1;
+            double gia_L = gia * 1.3;
+           
+            
             if (cbbKichThuoc.Text == "M")
             {
-                tbTien.Text= (MonAn.Don_gia*1.1).ToString() + "đ";
+                tbTien.Text= gia_M.ToString() + "đ";
+                gia = gia_M;
+               
             }
             else if (cbbKichThuoc.Text == "L")
             {
-                tbTien.Text = (MonAn.Don_gia*1.3).ToString() + "đ";
+                tbTien.Text = gia_L.ToString() + "đ";
+                gia = gia_L;
             }
             else
             {
-                tbTien.Text = MonAn.Don_gia.ToString() + "đ";
+                tbTien.Text = gia.ToString() + "đ";
             }
         }
     }

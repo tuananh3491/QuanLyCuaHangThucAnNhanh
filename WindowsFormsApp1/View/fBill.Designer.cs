@@ -28,47 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.dgvListBill = new System.Windows.Forms.DataGridView();
+            this.dtpkDate = new System.Windows.Forms.DateTimePicker();
+            this.btnDate = new FontAwesome.Sharp.IconButton();
             this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListBill
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 56);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(663, 342);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvListBill.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.dgvListBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListBill.Location = new System.Drawing.Point(25, 69);
+            this.dgvListBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvListBill.Name = "dgvListBill";
+            this.dgvListBill.RowHeadersWidth = 51;
+            this.dgvListBill.RowTemplate.Height = 24;
+            this.dgvListBill.Size = new System.Drawing.Size(884, 421);
+            this.dgvListBill.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dtpkDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(405, 15);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(213, 26);
-            this.dateTimePicker1.TabIndex = 12;
+            this.dtpkDate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkDate.Location = new System.Drawing.Point(540, 18);
+            this.dtpkDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpkDate.Name = "dtpkDate";
+            this.dtpkDate.Size = new System.Drawing.Size(283, 30);
+            this.dtpkDate.TabIndex = 12;
             // 
-            // iconButton1
+            // btnDate
             // 
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 40;
-            this.iconButton1.Location = new System.Drawing.Point(633, 10);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(30, 37);
-            this.iconButton1.TabIndex = 13;
-            this.iconButton1.UseVisualStyleBackColor = true;
+            this.btnDate.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.btnDate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDate.IconSize = 40;
+            this.btnDate.Location = new System.Drawing.Point(844, 12);
+            this.btnDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDate.Name = "btnDate";
+            this.btnDate.Size = new System.Drawing.Size(40, 46);
+            this.btnDate.TabIndex = 13;
+            this.btnDate.UseVisualStyleBackColor = true;
             // 
             // btnXemChiTiet
             // 
@@ -81,10 +81,10 @@
             this.btnXemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXemChiTiet.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXemChiTiet.ForeColor = System.Drawing.Color.White;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(479, 411);
-            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXemChiTiet.Location = new System.Drawing.Point(639, 506);
+            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(120, 32);
+            this.btnXemChiTiet.Size = new System.Drawing.Size(160, 39);
             this.btnXemChiTiet.TabIndex = 10;
             this.btnXemChiTiet.Text = "Xem chi tiết";
             this.btnXemChiTiet.TextColor = System.Drawing.Color.White;
@@ -93,29 +93,29 @@
             // 
             // fBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(698, 455);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.dateTimePicker1);
+            this.ClientSize = new System.Drawing.Size(931, 560);
+            this.Controls.Add(this.btnDate);
+            this.Controls.Add(this.dtpkDate);
             this.Controls.Add(this.btnXemChiTiet);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListBill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fBill";
             this.Text = "fBill";
             this.Load += new System.EventHandler(this.fBill_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListBill;
         private CustomControl.VBButton btnXemChiTiet;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.DateTimePicker dtpkDate;
+        private FontAwesome.Sharp.IconButton btnDate;
     }
 }

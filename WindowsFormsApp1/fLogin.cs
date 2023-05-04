@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
     public partial class fLogin : Form
     {
         Tai_khoanBLL bll;
+        public static string TaiKhoan;
         public fLogin()
         {
             InitializeComponent();

@@ -33,8 +33,8 @@ namespace WindowsFormsApp1.View
 
         private void fBill_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            bll.ShowDGV(dataGridView1);
+            dgvListBill.DataSource = null;
+            bll.ShowDGV(dgvListBill);
         }
     }
 }
