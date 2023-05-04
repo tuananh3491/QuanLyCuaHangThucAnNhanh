@@ -36,6 +36,7 @@
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.pic = new System.Windows.Forms.PictureBox();
+            this.checkCon = new System.Windows.Forms.CheckBox();
             this.pnPro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
@@ -43,6 +44,7 @@
             // pnPro
             // 
             this.pnPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.pnPro.Controls.Add(this.checkCon);
             this.pnPro.Controls.Add(this.btnEdit);
             this.pnPro.Controls.Add(this.txtName);
             this.pnPro.Controls.Add(this.button3);
@@ -88,6 +90,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "L";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -99,6 +102,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "M";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtPrice
             // 
@@ -120,6 +124,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "S";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pic
             // 
@@ -128,6 +133,16 @@
             this.pic.Size = new System.Drawing.Size(161, 95);
             this.pic.TabIndex = 8;
             this.pic.TabStop = false;
+            // 
+            // checkCon
+            // 
+            this.checkCon.AutoSize = true;
+            this.checkCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCon.Location = new System.Drawing.Point(210, 3);
+            this.checkCon.Name = "checkCon";
+            this.checkCon.Size = new System.Drawing.Size(18, 17);
+            this.checkCon.TabIndex = 25;
+            this.checkCon.UseVisualStyleBackColor = true;
             // 
             // pnProduct
             // 
@@ -154,5 +169,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pic;
         private FontAwesome.Sharp.IconButton btnEdit;
+        private System.Windows.Forms.CheckBox checkCon;
     }
 }

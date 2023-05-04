@@ -82,6 +82,7 @@
     <Compile Include="BLL\Hoa_donBLL.cs" />
     <Compile Include="BLL\KhachHang.cs" />
     <Compile Include="BLL\Khach_hangBLL.cs" />
+    <Compile Include="BLL\MaLoai.cs" />
     <Compile Include="BLL\Ma_loaiBLL.cs" />
     <Compile Include="BLL\Nhan_vienBLL.cs" />
     <Compile Include="BLL\Phan_congBLL.cs" />
@@ -157,6 +158,12 @@
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product\fAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Product\fAddCategory.Designer.cs">
+      <DependentUpon>fAddCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Report\pnNam.cs">
       <SubType>UserControl</SubType>
@@ -394,6 +401,9 @@
     <None Include="Resources\nước.png" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
+    <EmbeddedResource Include="View\Product\fAddCategory.resx">
+      <DependentUpon>fAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Report\pnNam.resx">
       <DependentUpon>pnNam.cs</DependentUpon>
     </EmbeddedResource>
