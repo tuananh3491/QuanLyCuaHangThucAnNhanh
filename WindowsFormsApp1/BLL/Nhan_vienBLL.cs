@@ -21,5 +21,29 @@ namespace WindowsFormsApp1.BLL
             dg.DataSource = dal.GetAllNV();
             dg.Columns["Tai_khoan"].Visible = false;
         }
+        public Nhan_vien GetNV(int NV)
+        {
+            return dal.GetNV(NV);
+        }
+        public Nhan_vien GetNV(string s)
+        {
+            return dal.GetNV(s);
+        }
+        public void AddNV(Nhan_vien nv)
+        {
+            dal.AddNV(nv);
+        }
+        public int addNV(Nhan_vien nv)
+        {
+            return dal.addNV(nv);
+        }
+        public void UpdateNV(Nhan_vien nv)
+        {
+            dal.UpdateNV(nv);
+        }
+        public void DeleteNV(Nhan_vien nv)
+        {
+            dal.DeleteNV(nv);
+        }
     }
 }

@@ -28,6 +28,16 @@ namespace WindowsFormsApp1.DAL
                 return s;
             }
         }
+        public List<int> getMaNV(int Ma_ca)
+        {
+            var s = et.Phan_cong.Where(p => p.Ma_ca == Ma_ca).Select(p => p.Ma_NV).Distinct().ToList();
+            return s;
+        }
+        public List<int> getMaCa()
+        {
+            var s = et.Phan_cong.Select(p => p.Ma_ca).Distinct().ToList();
+            return s;
+        }
         public dynamic GetNVPC(int Ma_ca)
         {
             {
@@ -45,14 +55,18 @@ namespace WindowsFormsApp1.DAL
         public void UpdatePC(Phan_cong pc)
         {
             {
-                et.Phan_cong.AddOrUpdate(pc);
+                var p = et.Phan_cong.Find(pc);
+                p.Ma_ca = pc.Ma_ca;
+                p.Ma_NV = pc.Ma_NV;
+                p.Ngay = DateTime.Today;
                 et.SaveChanges();
             }
         }
         public void DeletePC(Phan_cong pc)
         {
             {
-                et.Phan_cong.Remove(pc);
+                var p = et.Phan_cong.Find(pc.Ma_NV, pc.Ma_ca);
+                et.Phan_cong.Remove(p);
                 et.SaveChanges();
             }
         }
