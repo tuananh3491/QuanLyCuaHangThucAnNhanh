@@ -32,8 +32,6 @@
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.btnInHoaDon = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.btnTim = new FontAwesome.Sharp.IconButton();
@@ -46,6 +44,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -118,26 +118,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(821, 456);
             this.panel1.TabIndex = 20;
-            // 
-            // textBox6
-            // 
-            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Location = new System.Drawing.Point(608, 384);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(157, 25);
-            this.textBox6.TabIndex = 14;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(488, 385);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 22);
-            this.label5.TabIndex = 13;
-            this.label5.Text = "Tổng cộng:";
             // 
             // dataGridView1
             // 
@@ -265,6 +245,26 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Số điện thoại:";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(488, 385);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 22);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "Tổng cộng:";
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox6.Location = new System.Drawing.Point(608, 384);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(157, 25);
+            this.textBox6.TabIndex = 14;
+            // 
             // fBill_Print
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -293,8 +293,6 @@
         private FontAwesome.Sharp.IconButton btnBack;
         private CustomControl.VBButton btnInHoaDon;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox5;
         private FontAwesome.Sharp.IconButton btnTim;
@@ -307,5 +305,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label5;
     }
 }

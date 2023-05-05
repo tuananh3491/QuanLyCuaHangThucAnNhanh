@@ -23,8 +23,7 @@ namespace WindowsFormsApp1.DAL
         }
 
         public void AddCTHD(Chi_tiet_hoa_don ca)
-        {
-            
+        {           
             {
                 et.Chi_tiet_hoa_don.Add(ca);
                 et.SaveChanges();
