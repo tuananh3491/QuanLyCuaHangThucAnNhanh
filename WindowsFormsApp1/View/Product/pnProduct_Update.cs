@@ -57,9 +57,7 @@ namespace WindowsFormsApp1.View.Product
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            picture.Image = null;
-            txtName.Text = null;
-            txtPrice.Text = null;
+            
         }
 
         private void btnDel_Click(object sender, EventArgs e)
