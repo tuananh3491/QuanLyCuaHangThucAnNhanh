@@ -25,5 +25,6 @@ namespace WindowsFormsApp1.BLL
         {
             return dal.GetKH(m);
         }
+        
     }
 }
