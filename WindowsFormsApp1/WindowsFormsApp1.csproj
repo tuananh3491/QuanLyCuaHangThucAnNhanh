@@ -90,6 +90,7 @@
     <Compile Include="BLL\San_phamBLL.cs" />
     <Compile Include="BLL\TaiKhoan.cs" />
     <Compile Include="BLL\Tai_khoanBLL.cs" />
+    <Compile Include="Const.cs" />
     <Compile Include="CustomControl\RJRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
