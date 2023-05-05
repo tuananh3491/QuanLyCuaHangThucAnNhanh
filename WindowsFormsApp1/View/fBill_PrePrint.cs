@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1.View
 {
-    public partial class fReport_ProductChart : Form
+    public partial class fBill_PrePrint : Form
     {
-        public fReport_ProductChart()
+        public fBill_PrePrint()
         {
             InitializeComponent();
         }
 
-        private void btnSoLieu_Click(object sender, EventArgs e)
+        private void iconButton1_Click(object sender, EventArgs e)
         {
-            fReport_Product f = new fReport_Product();
+            fBill_Detail f = new fBill_Detail();
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);

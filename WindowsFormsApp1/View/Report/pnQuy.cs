@@ -8,20 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp1.View
+namespace WindowsFormsApp1.View.Report
 {
-    public partial class fReport_Revenue : Form
+    public partial class pnQuy : UserControl
     {
-        public fReport_Revenue()
+        public pnQuy()
         {
             InitializeComponent();
-        }
-
-     
-
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
