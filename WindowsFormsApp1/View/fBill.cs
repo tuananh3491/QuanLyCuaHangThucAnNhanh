@@ -27,7 +27,7 @@ namespace WindowsFormsApp1.View
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 int maHD = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-                MessageBox.Show(maHD.ToString());
+                //MessageBox.Show(maHD.ToString());
                 fBill_Detail f = new fBill_Detail(maHD);
                 f.TopLevel = false;
                 ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();

@@ -53,14 +53,15 @@
             this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCapNhat.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(485, 404);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCapNhat.Location = new System.Drawing.Point(25, 497);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(162, 32);
+            this.btnCapNhat.Size = new System.Drawing.Size(216, 39);
             this.btnCapNhat.TabIndex = 1;
             this.btnCapNhat.Text = "Cập nhật trạng thái";
             this.btnCapNhat.TextColor = System.Drawing.Color.White;
             this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Visible = false;
             this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // dataGridView1
@@ -76,54 +77,61 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(19, 20);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 25);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(663, 365);
+            this.dataGridView1.Size = new System.Drawing.Size(884, 449);
             this.dataGridView1.TabIndex = 2;
             // 
             // Column1
             // 
             this.Column1.DataPropertyName = "Ma_NV";
             this.Column1.HeaderText = "Mã nhân viên";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             // 
             // Column2
             // 
             this.Column2.DataPropertyName = "Ten_NV";
             this.Column2.HeaderText = "Tên nhân viên";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
             this.Column3.DataPropertyName = "Ngay_sinh";
             this.Column3.HeaderText = "Ngày sinh";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             // 
             // Column4
             // 
             this.Column4.DataPropertyName = "Gioi_tinh";
             this.Column4.HeaderText = "Nam(True)/Nữ(False)";
+            this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
             // Column5
             // 
             this.Column5.DataPropertyName = "SDT";
             this.Column5.HeaderText = "SĐT";
+            this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             // 
             // Column6
             // 
             this.Column6.DataPropertyName = "Luong";
             this.Column6.HeaderText = "Lương";
+            this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             // 
             // Column7
             // 
             this.Column7.DataPropertyName = "Trang_thai";
             this.Column7.HeaderText = "Trạng thái";
+            this.Column7.MinimumWidth = 6;
             this.Column7.Name = "Column7";
             // 
             // vbButton1
@@ -137,10 +145,10 @@
             this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(319, 404);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(2);
+            this.vbButton1.Location = new System.Drawing.Point(676, 497);
+            this.vbButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(162, 32);
+            this.vbButton1.Size = new System.Drawing.Size(216, 39);
             this.vbButton1.TabIndex = 3;
             this.vbButton1.Text = "Xem chi tiết";
             this.vbButton1.TextColor = System.Drawing.Color.White;
@@ -158,28 +166,28 @@
             this.vbButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.vbButton2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.vbButton2.ForeColor = System.Drawing.Color.White;
-            this.vbButton2.Location = new System.Drawing.Point(153, 404);
-            this.vbButton2.Margin = new System.Windows.Forms.Padding(2);
+            this.vbButton2.Location = new System.Drawing.Point(454, 497);
+            this.vbButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.vbButton2.Name = "vbButton2";
-            this.vbButton2.Size = new System.Drawing.Size(162, 32);
+            this.vbButton2.Size = new System.Drawing.Size(216, 39);
             this.vbButton2.TabIndex = 4;
-            this.vbButton2.Text = "Thên nhân viên";
+            this.vbButton2.Text = "Thêm nhân viên";
             this.vbButton2.TextColor = System.Drawing.Color.White;
             this.vbButton2.UseVisualStyleBackColor = false;
             this.vbButton2.Click += new System.EventHandler(this.vbButton2_Click);
             // 
             // fStaff
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(698, 455);
+            this.ClientSize = new System.Drawing.Size(931, 560);
             this.Controls.Add(this.vbButton2);
             this.Controls.Add(this.vbButton1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnCapNhat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fStaff";
             this.Text = "fStaff";
             this.Load += new System.EventHandler(this.fStaff_Load);

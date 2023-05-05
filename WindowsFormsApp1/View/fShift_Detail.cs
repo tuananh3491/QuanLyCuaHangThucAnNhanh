@@ -30,11 +30,7 @@ namespace WindowsFormsApp1.View
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            fShift f = new fShift();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            
         }
 
         private void fShift_Detail_Load(object sender, EventArgs e)
@@ -84,6 +80,15 @@ namespace WindowsFormsApp1.View
                     MessageBox.Show("KKK");
                 }
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            fShift f = new fShift();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
         }
     }
 }

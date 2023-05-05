@@ -46,9 +46,12 @@ namespace WindowsFormsApp1.View
 
         private void vbButton1_Click(object sender, EventArgs e)
         {
+            textBox1.Visible = false;
+            label1.Visible = false;
             int x = bll.addNV(new Nhan_vien
             {
-                Luong = Convert.ToInt32(textBox1.Text),
+                //Luong = Convert.ToInt32(textBox1.Text),
+                
                 SDT = textBox2.Text,
                 Ten_NV = textBox3.Text,
                 Gioi_tinh = (radioButton1.Checked),

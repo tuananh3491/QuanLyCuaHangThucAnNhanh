@@ -16,6 +16,12 @@ namespace WindowsFormsApp1.BLL
             //return cnn.Khach_hang.Where(p => p.Ma_KH == m).Select(p => p).FirstOrDefault();
             return cnn.Khach_hang.Find(m);
         }
+        public Khach_hang GetKHByPhone(string phone)
+        {
+            PBL_3Entities cnn = new PBL_3Entities();
+            return cnn.Khach_hang.Where(p => p.SDT == phone).Select(p => p).FirstOrDefault();
+            
+        }
         public void ShowDGV(DataGridView dg)
         {
             PBL_3Entities cnn = new PBL_3Entities();

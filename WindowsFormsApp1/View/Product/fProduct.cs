@@ -27,7 +27,7 @@ namespace WindowsFormsApp1.View
         }
         public void PhanQuyen()
         {
-            if (Const.loaiTaiKhoan)
+            if ((bool)Const.taiKhoan.Loai_TK)
             {
                 btnAddCategory.Enabled = false;
                 btnAddPro.Enabled = false;
@@ -70,8 +70,6 @@ namespace WindowsFormsApp1.View
             //    pnProduct p = new pnProduct(listSP[i].Ma_SP);
             //    flpnMonAn.Controls.Add(p);
             //}
-
-
         }
 
         private void btnAddPro_Click(object sender, EventArgs e)

@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vbButton1 = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btInHD = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tbTongTien = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.tbNgayMua = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -47,31 +49,30 @@
             this.tbMaHD = new System.Windows.Forms.TextBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.label7 = new System.Windows.Forms.Label();
-            this.tbTongTien = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // vbButton1
+            // btInHD
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 10;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(637, 513);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(160, 40);
-            this.vbButton1.TabIndex = 10;
-            this.vbButton1.Text = "In hóa đơn";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btInHD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btInHD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btInHD.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btInHD.BorderRadius = 10;
+            this.btInHD.BorderSize = 0;
+            this.btInHD.FlatAppearance.BorderSize = 0;
+            this.btInHD.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInHD.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInHD.ForeColor = System.Drawing.Color.White;
+            this.btInHD.Location = new System.Drawing.Point(708, 513);
+            this.btInHD.Margin = new System.Windows.Forms.Padding(5);
+            this.btInHD.Name = "btInHD";
+            this.btInHD.Size = new System.Drawing.Size(160, 40);
+            this.btInHD.TabIndex = 10;
+            this.btInHD.Text = "In hóa đơn";
+            this.btInHD.TextColor = System.Drawing.Color.White;
+            this.btInHD.UseVisualStyleBackColor = false;
+            this.btInHD.Click += new System.EventHandler(this.btInHD_Click);
             // 
             // panel1
             // 
@@ -94,6 +95,29 @@
             this.panel1.Size = new System.Drawing.Size(911, 458);
             this.panel1.TabIndex = 12;
             // 
+            // tbTongTien
+            // 
+            this.tbTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.tbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
+            this.tbTongTien.Location = new System.Drawing.Point(729, 401);
+            this.tbTongTien.Multiline = true;
+            this.tbTongTien.Name = "tbTongTien";
+            this.tbTongTien.Size = new System.Drawing.Size(157, 25);
+            this.tbTongTien.TabIndex = 17;
+            this.tbTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(611, 401);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 22);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Tổng cộng:";
+            // 
             // tbNgayMua
             // 
             this.tbNgayMua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
@@ -104,7 +128,7 @@
             this.tbNgayMua.Multiline = true;
             this.tbNgayMua.Name = "tbNgayMua";
             this.tbNgayMua.ReadOnly = true;
-            this.tbNgayMua.Size = new System.Drawing.Size(166, 25);
+            this.tbNgayMua.Size = new System.Drawing.Size(157, 25);
             this.tbNgayMua.TabIndex = 15;
             // 
             // label4
@@ -192,14 +216,14 @@
             this.tbSDT.Multiline = true;
             this.tbSDT.Name = "tbSDT";
             this.tbSDT.ReadOnly = true;
-            this.tbSDT.Size = new System.Drawing.Size(166, 25);
+            this.tbSDT.Size = new System.Drawing.Size(157, 25);
             this.tbSDT.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(43, 109);
+            this.label2.Location = new System.Drawing.Point(462, 113);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(130, 24);
@@ -211,12 +235,12 @@
             this.tbKhachHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.tbKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbKhachHang.Location = new System.Drawing.Point(179, 113);
+            this.tbKhachHang.Location = new System.Drawing.Point(627, 117);
             this.tbKhachHang.Margin = new System.Windows.Forms.Padding(5);
             this.tbKhachHang.Multiline = true;
             this.tbKhachHang.Name = "tbKhachHang";
             this.tbKhachHang.ReadOnly = true;
-            this.tbKhachHang.Size = new System.Drawing.Size(210, 25);
+            this.tbKhachHang.Size = new System.Drawing.Size(157, 25);
             this.tbKhachHang.TabIndex = 9;
             // 
             // label3
@@ -240,7 +264,7 @@
             this.tbNhanVien.Multiline = true;
             this.tbNhanVien.Name = "tbNhanVien";
             this.tbNhanVien.ReadOnly = true;
-            this.tbNhanVien.Size = new System.Drawing.Size(210, 25);
+            this.tbNhanVien.Size = new System.Drawing.Size(157, 25);
             this.tbNhanVien.TabIndex = 8;
             // 
             // tbMaHD
@@ -253,7 +277,7 @@
             this.tbMaHD.Multiline = true;
             this.tbMaHD.Name = "tbMaHD";
             this.tbMaHD.ReadOnly = true;
-            this.tbMaHD.Size = new System.Drawing.Size(210, 25);
+            this.tbMaHD.Size = new System.Drawing.Size(157, 25);
             this.tbMaHD.TabIndex = 7;
             // 
             // btnBack
@@ -283,29 +307,6 @@
             this.label7.TabIndex = 24;
             this.label7.Text = "THÔNG TIN HÓA ĐƠN";
             // 
-            // tbTongTien
-            // 
-            this.tbTongTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.tbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
-            this.tbTongTien.Location = new System.Drawing.Point(729, 401);
-            this.tbTongTien.Multiline = true;
-            this.tbTongTien.Name = "tbTongTien";
-            this.tbTongTien.Size = new System.Drawing.Size(140, 25);
-            this.tbTongTien.TabIndex = 17;
-            this.tbTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(611, 401);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 22);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Tổng cộng:";
-            // 
             // fBill_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -315,7 +316,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.vbButton1);
+            this.Controls.Add(this.btInHD);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fBill_Detail";
             this.Text = "fBill_Detail";
@@ -329,7 +330,7 @@
 
         #endregion
 
-        private CustomControl.VBButton vbButton1;
+        private CustomControl.VBButton btInHD;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbSDT;

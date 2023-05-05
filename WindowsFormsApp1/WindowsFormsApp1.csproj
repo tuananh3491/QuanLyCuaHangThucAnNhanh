@@ -90,7 +90,7 @@
     <Compile Include="BLL\San_phamBLL.cs" />
     <Compile Include="BLL\TaiKhoan.cs" />
     <Compile Include="BLL\Tai_khoanBLL.cs" />
-    <Compile Include="Const.cs" />
+    <Compile Include="BLL\Const.cs" />
     <Compile Include="CustomControl\RJRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -342,6 +342,12 @@
     <Compile Include="View\TrangChu\AddCustomer.Designer.cs">
       <DependentUpon>AddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChu\AddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\AddNewCustomer.Designer.cs">
+      <DependentUpon>AddNewCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TrangChu\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -461,6 +467,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\AddCustomer.resx">
       <DependentUpon>AddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChu\AddNewCustomer.resx">
+      <DependentUpon>AddNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>

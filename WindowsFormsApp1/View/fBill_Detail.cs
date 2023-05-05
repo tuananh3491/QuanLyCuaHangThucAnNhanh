@@ -51,13 +51,14 @@ namespace WindowsFormsApp1.View
             f.Show(); 
         }
 
-        private void vbButton1_Click(object sender, EventArgs e)
+
+        private void btInHD_Click(object sender, EventArgs e)
         {
-            //fBill_Print f=new fBill_Print();
-            //f.TopLevel = false;
-            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            //f.Show(); 
+            fBill_PrePrint f = new fBill_PrePrint();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
         }
     }
 }

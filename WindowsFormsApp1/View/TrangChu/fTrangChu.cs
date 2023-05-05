@@ -20,13 +20,14 @@ namespace WindowsFormsApp1.View.TrangChu
         public fTrangChu()
         {
             InitializeComponent();
-            Tao_Hoa_Don();
+            //Tao_Hoa_Don();
             ct =  new List<Chi_tiet_hoa_don>();
         }
-        public void Tao_Hoa_Don()
-        {
-            hoa_Don = new Hoa_don();
-        }
+        
+        //public void Tao_Hoa_Don()
+        //{
+        //    hoa_Don = new Hoa_don(Convert.ToDouble(tbTongTien.Text));
+        //}
         private void AddList(Chi_tiet_hoa_don t)
         {
             tongtien = 0;
@@ -77,7 +78,7 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill(ct);
+            Bill f = new Bill(ct, Convert.ToDouble(tbTongTien.Text));
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
@@ -100,6 +101,21 @@ namespace WindowsFormsApp1.View.TrangChu
                 flpnThucDon.Controls.Add(a);
                 a.callbackMonAn += new panelMonAn.Add(this.AddList);
             }
+        }
+
+        private void btnKem_Click(object sender, EventArgs e)
+        {
+            openPanel(btnKem.Text);
+        }
+
+        private void btnCombo_Click(object sender, EventArgs e)
+        {
+            openPanel(btnCombo.Text);
+        }
+
+        private void btnNuoc_Click(object sender, EventArgs e)
+        {
+            openPanel(btnNuoc.Text);
         }
     }
 }

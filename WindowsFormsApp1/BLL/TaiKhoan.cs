@@ -22,7 +22,8 @@ namespace WindowsFormsApp1.BLL
             {
                 if (i.Ma_TK == ten && i.Mat_khau == matKhau)
                 {
-                    Const.loaiTaiKhoan = (bool)i.Loai_TK;
+                    Const.taiKhoan = i;
+                    Const.taiKhoan.Loai_TK = i.Loai_TK;
                     return true;
                 }
             }
