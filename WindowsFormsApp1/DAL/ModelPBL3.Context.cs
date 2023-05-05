@@ -33,6 +33,7 @@ namespace WindowsFormsApp1.DAL
         public virtual DbSet<Nhan_vien> Nhan_vien { get; set; }
         public virtual DbSet<Phan_cong> Phan_cong { get; set; }
         public virtual DbSet<San_pham> San_pham { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Tai_khoan> Tai_khoan { get; set; }
     }
 }

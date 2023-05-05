@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="ModelPBL_3.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="PBL_3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ca_lam_viec">
           <Key>
             <PropertyRef Name="Ma_ca" />
@@ -23,8 +23,8 @@
           <Property Name="Ma_HD" Type="int" Nullable="false" />
           <Property Name="Ma_SP" Type="int" Nullable="false" />
           <Property Name="Kich_thuoc" Type="char" MaxLength="10" Nullable="false" />
-          <Property Name="Soluong_SP" Type="int" Nullable="false" />
-          <Property Name="Gia" Type="float" Nullable="false" />
+          <Property Name="Soluong_SP" Type="int" />
+          <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Hoa_don">
           <Key>
@@ -33,9 +33,9 @@
           <Property Name="Ma_HD" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Ma_NV" Type="int" Nullable="false" />
           <Property Name="Ma_KH" Type="int" Nullable="false" />
-          <Property Name="Trang_thai" Type="bit" Nullable="false" />
-          <Property Name="Ngay_mua" Type="datetime" Nullable="false" />
-          <Property Name="Tong_tien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Trang_thai" Type="bit" />
+          <Property Name="Ngay_mua" Type="datetime" />
+          <Property Name="Tong_tien" Type="decimal" Precision="18" Scale="0" />
         </EntityType>
         <EntityType Name="Khach_hang">
           <Key>
@@ -49,7 +49,7 @@
           <Key>
             <PropertyRef Name="Ma_loai" />
           </Key>
-          <Property Name="Ma_loai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ma_loai" Type="int" Nullable="false" />
           <Property Name="Ten" Type="nvarchar" MaxLength="50" />
           <Property Name="DVT" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -78,12 +78,22 @@
           <Key>
             <PropertyRef Name="Ma_SP" />
           </Key>
-          <Property Name="Ma_SP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Ma_SP" Type="int" Nullable="false" />
           <Property Name="Ten_SP" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Don_gia" Type="float" Nullable="false" />
+          <Property Name="Don_gia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Ma_loai" Type="int" Nullable="false" />
           <Property Name="Trang_thai" Type="bit" />
           <Property Name="Hinh_anh" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <EntityType Name="Tai_khoan">
           <Key>
@@ -190,7 +200,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="ModelPBL_3StoreContainer">
+        <EntityContainer Name="PBL_3ModelStoreContainer">
           <EntitySet Name="Ca_lam_viec" EntityType="Self.Ca_lam_viec" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Chi_tiet_hoa_don" EntityType="Self.Chi_tiet_hoa_don" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Hoa_don" EntityType="Self.Hoa_don" Schema="dbo" store:Type="Tables" />
@@ -199,6 +209,7 @@
           <EntitySet Name="Nhan_vien" EntityType="Self.Nhan_vien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Phan_cong" EntityType="Self.Phan_cong" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="San_pham" EntityType="Self.San_pham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Tai_khoan" EntityType="Self.Tai_khoan" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Chi_tiet_hoa_don_Hoa_don" Association="Self.FK_Chi_tiet_hoa_don_Hoa_don">
             <End Role="Hoa_don" EntitySet="Hoa_don" />
@@ -233,10 +244,11 @@
             <End Role="Tai_khoan" EntitySet="Tai_khoan" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="ModelPBL_3" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="PBL_3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Ca_lam_viec">
           <Key>
             <PropertyRef Name="Ma_ca" />
@@ -256,8 +268,8 @@
           <Property Name="Ma_HD" Type="Int32" Nullable="false" />
           <Property Name="Ma_SP" Type="Int32" Nullable="false" />
           <Property Name="Kich_thuoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
-          <Property Name="Soluong_SP" Type="Int32" Nullable="false" />
-          <Property Name="Gia" Type="Double" Nullable="false" />
+          <Property Name="Soluong_SP" Type="Int32" />
+          <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Hoa_don" Relationship="Self.FK_Chi_tiet_hoa_don_Hoa_don" FromRole="Chi_tiet_hoa_don" ToRole="Hoa_don" />
           <NavigationProperty Name="San_pham" Relationship="Self.FK_Chi_tiet_hoa_don_San_pham" FromRole="Chi_tiet_hoa_don" ToRole="San_pham" />
         </EntityType>
@@ -268,9 +280,9 @@
           <Property Name="Ma_HD" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Ma_NV" Type="Int32" Nullable="false" />
           <Property Name="Ma_KH" Type="Int32" Nullable="false" />
-          <Property Name="Trang_thai" Type="Boolean" Nullable="false" />
-          <Property Name="Ngay_mua" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Tong_tien" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Trang_thai" Type="Boolean" />
+          <Property Name="Ngay_mua" Type="DateTime" Precision="3" />
+          <Property Name="Tong_tien" Type="Decimal" Precision="18" Scale="0" />
           <NavigationProperty Name="Chi_tiet_hoa_don" Relationship="Self.FK_Chi_tiet_hoa_don_Hoa_don" FromRole="Hoa_don" ToRole="Chi_tiet_hoa_don" />
           <NavigationProperty Name="Khach_hang" Relationship="Self.FK_Hoa_don_Khach_hang" FromRole="Hoa_don" ToRole="Khach_hang" />
           <NavigationProperty Name="Tai_khoan" Relationship="Self.FK_Hoa_don_Tai_khoan" FromRole="Hoa_don" ToRole="Tai_khoan" />
@@ -288,7 +300,7 @@
           <Key>
             <PropertyRef Name="Ma_loai1" />
           </Key>
-          <Property Name="Ma_loai1" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ma_loai1" Type="Int32" Nullable="false" />
           <Property Name="Ten" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="DVT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="San_pham" Relationship="Self.FK_San_pham_Ma_loai" FromRole="Ma_loai" ToRole="San_pham" />
@@ -321,14 +333,24 @@
           <Key>
             <PropertyRef Name="Ma_SP" />
           </Key>
-          <Property Name="Ma_SP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Ma_SP" Type="Int32" Nullable="false" />
           <Property Name="Ten_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Don_gia" Type="Double" Nullable="false" />
+          <Property Name="Don_gia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="Ma_loai" Type="Int32" Nullable="false" />
           <Property Name="Trang_thai" Type="Boolean" />
           <Property Name="Hinh_anh" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="Chi_tiet_hoa_don" Relationship="Self.FK_Chi_tiet_hoa_don_San_pham" FromRole="San_pham" ToRole="Chi_tiet_hoa_don" />
           <NavigationProperty Name="Ma_loai1" Relationship="Self.FK_San_pham_Ma_loai" FromRole="San_pham" ToRole="Ma_loai" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="Tai_khoan">
           <Key>
@@ -447,6 +469,7 @@
           <EntitySet Name="Nhan_vien" EntityType="Self.Nhan_vien" />
           <EntitySet Name="Phan_cong" EntityType="Self.Phan_cong" />
           <EntitySet Name="San_pham" EntityType="Self.San_pham" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Tai_khoan" EntityType="Self.Tai_khoan" />
           <AssociationSet Name="FK_Phan_cong_Ca_lam_viec" Association="Self.FK_Phan_cong_Ca_lam_viec">
             <End Role="Ca_lam_viec" EntitySet="Ca_lam_viec" />
@@ -486,9 +509,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ModelPBL_3StoreContainer" CdmEntityContainer="PBL_3Entities">
+        <EntityContainerMapping StorageEntityContainer="PBL_3ModelStoreContainer" CdmEntityContainer="PBL_3Entities">
           <EntitySetMapping Name="Ca_lam_viec">
-            <EntityTypeMapping TypeName="ModelPBL_3.Ca_lam_viec">
+            <EntityTypeMapping TypeName="PBL_3Model.Ca_lam_viec">
               <MappingFragment StoreEntitySet="Ca_lam_viec">
                 <ScalarProperty Name="Ma_ca" ColumnName="Ma_ca" />
                 <ScalarProperty Name="Ten_ca" ColumnName="Ten_ca" />
@@ -498,7 +521,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Chi_tiet_hoa_don">
-            <EntityTypeMapping TypeName="ModelPBL_3.Chi_tiet_hoa_don">
+            <EntityTypeMapping TypeName="PBL_3Model.Chi_tiet_hoa_don">
               <MappingFragment StoreEntitySet="Chi_tiet_hoa_don">
                 <ScalarProperty Name="Ma_HD" ColumnName="Ma_HD" />
                 <ScalarProperty Name="Ma_SP" ColumnName="Ma_SP" />
@@ -509,7 +532,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Hoa_don">
-            <EntityTypeMapping TypeName="ModelPBL_3.Hoa_don">
+            <EntityTypeMapping TypeName="PBL_3Model.Hoa_don">
               <MappingFragment StoreEntitySet="Hoa_don">
                 <ScalarProperty Name="Ma_HD" ColumnName="Ma_HD" />
                 <ScalarProperty Name="Ma_NV" ColumnName="Ma_NV" />
@@ -521,7 +544,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Khach_hang">
-            <EntityTypeMapping TypeName="ModelPBL_3.Khach_hang">
+            <EntityTypeMapping TypeName="PBL_3Model.Khach_hang">
               <MappingFragment StoreEntitySet="Khach_hang">
                 <ScalarProperty Name="Ma_KH" ColumnName="Ma_KH" />
                 <ScalarProperty Name="Ten_KH" ColumnName="Ten_KH" />
@@ -530,7 +553,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Ma_loai">
-            <EntityTypeMapping TypeName="ModelPBL_3.Ma_loai">
+            <EntityTypeMapping TypeName="PBL_3Model.Ma_loai">
               <MappingFragment StoreEntitySet="Ma_loai">
                 <ScalarProperty Name="Ma_loai1" ColumnName="Ma_loai" />
                 <ScalarProperty Name="Ten" ColumnName="Ten" />
@@ -539,7 +562,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Nhan_vien">
-            <EntityTypeMapping TypeName="ModelPBL_3.Nhan_vien">
+            <EntityTypeMapping TypeName="PBL_3Model.Nhan_vien">
               <MappingFragment StoreEntitySet="Nhan_vien">
                 <ScalarProperty Name="Ma_NV" ColumnName="Ma_NV" />
                 <ScalarProperty Name="Ten_NV" ColumnName="Ten_NV" />
@@ -552,7 +575,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Phan_cong">
-            <EntityTypeMapping TypeName="ModelPBL_3.Phan_cong">
+            <EntityTypeMapping TypeName="PBL_3Model.Phan_cong">
               <MappingFragment StoreEntitySet="Phan_cong">
                 <ScalarProperty Name="Ma_NV" ColumnName="Ma_NV" />
                 <ScalarProperty Name="Ma_ca" ColumnName="Ma_ca" />
@@ -561,7 +584,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="San_pham">
-            <EntityTypeMapping TypeName="ModelPBL_3.San_pham">
+            <EntityTypeMapping TypeName="PBL_3Model.San_pham">
               <MappingFragment StoreEntitySet="San_pham">
                 <ScalarProperty Name="Ma_SP" ColumnName="Ma_SP" />
                 <ScalarProperty Name="Ten_SP" ColumnName="Ten_SP" />
@@ -572,8 +595,19 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="PBL_3Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Tai_khoan">
-            <EntityTypeMapping TypeName="ModelPBL_3.Tai_khoan">
+            <EntityTypeMapping TypeName="PBL_3Model.Tai_khoan">
               <MappingFragment StoreEntitySet="Tai_khoan">
                 <ScalarProperty Name="Ma_TK" ColumnName="Ma_TK" />
                 <ScalarProperty Name="Ten_TK" ColumnName="Ten_TK" />
@@ -596,7 +630,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

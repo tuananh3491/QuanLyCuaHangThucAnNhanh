@@ -47,7 +47,7 @@ namespace WindowsFormsApp1.View.Product
         {
             PBL_3Entities cnn = new PBL_3Entities();
             San_pham sp = cnn.San_pham.Find(maSP);
-            sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
+            sp.Don_gia = Convert.ToDecimal(txtPrice.Text.ToString());
             sp.Trang_thai = checkCo.Checked;
             cnn.SaveChanges();
             MessageBox.Show("Đã lưu","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);

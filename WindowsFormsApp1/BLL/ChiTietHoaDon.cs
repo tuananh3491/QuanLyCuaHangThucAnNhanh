@@ -23,7 +23,7 @@ namespace WindowsFormsApp1.BLL
                     if (htPro.ContainsKey(i.Ma_SP))
                     {
                         demLap = Convert.ToInt32(htPro[i.Ma_SP]);
-                        demLap += i.Soluong_SP;
+                        demLap += Convert.ToInt32(i.Soluong_SP);
                         htPro[i.Ma_SP] = demLap;
                     }
                     else

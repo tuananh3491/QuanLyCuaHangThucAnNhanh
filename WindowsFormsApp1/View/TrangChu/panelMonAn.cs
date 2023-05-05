@@ -20,9 +20,9 @@ namespace WindowsFormsApp1.View.TrangChu
         private San_pham MonAn;
         public delegate void Add(Chi_tiet_hoa_don t);
         public Add callbackMonAn;
-        public double gia;
-        double gia_M;
-        double gia_L;
+        public decimal gia;
+        decimal gia_M;
+        decimal gia_L;
         public panelMonAn(San_pham s)
         {
             InitializeComponent();
@@ -70,8 +70,8 @@ namespace WindowsFormsApp1.View.TrangChu
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             gia = MonAn.Don_gia;
-            gia_M = gia*1.1;
-            gia_L = gia * 1.3;
+            gia_M = gia*Convert.ToDecimal(1.1);
+            gia_L = gia * Convert.ToDecimal(1.3);
            
             
             if (cbbKichThuoc.Text == "M")

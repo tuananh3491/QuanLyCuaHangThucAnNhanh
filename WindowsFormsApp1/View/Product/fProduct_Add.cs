@@ -50,7 +50,7 @@ namespace WindowsFormsApp1.View.Product
                 var sp = new San_pham()
                 {
                     Ten_SP = txtName.Text.ToString(),
-                    Don_gia = Convert.ToDouble(txtPrice.Text.ToString()),
+                    Don_gia = Convert.ToDecimal(txtPrice.Text.ToString()),
                     Ma_loai = maLoaiBLL.GetIdCategory(cbbCategory.SelectedItem.ToString()),
                     Trang_thai = true,
                     Hinh_anh = bytes

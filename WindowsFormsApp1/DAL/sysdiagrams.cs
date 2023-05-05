@@ -12,15 +12,12 @@ namespace WindowsFormsApp1.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class Chi_tiet_hoa_don
+    public partial class sysdiagrams
     {
-        public int Ma_HD { get; set; }
-        public int Ma_SP { get; set; }
-        public string Kich_thuoc { get; set; }
-        public Nullable<int> Soluong_SP { get; set; }
-        public decimal Gia { get; set; }
-    
-        public virtual Hoa_don Hoa_don { get; set; }
-        public virtual San_pham San_pham { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }
