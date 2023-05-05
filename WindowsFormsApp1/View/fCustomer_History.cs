@@ -21,7 +21,7 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
             ma = m;
-            
+            bll = new Hoa_donBLL();
         }
         private void fCustomer_History_Load(object sender, EventArgs e)
         {
