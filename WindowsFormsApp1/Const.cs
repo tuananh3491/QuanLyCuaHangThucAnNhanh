@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1
 {
-    internal class Const
+    public class Const
     {
+        
     }
 }
