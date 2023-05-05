@@ -47,6 +47,17 @@ namespace WindowsFormsApp1.DAL
                 et.SaveChanges();
             }
         }
+        // lấy mã hóa đơn sau khi adđ cái sản phẩm ca vào
+        public int Add_HD(Hoa_don ca)
+        {
+            {
+                et.Hoa_don.Add(ca);
+                et.SaveChanges();
+                int i = ca.Ma_HD;
+                return i;
+            }
+        }
+
         public void UpdateHD(Hoa_don ca)
         {
             {
@@ -61,5 +72,6 @@ namespace WindowsFormsApp1.DAL
                 et.SaveChanges();
             }
         }
+
     }
 }

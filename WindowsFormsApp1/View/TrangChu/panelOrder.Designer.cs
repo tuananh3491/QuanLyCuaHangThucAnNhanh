@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbLoai = new System.Windows.Forms.Label();
             this.lbKichThuoc = new System.Windows.Forms.Label();
             this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.tbSoLuong = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbLoai);
             this.panel1.Controls.Add(this.lbKichThuoc);
             this.panel1.Controls.Add(this.btnDelete);
             this.panel1.Controls.Add(this.tbSoLuong);
@@ -56,6 +58,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(343, 94);
             this.panel1.TabIndex = 1;
+            // 
+            // lbLoai
+            // 
+            this.lbLoai.AutoSize = true;
+            this.lbLoai.Location = new System.Drawing.Point(197, 36);
+            this.lbLoai.Name = "lbLoai";
+            this.lbLoai.Size = new System.Drawing.Size(16, 16);
+            this.lbLoai.TabIndex = 10;
+            this.lbLoai.Text = "S";
             // 
             // lbKichThuoc
             // 
@@ -191,5 +202,6 @@
         private System.Windows.Forms.TextBox tbSoLuong;
         private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.Label lbKichThuoc;
+        private System.Windows.Forms.Label lbLoai;
     }
 }

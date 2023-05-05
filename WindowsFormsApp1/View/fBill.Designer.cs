@@ -37,11 +37,12 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+
             this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvListBill
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
@@ -62,7 +63,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(884, 421);
             this.dataGridView1.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dtpkDate
             // 
             this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(540, 18);
@@ -70,8 +71,9 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(283, 30);
             this.dateTimePicker1.TabIndex = 12;
+
             // 
-            // iconButton1
+            // btnDate
             // 
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
@@ -83,6 +85,7 @@
             this.iconButton1.Size = new System.Drawing.Size(40, 46);
             this.iconButton1.TabIndex = 13;
             this.iconButton1.UseVisualStyleBackColor = true;
+
             // 
             // Column1
             // 
@@ -145,6 +148,7 @@
             this.btnXemChiTiet.ForeColor = System.Drawing.Color.White;
             this.btnXemChiTiet.Location = new System.Drawing.Point(639, 506);
             this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(5);
+
             this.btnXemChiTiet.Name = "btnXemChiTiet";
             this.btnXemChiTiet.Size = new System.Drawing.Size(160, 39);
             this.btnXemChiTiet.TabIndex = 10;
@@ -161,21 +165,22 @@
             this.ClientSize = new System.Drawing.Size(931, 560);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.dateTimePicker1);
+
             this.Controls.Add(this.btnXemChiTiet);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvListBill);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fBill";
             this.Text = "fBill";
             this.Load += new System.EventHandler(this.fBill_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListBill;
         private CustomControl.VBButton btnXemChiTiet;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton iconButton1;
