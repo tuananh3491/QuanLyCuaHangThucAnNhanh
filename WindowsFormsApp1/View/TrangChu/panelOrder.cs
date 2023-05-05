@@ -14,7 +14,7 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class panelOrder : UserControl
     {
-        private static San_pham san_Pham;
+        San_pham san_Pham;
         private string KichCo;
         
         public static Hoa_don hoa_Don;
@@ -45,6 +45,7 @@ namespace WindowsFormsApp1.View.TrangChu
             else count--;
             setPanel(count);
             tbSoLuong.Text = count.ToString();
+            if (count == 0) this.Dispose();
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

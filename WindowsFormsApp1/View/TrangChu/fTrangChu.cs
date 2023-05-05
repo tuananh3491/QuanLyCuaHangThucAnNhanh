@@ -16,12 +16,12 @@ namespace WindowsFormsApp1.View.TrangChu
     {
         public static Hoa_don hoa_Don;
         List<Chi_tiet_hoa_don> ct;
-        double tongtien;
+        double tongtien = 0;
         public fTrangChu()
         {
             InitializeComponent();
             Tao_Hoa_Don();
-            ct =  new List<Chi_tiet_hoa_don> ();
+            ct =  new List<Chi_tiet_hoa_don>();
         }
         public void Tao_Hoa_Don()
         {
@@ -29,20 +29,20 @@ namespace WindowsFormsApp1.View.TrangChu
         }
         private void AddList(Chi_tiet_hoa_don t)
         {
-            var s = ct.Find(x => x.San_pham == t.San_pham && x.Kich_thuoc == t.Kich_thuoc);
+            tongtien = 0;
+            var s = ct.FirstOrDefault(x => x.Ma_SP == t.Ma_SP && x.Kich_thuoc == t.Kich_thuoc);
             if (s == null) { ct.Add(t); }
             else
             {
                 s.Soluong_SP = t.Soluong_SP;
                 s.Gia = t.Gia;
-                if (s.Soluong_SP == 0) ct.Remove(s);
             }
+            var r = ct.SingleOrDefault(x => x.Soluong_SP == 0);
+            ct.Remove(r);
             TinhTongTien();
         }
         private void TinhTongTien()
         {
-            tbTongTien.Text = "0";
-            tongtien = 0;
             foreach (Chi_tiet_hoa_don i in ct)
             {
                 tongtien += Convert.ToDouble(i.Gia);

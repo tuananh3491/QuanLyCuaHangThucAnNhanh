@@ -15,6 +15,7 @@ namespace WindowsFormsApp1.View.TrangChu
     public partial class Bill : Form
     {
         Hoa_donBLL bll;
+        Chi_tiet_hoa_donBLL chi_tiet_;
         private Hoa_don hd;
         private List<Chi_tiet_hoa_don> ct;
         public Bill()
@@ -25,6 +26,7 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
             bll = new Hoa_donBLL();
+            chi_tiet_ = new Chi_tiet_hoa_donBLL();
             ct = a;
         }
 
@@ -48,10 +50,7 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void Bill_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = ct.ToArray();
-            dataGridView1.Columns["Ma_HD"].Visible = false;
-            dataGridView1.Columns["Hoa_don"].Visible = false;
-            dataGridView1.Columns["San_pham"].Visible = false;
+            chi_tiet_.ShowDGV(dataGridView1, ct);
         }
     }
 }
