@@ -22,6 +22,16 @@ namespace WindowsFormsApp1.View.Product
             InitializeComponent();
             maSP = ma;
             Load(ma);
+            PhanQuyen();
+        }
+        public void PhanQuyen()
+        {
+            if (Const.loaiTaiKhoan)
+            {
+                txtPrice.Enabled = false;
+                checkCo.Enabled = false;
+                btnSave.Enabled = false;
+            }
         }
         public void Load(int ma)
         {
@@ -47,7 +57,9 @@ namespace WindowsFormsApp1.View.Product
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-
+            picture.Image = null;
+            txtName.Text = null;
+            txtPrice.Text = null;
         }
 
         private void btnDel_Click(object sender, EventArgs e)

@@ -26,6 +26,14 @@ namespace WindowsFormsApp1.View
             customizeDesig();
             ActivateButton(btnTrangChu);
             openChildForm(new fTrangChu(),pnForm);
+            PhanQuyen();
+        }
+        public void PhanQuyen()
+        {
+            if (Const.loaiTaiKhoan)
+            {
+                btnBaoCao.Enabled = false;
+            }
         }
         //custom panelBaoCao
         private void customizeDesig()

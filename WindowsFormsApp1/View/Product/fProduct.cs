@@ -23,8 +23,16 @@ namespace WindowsFormsApp1.View
         public fProduct()
         {
             InitializeComponent();
+            PhanQuyen();
         }
-
+        public void PhanQuyen()
+        {
+            if (Const.loaiTaiKhoan)
+            {
+                btnAddCategory.Enabled = false;
+                btnAddPro.Enabled = false;
+            }
+        }
         //private void btnPizza_Click(object sender, EventArgs e)
         //{
         //    flpnMonAn.Controls.Clear();

@@ -8,6 +8,6 @@ namespace WindowsFormsApp1
 {
     public class Const
     {
-        
+        public static bool loaiTaiKhoan;
     }
 }

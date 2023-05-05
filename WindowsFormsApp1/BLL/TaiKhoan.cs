@@ -21,7 +21,10 @@ namespace WindowsFormsApp1.BLL
             foreach (var i in dstk)
             {
                 if (i.Ma_TK == ten && i.Mat_khau == matKhau)
+                {
+                    Const.loaiTaiKhoan = (bool)i.Loai_TK;
                     return true;
+                }
             }
             return false;
         }
