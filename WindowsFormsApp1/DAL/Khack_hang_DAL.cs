@@ -49,10 +49,6 @@ namespace WindowsFormsApp1.DAL
                 et.SaveChanges();
             }
         }
-        public int GetMaKHBySdt(string x)
-        {
-            var s = et.Khach_hang.Where(i => i.SDT == x).FirstOrDefault();
-            return s.Ma_KH;
-        }
+        
     }
 }
