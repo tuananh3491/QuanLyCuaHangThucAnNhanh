@@ -16,12 +16,9 @@ namespace WindowsFormsApp1
 {
     public partial class fLogin : Form
     {
-        Tai_khoanBLL bll;
-        public static string TaiKhoan;
         public fLogin()
         {
             InitializeComponent();
-            bll = new Tai_khoanBLL();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -50,18 +47,23 @@ namespace WindowsFormsApp1
 
         private void btLogIn_Click(object sender, EventArgs e)
         {
-            Tai_khoan tk = bll.GetTK(int.Parse(txtUsername.Text));
-            if(tk != null)
+            fMainform fMainform = new fMainform();
+            if (txtUsername.Text != "" && txtPassWord.Text != "")
             {
-                MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Hide();
-                fMainform mainform = new fMainform();
-                mainform.ShowDialog();
+                TaiKhoan tkBLL = new TaiKhoan();
+                if(tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
+                {
+                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    
+                    this.Hide();
+                    
+                    fMainform.ShowDialog();
+                   
+                }
+                else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("Đăng nhập thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            fMainform = null;
+            this.Show();
         }
 
     }

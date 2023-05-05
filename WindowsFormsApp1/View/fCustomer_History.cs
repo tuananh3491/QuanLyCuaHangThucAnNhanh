@@ -8,22 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View
 {
     public partial class fCustomer_History : Form
     {
-        private int Ma_KH;
+        private int ma;
         Hoa_donBLL bll;
-        public fCustomer_History()
+        public fCustomer_History(int m)
         {
             InitializeComponent();
-        }
-        public fCustomer_History(int Ma_kh)
-        {
-            InitializeComponent();
-            bll = new Hoa_donBLL();
-            Ma_KH = Ma_kh;
+            ma = m;
+            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -37,7 +34,9 @@ namespace WindowsFormsApp1.View
 
         private void fCustomer_History_Load(object sender, EventArgs e)
         {
-            bll.ShowDGV(dataGridView1, Ma_KH);
+            //bll.ShowDGV(dataGridView1, Ma_KH);
+            PBL_3Entities cnn = new PBL_3Entities();
+            dataGridView1.DataSource = cnn.Hoa_don.Where(p => p.Ma_KH == ma).Select(p => new { p.Ma_HD, p.Ma_NV, p.Trang_thai, p.Ngay_mua, p.Tong_tien }).ToList();
         }
     }
 }
