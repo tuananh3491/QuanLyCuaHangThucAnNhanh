@@ -62,6 +62,10 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             openPanel(btnKhac.Text);
         }
+        private void btnNuoc_Click(object sender, EventArgs e)
+        {
+            openPanel(btnNuoc.Text);
+        }
 
         private void btnBurger_Click(object sender, EventArgs e)
         {
@@ -101,5 +105,6 @@ namespace WindowsFormsApp1.View.TrangChu
                 a.callbackMonAn += new panelMonAn.Add(this.AddList);
             }
         }
+
     }
 }

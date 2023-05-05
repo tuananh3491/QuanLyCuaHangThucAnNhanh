@@ -28,6 +28,13 @@ namespace WindowsFormsApp1.DAL
                 return s;
             }
         }
+        public Khach_hang GetKH(string m)
+        {
+            {
+                var s = et.Khach_hang.Where(p=>p.SDT==m).FirstOrDefault();
+                return s;
+            }
+        }
         public void AddKH(Khach_hang ca)
         {
             {

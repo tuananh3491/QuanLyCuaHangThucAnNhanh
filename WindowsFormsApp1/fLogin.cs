@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
 {
     public partial class fLogin : Form
     {
+        public static int maTK;
         public fLogin()
         {
             InitializeComponent();
@@ -54,7 +55,9 @@ namespace WindowsFormsApp1
                 if(tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
+
+                    maTK = int.Parse(txtUsername.Text);
+
                     this.Hide();
                     
                     fMainform.ShowDialog();
@@ -63,7 +66,7 @@ namespace WindowsFormsApp1
                 else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             fMainform = null;
-            this.Show();
+ //           this.Show();
         }
 
     }

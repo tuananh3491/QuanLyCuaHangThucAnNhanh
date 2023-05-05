@@ -23,6 +23,10 @@ namespace WindowsFormsApp1.View
             MaHD = s;
             setGUI(MaHD);
         }
+        public fBill_Detail()
+        {
+            InitializeComponent ();
+        }
         void setGUI(int i)
         {        
             Hoa_don hd = new Hoa_don();

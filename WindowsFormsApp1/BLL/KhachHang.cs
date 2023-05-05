@@ -22,5 +22,6 @@ namespace WindowsFormsApp1.BLL
             dg.DataSource = cnn.Khach_hang.ToList();
             dg.Columns["Hoa_don"].Visible = false;
         }
+
     }
 }

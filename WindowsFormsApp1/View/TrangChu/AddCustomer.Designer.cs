@@ -29,16 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbMaKhachHang = new System.Windows.Forms.TextBox();
-            this.tbSdt = new System.Windows.Forms.TextBox();
-            this.tbTenKhachHang = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbSdt = new System.Windows.Forms.TextBox();
+            this.tbTenKhachHang = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
@@ -57,76 +55,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(536, 32);
             this.panel1.TabIndex = 5;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 22);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Mã khách hàng:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 22);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Khách hàng:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 121);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 22);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Số điện thoại";
-            // 
-            // tbMaKhachHang
-            // 
-            this.tbMaKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbMaKhachHang.Location = new System.Drawing.Point(194, 20);
-            this.tbMaKhachHang.Multiline = true;
-            this.tbMaKhachHang.Name = "tbMaKhachHang";
-            this.tbMaKhachHang.Size = new System.Drawing.Size(174, 25);
-            this.tbMaKhachHang.TabIndex = 9;
-            // 
-            // tbSdt
-            // 
-            this.tbSdt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbSdt.Location = new System.Drawing.Point(194, 121);
-            this.tbSdt.Multiline = true;
-            this.tbSdt.Name = "tbSdt";
-            this.tbSdt.Size = new System.Drawing.Size(174, 25);
-            this.tbSdt.TabIndex = 10;
-            // 
-            // tbTenKhachHang
-            // 
-            this.tbTenKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTenKhachHang.Location = new System.Drawing.Point(194, 69);
-            this.tbTenKhachHang.Multiline = true;
-            this.tbTenKhachHang.Name = "tbTenKhachHang";
-            this.tbTenKhachHang.Size = new System.Drawing.Size(174, 25);
-            this.tbTenKhachHang.TabIndex = 11;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.tbTenKhachHang);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.tbSdt);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.tbMaKhachHang);
-            this.panel2.Location = new System.Drawing.Point(38, 58);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(446, 181);
-            this.panel2.TabIndex = 12;
             // 
             // btnMinimize
             // 
@@ -188,6 +116,57 @@
             this.btnExit.Text = " ";
             this.btnExit.UseVisualStyleBackColor = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(37, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(111, 22);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Khách hàng:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(37, 89);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(120, 22);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Số điện thoại:";
+            // 
+            // tbSdt
+            // 
+            this.tbSdt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbSdt.Location = new System.Drawing.Point(211, 90);
+            this.tbSdt.Multiline = true;
+            this.tbSdt.Name = "tbSdt";
+            this.tbSdt.Size = new System.Drawing.Size(174, 25);
+            this.tbSdt.TabIndex = 10;
+            // 
+            // tbTenKhachHang
+            // 
+            this.tbTenKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbTenKhachHang.Location = new System.Drawing.Point(211, 40);
+            this.tbTenKhachHang.Multiline = true;
+            this.tbTenKhachHang.Name = "tbTenKhachHang";
+            this.tbTenKhachHang.Size = new System.Drawing.Size(174, 25);
+            this.tbTenKhachHang.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.tbTenKhachHang);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.tbSdt);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(38, 58);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(446, 162);
+            this.panel2.TabIndex = 12;
+            // 
             // btnHuy
             // 
             this.btnHuy.BorderRadius = 10;
@@ -199,11 +178,12 @@
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.ForeColor = System.Drawing.Color.White;
             this.btnHuy.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnHuy.Location = new System.Drawing.Point(331, 254);
+            this.btnHuy.Location = new System.Drawing.Point(325, 238);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(100, 40);
             this.btnHuy.TabIndex = 66;
             this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -216,18 +196,19 @@
             this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.ForeColor = System.Drawing.Color.White;
             this.btnLuu.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnLuu.Location = new System.Drawing.Point(101, 254);
+            this.btnLuu.Location = new System.Drawing.Point(95, 238);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(100, 40);
             this.btnLuu.TabIndex = 67;
             this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // AddCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(536, 306);
+            this.ClientSize = new System.Drawing.Size(536, 291);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.panel2);
@@ -249,10 +230,8 @@
         private FontAwesome.Sharp.IconButton btnMinimize;
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnExit;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbMaKhachHang;
         private System.Windows.Forms.TextBox tbSdt;
         private System.Windows.Forms.TextBox tbTenKhachHang;
         private System.Windows.Forms.Panel panel2;

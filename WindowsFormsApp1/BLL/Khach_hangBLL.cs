@@ -21,5 +21,9 @@ namespace WindowsFormsApp1.BLL
             dg.DataSource = dal.GetAllKH();
             dg.Columns["Hoa_don"].Visible = false;
         }
+        public Khach_hang getKH(string m)
+        {
+            return dal.GetKH(m);
+        }
     }
 }
