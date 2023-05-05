@@ -39,7 +39,7 @@
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 
             this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListBill
@@ -167,20 +167,20 @@
             this.Controls.Add(this.dateTimePicker1);
 
             this.Controls.Add(this.btnXemChiTiet);
-            this.Controls.Add(this.dgvListBill);
+            this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fBill";
             this.Text = "fBill";
             this.Load += new System.EventHandler(this.fBill_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListBill)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvListBill;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private CustomControl.VBButton btnXemChiTiet;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton iconButton1;
