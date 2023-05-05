@@ -20,21 +20,21 @@ namespace WindowsFormsApp1.View
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            fBill_Detail f = new fBill_Detail();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            //fBill_Detail f = new fBill_Detail();
+            //f.TopLevel = false;
+            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            //f.Show();
         }
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("In thành công");
-            fBill_Detail f = new fBill_Detail();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            //MessageBox.Show("In thành công");
+            //fBill_Detail f = new fBill_Detail();
+            //f.TopLevel = false;
+            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            //f.Show();
         }
     }
     
