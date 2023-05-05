@@ -23,10 +23,24 @@ namespace WindowsFormsApp1.BLL
                 if (i.Ma_TK == ten && i.Mat_khau == matKhau)
                 {
                     Const.loaiTaiKhoan = (bool)i.Loai_TK;
+                    Const.Matk = i.Ma_TK;
                     return true;
                 }
             }
             return false;
+        }
+        public Tai_khoan GetTai_Khoan(int ten, string matKhau)
+        {
+            PBL_3Entities cnn = new PBL_3Entities();
+            var dstk = cnn.Tai_khoan.Select(p => p);
+            foreach (var i in dstk)
+            {
+                if (i.Ma_TK == ten && i.Mat_khau == matKhau)
+                {
+                    return i;
+                }
+            }
+            return null;
         }
     }
 }

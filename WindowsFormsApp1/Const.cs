@@ -9,5 +9,6 @@ namespace WindowsFormsApp1
     public class Const
     {
         public static bool loaiTaiKhoan;
+        public static int Matk;
     }
 }

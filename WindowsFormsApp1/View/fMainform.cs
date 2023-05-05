@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1.View
@@ -28,6 +29,7 @@ namespace WindowsFormsApp1.View
             openChildForm(new fTrangChu(),pnForm);
             PhanQuyen();
         }
+        
         public void PhanQuyen()
         {
             if (Const.loaiTaiKhoan)
