@@ -44,6 +44,7 @@
           <Property Name="Ma_KH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Ten_KH" Type="nvarchar(max)" Nullable="false" />
           <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Diem_tich_luy" Type="int" />
         </EntityType>
         <EntityType Name="Ma_loai">
           <Key>
@@ -283,6 +284,7 @@
           <Property Name="Ten_KH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Hoa_don" Relationship="Self.FK_Hoa_don_Khach_hang" FromRole="Khach_hang" ToRole="Hoa_don" />
+          <Property Name="Diem_tich_luy" Type="Int32" />
         </EntityType>
         <EntityType Name="Ma_loai">
           <Key>
@@ -523,6 +525,7 @@
           <EntitySetMapping Name="Khach_hang">
             <EntityTypeMapping TypeName="ModelPBL_3.Khach_hang">
               <MappingFragment StoreEntitySet="Khach_hang">
+                <ScalarProperty Name="Diem_tich_luy" ColumnName="Diem_tich_luy" />
                 <ScalarProperty Name="Ma_KH" ColumnName="Ma_KH" />
                 <ScalarProperty Name="Ten_KH" ColumnName="Ten_KH" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />
