@@ -20,6 +20,7 @@ namespace WindowsFormsApp1.View.TrangChu
         Chi_tiet_hoa_donBLL chi_tiet_;
         private Hoa_don hd;
         private List<Chi_tiet_hoa_don> ct;
+        Nhan_vien nv;
         public Bill()
         {
             InitializeComponent();
@@ -50,10 +51,19 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            hd = new Hoa_don 
+            int x = bll.Add_HD(new Hoa_don
             {
-
-            }; 
+                Ma_NV = nv.Ma_NV,
+                Ma_KH = khach_hangBLL.getKH(tbSDT.Text).Ma_KH,
+                Trang_thai = true,
+                Ngay_mua = Convert.ToDateTime(tbThoiGian.Text),
+                Tong_tien = Convert.ToDecimal(tbTongCong.Text)
+            });
+            foreach(Chi_tiet_hoa_don i in ct)
+            {
+                i.Ma_HD = x;
+               
+            }
             MessageBox.Show("In thành công");
         }
 
