@@ -208,7 +208,7 @@
             this.btnCaiDat.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
             this.btnCaiDat.Size = new System.Drawing.Size(236, 55);
             this.btnCaiDat.TabIndex = 10;
-            this.btnCaiDat.Text = "Cài đặt";
+            this.btnCaiDat.Text = "Tài khoản";
             this.btnCaiDat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCaiDat.UseVisualStyleBackColor = false;
             this.btnCaiDat.Click += new System.EventHandler(this.btnSetting_Click);
@@ -467,7 +467,7 @@
             this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rjTextBox1.Multiline = true;
             this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
             this.rjTextBox1.PasswordChar = false;
             this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
             this.rjTextBox1.PlaceholderText = "Tìm kiếm";

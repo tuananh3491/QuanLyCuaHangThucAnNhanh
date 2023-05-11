@@ -23,6 +23,7 @@ namespace WindowsFormsApp1.DAL
         public int Ma_KH { get; set; }
         public string Ten_KH { get; set; }
         public string SDT { get; set; }
+        public int Diem_tich_luy { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hoa_don> Hoa_don { get; set; }

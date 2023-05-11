@@ -37,7 +37,6 @@ namespace WindowsFormsApp1.View.TrangChu
         void setGUI()
         {
             Nhan_vien nv=new Nhan_vien();
-            MessageBox.Show(fLogin.maTK.ToString());
             nv = bll1.GetNV(fLogin.maTK);
             tbNhanVien.Text = nv.Ten_NV;
             tbThoiGian.Text = DateTime.Now.ToString();

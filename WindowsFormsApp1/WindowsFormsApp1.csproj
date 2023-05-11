@@ -160,6 +160,18 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fAccount.Designer.cs">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fAccount_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fAccount_Edit.Designer.cs">
+      <DependentUpon>fAccount_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\fBill_PrePrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -408,6 +420,12 @@
     <None Include="Resources\nước.png" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
+    <EmbeddedResource Include="View\fAccount.resx">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fAccount_Edit.resx">
+      <DependentUpon>fAccount_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\fBill_PrePrint.resx">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
     </EmbeddedResource>

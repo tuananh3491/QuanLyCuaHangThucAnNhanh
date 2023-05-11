@@ -36,9 +36,9 @@ namespace WindowsFormsApp1.BLL
             }
             return htMaKH;
         }
-        public decimal GetTotalMoney(int thang, int nam)
+        public double GetTotalMoney(int thang, int nam)
         {
-            decimal total = 0;
+            double total = 0;
             PBL_3Entities cnn = new PBL_3Entities();
             var list = cnn.Hoa_don.Where(p => p.Ngay_mua.Year == nam && p.Ngay_mua.Month == thang);
             foreach(var i in list) 
