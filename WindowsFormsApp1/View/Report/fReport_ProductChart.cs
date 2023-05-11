@@ -58,18 +58,25 @@ namespace WindowsFormsApp1.View
             // Thêm các DataPoints vào Series
             List<int> listIDBill = hoaDonBLL.GetIDBill(thang, nam);
             Hashtable htPro = chiTietHDBLL.GetNumPro(listIDBill);
-            
+            int i = 0;
             foreach (DictionaryEntry entry in htPro)
             {
-                series.Points.AddXY(sanPhamBLL.GetNamePro(Convert.ToInt32(entry.Key)), entry.Value);
+                //series.Points.AddXY(sanPhamBLL.GetNamePro(Convert.ToInt32(entry.Key)), entry.Value);
+                //// Thêm các giá trị và tỉ lệ vào biểu đồ
+                series.Points.Add(Convert.ToDouble(entry.Value));
+                //// Đặt tên cho các phần trên biểu đồ
+                series.Points[i].LegendText = sanPhamBLL.GetNamePro(Convert.ToInt32(entry.Key));
+                i++;
+
             }
-            
+            series.Label = "#PERCENT{P0}";// Định dạng để hiển thị phần trăm
+
             // Thêm Series vào Chart
             bieuDoSP.Series.Add(series);
-
+            
             // Hiển thị Chart trên form
             //this.Controls.Add(this.bieuDoSP);
-            
+
         }
 
         private void iconPictureBox1_Click(object sender, EventArgs e)

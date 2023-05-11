@@ -35,7 +35,7 @@ namespace WindowsFormsApp1.View
                 f.Show();
             }
         }
-
+        
         private void fBill_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;

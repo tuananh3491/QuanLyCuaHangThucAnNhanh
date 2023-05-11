@@ -55,5 +55,6 @@ namespace WindowsFormsApp1.View.TrangChu
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
+
     }
 }

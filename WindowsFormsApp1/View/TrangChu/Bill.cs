@@ -54,23 +54,26 @@ namespace WindowsFormsApp1.View.TrangChu
                     Trang_thai = true,
                     Ngay_mua = Convert.ToDateTime(txtTime.Text.ToString()),
                     Ma_KH = khBLL.GetKHByPhone(txtPhone.Text).Ma_KH,
-                    Tong_tien = (decimal)tongTien
+                    Tong_tien = tongTien
 
                 };
 
-                Chi_tiet_hoa_don cthd = new Chi_tiet_hoa_don()
-                {
-                    Ma_HD = hd.Ma_HD,
-                    //Ma_SP = 
-                };
                 using (PBL_3Entities cnn = new PBL_3Entities())
                 {
                     cnn.Hoa_don.Add(hd);
-                    cnn.Chi_tiet_hoa_don.Add(cthd);
+                    cnn.Chi_tiet_hoa_don.AddRange(ct);
                     cnn.SaveChanges();
                 }
-                MessageBox.Show("In thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 txtIdBill.Text = hd.Ma_KH.ToString();
+                MessageBox.Show("In thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                
+                this.Hide();
+                fBill_PrePrint f = new fBill_PrePrint();
+                f.ShowDialog();
+                f = null;
+                this.Show();
+                this.btnInHoaDon.Enabled = false;
+
             }
         }
 

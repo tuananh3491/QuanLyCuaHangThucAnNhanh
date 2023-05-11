@@ -166,6 +166,12 @@
     <Compile Include="View\fBill_PrePrint.Designer.cs">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fPersonality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fPersonality.Designer.cs">
+      <DependentUpon>fPersonality.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Product\fAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +404,7 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
       <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\bút.png" />
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
     <Content Include="Resources\hotdog.jpg" />
@@ -416,6 +423,9 @@
     <Content Include="Resources\pizzanam.jpg" />
     <EmbeddedResource Include="View\fBill_PrePrint.resx">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fPersonality.resx">
+      <DependentUpon>fPersonality.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fAddCategory.resx">
       <DependentUpon>fAddCategory.cs</DependentUpon>

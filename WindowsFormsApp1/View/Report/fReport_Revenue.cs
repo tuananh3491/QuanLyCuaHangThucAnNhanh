@@ -45,6 +45,7 @@ namespace WindowsFormsApp1.View
             {
                 thang = i;                
                 series1.Points.AddXY(i, hoadonBLL.GetTotalMoney(thang, nam));
+                if (hoadonBLL.GetTotalMoney(thang, nam) != 0) series1.Points[i - 1].Label = hoadonBLL.GetTotalMoney(thang, nam).ToString();
             }
             // Thiết lập kiểu biểu đồ và dữ liệu
             chart1.Series.Clear();

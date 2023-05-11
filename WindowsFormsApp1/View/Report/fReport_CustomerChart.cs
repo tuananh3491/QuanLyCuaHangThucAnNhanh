@@ -148,8 +148,9 @@ namespace WindowsFormsApp1.View
                     }
                 }
                 series1.Points.AddXY(i, n1);
-              
                 series2.Points.AddXY(i, n2);
+                if(n1 != 0) series1.Points[i - 1].Label = n1.ToString();
+                if (n2 != 0) series2.Points[i - 1].Label = n2.ToString();
             }
             // Thiết lập kiểu biểu đồ và dữ liệu
             bieuDoKH.Series.Add(series1);
