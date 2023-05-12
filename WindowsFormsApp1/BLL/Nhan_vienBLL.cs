@@ -13,9 +13,9 @@ namespace WindowsFormsApp1.BLL
     {
 
         PBL_3Entities cnn = new PBL_3Entities();
-        public List<Nhan_vien> GetAllNV()
+        public List<Nhan_vien> GetAllNV()//ko lấy chủ, chỉ lấy nv
         {
-            var s = cnn.Nhan_vien.ToList();
+            var s = cnn.Nhan_vien.Where(p => p.Tai_khoan.Loai_TK == true).ToList();
             return s;
 
         }

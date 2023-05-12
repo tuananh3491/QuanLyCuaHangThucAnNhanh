@@ -26,8 +26,18 @@ namespace WindowsFormsApp1.View
             pcBLL = new Phan_congBLL();
             this.x = x;
             reload();
+            PhanQuyen();
         }
+        public void PhanQuyen()
+        {
+            if (Const.taiKhoan.Loai_TK)
+            {
+                btnXoa.Visible = false;
+                btnThem.Visible = false;
+                cbbNV.Visible = false;
+            }
 
+        }
         private void fShift_Detail_Load(object sender, EventArgs e)
         {
             reload();
@@ -35,8 +45,8 @@ namespace WindowsFormsApp1.View
         private void reload()
         {
             pcBLL.ShowDGV(dataGridView1, x);
-            comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(pcBLL.GetMaNV(x).ToArray());
+            cbbNV.Items.Clear();
+            cbbNV.Items.AddRange(pcBLL.GetMaNV(x).ToArray());
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -46,7 +56,7 @@ namespace WindowsFormsApp1.View
                 pcBLL.SavePC(new Phan_cong
                 {
                     Ma_ca = x,
-                    Ma_NV = int.Parse(comboBox1.Text),
+                    Ma_NV = int.Parse(cbbNV.Text),
                     Ngay = DateTime.Today
                 });
                 reload();

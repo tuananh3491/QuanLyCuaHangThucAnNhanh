@@ -34,7 +34,7 @@
             this.Ten_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnXoa = new WindowsFormsApp1.CustomControl.VBButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbNV = new System.Windows.Forms.ComboBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.iconDone = new FontAwesome.Sharp.IconButton();
@@ -122,15 +122,15 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // comboBox1
+            // cbbNV
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 11F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 459);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 29);
-            this.comboBox1.TabIndex = 15;
+            this.cbbNV.Font = new System.Drawing.Font("Arial", 11F);
+            this.cbbNV.FormattingEnabled = true;
+            this.cbbNV.Location = new System.Drawing.Point(125, 459);
+            this.cbbNV.Margin = new System.Windows.Forms.Padding(4);
+            this.cbbNV.Name = "cbbNV";
+            this.cbbNV.Size = new System.Drawing.Size(160, 29);
+            this.cbbNV.TabIndex = 15;
             // 
             // btnBack
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.iconDone);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbbNV);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.panel1);
@@ -205,7 +205,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Ten_NV;
         private CustomControl.VBButton btnThem;
         private CustomControl.VBButton btnXoa;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbNV;
         private FontAwesome.Sharp.IconButton btnBack;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private FontAwesome.Sharp.IconButton iconDone;

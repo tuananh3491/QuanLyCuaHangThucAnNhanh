@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.CustomControl;
 using WindowsFormsApp1.DAL;
+using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1.View
 {
@@ -59,7 +60,7 @@ namespace WindowsFormsApp1.View
             checkBox1.Checked = (x.Trang_thai == true);
         }
 
-        private void vbButton1_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
             x.Ma_NV = int.Parse(textBox1.Text);
             x.SDT = textBox2.Text;
@@ -68,7 +69,7 @@ namespace WindowsFormsApp1.View
             x.Tai_khoan.Ten_TK = textBox5.Text;
             x.Tai_khoan.Mat_khau = textBox6.Text;
             x.Luong = Convert.ToInt32(textBox4.Text);
-            
+
             if (radioButton1.Checked) x.Gioi_tinh = true;
             else x.Gioi_tinh = false;
             if (radioButton4.Checked) x.Tai_khoan.Loai_TK = true;

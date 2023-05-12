@@ -18,8 +18,12 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
             clvBLL = new Ca_lam_viecBLL();
+            PhanQuyen();
         }
-
+        public void PhanQuyen()
+        {
+            if(Const.taiKhoan.Loai_TK) btnTaoCa.Visible = false;
+        }
         private void btnTaoCa_Click(object sender, EventArgs e)
         {
             fShift_Create f = new fShift_Create();

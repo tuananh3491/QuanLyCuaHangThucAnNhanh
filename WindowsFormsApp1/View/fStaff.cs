@@ -25,7 +25,7 @@ namespace WindowsFormsApp1.View
             nvBLL.ShowDGV(dataGridView1);
         }
 
-        private void vbButton1_Click(object sender, EventArgs e)
+        private void btnXem_Click(object sender, EventArgs e)
         {
             if(dataGridView1.SelectedRows.Count == 1)
             {
@@ -37,13 +37,5 @@ namespace WindowsFormsApp1.View
             }
         }
 
-        private void vbButton2_Click(object sender, EventArgs e)
-        {
-            fStaff_Add f = new fStaff_Add();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
-        }
     }
 }
