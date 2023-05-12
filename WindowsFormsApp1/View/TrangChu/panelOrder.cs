@@ -15,8 +15,16 @@ namespace WindowsFormsApp1.View.TrangChu
     public partial class panelOrder : UserControl
     {
         San_pham san_Pham;
-        private string KichCo;
-        
+        public int Soluongsp;
+        public string kickthuoc
+        {
+            get
+            {
+                return lbLoai.Text;
+            }
+        }
+        public string KichCo;
+
         public static Hoa_don hoa_Don;
         public delegate void update(Chi_tiet_hoa_don chitiet);
         public delegate void clear();
@@ -29,37 +37,47 @@ namespace WindowsFormsApp1.View.TrangChu
             KichCo = kich_co;
             setGUI();
         }
+        public panelOrder(San_pham s, Chi_tiet_hoa_don ct)
+        {
+            InitializeComponent();
+            san_Pham = s;
+            KichCo = ct.Kich_thuoc;
+            Soluongsp = Convert.ToInt32(ct.Soluong_SP);
+            setGUI();
+        }
         public void setGUI()
         {
             pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(san_Pham.Hinh_anh));
             lbTenMonAn.Text = san_Pham.Ten_SP;
             tbTien.Text = san_Pham.Don_gia.ToString() + "đ";
             lbLoai.Text = KichCo;
+            tbSoLuong.Text = Soluongsp.ToString();
         }
-        
+
         private void btnSub_Click(object sender, EventArgs e)
+        {
+            Edit("sub");
+
+        }
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            Edit("add");
+        }
+
+        public void Edit(string s)
         {
             int count;
             count = Convert.ToInt32(tbSoLuong.Text);
-            if (count == 0) return;
-            else count--;
+            if (s == "add") count++;
+            if (s == "sub") count--;
             setPanel(count);
             tbSoLuong.Text = count.ToString();
             if (count == 0) this.Dispose();
         }
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            int count;
-            count = Convert.ToInt32(tbSoLuong.Text);
-            count++;
-
-            setPanel(count);
-            tbSoLuong.Text = count.ToString();
-        }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            setPanel(0);   
+            setPanel(0);
             this.Dispose();
         }
         private void setPanel(int x)

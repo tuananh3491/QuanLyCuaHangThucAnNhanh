@@ -16,10 +16,10 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class panelMonAn : UserControl
     {
-
         private San_pham MonAn;
-        public delegate void Add(Chi_tiet_hoa_don t);
-        public Add callbackMonAn;
+        public delegate void Edit(Chi_tiet_hoa_don t);
+        public Edit Add;
+        public Edit Update;
         public double gia;
         double gia_M;
         double gia_L;
@@ -55,14 +55,9 @@ namespace WindowsFormsApp1.View.TrangChu
                     Soluong_SP = 1,
                     Gia = (cbbKichThuoc.Text == "S") ? gia : (cbbKichThuoc.Text == "M") ? gia_M : gia_L,
                 };
-                callbackMonAn(ct);
-                panelOrder p = new panelOrder(MonAn,cbbKichThuoc.Text);
-                if (p.Visible == true)
-                {
-                    ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
-                    p.callback += new panelOrder.update(this.callbackMonAn);
-                    p.Show();
-                }
+                Add(ct);
+                panelOrder p = new panelOrder(MonAn, ct);
+                p.callback += new panelOrder.update(this.Update);
             }
         }
 
