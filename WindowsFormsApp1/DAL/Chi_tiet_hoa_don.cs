@@ -17,8 +17,8 @@ namespace WindowsFormsApp1.DAL
         public int Ma_HD { get; set; }
         public int Ma_SP { get; set; }
         public string Kich_thuoc { get; set; }
-        public Nullable<int> Soluong_SP { get; set; }
-        public Nullable<int> Gia { get; set; }
+        public int Soluong_SP { get; set; }
+        public double Gia { get; set; }
     
         public virtual Hoa_don Hoa_don { get; set; }
         public virtual San_pham San_pham { get; set; }

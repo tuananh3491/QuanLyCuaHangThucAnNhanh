@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.View;
+using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1
 {

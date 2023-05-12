@@ -29,81 +29,44 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fProduct_Add));
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.tbTenSP = new System.Windows.Forms.TextBox();
-            this.tbLoaiSP = new System.Windows.Forms.TextBox();
-            this.tbDonGia = new System.Windows.Forms.TextBox();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.cbS = new System.Windows.Forms.CheckBox();
             this.cbL = new System.Windows.Forms.CheckBox();
             this.cbM = new System.Windows.Forms.CheckBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cbbCategory = new System.Windows.Forms.ComboBox();
+            this.txtLink = new System.Windows.Forms.TextBox();
+            this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
+            this.picture = new System.Windows.Forms.PictureBox();
+            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BorderRadius = 10;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnAdd.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
-            this.btnAdd.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnAdd.Location = new System.Drawing.Point(242, 488);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(0)))));
-            this.btnAdd.Size = new System.Drawing.Size(115, 40);
-            this.btnAdd.TabIndex = 46;
-            this.btnAdd.Text = " Lưu";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCancel.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
-            this.btnCancel.ImageSize = new System.Drawing.Size(28, 28);
-            this.btnCancel.Location = new System.Drawing.Point(562, 488);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(118)))), ((int)(((byte)(0)))));
-            this.btnCancel.Size = new System.Drawing.Size(115, 40);
-            this.btnCancel.TabIndex = 47;
-            this.btnCancel.Text = " Hủy";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 281);
+            this.label2.Location = new System.Drawing.Point(12, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 24);
+            this.label2.Size = new System.Drawing.Size(57, 24);
             this.label2.TabIndex = 50;
-            this.label2.Text = "Mã:";
+            this.label2.Text = "Link:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(314, 54);
+            this.label3.Location = new System.Drawing.Point(410, 71);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 23);
             this.label3.TabIndex = 51;
@@ -113,7 +76,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(314, 132);
+            this.label4.Location = new System.Drawing.Point(410, 149);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(144, 23);
             this.label4.TabIndex = 52;
@@ -123,7 +86,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(314, 204);
+            this.label5.Location = new System.Drawing.Point(410, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 23);
             this.label5.TabIndex = 53;
@@ -133,74 +96,37 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(314, 278);
+            this.label6.Location = new System.Drawing.Point(410, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 23);
             this.label6.TabIndex = 54;
             this.label6.Text = "Size:";
             // 
-            // tbTenSP
+            // txtName
             // 
-            this.tbTenSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTenSP.Font = new System.Drawing.Font("Arial", 12F);
-            this.tbTenSP.Location = new System.Drawing.Point(470, 54);
-            this.tbTenSP.Multiline = true;
-            this.tbTenSP.Name = "tbTenSP";
-            this.tbTenSP.Size = new System.Drawing.Size(200, 25);
-            this.tbTenSP.TabIndex = 55;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtName.Location = new System.Drawing.Point(566, 71);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(200, 25);
+            this.txtName.TabIndex = 55;
             // 
-            // tbLoaiSP
+            // txtPrice
             // 
-            this.tbLoaiSP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbLoaiSP.Font = new System.Drawing.Font("Arial", 12F);
-            this.tbLoaiSP.Location = new System.Drawing.Point(470, 132);
-            this.tbLoaiSP.Multiline = true;
-            this.tbLoaiSP.Name = "tbLoaiSP";
-            this.tbLoaiSP.Size = new System.Drawing.Size(200, 25);
-            this.tbLoaiSP.TabIndex = 56;
-            // 
-            // tbDonGia
-            // 
-            this.tbDonGia.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbDonGia.Font = new System.Drawing.Font("Arial", 12F);
-            this.tbDonGia.Location = new System.Drawing.Point(470, 204);
-            this.tbDonGia.Multiline = true;
-            this.tbDonGia.Name = "tbDonGia";
-            this.tbDonGia.Size = new System.Drawing.Size(200, 25);
-            this.tbDonGia.TabIndex = 57;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Controls.Add(this.pictureBox1);
-            this.guna2Panel1.Controls.Add(this.cbS);
-            this.guna2Panel1.Controls.Add(this.cbL);
-            this.guna2Panel1.Controls.Add(this.cbM);
-            this.guna2Panel1.Controls.Add(this.label2);
-            this.guna2Panel1.Controls.Add(this.tbDonGia);
-            this.guna2Panel1.Controls.Add(this.label3);
-            this.guna2Panel1.Controls.Add(this.tbLoaiSP);
-            this.guna2Panel1.Controls.Add(this.label4);
-            this.guna2Panel1.Controls.Add(this.tbTenSP);
-            this.guna2Panel1.Controls.Add(this.label5);
-            this.guna2Panel1.Controls.Add(this.label6);
-            this.guna2Panel1.Location = new System.Drawing.Point(122, 80);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(691, 358);
-            this.guna2Panel1.TabIndex = 59;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(52, 43);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 210);
-            this.pictureBox1.TabIndex = 62;
-            this.pictureBox1.TabStop = false;
+            this.txtPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrice.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtPrice.Location = new System.Drawing.Point(566, 221);
+            this.txtPrice.Multiline = true;
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(200, 25);
+            this.txtPrice.TabIndex = 57;
             // 
             // cbS
             // 
             this.cbS.AutoSize = true;
             this.cbS.Font = new System.Drawing.Font("Arial", 12F);
-            this.cbS.Location = new System.Drawing.Point(480, 278);
+            this.cbS.Location = new System.Drawing.Point(576, 295);
             this.cbS.Name = "cbS";
             this.cbS.Size = new System.Drawing.Size(45, 27);
             this.cbS.TabIndex = 61;
@@ -211,7 +137,7 @@
             // 
             this.cbL.AutoSize = true;
             this.cbL.Font = new System.Drawing.Font("Arial", 12F);
-            this.cbL.Location = new System.Drawing.Point(621, 277);
+            this.cbL.Location = new System.Drawing.Point(717, 294);
             this.cbL.Name = "cbL";
             this.cbL.Size = new System.Drawing.Size(43, 27);
             this.cbL.TabIndex = 60;
@@ -222,12 +148,114 @@
             // 
             this.cbM.AutoSize = true;
             this.cbM.Font = new System.Drawing.Font("Arial", 12F);
-            this.cbM.Location = new System.Drawing.Point(550, 277);
+            this.cbM.Location = new System.Drawing.Point(646, 294);
             this.cbM.Name = "cbM";
             this.cbM.Size = new System.Drawing.Size(49, 27);
             this.cbM.TabIndex = 59;
             this.cbM.Text = "M";
             this.cbM.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.guna2Button1);
+            this.panel1.Controls.Add(this.txtLink);
+            this.panel1.Controls.Add(this.cbbCategory);
+            this.panel1.Controls.Add(this.picture);
+            this.panel1.Controls.Add(this.cbS);
+            this.panel1.Controls.Add(this.cbL);
+            this.panel1.Controls.Add(this.cbM);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtPrice);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.txtName);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.guna2ImageButton1);
+            this.panel1.Location = new System.Drawing.Point(47, 76);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(835, 391);
+            this.panel1.TabIndex = 63;
+            // 
+            // cbbCategory
+            // 
+            this.cbbCategory.FormattingEnabled = true;
+            this.cbbCategory.Location = new System.Drawing.Point(566, 149);
+            this.cbbCategory.Name = "cbbCategory";
+            this.cbbCategory.Size = new System.Drawing.Size(200, 24);
+            this.cbbCategory.TabIndex = 63;
+            // 
+            // txtLink
+            // 
+            this.txtLink.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLink.Font = new System.Drawing.Font("Arial", 12F);
+            this.txtLink.Location = new System.Drawing.Point(75, 293);
+            this.txtLink.Multiline = true;
+            this.txtLink.Name = "txtLink";
+            this.txtLink.Size = new System.Drawing.Size(200, 25);
+            this.txtLink.TabIndex = 64;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.BorderRadius = 10;
+            this.btnHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHuy.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHuy.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHuy.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Image = global::WindowsFormsApp1.Properties.Resources.iconCancel;
+            this.btnHuy.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnHuy.Location = new System.Drawing.Point(548, 491);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(135, 45);
+            this.btnHuy.TabIndex = 65;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.BorderRadius = 10;
+            this.btnLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLuu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLuu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLuu.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnLuu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Image = global::WindowsFormsApp1.Properties.Resources.iconSave;
+            this.btnLuu.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnLuu.Location = new System.Drawing.Point(220, 491);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(135, 45);
+            this.btnLuu.TabIndex = 64;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // picture
+            // 
+            this.picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture.Image = ((System.Drawing.Image)(resources.GetObject("picture.Image")));
+            this.picture.Location = new System.Drawing.Point(51, 60);
+            this.picture.Name = "picture";
+            this.picture.Size = new System.Drawing.Size(210, 210);
+            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture.TabIndex = 62;
+            this.picture.TabStop = false;
+            // 
+            // guna2ImageButton1
+            // 
+            this.guna2ImageButton1.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton1.Image")));
+            this.guna2ImageButton1.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton1.ImageRotate = 0F;
+            this.guna2ImageButton1.Location = new System.Drawing.Point(72, 81);
+            this.guna2ImageButton1.Name = "guna2ImageButton1";
+            this.guna2ImageButton1.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton1.Size = new System.Drawing.Size(214, 189);
+            this.guna2ImageButton1.TabIndex = 0;
             // 
             // btnBack
             // 
@@ -246,43 +274,64 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 20;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
+            this.guna2Button1.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Button1.Location = new System.Drawing.Point(242, 286);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(37, 34);
+            this.guna2Button1.TabIndex = 66;
+            this.guna2Button1.Click += new System.EventHandler(this.btnLink_Click);
+            // 
             // fProduct_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fProduct_Add";
             this.Text = "fProduct_Add";
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Guna.UI2.WinForms.Guna2Button btnCancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox tbTenSP;
-        private System.Windows.Forms.TextBox tbLoaiSP;
-        private System.Windows.Forms.TextBox tbDonGia;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.CheckBox cbS;
         private System.Windows.Forms.CheckBox cbL;
         private System.Windows.Forms.CheckBox cbM;
         private FontAwesome.Sharp.IconButton btnBack;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
+        private Guna.UI2.WinForms.Guna2Button btnLuu;
+        private Guna.UI2.WinForms.Guna2Button btnHuy;
+        private System.Windows.Forms.ComboBox cbbCategory;
+        private System.Windows.Forms.TextBox txtLink;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }

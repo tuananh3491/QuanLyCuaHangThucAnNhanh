@@ -4,43 +4,41 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.BLL
 {
     internal class Khach_hangBLL
     {
+        PBL_3Entities cnn = new PBL_3Entities();
+
         public List<Khach_hang> GetAllKH()
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Khach_hang.ToList();
-                return s;
-            }
+            var s = cnn.Khach_hang.ToList();
+            return s;
         }
-        public Khach_hang GetKH(int m)
+        public void SaveKH(Khach_hang kh)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Khach_hang.Find(m);
-                return s;
-            }
+            cnn.Khach_hang.AddOrUpdate(kh);
+            cnn.SaveChanges();
         }
-        public void AddKH(Khach_hang ca)
+        public void ShowDGV(DataGridView dg)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Khach_hang.Add(ca);
-                et.SaveChanges();
-            }
+            dg.DataSource = GetAllKH();
+            dg.Columns["Hoa_don"].Visible = false;
         }
-        public void Updatekh(Khach_hang ca)
+        public Khach_hang GetKHById(int m)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Khach_hang.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
+            PBL_3Entities cnn = new PBL_3Entities();
+            //return cnn.Khach_hang.Where(p => p.Ma_KH == m).Select(p => p).FirstOrDefault();
+            return cnn.Khach_hang.Find(m);
         }
+        public Khach_hang GetKHByPhone(string phone)
+        {
+            PBL_3Entities cnn = new PBL_3Entities();
+            return cnn.Khach_hang.Where(p => p.SDT == phone).Select(p => p).FirstOrDefault();
+        }
+        
     }
 }

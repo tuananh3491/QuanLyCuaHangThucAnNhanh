@@ -50,7 +50,9 @@
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -58,6 +60,7 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -72,14 +75,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Ca_lam_viecBLL.cs" />
-    <Compile Include="BLL\Chi_tiet_hoa_donBLL.cs" />
-    <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\CBBItem.cs" />
+    <Compile Include="BLL\ChiTietHoaDonBLL.cs" />
     <Compile Include="BLL\Hoa_donBLL.cs" />
     <Compile Include="BLL\Khach_hangBLL.cs" />
     <Compile Include="BLL\Ma_loaiBLL.cs" />
     <Compile Include="BLL\Nhan_vienBLL.cs" />
+    <Compile Include="BLL\Phan_congBLL.cs" />
     <Compile Include="BLL\San_phamBLL.cs" />
     <Compile Include="BLL\Tai_khoanBLL.cs" />
+    <Compile Include="BLL\Const.cs" />
     <Compile Include="CustomControl\RJRadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -98,7 +103,6 @@
     <Compile Include="DAL\Chi_tiet_hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\DangNhapDAL.cs" />
     <Compile Include="DAL\Hoa_don.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
@@ -126,10 +130,10 @@
     <Compile Include="DAL\Nhan_vien.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\San_pham.cs">
+    <Compile Include="DAL\Phan_cong.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\sysdiagrams.cs">
+    <Compile Include="DAL\San_pham.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
     <Compile Include="DAL\Tai_khoan.cs">
@@ -140,6 +144,24 @@
     </Compile>
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fBill_PrePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fBill_PrePrint.Designer.cs">
+      <DependentUpon>fBill_PrePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fPersonality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fPersonality.Designer.cs">
+      <DependentUpon>fPersonality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Product\fAddCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Product\fAddCategory.Designer.cs">
+      <DependentUpon>fAddCategory.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,12 +176,6 @@
     </Compile>
     <Compile Include="View\fBill_Detail.Designer.cs">
       <DependentUpon>fBill_Detail.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\fBill_Print.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\fBill_Print.Designer.cs">
-      <DependentUpon>fBill_Print.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fCustomer.cs">
       <SubType>Form</SubType>
@@ -179,6 +195,30 @@
     <Compile Include="View\fCustomer_Update.Designer.cs">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fShift_AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fShift_AddStaff.Designer.cs">
+      <DependentUpon>fShift_AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fShift_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fShift_Detail.Designer.cs">
+      <DependentUpon>fShift_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fStaff_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fStaff_Add.Designer.cs">
+      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fStaff_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fStaff_View.Designer.cs">
+      <DependentUpon>fStaff_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Product\fProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,34 +231,34 @@
     <Compile Include="View\fMainform.Designer.cs">
       <DependentUpon>fMainform.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fReport_Customer.cs">
+    <Compile Include="View\Report\fReport_Customer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fReport_Customer.Designer.cs">
+    <Compile Include="View\Report\fReport_Customer.Designer.cs">
       <DependentUpon>fReport_Customer.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fReport_CustomerChart.cs">
+    <Compile Include="View\Report\fReport_CustomerChart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fReport_CustomerChart.Designer.cs">
+    <Compile Include="View\Report\fReport_CustomerChart.Designer.cs">
       <DependentUpon>fReport_CustomerChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fReport_Product.cs">
+    <Compile Include="View\Report\fReport_Product.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fReport_Product.Designer.cs">
+    <Compile Include="View\Report\fReport_Product.Designer.cs">
       <DependentUpon>fReport_Product.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fReport_ProductChart.cs">
+    <Compile Include="View\Report\fReport_ProductChart.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fReport_ProductChart.Designer.cs">
+    <Compile Include="View\Report\fReport_ProductChart.Designer.cs">
       <DependentUpon>fReport_ProductChart.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fReport_Revenue.cs">
+    <Compile Include="View\Report\fReport_Revenue.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fReport_Revenue.Designer.cs">
+    <Compile Include="View\Report\fReport_Revenue.Designer.cs">
       <DependentUpon>fReport_Revenue.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fShift.cs">
@@ -263,6 +303,12 @@
     <Compile Include="View\Product\pnProduct_Update.Designer.cs">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\TrangChu\AddNewCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\TrangChu\AddNewCustomer.Designer.cs">
+      <DependentUpon>AddNewCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TrangChu\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -287,6 +333,22 @@
     <Compile Include="View\TrangChu\panelOrder.Designer.cs">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </Compile>
+    <EntityDeploy Include="DAL\ModelPBL_3.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DAL\ModelPBL_3.edmx.diagram">
+      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
+    </None>
+    <None Include="Resources\anhCaNhan.png" />
+    <None Include="Resources\SP_Combo.png" />
+    <None Include="Resources\SP_Icream.png" />
+    <None Include="Resources\SP_drink.png" />
+    <None Include="Resources\SP_burger.png" />
+    <None Include="Resources\SP_chicken.png" />
+    <None Include="Resources\SP_Pizza.png" />
+    <None Include="Resources\anhCaNhan.png" />
+    <None Include="Resources\005-min.jpg" />
     <Content Include="DAL\ModelPBL_3.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
@@ -297,38 +359,58 @@
       <DependentUpon>ModelPBL_3.edmx</DependentUpon>
       <LastGenOutput>ModelPBL_3.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\anhCaNhan.png" />
+    <None Include="Resources\bút.png" />
     <Content Include="Resources\hamburger gà 2.jpg" />
     <Content Include="Resources\hamburger gà.png" />
     <Content Include="Resources\hotdog.jpg" />
-    <EntityDeploy Include="DAL\ModelPBL_3.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="DAL\ModelPBL_3.edmx.diagram">
-      <DependentUpon>ModelPBL_3.edmx</DependentUpon>
-    </None>
     <None Include="Resources\iconGlass1.png" />
+    <None Include="Resources\iconDots.png" />
+    <None Include="Resources\iconCong.png" />
+    <None Include="Resources\iconSave1.png" />
+    <None Include="Resources\iconSave.png" />
+    <None Include="Resources\iconCancel.png" />
     <Content Include="Resources\kem ly.jpg" />
     <Content Include="Resources\khoaitaychien.jpg" />
     <None Include="Resources\mo-cua-hang-thuc-an-nhanh.jpg" />
     <None Include="Resources\mo-cua-hang-thuc-an-nhanh1.jpg" />
+    <None Include="Resources\nước.png" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
-    <EmbeddedResource Include="View\fReport_Customer.resx">
+    <EmbeddedResource Include="View\fBill_PrePrint.resx">
+      <DependentUpon>fBill_PrePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fPersonality.resx">
+      <DependentUpon>fPersonality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Product\fAddCategory.resx">
+      <DependentUpon>fAddCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Report\fReport_Customer.resx">
       <DependentUpon>fReport_Customer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fReport_CustomerChart.resx">
+    <EmbeddedResource Include="View\Report\fReport_CustomerChart.resx">
       <DependentUpon>fReport_CustomerChart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fReport_Product.resx">
+    <EmbeddedResource Include="View\Report\fReport_Product.resx">
       <DependentUpon>fReport_Product.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fReport_ProductChart.resx">
+    <EmbeddedResource Include="View\Report\fReport_ProductChart.resx">
       <DependentUpon>fReport_ProductChart.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fReport_Revenue.resx">
+    <EmbeddedResource Include="View\Report\fReport_Revenue.resx">
       <DependentUpon>fReport_Revenue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fShift_AddStaff.resx">
+      <DependentUpon>fShift_AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fShift_Detail.resx">
+      <DependentUpon>fShift_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fStaff_Add.resx">
+      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fStaff_View.resx">
+      <DependentUpon>fStaff_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fProduct_Add.resx">
       <DependentUpon>fProduct_Add.cs</DependentUpon>
@@ -338,6 +420,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\pnProduct_Update.resx">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\TrangChu\AddNewCustomer.resx">
+      <DependentUpon>AddNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
@@ -361,9 +446,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fBill_Detail.resx">
       <DependentUpon>fBill_Detail.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\fBill_Print.resx">
-      <DependentUpon>fBill_Print.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fCustomer.resx">
       <DependentUpon>fCustomer.cs</DependentUpon>

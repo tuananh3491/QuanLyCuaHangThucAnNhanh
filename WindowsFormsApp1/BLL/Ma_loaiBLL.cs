@@ -4,51 +4,40 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.BLL
 {
     internal class Ma_loaiBLL
     {
-        public List<Ma_loai> GetAllML()
+        PBL_3Entities cnn = new PBL_3Entities();
+        public List<Ma_loai> GetAllML()//GetListCategory
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Ma_loai.ToList();
-                return s;
-            }
+            var s = cnn.Ma_loai.ToList();
+            return s;
         }
         public Ma_loai GetML(int m)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Ma_loai.Find(m);
-                return s;
-            }
+            var s = cnn.Ma_loai.Find(m);
+            return s;
         }
-        public void AddML(Ma_loai ca)
+        public void SaveML(Ma_loai loai)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Ma_loai.Add(ca);
-                et.SaveChanges();
-            }
+            cnn.Ma_loai.AddOrUpdate(loai);
+            cnn.SaveChanges();
         }
-        public void UpdateML(Ma_loai ca)
+        public void DeleteCLV(Ma_loai loai)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Ma_loai.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
+            cnn.Ma_loai.Remove(loai);
+            cnn.SaveChanges();
         }
-        public void DeleteCLV(Ma_loai ca)
+        public int GetIdCategory(string name)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Ma_loai.Remove(ca);
-                et.SaveChanges();
-            }
+            PBL_3Entities cnn = new PBL_3Entities();
+            var x = cnn.Ma_loai.Where(p => p.Ten.Contains(name)).FirstOrDefault();
+            return x.Ma_loai1;
         }
+     
     }
 }

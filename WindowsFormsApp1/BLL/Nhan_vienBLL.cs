@@ -4,51 +4,51 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.BLL
 {
     internal class Nhan_vienBLL
     {
-        public List<Nhan_vien> GetAllNV()
+
+        PBL_3Entities cnn = new PBL_3Entities();
+        public List<Nhan_vien> GetAllNV()//ko lấy chủ, chỉ lấy nv
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Nhan_vien.ToList();
-                return s;
-            }
+            var s = cnn.Nhan_vien.Where(p => p.Tai_khoan.Loai_TK == true).ToList();
+            return s;
+
         }
-        public Nhan_vien GetNV(int m)
+        public Nhan_vien GetNVByMa(int ma)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Nhan_vien.Find(m);
-                return s;
-            }
+            var s = cnn.Nhan_vien.Find(ma);
+            return s;
         }
-        public void AddNV(Nhan_vien ca)
+        public Nhan_vien GetNVBySDT(string sdt)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Nhan_vien.Add(ca);
-                et.SaveChanges();
-            }
+            var s = cnn.Nhan_vien.Where(p => p.SDT == sdt).FirstOrDefault();
+            return s;
         }
-        public void UpdateNV(Nhan_vien ca)
+        public int AddNV(Nhan_vien nv)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Nhan_vien.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
+            cnn.Nhan_vien.Add(nv);
+            cnn.SaveChanges();
+            return nv.Ma_NV;
+        }
+        public void SaveNV(Nhan_vien nv)
+        {
+            cnn.Nhan_vien.AddOrUpdate(nv);
+            cnn.SaveChanges();
         }
         public void DeleteNV(Nhan_vien ca)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Nhan_vien.Remove(ca);
-                et.SaveChanges();
-            }
+            cnn.Nhan_vien.Remove(ca);
+            cnn.SaveChanges();
+        }
+        public void ShowDGV(DataGridView dg)
+        {
+            dg.DataSource = GetAllNV();
+            dg.Columns["Tai_khoan"].Visible = false;
         }
     }
 }

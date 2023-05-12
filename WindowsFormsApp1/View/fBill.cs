@@ -14,6 +14,7 @@ namespace WindowsFormsApp1.View
 {
     public partial class fBill : Form
     {
+        Hoa_donBLL hdBLL = new Hoa_donBLL();
         public fBill()
         {
             InitializeComponent();
@@ -22,20 +23,28 @@ namespace WindowsFormsApp1.View
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            fBill_Detail f=new fBill_Detail();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
+                int maHD = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                //MessageBox.Show(maHD.ToString());
+                fBill_Detail f = new fBill_Detail(maHD);
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
+            }
         }
-
+        
         private void fBill_Load(object sender, EventArgs e)
         {
-            Hoa_donBLL bll = new Hoa_donBLL();
-            dataGridView1.DataSource = bll.GetAllHD();
-            dataGridView1.Columns["Chi_tiet_hoa_don"].Visible = false;
-            dataGridView1.Columns["Khach_hang"].Visible = false;
-            dataGridView1.Columns["Tai_khoan"].Visible = false;
+            dataGridView1.DataSource = null;
+            hdBLL.ShowDGV(dataGridView1);
+        }
+
+        private void iconDone_Click(object sender, EventArgs e)
+        {
+            DateTime date = dateTimePicker1.Value;
+            dataGridView1.DataSource = hdBLL.GetHDByDate(date);
         }
     }
 }

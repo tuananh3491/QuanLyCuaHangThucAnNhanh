@@ -12,12 +12,13 @@ namespace WindowsFormsApp1.DAL
     using System;
     using System.Collections.Generic;
     
-    public partial class sysdiagrams
+    public partial class Phan_cong
     {
-        public string name { get; set; }
-        public int principal_id { get; set; }
-        public int diagram_id { get; set; }
-        public Nullable<int> version { get; set; }
-        public byte[] definition { get; set; }
+        public int Ma_NV { get; set; }
+        public int Ma_ca { get; set; }
+        public Nullable<System.DateTime> Ngay { get; set; }
+    
+        public virtual Ca_lam_viec Ca_lam_viec { get; set; }
+        public virtual Tai_khoan Tai_khoan { get; set; }
     }
 }

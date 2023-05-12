@@ -10,45 +10,51 @@ namespace WindowsFormsApp1.BLL
 {
     internal class San_phamBLL
     {
+        PBL_3Entities cnn = new PBL_3Entities();
         public List<San_pham> GetAllSP()
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.San_pham.ToList();
-                return s;
-            }
+            var s = cnn.San_pham.ToList();
+            return s;
         }
-        public San_pham GetSP(int m)
+        public San_pham GetPro(int maSP)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.San_pham.Find(m);
-                return s;
-            }
+            var s = cnn.San_pham.Find(maSP);
+            return s;
         }
-        public void AddSP(San_pham ca)
+        public void SaveSP(San_pham sp)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.San_pham.Add(ca);
-                et.SaveChanges();
-            }
+            cnn.San_pham.AddOrUpdate(sp);
+            cnn.SaveChanges();
         }
-        public void UpdateSP(San_pham ca)
+        public void DeleteSP(San_pham sp)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.San_pham.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
+            cnn.San_pham.Remove(sp);
+            cnn.SaveChanges();
         }
-        public void DeleteSP(San_pham ca)
+
+        public List<San_pham> GetSPCategory(string s)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
+            List<San_pham> lt = new List<San_pham>();
+            foreach (var i in GetAllSP())
             {
-                et.San_pham.Remove(ca);
-                et.SaveChanges();
+                if (i.Ma_loai1.Ten == s) lt.Add(i);
             }
+            return lt;
+        }
+
+        public string GetNamePro(int idPro)
+        {
+            PBL_3Entities cnn = new PBL_3Entities();
+            var x = cnn.San_pham.Where(p => p.Ma_SP == idPro).FirstOrDefault();
+            return x.Ten_SP;
+        }
+
+        public List<San_pham> GetProOfType(int idType)//lấy danh sách sản phẩm dựa vào mã loại
+        {
+            PBL_3Entities cnn = new PBL_3Entities();
+            var l = cnn.San_pham.Where(p => p.Ma_loai == idType).ToList();
+            return l;
+
         }
     }
 }

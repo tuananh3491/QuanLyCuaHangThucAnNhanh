@@ -2,53 +2,41 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.BLL
 {
     internal class Ca_lam_viecBLL
     {
+        PBL_3Entities cnn = new PBL_3Entities();
         public List<Ca_lam_viec> GetAllCLV()
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Ca_lam_viec.ToList();
-                return s;
-            }
+            var s = cnn.Ca_lam_viec.ToList();
+            return s;
         }
-        public Ca_lam_viec GetCLV(int m)
+        public Ca_lam_viec GetCLV(int ma)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Ca_lam_viec.Find(m);
-                return s;
-            }
+            var s = cnn.Ca_lam_viec.Find(ma);
+            return s;
         }
-        public void AddCLV(Ca_lam_viec ca)
+        public void SaveCLV(Ca_lam_viec ca)
         {
-            using(PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Ca_lam_viec.Add(ca);
-                et.SaveChanges();
-            }
-        }
-        public void UpdateCLV(Ca_lam_viec ca)
-        {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Ca_lam_viec.AddOrUpdate(ca);
-                et.SaveChanges();
-            }
+            cnn.Ca_lam_viec.AddOrUpdate(ca);
+            cnn.SaveChanges();
         }
         public void DeleteCLV(Ca_lam_viec ca)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                et.Ca_lam_viec.Remove(ca);
-                et.SaveChanges();
-            }
+            cnn.Ca_lam_viec.Remove(ca);
+            cnn.SaveChanges();
+        }
+        public void ShowDGV(DataGridView dg)
+        {
+            dg.DataSource = GetAllCLV();
+            dg.Columns["Phan_cong"].Visible = false;
         }
     }
 }

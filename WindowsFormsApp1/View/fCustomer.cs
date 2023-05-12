@@ -17,36 +17,48 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
         }
-
-
-
-        
-
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            fCustomer_Update f = new fCustomer_Update();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            if(dataGridView.SelectedRows.Count == 1)
+            {
+                int m = int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                fCustomer_Update f = new fCustomer_Update(m);
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
+            }
+            else MessageBox.Show("Lỗi","Cảnh báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
         }
 
         private void btnViewHtr_Click(object sender, EventArgs e)
         {
-            fCustomer_History f = new fCustomer_History();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
-
+            //if(dataGridView.SelectedRows.Count == 1)
+            //{
+            //    fCustomer_History f = new fCustomer_History(int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString()));
+            //    f.TopLevel = false;
+            //    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            //    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            //    f.Show();
+            //}
+            if (dataGridView.SelectedRows.Count == 1)
+            {
+                int m = int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString());
+                fCustomer_History f = new fCustomer_History(m);
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
+            }
+            else MessageBox.Show("Lỗi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
         }
-
         private void fCustomer_Load(object sender, EventArgs e)
         {
-            Khach_hangBLL bll = new Khach_hangBLL();
-            dataGridView.DataSource = bll.GetAllKH();
-            dataGridView.Columns["Hoa_don"].Visible = false;
+            Khach_hangBLL khBLL = new Khach_hangBLL();
+            khBLL.ShowDGV(dataGridView);    
         }
+
+       
     }
  }
 

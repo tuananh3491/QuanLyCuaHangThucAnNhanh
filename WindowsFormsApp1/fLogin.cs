@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.View;
 using WindowsFormsApp1.View.TrangChu;
 
@@ -46,22 +47,19 @@ namespace WindowsFormsApp1
 
         private void btLogIn_Click(object sender, EventArgs e)
         {
-            if(txtUsername.Text != "" && txtPassWord.Text != "")
+            if (txtUsername.Text != "" && txtPassWord.Text != "")
             {
-                DangNhapBLL dn = new DangNhapBLL();
-                if (dn.checkLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
+                Tai_khoanBLL tkBLL = new Tai_khoanBLL();
+                if(tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
                 {
-                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     fMainform fMainform = new fMainform();
                     this.Hide();
                     fMainform.ShowDialog();
-                    //this.Show();
                 }
                 else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-  
     }
 }

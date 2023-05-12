@@ -28,23 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainform));
             this.pnForm = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelBaoCao = new System.Windows.Forms.Panel();
-            this.panelbutton = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panelTimKiem = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
-            this.btnCaiDat = new FontAwesome.Sharp.IconButton();
             this.btnBCKhachHang = new FontAwesome.Sharp.IconButton();
             this.btnBCSanPham = new FontAwesome.Sharp.IconButton();
             this.btnBCDoanhThu = new FontAwesome.Sharp.IconButton();
+            this.panelbutton = new System.Windows.Forms.Panel();
+            this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnBaoCao = new FontAwesome.Sharp.IconButton();
             this.btnHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnSanPham = new FontAwesome.Sharp.IconButton();
@@ -52,19 +45,29 @@
             this.btnCaLamViec = new FontAwesome.Sharp.IconButton();
             this.btnNhanVien = new FontAwesome.Sharp.IconButton();
             this.btnTrangChu = new FontAwesome.Sharp.IconButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
+            this.panelTimKiem = new System.Windows.Forms.Panel();
+            this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.iconLogOut = new FontAwesome.Sharp.IconPictureBox();
+            this.btnPerson = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBaoCao.SuspendLayout();
             this.panelbutton.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelTimKiem.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnForm
@@ -73,7 +76,7 @@
             this.pnForm.Location = new System.Drawing.Point(251, 148);
             this.pnForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnForm.Name = "pnForm";
-            this.pnForm.Size = new System.Drawing.Size(930, 560);
+            this.pnForm.Size = new System.Drawing.Size(931, 571);
             this.pnForm.TabIndex = 7;
             // 
             // panelLogo
@@ -85,6 +88,17 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(236, 116);
             this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(236, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // panelBaoCao
             // 
@@ -98,168 +112,6 @@
             this.panelBaoCao.Name = "panelBaoCao";
             this.panelBaoCao.Size = new System.Drawing.Size(236, 140);
             this.panelBaoCao.TabIndex = 8;
-            // 
-            // panelbutton
-            // 
-            this.panelbutton.BackColor = System.Drawing.Color.White;
-            this.panelbutton.Controls.Add(this.btnCaiDat);
-            this.panelbutton.Controls.Add(this.panelBaoCao);
-            this.panelbutton.Controls.Add(this.btnBaoCao);
-            this.panelbutton.Controls.Add(this.btnHoaDon);
-            this.panelbutton.Controls.Add(this.btnSanPham);
-            this.panelbutton.Controls.Add(this.btnKhachHang);
-            this.panelbutton.Controls.Add(this.btnCaLamViec);
-            this.panelbutton.Controls.Add(this.btnNhanVien);
-            this.panelbutton.Controls.Add(this.btnTrangChu);
-            this.panelbutton.Controls.Add(this.panelLogo);
-            this.panelbutton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelbutton.Location = new System.Drawing.Point(0, 32);
-            this.panelbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelbutton.Name = "panelbutton";
-            this.panelbutton.Size = new System.Drawing.Size(236, 695);
-            this.panelbutton.TabIndex = 5;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.panel1.Controls.Add(this.btnMinimize);
-            this.panel1.Controls.Add(this.btnMaximize);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1196, 32);
-            this.panel1.TabIndex = 4;
-            // 
-            // panelTimKiem
-            // 
-            this.panelTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.panelTimKiem.Controls.Add(this.rjTextBox1);
-            this.panelTimKiem.Controls.Add(this.pcbTimKiem);
-            this.panelTimKiem.Location = new System.Drawing.Point(485, 21);
-            this.panelTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTimKiem.Name = "panelTimKiem";
-            this.panelTimKiem.Size = new System.Drawing.Size(251, 39);
-            this.panelTimKiem.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.guna2CircleButton1);
-            this.panel2.Controls.Add(this.panelTimKiem);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(236, 32);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 100);
-            this.panel2.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(9, 6);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(449, 94);
-            this.panel3.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Rage Italic", 38F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(228, 15);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(219, 79);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Slowly";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 24);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Chào mừng đến với";
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(49, 3);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
-            // guna2CircleButton1
-            // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2CircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.anhCaNhan;
-            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(795, 8);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(80, 80);
-            this.guna2CircleButton1.TabIndex = 4;
-            // 
-            // pcbTimKiem
-            // 
-            this.pcbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.pcbTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.pcbTimKiem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.pcbTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.pcbTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbTimKiem.Location = new System.Drawing.Point(11, 5);
-            this.pcbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcbTimKiem.Name = "pcbTimKiem";
-            this.pcbTimKiem.Size = new System.Drawing.Size(32, 32);
-            this.pcbTimKiem.TabIndex = 0;
-            this.pcbTimKiem.TabStop = false;
-            // 
-            // btnCaiDat
-            // 
-            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.btnCaiDat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCaiDat.FlatAppearance.BorderSize = 0;
-            this.btnCaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaiDat.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.btnCaiDat.IconColor = System.Drawing.Color.Black;
-            this.btnCaiDat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 641);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCaiDat.Name = "btnCaiDat";
-            this.btnCaiDat.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnCaiDat.Size = new System.Drawing.Size(236, 55);
-            this.btnCaiDat.TabIndex = 10;
-            this.btnCaiDat.Text = "Cài đặt";
-            this.btnCaiDat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCaiDat.UseVisualStyleBackColor = false;
-            this.btnCaiDat.Click += new System.EventHandler(this.btnSetting_Click);
             // 
             // btnBCKhachHang
             // 
@@ -320,6 +172,48 @@
             this.btnBCDoanhThu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBCDoanhThu.UseVisualStyleBackColor = false;
             this.btnBCDoanhThu.Click += new System.EventHandler(this.btnBCDoanhThu_Click);
+            // 
+            // panelbutton
+            // 
+            this.panelbutton.BackColor = System.Drawing.Color.White;
+            this.panelbutton.Controls.Add(this.btnTaiKhoan);
+            this.panelbutton.Controls.Add(this.panelBaoCao);
+            this.panelbutton.Controls.Add(this.btnBaoCao);
+            this.panelbutton.Controls.Add(this.btnHoaDon);
+            this.panelbutton.Controls.Add(this.btnSanPham);
+            this.panelbutton.Controls.Add(this.btnKhachHang);
+            this.panelbutton.Controls.Add(this.btnCaLamViec);
+            this.panelbutton.Controls.Add(this.btnNhanVien);
+            this.panelbutton.Controls.Add(this.btnTrangChu);
+            this.panelbutton.Controls.Add(this.panelLogo);
+            this.panelbutton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelbutton.Location = new System.Drawing.Point(0, 32);
+            this.panelbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelbutton.Name = "panelbutton";
+            this.panelbutton.Size = new System.Drawing.Size(236, 700);
+            this.panelbutton.TabIndex = 5;
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.Gear;
+            this.btnTaiKhoan.IconColor = System.Drawing.Color.Black;
+            this.btnTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 641);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(236, 55);
+            this.btnTaiKhoan.TabIndex = 10;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // btnBaoCao
             // 
@@ -477,15 +371,18 @@
             this.btnTrangChu.UseVisualStyleBackColor = false;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.mo_cua_hang_thuc_an_nhanh1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(236, 116);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.panel1.Controls.Add(this.btnMinimize);
+            this.panel1.Controls.Add(this.btnMaximize);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1196, 32);
+            this.panel1.TabIndex = 4;
             // 
             // btnMinimize
             // 
@@ -549,12 +446,139 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // panelTimKiem
+            // 
+            this.panelTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.panelTimKiem.Controls.Add(this.rjTextBox1);
+            this.panelTimKiem.Controls.Add(this.pcbTimKiem);
+            this.panelTimKiem.Location = new System.Drawing.Point(485, 21);
+            this.panelTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTimKiem.Name = "panelTimKiem";
+            this.panelTimKiem.Size = new System.Drawing.Size(251, 39);
+            this.panelTimKiem.TabIndex = 0;
+            // 
+            // pcbTimKiem
+            // 
+            this.pcbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.pcbTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.pcbTimKiem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.pcbTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.pcbTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.pcbTimKiem.Location = new System.Drawing.Point(11, 5);
+            this.pcbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pcbTimKiem.Name = "pcbTimKiem";
+            this.pcbTimKiem.Size = new System.Drawing.Size(32, 32);
+            this.pcbTimKiem.TabIndex = 0;
+            this.pcbTimKiem.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.iconLogOut);
+            this.panel2.Controls.Add(this.btnPerson);
+            this.panel2.Controls.Add(this.panelTimKiem);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(236, 32);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(960, 100);
+            this.panel2.TabIndex = 6;
+            // 
+            // iconLogOut
+            // 
+            this.iconLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.iconLogOut.ForeColor = System.Drawing.Color.Black;
+            this.iconLogOut.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.iconLogOut.IconColor = System.Drawing.Color.Black;
+            this.iconLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconLogOut.IconSize = 34;
+            this.iconLogOut.Location = new System.Drawing.Point(882, 35);
+            this.iconLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconLogOut.Name = "iconLogOut";
+            this.iconLogOut.Size = new System.Drawing.Size(38, 34);
+            this.iconLogOut.TabIndex = 2;
+            this.iconLogOut.TabStop = false;
+            this.iconLogOut.Click += new System.EventHandler(this.iconLogOut_Click);
+            // 
+            // btnPerson
+            // 
+            this.btnPerson.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPerson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPerson.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnPerson.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnPerson.Image")));
+            this.btnPerson.ImageSize = new System.Drawing.Size(70, 70);
+            this.btnPerson.Location = new System.Drawing.Point(765, 7);
+            this.btnPerson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPerson.Name = "btnPerson";
+            this.btnPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnPerson.Size = new System.Drawing.Size(91, 80);
+            this.btnPerson.TabIndex = 4;
+            this.btnPerson.Click += new System.EventHandler(this.btnPerson_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(9, 6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(449, 94);
+            this.panel3.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Rage Italic", 38F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(228, 15);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(219, 79);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Slowly";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 24);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Chào mừng đến với";
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(49, 2);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
+            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
+            this.rjTextBox1.TabIndex = 1;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
             // fMainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1196, 727);
+            this.ClientSize = new System.Drawing.Size(1196, 732);
             this.Controls.Add(this.pnForm);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelbutton);
@@ -565,15 +589,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fMainform";
             this.panelLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelBaoCao.ResumeLayout(false);
             this.panelbutton.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelTimKiem.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -591,7 +616,7 @@
         private FontAwesome.Sharp.IconButton btnBCKhachHang;
         private FontAwesome.Sharp.IconButton btnBCSanPham;
         private FontAwesome.Sharp.IconButton btnBCDoanhThu;
-        private FontAwesome.Sharp.IconButton btnCaiDat;
+        private FontAwesome.Sharp.IconButton btnTaiKhoan;
         private System.Windows.Forms.Panel panelbutton;
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnMaximize;
@@ -606,6 +631,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel pnForm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnPerson;
+        private FontAwesome.Sharp.IconPictureBox iconLogOut;
     }
 }
