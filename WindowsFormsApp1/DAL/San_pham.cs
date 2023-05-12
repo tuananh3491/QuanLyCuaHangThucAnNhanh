@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.DAL
         public string Ten_SP { get; set; }
         public double Don_gia { get; set; }
         public int Ma_loai { get; set; }
-        public Nullable<bool> Trang_thai { get; set; }
+        public bool Trang_thai { get; set; }
         public byte[] Hinh_anh { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.View.TrangChu
             flpnOrder.Controls.Clear();
             foreach (var i in ct)
             {
-                panelOrder pn = new panelOrder(bll.FindSp(i.Ma_SP), i);
+                panelOrder pn = new panelOrder(bll.GetPro(i.Ma_SP), i);
                 flpnOrder.Controls.Add(pn);
                 pn.callback += new panelOrder.update(this.UpdateList);
             }

@@ -21,8 +21,6 @@ namespace WindowsFormsApp1.View.TrangChu
         public delegate void Edit(Chi_tiet_hoa_don t);
         public Edit Add;
         public Edit Update;
-       
-        string check;
         public double gia;
         double gia_M;
         double gia_L;

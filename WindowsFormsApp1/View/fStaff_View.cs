@@ -77,7 +77,7 @@ namespace WindowsFormsApp1.View
             else x.Tai_khoan.Loai_TK = false;
             x.Trang_thai = checkBox1.Checked;
 
-            bll.UpdateNV(x);
+            bll.SaveNV(x);
             changeForm();
         }
     }

@@ -17,10 +17,10 @@ namespace WindowsFormsApp1.DAL
         public int Ma_NV { get; set; }
         public string Ten_NV { get; set; }
         public Nullable<System.DateTime> Ngay_sinh { get; set; }
-        public Nullable<bool> Gioi_tinh { get; set; }
+        public bool Gioi_tinh { get; set; }
         public string SDT { get; set; }
-        public Nullable<int> Luong { get; set; }
-        public Nullable<bool> Trang_thai { get; set; }
+        public int Luong { get; set; }
+        public bool Trang_thai { get; set; }
     
         public virtual Tai_khoan Tai_khoan { get; set; }
     }

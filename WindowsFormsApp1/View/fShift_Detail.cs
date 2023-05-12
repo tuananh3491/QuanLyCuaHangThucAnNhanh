@@ -52,7 +52,7 @@ namespace WindowsFormsApp1.View
         {
             try
             {
-                bll.AddPC(new Phan_cong
+                bll.SavePC(new Phan_cong
                 {
                     Ma_ca = x,
                     Ma_NV = int.Parse(comboBox1.Text),

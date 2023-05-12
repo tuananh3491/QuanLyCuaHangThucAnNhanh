@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.DAL
         public int Ma_TK { get; set; }
         public string Ten_TK { get; set; }
         public string Mat_khau { get; set; }
-        public Nullable<bool> Loai_TK { get; set; }
+        public bool Loai_TK { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Hoa_don> Hoa_don { get; set; }

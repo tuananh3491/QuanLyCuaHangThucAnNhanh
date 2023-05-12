@@ -302,7 +302,7 @@
             this.iconButton1.Size = new System.Drawing.Size(61, 39);
             this.iconButton1.TabIndex = 29;
             this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.iconButton1.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // fBill_PrePrint
             // 
