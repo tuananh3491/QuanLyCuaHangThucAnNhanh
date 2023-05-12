@@ -16,9 +16,9 @@ namespace WindowsFormsApp1.View
 {
     public partial class fReport_ProductChart : Form
     {
-        HoaDon hoaDonBLL = new HoaDon();
-        ChiTietHoaDon chiTietHDBLL = new ChiTietHoaDon();
-        SanPham sanPhamBLL = new SanPham();
+        Hoa_donBLL hoaDonBLL = new Hoa_donBLL();
+        ChiTietHoaDonBLL chiTietHDBLL = new ChiTietHoaDonBLL();
+        San_phamBLL sanPhamBLL = new San_phamBLL();
         public fReport_ProductChart()
         {
             InitializeComponent();

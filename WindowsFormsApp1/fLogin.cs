@@ -49,7 +49,7 @@ namespace WindowsFormsApp1
         {
             if (txtUsername.Text != "" && txtPassWord.Text != "")
             {
-                TaiKhoan tkBLL = new TaiKhoan();
+                Tai_khoanBLL tkBLL = new Tai_khoanBLL();
                 if(tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);

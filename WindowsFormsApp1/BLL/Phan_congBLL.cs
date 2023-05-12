@@ -12,38 +12,63 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Phan_congBLL
     {
-        Phan_cong_DAL dal;
-        Nhan_vien_DAL bll;
-        public Phan_congBLL()
+        PBL_3Entities cnn = new PBL_3Entities();
+
+        public List<Phan_cong> GetAllPC()
         {
-            dal = new Phan_cong_DAL();
-            bll = new Nhan_vien_DAL();
+            var s = cnn.Phan_cong.ToList();
+            return s;
         }
-        public void ShowDGV(DataGridView dg,int Ma_ca)
+        public List<Phan_cong> GetPCByNV(int Ma_NV)
         {
-            dg.DataSource = dal.GetNVPC(Ma_ca);
+            var s = cnn.Phan_cong.Where(p => p.Ma_NV == Ma_NV).ToList();
+            return s;
         }
-        public void AddPC(Phan_cong p)
+        public List<int> getMaNV(int Ma_ca)
         {
-            dal.AddPC(p);
+            var s = cnn.Phan_cong.Where(p => p.Ma_ca == Ma_ca).Select(p => p.Ma_NV).Distinct().ToList();
+            return s;
         }
-        public void DeletePC(Phan_cong p)
+        public List<int> getMaCa()
         {
-            dal.DeletePC(p);
+            var s = cnn.Phan_cong.Select(p => p.Ma_ca).Distinct().ToList();
+            return s;
+        }
+        public dynamic GetNVPC(int Ma_ca)
+        {
+            var s = cnn.Phan_cong.Where(p => p.Ma_ca == Ma_ca).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV }).ToList();
+            return s;
+        }
+
+        public void SavePC(Phan_cong pc)
+        {
+            cnn.Phan_cong.AddOrUpdate(pc);
+            cnn.SaveChanges();
+        }
+        public void DeletePC(Phan_cong pc)
+        {
+            var p = cnn.Phan_cong.Find(pc.Ma_NV, pc.Ma_ca);
+            cnn.Phan_cong.Remove(p);
+            cnn.SaveChanges();
+        }
+        public void ShowDGV(DataGridView dg, int Ma_ca)
+        {
+            dg.DataSource = GetNVPC(Ma_ca);
         }
         public List<string> GetMaNV(int Ma_ca)
         {
+            Nhan_vienBLL nvBLL = new Nhan_vienBLL();
             int t;
             List<string> list = new List<string>();
-            foreach(var i in bll.GetAllNV())
+            foreach (var i in nvBLL.GetAllNV())
             {
                 t = 0;
-                foreach (var j in dal.GetNVPC(Ma_ca))
+                foreach (var j in GetNVPC(Ma_ca))
                 {
                     if (i.Ma_NV == j.Ma_NV) break;
                     else t++;
                 }
-                if (t >= dal.GetNVPC(Ma_ca).Count)
+                if (t >= GetNVPC(Ma_ca).Count)
                 {
                     list.Add(i.Ma_NV.ToString());
                 }

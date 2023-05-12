@@ -46,7 +46,7 @@ namespace WindowsFormsApp1.View
 
         private void vbButton1_Click(object sender, EventArgs e)
         {
-            int x = bll.addNV(new Nhan_vien
+            int x = bll.AddNV(new Nhan_vien
             {
                 Luong = Convert.ToInt32(textBox1.Text),
                 SDT = textBox2.Text,
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1.View
                 Trang_thai = (checkBox1.Checked),
             });
 
-            bll1.AddTK(new Tai_khoan
+            bll1.SaveTK(new Tai_khoan
             {
                 Ma_TK = x,
                 Ten_TK = textBox5.Text,

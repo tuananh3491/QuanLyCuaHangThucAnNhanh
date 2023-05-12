@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.View
 {
     public partial class fReport_Revenue : Form
     {
-        HoaDon hoadonBLL = new HoaDon();
+        Hoa_donBLL hoadonBLL = new Hoa_donBLL();
         public fReport_Revenue()
         {
             InitializeComponent();

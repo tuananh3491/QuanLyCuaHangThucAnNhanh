@@ -10,51 +10,32 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Ma_loaiBLL
     {
-        Ma_loai_DAL dal;
-        public Ma_loaiBLL()
+        PBL_3Entities cnn = new PBL_3Entities();
+        public List<Ma_loai> GetAllML()//GetListCategory
         {
-            dal = new Ma_loai_DAL();
-        }
-        public List<Ma_loai> GetAllML()
-        {
-
-            {
-                var s = dal.GetAllML();
-                return s;
-            }
+            var s = cnn.Ma_loai.ToList();
+            return s;
         }
         public Ma_loai GetML(int m)
         {
-            {
-                var s = dal.GetML(m);
-                return s;
-            }
+            var s = cnn.Ma_loai.Find(m);
+            return s;
         }
-        public Ma_loai GetML_Category(string m)
+        public void SaveML(Ma_loai loai)
         {
-            using (PBL_3Entities et = new PBL_3Entities())
-            {
-                var s = et.Ma_loai.Find(m);
-                return s;
-            }
+            cnn.Ma_loai.AddOrUpdate(loai);
+            cnn.SaveChanges();
         }
-        public void AddML(Ma_loai ca)
+        public void DeleteCLV(Ma_loai loai)
         {
-            {
-                dal.AddML(ca);
-            }
+            cnn.Ma_loai.Remove(loai);
+            cnn.SaveChanges();
         }
-        public void UpdateML(Ma_loai ca)
+        public int GetIdCategory(string name)
         {
-            {
-                dal.UpdateML(ca);
-            }
-        }
-        public void DeleteCLV(Ma_loai ca)
-        {
-            {
-                dal.DeleteCLV(ca);
-            }
+            PBL_3Entities cnn = new PBL_3Entities();
+            var x = cnn.Ma_loai.Where(p => p.Ten.Contains(name)).FirstOrDefault();
+            return x.Ma_loai1;
         }
     }
 }

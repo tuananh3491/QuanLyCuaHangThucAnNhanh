@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.View
 {
     public partial class fReport_Customer : Form
     {
-        HoaDon hoaDonBLL = new HoaDon();
+        Hoa_donBLL hoaDonBLL = new Hoa_donBLL();
         //CBBItem cBBItem = new CBBItem();
         public fReport_Customer()
         {

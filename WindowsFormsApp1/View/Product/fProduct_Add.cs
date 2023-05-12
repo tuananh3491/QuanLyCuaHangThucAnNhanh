@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.View.Product
 {
     public partial class fProduct_Add : Form
     {
-        MaLoai maLoaiBLL = new MaLoai();
+        Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();
         public fProduct_Add()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace WindowsFormsApp1.View.Product
         }
         public void setCbb()
         {
-            List<Ma_loai> list = maLoaiBLL.GetListCategory();
+            List<Ma_loai> list = maLoaiBLL.GetAllML();
             foreach(Ma_loai item in list)
             {
                 cbbCategory.Items.Add(item.Ten);

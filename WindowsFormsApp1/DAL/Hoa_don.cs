@@ -23,7 +23,7 @@ namespace WindowsFormsApp1.DAL
         public int Ma_HD { get; set; }
         public int Ma_NV { get; set; }
         public int Ma_KH { get; set; }
-        public Nullable<bool> Trang_thai { get; set; }
+        public bool Trang_thai { get; set; }
         public System.DateTime Ngay_mua { get; set; }
         public double Tong_tien { get; set; }
     

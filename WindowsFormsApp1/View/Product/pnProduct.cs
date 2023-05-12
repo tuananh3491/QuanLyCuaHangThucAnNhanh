@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.View.Product
 {
     public partial class pnProduct : UserControl
     {
-        SanPham sanPhamBLL = new SanPham();
+        San_phamBLL sanPhamBLL = new San_phamBLL();
         private int maSP;
         public pnProduct(int m )
         {

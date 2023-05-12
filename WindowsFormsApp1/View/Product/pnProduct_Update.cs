@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.View.Product
     public partial class pnProduct_Update : UserControl
     {
         private int maSP;
-        SanPham sanPhamBLL = new SanPham();
+        San_phamBLL sanPhamBLL = new San_phamBLL();
         public pnProduct_Update(int ma)
         {
             InitializeComponent();

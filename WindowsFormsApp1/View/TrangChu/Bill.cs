@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.View.TrangChu
     public partial class Bill : Form
     {
         Hoa_donBLL bll;
-        Chi_tiet_hoa_donBLL chi_tiet_;
+        ChiTietHoaDonBLL chi_tiet_;
         private Hoa_don hd;
         private List<Chi_tiet_hoa_don> ct;
         public Bill()
@@ -26,7 +26,7 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
             bll = new Hoa_donBLL();
-            chi_tiet_ = new Chi_tiet_hoa_donBLL();
+            chi_tiet_ = new ChiTietHoaDonBLL();
             ct = a;
             hd = b;
         }

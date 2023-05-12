@@ -18,8 +18,8 @@ namespace WindowsFormsApp1.View
 {
     public partial class fProduct : Form
     {
-        SanPham sanPhamBLL = new SanPham();
-        MaLoai maLoaiBLL = new MaLoai();    
+        San_phamBLL sanPhamBLL = new San_phamBLL();
+        Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();    
         public fProduct()
         {
             InitializeComponent();
@@ -27,7 +27,7 @@ namespace WindowsFormsApp1.View
         }
         public void PhanQuyen()
         {
-            if (Const.loaiTaiKhoan)
+            if (Const.taiKhoan.Loai_TK == true)
             {
                 btnAddCategory.Enabled = false;
                 btnAddPro.Enabled = false;

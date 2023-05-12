@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.View
     {
         private int ma;
         Hoa_donBLL bll;
-        KhachHang khachHangBLL = new KhachHang();
+        Khach_hangBLL khachHangBLL = new Khach_hangBLL();
         public fCustomer_History(int m)
         {
             InitializeComponent();

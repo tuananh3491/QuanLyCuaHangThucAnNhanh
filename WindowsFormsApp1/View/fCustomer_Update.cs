@@ -24,7 +24,7 @@ namespace WindowsFormsApp1.View
         }
         public void Load(int m)
         {
-            KhachHang khBLL = new KhachHang();
+            Khach_hangBLL khBLL = new Khach_hangBLL();
             var kh = khBLL.GetKHById(m);
             txtMaKH.Text = kh.Ma_KH.ToString();
             txtMaKH.Enabled = false;
