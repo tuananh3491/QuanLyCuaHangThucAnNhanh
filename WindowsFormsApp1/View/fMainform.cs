@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.View.Product;
@@ -19,6 +20,8 @@ namespace WindowsFormsApp1.View
         private IconButton currentBtn;
         private IconButton BtnChild;
         private Form activeForm;
+        public delegate void Logout();
+        public Logout logout;
         public fMainform()
         {
             InitializeComponent();
@@ -217,6 +220,13 @@ namespace WindowsFormsApp1.View
 
         private void iconLogOut_Click(object sender, EventArgs e)
         {
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn đăng xuất? ", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            if(result == DialogResult.OK)
+            {
+                logout();
+                Thread.Sleep(1500);
+                this.Dispose();
+            }
 
         }
 

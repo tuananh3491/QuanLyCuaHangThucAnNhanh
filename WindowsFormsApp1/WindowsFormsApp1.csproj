@@ -195,11 +195,11 @@
     <Compile Include="View\fCustomer_Update.Designer.cs">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fShift_AddStaff.cs">
+    <Compile Include="View\fShift_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fShift_AddStaff.Designer.cs">
-      <DependentUpon>fShift_AddStaff.cs</DependentUpon>
+    <Compile Include="View\fShift_Add.Designer.cs">
+      <DependentUpon>fShift_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fShift_Detail.cs">
       <SubType>Form</SubType>
@@ -400,8 +400,8 @@
     <EmbeddedResource Include="View\Report\fReport_Revenue.resx">
       <DependentUpon>fReport_Revenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fShift_AddStaff.resx">
-      <DependentUpon>fShift_AddStaff.cs</DependentUpon>
+    <EmbeddedResource Include="View\fShift_Add.resx">
+      <DependentUpon>fShift_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fShift_Detail.resx">
       <DependentUpon>fShift_Detail.cs</DependentUpon>

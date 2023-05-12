@@ -14,7 +14,8 @@ namespace WindowsFormsApp1.View
 {
     public partial class fShift_Detail : Form
     {
-        Phan_congBLL pcBLL = new Phan_congBLL(); 
+        Phan_congBLL pcBLL = new Phan_congBLL();
+        Nhan_vienBLL nvbll = new Nhan_vienBLL();
         int x;
         public fShift_Detail()
         {
@@ -32,9 +33,7 @@ namespace WindowsFormsApp1.View
         {
             if (Const.taiKhoan.Loai_TK)
             {
-                btnXoa.Visible = false;
-                btnThem.Visible = false;
-                cbbNV.Visible = false;
+                groupBox1.Visible = false;
             }
 
         }
@@ -57,7 +56,7 @@ namespace WindowsFormsApp1.View
                 {
                     Ma_ca = x,
                     Ma_NV = int.Parse(cbbNV.Text),
-                    Ngay = DateTime.Today
+                    Ngay = dateTimePicker2.Value
                 });
                 reload();
             }
@@ -99,6 +98,16 @@ namespace WindowsFormsApp1.View
         private void iconDone_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            pcBLL.ShowDGV(dataGridView1, dateTimePicker1.Value, x);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbTenNV.Text = nvbll.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
         }
     }
 }
