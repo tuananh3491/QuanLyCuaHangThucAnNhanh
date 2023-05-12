@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View.Product
 {
     public partial class fAddCategory : Form
     {
+        Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();    
         public fAddCategory()
         {
             InitializeComponent();
@@ -30,11 +32,12 @@ namespace WindowsFormsApp1.View.Product
                     Ten = txtName.Text,
                     DVT = txtUnit.Text,
                 };
-                using(PBL_3Entities cnn = new PBL_3Entities())
-                {
-                    cnn.Ma_loai.Add(loai);
-                    cnn.SaveChanges();
-                }
+                //using(PBL_3Entities cnn = new PBL_3Entities())
+                //{
+                //    cnn.Ma_loai.Add(loai);
+                //    cnn.SaveChanges();
+                //}
+                maLoaiBLL.SaveML(loai);
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 txtMa.Text = loai.Ma_loai1.ToString();
             }

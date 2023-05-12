@@ -12,38 +12,31 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Ca_lam_viecBLL
     {
-        Ca_lam_viec_DAL dal;
-        public Ca_lam_viecBLL()
+        PBL_3Entities cnn = new PBL_3Entities();
+        public List<Ca_lam_viec> GetAllCLV()
         {
-            dal = new Ca_lam_viec_DAL();
-        }
-        public void ShowDGV(DataGridView dg)
-        {
-            dg.DataSource = dal.GetAllCLV();
-            dg.Columns["Phan_cong"].Visible = false;
-        }
-        public Ca_lam_viec GetCLV(int m)
-        {
-
-            var s = dal.GetCLV(m);
+            var s = cnn.Ca_lam_viec.ToList();
             return s;
-
         }
-        public void AddCLV(Ca_lam_viec ca)
+        public Ca_lam_viec GetCLV(int ma)
         {
-
-            dal.AddCLV(ca);
-
+            var s = cnn.Ca_lam_viec.Find(ma);
+            return s;
         }
-        public void UpdateCLV(Ca_lam_viec ca)
+        public void SaveCLV(Ca_lam_viec ca)
         {
-
-            dal.UpdateCLV(ca);
-
+            cnn.Ca_lam_viec.AddOrUpdate(ca);
+            cnn.SaveChanges();
         }
         public void DeleteCLV(Ca_lam_viec ca)
         {
-            dal.DeleteCLV(ca);
+            cnn.Ca_lam_viec.Remove(ca);
+            cnn.SaveChanges();
+        }
+        public void ShowDGV(DataGridView dg)
+        {
+            dg.DataSource = GetAllCLV();
+            dg.Columns["Phan_cong"].Visible = false;
         }
     }
 }

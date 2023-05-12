@@ -37,7 +37,7 @@
             this.btnBCSanPham = new FontAwesome.Sharp.IconButton();
             this.btnBCDoanhThu = new FontAwesome.Sharp.IconButton();
             this.panelbutton = new System.Windows.Forms.Panel();
-            this.btnCaiDat = new FontAwesome.Sharp.IconButton();
+            this.btnTaiKhoan = new FontAwesome.Sharp.IconButton();
             this.btnBaoCao = new FontAwesome.Sharp.IconButton();
             this.btnHoaDon = new FontAwesome.Sharp.IconButton();
             this.btnSanPham = new FontAwesome.Sharp.IconButton();
@@ -50,13 +50,14 @@
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panelTimKiem = new System.Windows.Forms.Panel();
-            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.iconLogOut = new FontAwesome.Sharp.IconPictureBox();
+            this.btnPerson = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBaoCao.SuspendLayout();
@@ -65,6 +66,7 @@
             this.panelTimKiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,7 +176,7 @@
             // panelbutton
             // 
             this.panelbutton.BackColor = System.Drawing.Color.White;
-            this.panelbutton.Controls.Add(this.btnCaiDat);
+            this.panelbutton.Controls.Add(this.btnTaiKhoan);
             this.panelbutton.Controls.Add(this.panelBaoCao);
             this.panelbutton.Controls.Add(this.btnBaoCao);
             this.panelbutton.Controls.Add(this.btnHoaDon);
@@ -191,27 +193,27 @@
             this.panelbutton.Size = new System.Drawing.Size(236, 700);
             this.panelbutton.TabIndex = 5;
             // 
-            // btnCaiDat
+            // btnTaiKhoan
             // 
-            this.btnCaiDat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.btnCaiDat.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCaiDat.FlatAppearance.BorderSize = 0;
-            this.btnCaiDat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaiDat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaiDat.IconChar = FontAwesome.Sharp.IconChar.Gear;
-            this.btnCaiDat.IconColor = System.Drawing.Color.Black;
-            this.btnCaiDat.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCaiDat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCaiDat.Location = new System.Drawing.Point(0, 641);
-            this.btnCaiDat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCaiDat.Name = "btnCaiDat";
-            this.btnCaiDat.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
-            this.btnCaiDat.Size = new System.Drawing.Size(236, 55);
-            this.btnCaiDat.TabIndex = 10;
-            this.btnCaiDat.Text = "Cài đặt";
-            this.btnCaiDat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnCaiDat.UseVisualStyleBackColor = false;
-            this.btnCaiDat.Click += new System.EventHandler(this.btnSetting_Click);
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnTaiKhoan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTaiKhoan.FlatAppearance.BorderSize = 0;
+            this.btnTaiKhoan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.IconChar = FontAwesome.Sharp.IconChar.Gear;
+            this.btnTaiKhoan.IconColor = System.Drawing.Color.Black;
+            this.btnTaiKhoan.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(0, 641);
+            this.btnTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Padding = new System.Windows.Forms.Padding(11, 0, 20, 0);
+            this.btnTaiKhoan.Size = new System.Drawing.Size(236, 55);
+            this.btnTaiKhoan.TabIndex = 10;
+            this.btnTaiKhoan.Text = "Tài khoản";
+            this.btnTaiKhoan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // btnBaoCao
             // 
@@ -455,27 +457,6 @@
             this.panelTimKiem.Size = new System.Drawing.Size(251, 39);
             this.panelTimKiem.TabIndex = 0;
             // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(49, 2);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            // 
             // pcbTimKiem
             // 
             this.pcbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
@@ -493,7 +474,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.guna2CircleButton1);
+            this.panel2.Controls.Add(this.iconLogOut);
+            this.panel2.Controls.Add(this.btnPerson);
             this.panel2.Controls.Add(this.panelTimKiem);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -503,23 +485,40 @@
             this.panel2.Size = new System.Drawing.Size(960, 100);
             this.panel2.TabIndex = 6;
             // 
-            // guna2CircleButton1
+            // iconLogOut
             // 
-            this.guna2CircleButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2CircleButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.guna2CircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CircleButton1.Image")));
-            this.guna2CircleButton1.ImageSize = new System.Drawing.Size(70, 70);
-            this.guna2CircleButton1.Location = new System.Drawing.Point(765, 7);
-            this.guna2CircleButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CircleButton1.Name = "guna2CircleButton1";
-            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleButton1.Size = new System.Drawing.Size(91, 80);
-            this.guna2CircleButton1.TabIndex = 4;
+            this.iconLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.iconLogOut.ForeColor = System.Drawing.Color.Black;
+            this.iconLogOut.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
+            this.iconLogOut.IconColor = System.Drawing.Color.Black;
+            this.iconLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconLogOut.IconSize = 34;
+            this.iconLogOut.Location = new System.Drawing.Point(882, 35);
+            this.iconLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconLogOut.Name = "iconLogOut";
+            this.iconLogOut.Size = new System.Drawing.Size(38, 34);
+            this.iconLogOut.TabIndex = 2;
+            this.iconLogOut.TabStop = false;
+            this.iconLogOut.Click += new System.EventHandler(this.iconLogOut_Click);
+            // 
+            // btnPerson
+            // 
+            this.btnPerson.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPerson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPerson.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnPerson.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.btnPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnPerson.Image")));
+            this.btnPerson.ImageSize = new System.Drawing.Size(70, 70);
+            this.btnPerson.Location = new System.Drawing.Point(765, 7);
+            this.btnPerson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnPerson.Name = "btnPerson";
+            this.btnPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnPerson.Size = new System.Drawing.Size(91, 80);
+            this.btnPerson.TabIndex = 4;
+            this.btnPerson.Click += new System.EventHandler(this.btnPerson_Click);
             // 
             // panel3
             // 
@@ -552,6 +551,27 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Chào mừng đến với";
             // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(49, 2);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
+            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
+            this.rjTextBox1.TabIndex = 1;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            // 
             // fMainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -576,6 +596,7 @@
             this.panelTimKiem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).EndInit();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -595,7 +616,7 @@
         private FontAwesome.Sharp.IconButton btnBCKhachHang;
         private FontAwesome.Sharp.IconButton btnBCSanPham;
         private FontAwesome.Sharp.IconButton btnBCDoanhThu;
-        private FontAwesome.Sharp.IconButton btnCaiDat;
+        private FontAwesome.Sharp.IconButton btnTaiKhoan;
         private System.Windows.Forms.Panel panelbutton;
         private FontAwesome.Sharp.IconButton btnExit;
         private FontAwesome.Sharp.IconButton btnMaximize;
@@ -610,6 +631,7 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Panel pnForm;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2CircleButton btnPerson;
+        private FontAwesome.Sharp.IconPictureBox iconLogOut;
     }
 }

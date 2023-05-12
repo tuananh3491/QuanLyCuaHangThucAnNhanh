@@ -11,39 +11,44 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Nhan_vienBLL
     {
-        Nhan_vien_DAL dal;
-        public Nhan_vienBLL()
+
+        PBL_3Entities cnn = new PBL_3Entities();
+        public List<Nhan_vien> GetAllNV()
         {
-            dal = new Nhan_vien_DAL();
+            var s = cnn.Nhan_vien.ToList();
+            return s;
+
+        }
+        public Nhan_vien GetNVByMa(int ma)
+        {
+            var s = cnn.Nhan_vien.Find(ma);
+            return s;
+        }
+        public Nhan_vien GetNVBySDT(string sdt)
+        {
+            var s = cnn.Nhan_vien.Where(p => p.SDT == sdt).FirstOrDefault();
+            return s;
+        }
+        public int AddNV(Nhan_vien nv)
+        {
+            cnn.Nhan_vien.Add(nv);
+            cnn.SaveChanges();
+            return nv.Ma_NV;
+        }
+        public void SaveNV(Nhan_vien nv)
+        {
+            cnn.Nhan_vien.AddOrUpdate(nv);
+            cnn.SaveChanges();
+        }
+        public void DeleteNV(Nhan_vien ca)
+        {
+            cnn.Nhan_vien.Remove(ca);
+            cnn.SaveChanges();
         }
         public void ShowDGV(DataGridView dg)
         {
-            dg.DataSource = dal.GetAllNV();
+            dg.DataSource = GetAllNV();
             dg.Columns["Tai_khoan"].Visible = false;
-        }
-        public Nhan_vien GetNV(int NV)
-        {
-            return dal.GetNV(NV);
-        }
-        public Nhan_vien GetNV(string s)
-        {
-            return dal.GetNV(s);
-        }
-        public void AddNV(Nhan_vien nv)
-        {
-            dal.AddNV(nv);
-        }
-        public int addNV(Nhan_vien nv)
-        {
-            return dal.addNV(nv);
-        }
-        public void UpdateNV(Nhan_vien nv)
-        {
-            dal.UpdateNV(nv);
-        }
-        public void DeleteNV(Nhan_vien nv)
-        {
-            dal.DeleteNV(nv);
         }
     }
 }

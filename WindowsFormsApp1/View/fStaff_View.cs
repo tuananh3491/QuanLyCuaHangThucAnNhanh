@@ -17,17 +17,15 @@ namespace WindowsFormsApp1.View
     public partial class fStaff_View : Form
     {
         private Nhan_vien x;
-        Nhan_vienBLL bll;
+        Nhan_vienBLL nvBLL = new Nhan_vienBLL();
         public fStaff_View()
         {
             InitializeComponent();
-            bll = new Nhan_vienBLL();
         }
 
         public fStaff_View(Nhan_vien x)
         {
             InitializeComponent();
-            bll = new Nhan_vienBLL();
             this.x = x;
         }
 
@@ -51,7 +49,7 @@ namespace WindowsFormsApp1.View
             textBox2.Text = x.SDT;
             textBox3.Text = x.Ten_NV;
             textBox4.Text = x.Luong.ToString();
-            dateTimePicker1.Value = x.Ngay_sinh.Value;
+            dateTimePicker1.Value = x.Ngay_sinh;
             textBox5.Text = x.Tai_khoan.Ten_TK;
             textBox6.Text = x.Tai_khoan.Mat_khau;
             if(x.Gioi_tinh == true) radioButton1.Checked = true;
@@ -77,7 +75,7 @@ namespace WindowsFormsApp1.View
             else x.Tai_khoan.Loai_TK = false;
             x.Trang_thai = checkBox1.Checked;
 
-            bll.UpdateNV(x);
+            nvBLL.SaveNV(x);
             changeForm();
         }
     }

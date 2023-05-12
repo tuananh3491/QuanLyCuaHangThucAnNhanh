@@ -14,11 +14,10 @@ namespace WindowsFormsApp1.View
 {
     public partial class fShift_Create : Form
     {
-        Ca_lam_viecBLL bll;
+        Ca_lam_viecBLL clvBLL = new Ca_lam_viecBLL();
         public fShift_Create()
         {
             InitializeComponent();
-            bll = new Ca_lam_viecBLL();
         }
         private void btnHuy_Click(object sender, EventArgs e)
         {
@@ -27,13 +26,13 @@ namespace WindowsFormsApp1.View
 
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            Ca_lam_viec t = new Ca_lam_viec()
+            Ca_lam_viec clv = new Ca_lam_viec()
             {
                 Ten_ca = txtName.Text,
                 Thoigianbatdau = TimeSpan.Parse(dateTimePicker1.Text),
                 Thoigianketthuc = TimeSpan.Parse(dateTimePicker2.Text),
             };
-            bll.AddCLV(t);
+            clvBLL.SaveCLV(clv);
             MessageBox.Show("Tạo ca thành công");
             fShift f = new fShift();
             f.TopLevel = false;
@@ -44,7 +43,6 @@ namespace WindowsFormsApp1.View
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-
             fShift f = new fShift();
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();

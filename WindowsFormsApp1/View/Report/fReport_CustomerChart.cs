@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.View
 {
     public partial class fReport_CustomerChart : Form
     {
-        HoaDon hoaDonBLL = new HoaDon();
+        Hoa_donBLL hoaDonBLL = new Hoa_donBLL();
         public fReport_CustomerChart()
         {
             InitializeComponent();
@@ -36,9 +36,10 @@ namespace WindowsFormsApp1.View
         }
         public void setCbbNam()
         {
-            PBL_3Entities cnn = new PBL_3Entities();
-            var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
-            foreach (int i in dsNam)
+            //    PBL_3Entities cnn = new PBL_3Entities();
+            //    var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
+            
+            foreach (int i in hoaDonBLL.GetListNam())
             {
                 cbbNam.Items.Add(i);
             }
@@ -162,7 +163,7 @@ namespace WindowsFormsApp1.View
             // Thiết lập các thuộc tính
             //bieuDoKH.Titles.Add("BIỂU ĐỒ BÁO CÁO VỀ KHÁCH HÀNG");
             bieuDoKH.ChartAreas[0].AxisX.Title = "Tháng";
-            bieuDoKH.ChartAreas[0].AxisY.Title = "Số lượng";
+            bieuDoKH.ChartAreas[0].AxisY.Title = "Số lượng (người)";
         }
 
     

@@ -18,8 +18,8 @@ namespace WindowsFormsApp1.View
 {
     public partial class fProduct : Form
     {
-        SanPham sanPhamBLL = new SanPham();
-        MaLoai maLoaiBLL = new MaLoai();    
+        San_phamBLL sanPhamBLL = new San_phamBLL();
+        Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();    
         public fProduct()
         {
             InitializeComponent();
@@ -29,21 +29,15 @@ namespace WindowsFormsApp1.View
         {
             if ((bool)Const.taiKhoan.Loai_TK)
             {
-                btnAddCategory.Enabled = false;
-                btnAddPro.Enabled = false;
+                btnAddCategory.Visible = false;
+                btnAddPro.Visible = false;
+                //btnAddCategory.Enabled = false;
+                //btnAddPro.Enabled = false;
             }
         }
-        //private void btnPizza_Click(object sender, EventArgs e)
-        //{
-        //    flpnMonAn.Controls.Clear();
-        //    pnProduct p=new pnProduct();
-        //    flpnMonAn.Controls.Add(p);
-        //}
-
         private void btnAddCate_Click(object sender, EventArgs e)
         {
             flpnMonAn.Controls.Clear();
-          
             fAddCategory f = new fAddCategory();
             f.TopLevel = false;
             ((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Clear();
@@ -51,7 +45,6 @@ namespace WindowsFormsApp1.View
             f.Show();
          
         }
-
 
         private void btn_Click(object sender, EventArgs e)
         {

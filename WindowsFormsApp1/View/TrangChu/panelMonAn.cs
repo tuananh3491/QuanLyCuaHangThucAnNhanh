@@ -27,8 +27,7 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
             MonAn = s;
-            setGUI(MonAn);
-            
+            setGUI(MonAn);            
         }
         
         void setGUI(San_pham sp)

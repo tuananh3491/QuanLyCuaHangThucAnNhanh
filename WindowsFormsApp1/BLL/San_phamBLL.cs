@@ -10,24 +10,50 @@ namespace WindowsFormsApp1.BLL
 {
     internal class San_phamBLL
     {
-        San_pham_DAL dal; 
-        public San_phamBLL()
+        PBL_3Entities cnn = new PBL_3Entities();
+        public List<San_pham> GetAllSP()
         {
-            dal = new San_pham_DAL();
+            var s = cnn.San_pham.ToList();
+            return s;
+        }
+        public San_pham GetPro(int maSP)
+        {
+            var s = cnn.San_pham.Find(maSP);
+            return s;
+        }
+        public void SaveSP(San_pham sp)
+        {
+            cnn.San_pham.AddOrUpdate(sp);
+            cnn.SaveChanges();
+        }
+        public void DeleteSP(San_pham sp)
+        {
+            cnn.San_pham.Remove(sp);
+            cnn.SaveChanges();
         }
 
         public List<San_pham> GetSPCategory(string s)
         {
             List<San_pham> lt = new List<San_pham>();
-            foreach (var i in dal.GetAllSP())
+            foreach (var i in GetAllSP())
             {
                 if (i.Ma_loai1.Ten == s) lt.Add(i);
             }
             return lt;
         }
-        public List<San_pham> GetListSP()
+
+        public string GetNamePro(int idPro)
         {
-            return dal.GetAllSP();
+            PBL_3Entities cnn = new PBL_3Entities();
+            var x = cnn.San_pham.Where(p => p.Ma_SP == idPro).FirstOrDefault();
+            return x.Ten_SP;
+        }
+
+        public List<San_pham> GetProOfType(int idType)//lấy danh sách sản phẩm dựa vào mã loại
+        {
+            PBL_3Entities cnn = new PBL_3Entities();
+            var l = cnn.San_pham.Where(p => p.Ma_loai == idType).ToList();
+            return l;
 
         }
     }

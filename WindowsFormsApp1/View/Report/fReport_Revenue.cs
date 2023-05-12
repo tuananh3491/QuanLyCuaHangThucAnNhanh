@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.View
 {
     public partial class fReport_Revenue : Form
     {
-        HoaDon hoadonBLL = new HoaDon();
+        Hoa_donBLL hoadonBLL = new Hoa_donBLL();
         public fReport_Revenue()
         {
             InitializeComponent();
@@ -26,9 +26,7 @@ namespace WindowsFormsApp1.View
         }
         public void SetCbbNam()
         {
-            PBL_3Entities cnn = new PBL_3Entities();
-            var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
-            foreach (int i in dsNam)
+            foreach (int i in hoadonBLL.GetListNam())
             {
                 cbbNam.Items.Add(i);
             }
@@ -62,7 +60,7 @@ namespace WindowsFormsApp1.View
             chart1.ChartAreas[0].AxisY.Title = "Doanh thu (đồng)";
         }
 
-        private void iconPictureBox1_Click(object sender, EventArgs e)
+        private void iconDone_Click(object sender, EventArgs e)
         {
             Load(int.Parse(cbbNam.SelectedItem.ToString()));
         }

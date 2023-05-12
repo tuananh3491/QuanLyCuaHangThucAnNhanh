@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.View
     public partial class fCustomer_Update : Form
     {
         public int maKH;
-        //KhachHang khBLL = new KhachHang();
+        Khach_hangBLL khBLL = new Khach_hangBLL();
         public fCustomer_Update(int m = -1)
         {
             InitializeComponent();
@@ -24,52 +24,32 @@ namespace WindowsFormsApp1.View
         }
         public void Load(int m)
         {
-            KhachHang khBLL = new KhachHang();
             var kh = khBLL.GetKHById(m);
             txtMaKH.Text = kh.Ma_KH.ToString();
             txtMaKH.Enabled = false;
             txtTenKH.Text = kh.Ten_KH.ToString();
             txtTenKH.Enabled = false;
             txtSDT.Text = kh.SDT.ToString();
+            txtDiemTL.Text = kh.Diem_tich_luy.ToString();
+            txtDiemTL.Enabled = false;
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-           // maKH = int.Parse(txtMaKH.Text.ToString());//? cần có ko
-            PBL_3Entities cnn = new PBL_3Entities();
-            //KhachHang khBLL = new KhachHang();
-            Khach_hang kh = cnn.Khach_hang.Find(maKH);
-           
+            Khach_hang kh = khBLL.GetKHById(maKH);
             if (kh.SDT != txtSDT.Text)
             {
                 kh.SDT = txtSDT.Text.ToString();
-                cnn.SaveChanges();
+                khBLL.SaveKH(kh);
                 MessageBox.Show("Cập nhật thành công");
-                fCustomer f = new fCustomer();
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
             }
             else
             {
                 DialogResult result = MessageBox.Show("Bạn muốn giữ số điện thoại cũ?", "Hỏi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                if (result == DialogResult.OK)
-                {
-                    fCustomer f = new fCustomer();
-                    f.TopLevel = false;
-                    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                    f.Show();
-                }
-                
-                
             }
         }
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
-            PBL_3Entities cnn = new PBL_3Entities();
-            Khach_hang kh = cnn.Khach_hang.Find(maKH);
             txtSDT.Text = "";
             //fCustomer f = new fCustomer();
             //f.TopLevel = false;

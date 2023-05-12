@@ -15,9 +15,9 @@ namespace WindowsFormsApp1.View
 {
     public partial class fReport_Product : Form
     {
-        HoaDon hoaDonBLL = new HoaDon();
-        ChiTietHoaDon chiTietHDBLL = new ChiTietHoaDon();
-        SanPham sanPhamBLL = new SanPham();
+        Hoa_donBLL hoaDonBLL = new Hoa_donBLL();
+        ChiTietHoaDonBLL chiTietHDBLL = new ChiTietHoaDonBLL();
+        San_phamBLL sanPhamBLL = new San_phamBLL();
         public fReport_Product()
         {
             InitializeComponent();
@@ -29,9 +29,7 @@ namespace WindowsFormsApp1.View
         }
         public void setCbbNam()
         {
-            PBL_3Entities cnn = new PBL_3Entities();
-            var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
-            foreach (int i in dsNam)
+            foreach (int i in hoaDonBLL.GetListNam())
             {
                 cbbNam.Items.Add(i);
             }
@@ -53,12 +51,12 @@ namespace WindowsFormsApp1.View
             int i = 1;
             foreach (DictionaryEntry x in htPro)
             {
-                dataGridView1.Rows.Add(i, x.Key, sanPhamBLL.GetNamePro(Convert.ToInt32(x.Key)), x.Value);
+                dataGridView1.Rows.Add(i, x.Key, sanPhamBLL.GetPro(Convert.ToInt32(x.Key)).Ten_SP, x.Value);
                 i++;
             }
         }
 
-        private void iconPictureBox1_Click(object sender, EventArgs e)
+        private void iconDone_Click(object sender, EventArgs e)
         {
             while(dataGridView1.Rows.Count > 1)
             {

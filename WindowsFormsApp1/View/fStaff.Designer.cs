@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnCapNhat = new WindowsFormsApp1.CustomControl.VBButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,28 +40,6 @@
             this.vbButton2 = new WindowsFormsApp1.CustomControl.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnCapNhat
-            // 
-            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCapNhat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCapNhat.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCapNhat.BorderRadius = 10;
-            this.btnCapNhat.BorderSize = 0;
-            this.btnCapNhat.FlatAppearance.BorderSize = 0;
-            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCapNhat.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
-            this.btnCapNhat.Location = new System.Drawing.Point(25, 497);
-            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnCapNhat.Name = "btnCapNhat";
-            this.btnCapNhat.Size = new System.Drawing.Size(216, 39);
-            this.btnCapNhat.TabIndex = 1;
-            this.btnCapNhat.Text = "Cập nhật trạng thái";
-            this.btnCapNhat.TextColor = System.Drawing.Color.White;
-            this.btnCapNhat.UseVisualStyleBackColor = false;
-            this.btnCapNhat.Visible = false;
-            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // dataGridView1
             // 
@@ -82,6 +59,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(884, 449);
             this.dataGridView1.TabIndex = 2;
             // 
@@ -185,7 +163,6 @@
             this.Controls.Add(this.vbButton2);
             this.Controls.Add(this.vbButton1);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnCapNhat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fStaff";
@@ -197,7 +174,6 @@
         }
 
         #endregion
-        private CustomControl.VBButton btnCapNhat;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

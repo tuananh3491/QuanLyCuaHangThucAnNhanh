@@ -16,7 +16,7 @@ namespace WindowsFormsApp1.View.Product
     public partial class pnProduct_Update : UserControl
     {
         private int maSP;
-        SanPham sanPhamBLL = new SanPham();
+        San_phamBLL sanPhamBLL = new San_phamBLL();
         public pnProduct_Update(int ma)
         {
             InitializeComponent();
@@ -45,11 +45,16 @@ namespace WindowsFormsApp1.View.Product
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            PBL_3Entities cnn = new PBL_3Entities();
-            San_pham sp = cnn.San_pham.Find(maSP);
+            //PBL_3Entities cnn = new PBL_3Entities();
+            //San_pham sp = cnn.San_pham.Find(maSP);
+            //sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
+            //sp.Trang_thai = checkCo.Checked;
+            //cnn.SaveChanges();
+            San_pham sp = sanPhamBLL.GetPro(maSP);
             sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
             sp.Trang_thai = checkCo.Checked;
-            cnn.SaveChanges();
+            sanPhamBLL.SaveSP(sp);
+
             MessageBox.Show("Đã lưu","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
             fProduct fProduct = new fProduct();
             
@@ -65,10 +70,13 @@ namespace WindowsFormsApp1.View.Product
             DialogResult result = MessageBox.Show("Bạn có chắc muốn xóa sản phẩm khỏi menu?", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             if (result == DialogResult.OK)
             {
-                PBL_3Entities cnn = new PBL_3Entities();
-                San_pham sp = cnn.San_pham.Find(maSP);
+                //PBL_3Entities cnn = new PBL_3Entities();
+                //San_pham sp = cnn.San_pham.Find(maSP);
+                //sp.Trang_thai = false;
+                //cnn.SaveChanges();
+                San_pham sp = sanPhamBLL.GetPro(maSP);
                 sp.Trang_thai = false;
-                cnn.SaveChanges();
+                sanPhamBLL.SaveSP(sp);
             }
         }
     }

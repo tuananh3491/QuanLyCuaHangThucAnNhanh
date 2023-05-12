@@ -13,33 +13,23 @@ namespace WindowsFormsApp1.View
 {
     public partial class fStaff : Form
     {
-        Nhan_vienBLL bll;
+        Nhan_vienBLL nvBLL = new Nhan_vienBLL();
         public fStaff()
         {
             InitializeComponent();
-            bll = new Nhan_vienBLL();
-        }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
-        {
-            fStaff_Salary f = new fStaff_Salary();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
         }
 
         private void fStaff_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            bll.ShowDGV(dataGridView1);
+            nvBLL.ShowDGV(dataGridView1);
         }
 
         private void vbButton1_Click(object sender, EventArgs e)
         {
             if(dataGridView1.SelectedRows.Count == 1)
             {
-                fStaff_View f = new fStaff_View(bll.GetNV(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString())));
+                fStaff_View f = new fStaff_View(nvBLL.GetNVByMa(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString())));
                 f.TopLevel = false;
                 ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
                 ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);

@@ -14,11 +14,10 @@ namespace WindowsFormsApp1.View
 {
     public partial class fBill : Form
     {
-        Hoa_donBLL bll;
+        Hoa_donBLL hdBLL = new Hoa_donBLL();
         public fBill()
         {
             InitializeComponent();
-            bll = new Hoa_donBLL();
         }
 
 
@@ -39,8 +38,13 @@ namespace WindowsFormsApp1.View
         private void fBill_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            bll.ShowDGV(dataGridView1);
+            hdBLL.ShowDGV(dataGridView1);
         }
 
+        private void iconDone_Click(object sender, EventArgs e)
+        {
+            DateTime date = dateTimePicker1.Value;
+            dataGridView1.DataSource = hdBLL.GetHDByDate(date);
+        }
     }
 }

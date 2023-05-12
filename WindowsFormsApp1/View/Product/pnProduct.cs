@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.View.Product
 {
     public partial class pnProduct : UserControl
     {
-        SanPham sanPhamBLL = new SanPham();
+        San_phamBLL sanPhamBLL = new San_phamBLL();
         private int maSP;
         public pnProduct(int m )
         {
@@ -41,19 +41,19 @@ namespace WindowsFormsApp1.View.Product
             txtPrice.Text = sp.Don_gia.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnS_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
             txtPrice.Text = sp.Don_gia.ToString();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnM_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
             txtPrice.Text = (sp.Don_gia*1.1).ToString();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnL_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
             txtPrice.Text = (sp.Don_gia*1.2).ToString();

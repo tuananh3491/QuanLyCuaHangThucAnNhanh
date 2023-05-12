@@ -13,11 +13,11 @@ namespace WindowsFormsApp1.View
 {
     public partial class fShift : Form
     {
-        Ca_lam_viecBLL bll;
+        Ca_lam_viecBLL clvBLL;
         public fShift()
         {
             InitializeComponent();
-            bll = new Ca_lam_viecBLL();
+            clvBLL = new Ca_lam_viecBLL();
         }
 
         private void btnTaoCa_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.View
         private void fShift_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = null;
-            bll.ShowDGV(dataGridView1);
+            clvBLL.ShowDGV(dataGridView1);
         }
 
         private void btnDetail_Click(object sender, EventArgs e)

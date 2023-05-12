@@ -12,14 +12,13 @@ using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.View.Product;
-using WindowsFormsApp1.View.Report;
 using Application = System.Windows.Forms.Application;
 
 namespace WindowsFormsApp1.View
 {
     public partial class fReport_Customer : Form
     {
-        HoaDon hoaDonBLL = new HoaDon();
+        Hoa_donBLL hoaDonBLL = new Hoa_donBLL();
         //CBBItem cBBItem = new CBBItem();
         public fReport_Customer()
         {
@@ -32,8 +31,9 @@ namespace WindowsFormsApp1.View
         }
         public void setCbbNam()
         {
-            PBL_3Entities cnn = new PBL_3Entities();
-            var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
+            //PBL_3Entities cnn = new PBL_3Entities();
+            //var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
+            List<int> dsNam = hoaDonBLL.GetListNam();
             foreach (int i in dsNam)
             {
                 cbbNam.Items.Add(i);
@@ -100,7 +100,7 @@ namespace WindowsFormsApp1.View
              
         }
 
-        private void iconPictureBox1_Click(object sender, EventArgs e)
+        private void iconDone_Click(object sender, EventArgs e)
         {
 
             //dataGridView1.SelectAll();

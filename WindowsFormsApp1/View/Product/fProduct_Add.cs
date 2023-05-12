@@ -15,7 +15,8 @@ namespace WindowsFormsApp1.View.Product
 {
     public partial class fProduct_Add : Form
     {
-        MaLoai maLoaiBLL = new MaLoai();
+        Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();
+        San_phamBLL san_PhamBLL = new San_phamBLL();
         public fProduct_Add()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace WindowsFormsApp1.View.Product
         }
         public void setCbb()
         {
-            List<Ma_loai> list = maLoaiBLL.GetListCategory();
+            List<Ma_loai> list = maLoaiBLL.GetAllML();
             foreach(Ma_loai item in list)
             {
                 cbbCategory.Items.Add(item.Ten);
@@ -55,11 +56,12 @@ namespace WindowsFormsApp1.View.Product
                     Trang_thai = true,
                     Hinh_anh = bytes
                 };
-                using (PBL_3Entities cnn = new PBL_3Entities())
-                {
-                    cnn.San_pham.Add(sp);
-                    cnn.SaveChanges();
-                }
+                san_PhamBLL.SaveSP(sp);
+                //using (PBL_3Entities cnn = new PBL_3Entities())
+                //{
+                //    cnn.San_pham.Add(sp);
+                //    cnn.SaveChanges();
+                //}
 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }

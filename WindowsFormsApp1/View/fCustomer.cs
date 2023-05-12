@@ -54,7 +54,7 @@ namespace WindowsFormsApp1.View
         }
         private void fCustomer_Load(object sender, EventArgs e)
         {
-            KhachHang khBLL = new KhachHang();
+            Khach_hangBLL khBLL = new Khach_hangBLL();
             khBLL.ShowDGV(dataGridView);    
         }
 

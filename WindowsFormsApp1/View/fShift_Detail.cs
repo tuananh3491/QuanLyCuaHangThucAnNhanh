@@ -14,23 +14,18 @@ namespace WindowsFormsApp1.View
 {
     public partial class fShift_Detail : Form
     {
-        Phan_congBLL bll; int x;
+        Phan_congBLL pcBLL = new Phan_congBLL(); 
+        int x;
         public fShift_Detail()
         {
             InitializeComponent();
-            bll = new Phan_congBLL();
         }
         public fShift_Detail(int x)
         {
             InitializeComponent();
-            bll = new Phan_congBLL();
+            pcBLL = new Phan_congBLL();
             this.x = x;
             reload();
-        }
-
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void fShift_Detail_Load(object sender, EventArgs e)
@@ -39,16 +34,16 @@ namespace WindowsFormsApp1.View
         }
         private void reload()
         {
-            bll.ShowDGV(dataGridView1, x);
+            pcBLL.ShowDGV(dataGridView1, x);
             comboBox1.Items.Clear();
-            comboBox1.Items.AddRange(bll.GetMaNV(x).ToArray());
+            comboBox1.Items.AddRange(pcBLL.GetMaNV(x).ToArray());
         }
 
-        private void vbButton1_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
             try
             {
-                bll.AddPC(new Phan_cong
+                pcBLL.SavePC(new Phan_cong
                 {
                     Ma_ca = x,
                     Ma_NV = int.Parse(comboBox1.Text),
@@ -58,17 +53,17 @@ namespace WindowsFormsApp1.View
             }
             catch (FormatException)
             {
-                MessageBox.Show("NV BỊ TRỐNG");
+                MessageBox.Show("NV BỊ TRỐNG", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
 
-        private void vbButton2_Click(object sender, EventArgs e)
+        private void btnXoa_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 try
                 {
-                    bll.DeletePC(new Phan_cong
+                    pcBLL.DeletePC(new Phan_cong
                     {
                         Ma_ca = x,
                         Ma_NV = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()),
@@ -77,7 +72,7 @@ namespace WindowsFormsApp1.View
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("KKK");
+                    MessageBox.Show("Lỗi","Cảnh báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
                 }
             }
         }
@@ -89,6 +84,11 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
+        }
+
+        private void iconDone_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

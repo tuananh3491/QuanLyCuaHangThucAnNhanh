@@ -14,31 +14,34 @@ namespace WindowsFormsApp1.View
 {
     public partial class fBill_Detail : Form
     {
-        private int MaHD;
-        private Hoa_donBLL hoa_DonBLL;
+        private int maHD;
+        Hoa_donBLL hdBLL = new Hoa_donBLL();
+        ChiTietHoaDonBLL cthdBLL = new ChiTietHoaDonBLL();
         public fBill_Detail(int s)
         {
             InitializeComponent();
-            hoa_DonBLL = new Hoa_donBLL();
-            MaHD = s;
-            setGUI(MaHD);
+            maHD = s;
+            setGUI(maHD);
         }
-        void setGUI(int i)
-        {        
+        void setGUI(int maHD)
+        {
+            double tong = 0;
             Hoa_don hd = new Hoa_don();
-            hd = hoa_DonBLL.getHDBll(i);
-            tbNhanVien.Text = hd.Tai_khoan.Nhan_vien.Ten_NV.ToString();
-            tbMaHD.Text = hd.Ma_HD.ToString();
-            tbKhachHang.Text = hd.Khach_hang.Ten_KH.ToString();
-            tbSDT.Text = hd.Khach_hang.SDT.ToString();
-            tbNgayMua.Text=hd.Ngay_mua.ToString();
+            hd = hdBLL.GetHDByMaHD(maHD);
+            txtNV.Text = hd.Tai_khoan.Nhan_vien.Ten_NV.ToString();
+            txtMa.Text = hd.Ma_HD.ToString();
+            txtKH.Text = hd.Khach_hang.Ten_KH.ToString();
+            txtSDT.Text = hd.Khach_hang.SDT.ToString();
+            txtNgay.Text = hd.Ngay_mua.ToString();
             List<Chi_tiet_hoa_don> list = new List<Chi_tiet_hoa_don>();
-            list = hoa_DonBLL.getALLCT(hd.Ma_HD);
-            tbTongTien.Text=hd.Tong_tien.ToString()+"đ";
+            list = cthdBLL.GetAllCT(maHD);
+            
             foreach (Chi_tiet_hoa_don l in list)
             {
-                dataGridView1.Rows.Add(l.San_pham.Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(),l.Gia.ToString());
+                dgvCTHD.Rows.Add(l.San_pham.Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(),l.Gia.ToString());
+                tong += l.Gia * l.Soluong_SP;
             }
+            txtTongTien.Text = tong.ToString();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -54,7 +57,7 @@ namespace WindowsFormsApp1.View
 
         private void btInHD_Click(object sender, EventArgs e)
         {
-            fBill_PrePrint f = new fBill_PrePrint();
+            fBill_PrePrint f = new fBill_PrePrint(maHD);
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);

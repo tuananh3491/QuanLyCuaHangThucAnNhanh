@@ -173,7 +173,7 @@
             this.btnCombo.Size = new System.Drawing.Size(107, 34);
             this.btnCombo.TabIndex = 23;
             this.btnCombo.Text = "Combo";
-            this.btnCombo.Click += new System.EventHandler(this.btnCombo_Click);
+            this.btnCombo.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnPizza
             // 
@@ -193,7 +193,7 @@
             this.btnPizza.Size = new System.Drawing.Size(87, 34);
             this.btnPizza.TabIndex = 22;
             this.btnPizza.Text = "Pizza";
-            this.btnPizza.Click += new System.EventHandler(this.btnPizza_Click_1);
+            this.btnPizza.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnGa
             // 
@@ -213,7 +213,7 @@
             this.btnGa.Size = new System.Drawing.Size(87, 34);
             this.btnGa.TabIndex = 21;
             this.btnGa.Text = "Gà";
-            this.btnGa.Click += new System.EventHandler(this.btnGa_Click);
+            this.btnGa.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnBurger
             // 
@@ -233,7 +233,7 @@
             this.btnBurger.Size = new System.Drawing.Size(116, 43);
             this.btnBurger.TabIndex = 20;
             this.btnBurger.Text = "Burger";
-            this.btnBurger.Click += new System.EventHandler(this.btnBurger_Click);
+            this.btnBurger.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnNuoc
             // 
@@ -253,7 +253,7 @@
             this.btnNuoc.Size = new System.Drawing.Size(87, 34);
             this.btnNuoc.TabIndex = 19;
             this.btnNuoc.Text = "Nước";
-            this.btnNuoc.Click += new System.EventHandler(this.btnNuoc_Click);
+            this.btnNuoc.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnKem
             // 
@@ -273,7 +273,7 @@
             this.btnKem.Size = new System.Drawing.Size(87, 34);
             this.btnKem.TabIndex = 18;
             this.btnKem.Text = "Kem";
-            this.btnKem.Click += new System.EventHandler(this.btnKem_Click);
+            this.btnKem.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnKhac
             // 
@@ -293,7 +293,7 @@
             this.btnKhac.Size = new System.Drawing.Size(87, 34);
             this.btnKhac.TabIndex = 17;
             this.btnKhac.Text = "Khác";
-            this.btnKhac.Click += new System.EventHandler(this.btnKhac_Click);
+            this.btnKhac.Click += new System.EventHandler(this.btn_Click);
             // 
             // flpnThucDon
             // 

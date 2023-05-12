@@ -1,4 +1,5 @@
 ﻿    using FontAwesome.Sharp;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.View.Product;
 using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1.View
@@ -32,7 +34,9 @@ namespace WindowsFormsApp1.View
         {
             if ((bool)Const.taiKhoan.Loai_TK)
             {
-                btnBaoCao.Enabled = false;
+                //btnBaoCao.Enabled = false;
+                btnBaoCao.Visible = false;
+                btnTaiKhoan.Visible = false;
             }
         }
         //custom panelBaoCao
@@ -165,7 +169,7 @@ namespace WindowsFormsApp1.View
             panelBaoCao.Visible = false;
         }
 
-        private void btnSetting_Click(object sender, EventArgs e)
+        private void btnTaiKHoan_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
             panelBaoCao.Visible = false;
@@ -211,6 +215,23 @@ namespace WindowsFormsApp1.View
             ActivateButtonPanel(sender);
         }
 
+        private void iconLogOut_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnPerson_Click(object sender, EventArgs e)
+        {
+            fPersonality f = new fPersonality();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,14 +15,11 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class fTrangChu : Form
     {
-        public static Hoa_don hoa_Don;
-        List<Chi_tiet_hoa_don> ct;
+        List<Chi_tiet_hoa_don> listCTHD = new List<Chi_tiet_hoa_don>();
         double tongtien = 0;
         public fTrangChu()
         {
             InitializeComponent();
-            //Tao_Hoa_Don();
-            ct =  new List<Chi_tiet_hoa_don>();
         }
         
         //public void Tao_Hoa_Don()
@@ -31,43 +29,47 @@ namespace WindowsFormsApp1.View.TrangChu
         private void AddList(Chi_tiet_hoa_don t)
         {
             tongtien = 0;
-            var s = ct.FirstOrDefault(x => x.Ma_SP == t.Ma_SP && x.Kich_thuoc == t.Kich_thuoc);
-            if (s == null) { ct.Add(t); }
+            var s = listCTHD.FirstOrDefault(x => x.Ma_SP == t.Ma_SP && x.Kich_thuoc == t.Kich_thuoc);
+            if (s == null) { listCTHD.Add(t); }
             else
             {
                 s.Soluong_SP = t.Soluong_SP;
                 s.Gia = t.Gia;
             }
-            var r = ct.SingleOrDefault(x => x.Soluong_SP == 0);
-            ct.Remove(r);
+            var r = listCTHD.SingleOrDefault(x => x.Soluong_SP == 0);
+            listCTHD.Remove(r);
             TinhTongTien();
         }
         private void TinhTongTien()
         {
-            foreach (Chi_tiet_hoa_don i in ct)
+            foreach (Chi_tiet_hoa_don i in listCTHD)
             {
                 tongtien += Convert.ToDouble(i.Gia);
             }
             tbTongTien.Text = tongtien.ToString();
         }
-        private void btnPizza_Click_1(object sender, EventArgs e)
+        private void btn_Click(object sender, EventArgs e)
         {
-            openPanel(btnPizza.Text);
+            openPanel(((Guna2Button)sender).Text);
         }
+        //private void btnPizza_Click_1(object sender, EventArgs e)
+        //{
+        //    openPanel(btnPizza.Text);
+        //}
 
-        private void btnGa_Click(object sender, EventArgs e)
-        {
-            openPanel(btnGa.Text);
-        }
-        private void btnKhac_Click(object sender, EventArgs e)
-        {
-            openPanel(btnKhac.Text);
-        }
+        //private void btnGa_Click(object sender, EventArgs e)
+        //{
+        //    openPanel(btnGa.Text);
+        //}
+        //private void btnKhac_Click(object sender, EventArgs e)
+        //{
+        //    openPanel(btnKhac.Text);
+        //}
 
-        private void btnBurger_Click(object sender, EventArgs e)
-        {
-            openPanel(btnBurger.Text);
-        }
+        //private void btnBurger_Click(object sender, EventArgs e)
+        //{
+        //    openPanel(btnBurger.Text);
+        //}
 
         private void btnHuy_Click(object sender, EventArgs e)
         {   
@@ -78,7 +80,7 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill(ct, Convert.ToDouble(tbTongTien.Text));
+            Bill f = new Bill(listCTHD, Convert.ToDouble(tbTongTien.Text));
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
@@ -103,19 +105,19 @@ namespace WindowsFormsApp1.View.TrangChu
             }
         }
 
-        private void btnKem_Click(object sender, EventArgs e)
-        {
-            openPanel(btnKem.Text);
-        }
+        //private void btnKem_Click(object sender, EventArgs e)
+        //{
+        //    openPanel(btnKem.Text);
+        //}
 
-        private void btnCombo_Click(object sender, EventArgs e)
-        {
-            openPanel(btnCombo.Text);
-        }
+        //private void btnCombo_Click(object sender, EventArgs e)
+        //{
+        //    openPanel(btnCombo.Text);
+        //}
 
-        private void btnNuoc_Click(object sender, EventArgs e)
-        {
-            openPanel(btnNuoc.Text);
-        }
+        //private void btnNuoc_Click(object sender, EventArgs e)
+        //{
+        //    openPanel(btnNuoc.Text);
+        //}
     }
 }

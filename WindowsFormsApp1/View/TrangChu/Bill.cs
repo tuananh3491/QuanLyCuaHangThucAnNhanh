@@ -16,11 +16,10 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class Bill : Form
     {
-        Hoa_donBLL bll;
-        Chi_tiet_hoa_donBLL chi_tiet_;
-        KhachHang khBLL = new KhachHang();
-        HoaDon hoaDonBLL = new HoaDon();
-        private List<Chi_tiet_hoa_don> ct;
+        Hoa_donBLL hdBLL = new Hoa_donBLL();
+        ChiTietHoaDonBLL cthdBLL = new ChiTietHoaDonBLL();
+        Khach_hangBLL khBLL = new Khach_hangBLL();  
+        private List<Chi_tiet_hoa_don> listCTHD;
         private double tongTien;
      
         public Bill()
@@ -29,13 +28,10 @@ namespace WindowsFormsApp1.View.TrangChu
         }
 
        
-        public Bill(List<Chi_tiet_hoa_don> a, double t)
+        public Bill(List<Chi_tiet_hoa_don> list, double t)
         {
-            InitializeComponent();
-            bll = new Hoa_donBLL();
-            chi_tiet_ = new Chi_tiet_hoa_donBLL();
-            ct = a;
-
+            InitializeComponent(); 
+            listCTHD = list;
             tongTien = t;
             Load(t);
         }
@@ -58,17 +54,19 @@ namespace WindowsFormsApp1.View.TrangChu
 
                 };
 
-                using (PBL_3Entities cnn = new PBL_3Entities())
-                {
-                    cnn.Hoa_don.Add(hd);
-                    cnn.Chi_tiet_hoa_don.AddRange(ct);
-                    cnn.SaveChanges();
-                }
+                //using (PBL_3Entities cnn = new PBL_3Entities())
+                //{
+                //    cnn.Hoa_don.Add(hd);
+                //    cnn.Chi_tiet_hoa_don.AddRange(listCTHD);
+                //    cnn.SaveChanges();
+                //}
+                hdBLL.SaveHD(hd);
+                cthdBLL.AddList(listCTHD);
                 txtIdBill.Text = hd.Ma_KH.ToString();
                 MessageBox.Show("In thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 
                 this.Hide();
-                fBill_PrePrint f = new fBill_PrePrint();
+                fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD);
                 f.ShowDialog();
                 f = null;
                 this.Show();
@@ -92,8 +90,7 @@ namespace WindowsFormsApp1.View.TrangChu
             txtTime.Enabled = false;
             txtStaff.Text = Const.taiKhoan.Ten_TK;
             txtTime.Text = DateTime.Now.ToString();
-
-            chi_tiet_.ShowDGV(dataGridView1, ct);
+            cthdBLL.ShowDGV(dataGridView1, listCTHD);
             txtTotal.Enabled = false;
             txtTotal.Text = t.ToString();
 
@@ -105,7 +102,6 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            KhachHang khBLL = new KhachHang();
             Khach_hang kh = khBLL.GetKHByPhone(txtPhone.Text);
             if (kh == null)
             {

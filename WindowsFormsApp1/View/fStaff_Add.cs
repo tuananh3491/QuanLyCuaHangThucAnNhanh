@@ -16,13 +16,11 @@ namespace WindowsFormsApp1.View
     public partial class fStaff_Add : Form
     {
         
-        Nhan_vienBLL bll;
-        Tai_khoanBLL bll1;
+        Nhan_vienBLL nvBLL = new Nhan_vienBLL();
+        Tai_khoanBLL tkBLL = new Tai_khoanBLL();
         public fStaff_Add()
         {
             InitializeComponent();
-            bll = new Nhan_vienBLL();
-            bll1 = new Tai_khoanBLL();
         }
 
         private void changeForm()
@@ -48,7 +46,7 @@ namespace WindowsFormsApp1.View
         {
             textBox1.Visible = false;
             label1.Visible = false;
-            int x = bll.addNV(new Nhan_vien
+            int x = nvBLL.AddNV(new Nhan_vien
             {
                 //Luong = Convert.ToInt32(textBox1.Text),
                 
@@ -59,14 +57,14 @@ namespace WindowsFormsApp1.View
                 Trang_thai = (checkBox1.Checked),
             });
 
-            bll1.AddTK(new Tai_khoan
+            tkBLL.SaveTK(new Tai_khoan
             {
                 Ma_TK = x,
                 Ten_TK = textBox5.Text,
                 Mat_khau = textBox6.Text,
                 Loai_TK = radioButton4.Checked
             });
-            MessageBox.Show("thêm nv thành công.");
+            MessageBox.Show("Thêm nhân viên thành công.");
             changeForm();
         }
     }   

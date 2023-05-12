@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.pnPro = new System.Windows.Forms.Panel();
+            this.checkCon = new System.Windows.Forms.CheckBox();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnL = new System.Windows.Forms.Button();
+            this.btnM = new System.Windows.Forms.Button();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnS = new System.Windows.Forms.Button();
             this.pic = new System.Windows.Forms.PictureBox();
-            this.checkCon = new System.Windows.Forms.CheckBox();
             this.pnPro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
             this.SuspendLayout();
@@ -47,15 +47,25 @@
             this.pnPro.Controls.Add(this.checkCon);
             this.pnPro.Controls.Add(this.btnEdit);
             this.pnPro.Controls.Add(this.txtName);
-            this.pnPro.Controls.Add(this.button3);
-            this.pnPro.Controls.Add(this.button2);
+            this.pnPro.Controls.Add(this.btnL);
+            this.pnPro.Controls.Add(this.btnM);
             this.pnPro.Controls.Add(this.txtPrice);
-            this.pnPro.Controls.Add(this.button1);
+            this.pnPro.Controls.Add(this.btnS);
             this.pnPro.Controls.Add(this.pic);
             this.pnPro.Location = new System.Drawing.Point(3, 3);
             this.pnPro.Name = "pnPro";
             this.pnPro.Size = new System.Drawing.Size(231, 259);
             this.pnPro.TabIndex = 0;
+            // 
+            // checkCon
+            // 
+            this.checkCon.AutoSize = true;
+            this.checkCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkCon.Location = new System.Drawing.Point(210, 3);
+            this.checkCon.Name = "checkCon";
+            this.checkCon.Size = new System.Drawing.Size(18, 17);
+            this.checkCon.TabIndex = 25;
+            this.checkCon.UseVisualStyleBackColor = true;
             // 
             // btnEdit
             // 
@@ -80,29 +90,29 @@
             this.txtName.Size = new System.Drawing.Size(136, 23);
             this.txtName.TabIndex = 13;
             // 
-            // button3
+            // btnL
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.button3.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(133, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(32, 27);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "L";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnL.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnL.Location = new System.Drawing.Point(133, 168);
+            this.btnL.Name = "btnL";
+            this.btnL.Size = new System.Drawing.Size(32, 27);
+            this.btnL.TabIndex = 12;
+            this.btnL.Text = "L";
+            this.btnL.UseVisualStyleBackColor = false;
+            this.btnL.Click += new System.EventHandler(this.btnL_Click);
             // 
-            // button2
+            // btnM
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.button2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(93, 168);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(32, 27);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "M";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnM.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnM.Location = new System.Drawing.Point(93, 168);
+            this.btnM.Name = "btnM";
+            this.btnM.Size = new System.Drawing.Size(32, 27);
+            this.btnM.TabIndex = 11;
+            this.btnM.Text = "M";
+            this.btnM.UseVisualStyleBackColor = false;
+            this.btnM.Click += new System.EventHandler(this.btnM_Click);
             // 
             // txtPrice
             // 
@@ -114,17 +124,17 @@
             this.txtPrice.TabIndex = 10;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // button1
+            // btnS
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(56, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(32, 27);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "S";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnS.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnS.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnS.Location = new System.Drawing.Point(56, 168);
+            this.btnS.Name = "btnS";
+            this.btnS.Size = new System.Drawing.Size(32, 27);
+            this.btnS.TabIndex = 9;
+            this.btnS.Text = "S";
+            this.btnS.UseVisualStyleBackColor = false;
+            this.btnS.Click += new System.EventHandler(this.btnS_Click);
             // 
             // pic
             // 
@@ -133,16 +143,6 @@
             this.pic.Size = new System.Drawing.Size(161, 95);
             this.pic.TabIndex = 8;
             this.pic.TabStop = false;
-            // 
-            // checkCon
-            // 
-            this.checkCon.AutoSize = true;
-            this.checkCon.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkCon.Location = new System.Drawing.Point(210, 3);
-            this.checkCon.Name = "checkCon";
-            this.checkCon.Size = new System.Drawing.Size(18, 17);
-            this.checkCon.TabIndex = 25;
-            this.checkCon.UseVisualStyleBackColor = true;
             // 
             // pnProduct
             // 
@@ -163,10 +163,10 @@
 
         private System.Windows.Forms.Panel pnPro;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnL;
+        private System.Windows.Forms.Button btnM;
         private System.Windows.Forms.TextBox txtPrice;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnS;
         private System.Windows.Forms.PictureBox pic;
         private FontAwesome.Sharp.IconButton btnEdit;
         private System.Windows.Forms.CheckBox checkCon;

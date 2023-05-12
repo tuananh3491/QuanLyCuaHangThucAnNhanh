@@ -108,7 +108,7 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(50, 38);
             this.iconPictureBox1.TabIndex = 61;
             this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click);
+            this.iconPictureBox1.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // ccbLoc
             // 
