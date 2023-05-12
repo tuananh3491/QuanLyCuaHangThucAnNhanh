@@ -104,6 +104,7 @@ namespace WindowsFormsApp1
             // 
             this.btnMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnMaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnMaximize.Enabled = false;
             this.btnMaximize.FlatAppearance.BorderSize = 0;
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(153)))), ((int)(((byte)(33)))));
@@ -263,6 +264,7 @@ namespace WindowsFormsApp1
             this.txtPassWord.SelectedText = "";
             this.txtPassWord.Size = new System.Drawing.Size(276, 48);
             this.txtPassWord.TabIndex = 1;
+            this.txtPassWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassWord_KeyDown);
             // 
             // txtUsername
             // 

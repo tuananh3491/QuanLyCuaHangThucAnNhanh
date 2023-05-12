@@ -17,6 +17,12 @@ namespace WindowsFormsApp1.View
         public fStaff()
         {
             InitializeComponent();
+            setGUI();
+        }
+        public void setGUI()
+        {
+            dataGridView1.DataSource = null;
+            nvBLL.ShowDGV(dataGridView1);
         }
 
         private void fStaff_Load(object sender, EventArgs e)
@@ -34,6 +40,7 @@ namespace WindowsFormsApp1.View
                 ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
                 ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
                 f.Show();
+                this.Dispose();
             }
         }
 

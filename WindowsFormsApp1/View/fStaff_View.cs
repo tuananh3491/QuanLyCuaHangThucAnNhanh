@@ -42,6 +42,7 @@ namespace WindowsFormsApp1.View
         private void btnBack_Click(object sender, EventArgs e)
         {
             changeForm();
+            this.Dispose();
         }
 
         private void fStaff_Add_Load(object sender, EventArgs e)

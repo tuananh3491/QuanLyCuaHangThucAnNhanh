@@ -169,12 +169,6 @@ namespace WindowsFormsApp1.View
             panelBaoCao.Visible = false;
         }
 
-        private void btnTaiKHoan_Click(object sender, EventArgs e)
-        {
-            ActivateButton(sender);
-            panelBaoCao.Visible = false;
-        }
-
         private void btnCaLamViec_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
@@ -222,7 +216,9 @@ namespace WindowsFormsApp1.View
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
-           
+            ActivateButton(sender);
+            openChildForm(new fAccount(), pnForm);
+            panelBaoCao.Visible = false;
         }
 
         private void btnPerson_Click(object sender, EventArgs e)
