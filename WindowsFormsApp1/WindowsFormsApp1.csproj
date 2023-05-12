@@ -75,7 +75,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\Ca_lam_viecBLL.cs" />
-    <Compile Include="BLL\CBBItem.cs" />
     <Compile Include="BLL\ChiTietHoaDonBLL.cs" />
     <Compile Include="BLL\Hoa_donBLL.cs" />
     <Compile Include="BLL\Khach_hangBLL.cs" />

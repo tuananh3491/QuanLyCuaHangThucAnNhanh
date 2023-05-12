@@ -30,7 +30,7 @@ namespace WindowsFormsApp1.View
         void setGUI(int i)
         {        
             Hoa_don hd = new Hoa_don();
-            hd = hoa_DonBLL.getHDBll(i);
+            hd = hoa_DonBLL.GetHDByMaHD(i);
             tbNhanVien.Text = hd.Tai_khoan.Nhan_vien.Ten_NV.ToString();
             tbMaHD.Text = hd.Ma_HD.ToString();
             tbKhachHang.Text = hd.Khach_hang.Ten_KH.ToString();

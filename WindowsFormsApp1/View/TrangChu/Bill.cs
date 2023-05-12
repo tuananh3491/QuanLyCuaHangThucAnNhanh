@@ -47,7 +47,7 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void Bill_Load(object sender, EventArgs e)
         {
-            textBox2.Text = Const.tenNV;
+            textBox2.Text = Const.taiKhoan.Nhan_vien.Ten_NV;
             textBox6.Text = hd.Tong_tien.ToString();
             chi_tiet_.ShowDGV(dataGridView1, ct);
         }

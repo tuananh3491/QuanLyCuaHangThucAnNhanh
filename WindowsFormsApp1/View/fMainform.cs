@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.View
         
         public void PhanQuyen()
         {
-            if (Const.loaiTaiKhoan)
+            if (Const.taiKhoan.Loai_TK == true)
             {
                 btnBaoCao.Enabled = false;
             }

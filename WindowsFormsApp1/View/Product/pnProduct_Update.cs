@@ -26,7 +26,7 @@ namespace WindowsFormsApp1.View.Product
         }
         public void PhanQuyen()
         {
-            if (Const.loaiTaiKhoan)
+            if (Const.taiKhoan.Loai_TK == true)
             {
                 txtPrice.Enabled = false;
                 checkCo.Enabled = false;

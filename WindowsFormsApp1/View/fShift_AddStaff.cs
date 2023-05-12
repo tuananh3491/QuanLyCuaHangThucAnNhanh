@@ -37,7 +37,7 @@ namespace WindowsFormsApp1.View
                 Thoigianbatdau = TimeSpan.Parse(dateTimePicker1.Text),
                 Thoigianketthuc = TimeSpan.Parse(dateTimePicker2.Text),
             };
-            bll.AddCLV(t);
+            bll.SaveCLV(t);
             MessageBox.Show("Tạo ca thành công");
             fShift f = new fShift();
             f.TopLevel = false;

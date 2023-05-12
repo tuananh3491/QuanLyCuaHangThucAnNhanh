@@ -103,7 +103,7 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             Hoa_don a = new Hoa_don
             {
-                Ma_NV = Const.Matk,
+                Ma_NV = Const.taiKhoan.Ma_TK,
                 Ngay_mua = DateTime.Now,
                 Tong_tien = double.Parse(tbTongTien.Text)
             };
