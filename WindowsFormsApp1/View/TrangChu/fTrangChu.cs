@@ -16,30 +16,58 @@ namespace WindowsFormsApp1.View.TrangChu
     public partial class fTrangChu : Form
     {
         List<Chi_tiet_hoa_don> listCTHD = new List<Chi_tiet_hoa_don>();
+        San_phamBLL bll = new San_phamBLL();
         double tongtien = 0;
         public fTrangChu()
         {
             InitializeComponent();
         }
-        
+
         //public void Tao_Hoa_Don()
         //{
         //    hoa_Don = new Hoa_don(Convert.ToDouble(tbTongTien.Text));
         //}
         private void AddList(Chi_tiet_hoa_don t)
         {
-            tongtien = 0;
-            var s = listCTHD.FirstOrDefault(x => x.Ma_SP == t.Ma_SP && x.Kich_thuoc == t.Kich_thuoc);
-            if (s == null) { listCTHD.Add(t); }
-            else
+            Edit("add", t);
+            TinhTongTien();
+            flpnOrder.Controls.Clear();
+            foreach (var i in listCTHD)
             {
-                s.Soluong_SP = t.Soluong_SP;
-                s.Gia = t.Gia;
+                panelOrder pn = new panelOrder(bll.GetPro(i.Ma_SP), i);
+                flpnOrder.Controls.Add(pn);
+                pn.callback += new panelOrder.update(this.UpdateList);
             }
-            var r = listCTHD.SingleOrDefault(x => x.Soluong_SP == 0);
-            listCTHD.Remove(r);
+        }
+
+        private void UpdateList(Chi_tiet_hoa_don t)
+        {
+            Edit("update", t);
             TinhTongTien();
         }
+
+        private void Edit(string st, Chi_tiet_hoa_don t) //thêm sửa xóa đều ở đây
+        {
+            tongtien = 0;
+            var s = listCTHD.FirstOrDefault(x => x.Ma_SP == t.Ma_SP && x.Kich_thuoc == t.Kich_thuoc);
+            if (s == null) { listCTHD.Add(t); } //thêm t
+            else //sửa s
+            {
+                if (st == "update")
+                {
+                    s.Soluong_SP = t.Soluong_SP;
+                    s.Gia = t.Gia;
+                }
+                if (st == "add")
+                {
+                    s.Soluong_SP += 1;
+                    s.Gia += t.Gia;
+                }
+            }
+            var r = listCTHD.SingleOrDefault(x => x.Soluong_SP == 0); //xóa các phần tử có điều kiện trên
+            listCTHD.Remove(r);
+        }
+
         private void TinhTongTien()
         {
             foreach (Chi_tiet_hoa_don i in listCTHD)
@@ -101,7 +129,8 @@ namespace WindowsFormsApp1.View.TrangChu
             {
                 panelMonAn a = new panelMonAn(i);
                 flpnThucDon.Controls.Add(a);
-                a.callbackMonAn += new panelMonAn.Add(this.AddList);
+                a.Add += new panelMonAn.Edit(this.AddList);
+                a.Update += new panelMonAn.Edit(this.UpdateList);
             }
         }
 
