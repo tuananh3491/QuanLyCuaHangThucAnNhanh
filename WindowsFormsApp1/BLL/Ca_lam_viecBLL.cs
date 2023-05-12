@@ -12,38 +12,53 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Ca_lam_viecBLL
     {
-        Ca_lam_viec_DAL dal;
+        PBL_3Entities et;
         public Ca_lam_viecBLL()
         {
-            dal = new Ca_lam_viec_DAL();
+            et = new PBL_3Entities();
         }
         public void ShowDGV(DataGridView dg)
         {
-            dg.DataSource = dal.GetAllCLV();
+            dg.DataSource = GetAllCLV();
             dg.Columns["Phan_cong"].Visible = false;
+        }
+        
+        public List<Ca_lam_viec> GetAllCLV()
+        {
+
+            var s = et.Ca_lam_viec.ToList();
+            return s;
+
         }
         public Ca_lam_viec GetCLV(int m)
         {
 
-            var s = dal.GetCLV(m);
+            var s = et.Ca_lam_viec.Find(m);
             return s;
 
         }
         public void AddCLV(Ca_lam_viec ca)
         {
 
-            dal.AddCLV(ca);
+            et.Ca_lam_viec.AddOrUpdate(ca);
+            et.SaveChanges();
 
         }
         public void UpdateCLV(Ca_lam_viec ca)
         {
-
-            dal.UpdateCLV(ca);
-
+            var s = et.Ca_lam_viec.Find(ca);
+            s.Ma_ca = ca.Ma_ca;
+            s.Ten_ca = ca.Ten_ca;
+            s.Thoigianbatdau = ca.Thoigianbatdau;
+            s.Thoigianketthuc = ca.Thoigianketthuc;
+            et.SaveChanges();
         }
         public void DeleteCLV(Ca_lam_viec ca)
         {
-            dal.DeleteCLV(ca);
+
+            et.Ca_lam_viec.Remove(ca);
+            et.SaveChanges();
+
         }
     }
 }

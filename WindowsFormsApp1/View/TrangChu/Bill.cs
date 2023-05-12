@@ -22,20 +22,17 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
         }
-        public Bill(List<Chi_tiet_hoa_don> a)
+        public Bill(List<Chi_tiet_hoa_don> a, Hoa_don b)
         {
             InitializeComponent();
             bll = new Hoa_donBLL();
             chi_tiet_ = new Chi_tiet_hoa_donBLL();
             ct = a;
+            hd = b;
         }
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            hd = new Hoa_don 
-            {
-
-            }; 
             MessageBox.Show("In thành công");
         }
 
@@ -50,6 +47,8 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void Bill_Load(object sender, EventArgs e)
         {
+            textBox2.Text = Const.tenNV;
+            textBox6.Text = hd.Tong_tien.ToString();
             chi_tiet_.ShowDGV(dataGridView1, ct);
         }
     }

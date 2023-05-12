@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="PBL_3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="PBL_3Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Ca_lam_viec">
           <Key>
             <PropertyRef Name="Ma_ca" />
@@ -24,7 +24,7 @@
           <Property Name="Ma_SP" Type="int" Nullable="false" />
           <Property Name="Kich_thuoc" Type="char" MaxLength="10" Nullable="false" />
           <Property Name="Soluong_SP" Type="int" />
-          <Property Name="Gia" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Gia" Type="float" />
         </EntityType>
         <EntityType Name="Hoa_don">
           <Key>
@@ -35,15 +35,16 @@
           <Property Name="Ma_KH" Type="int" Nullable="false" />
           <Property Name="Trang_thai" Type="bit" />
           <Property Name="Ngay_mua" Type="datetime" />
-          <Property Name="Tong_tien" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Tong_tien" Type="float" />
         </EntityType>
         <EntityType Name="Khach_hang">
           <Key>
             <PropertyRef Name="Ma_KH" />
           </Key>
           <Property Name="Ma_KH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ten_KH" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Ten_KH" Type="nvarchar(max)" />
+          <Property Name="SDT" Type="nchar" MaxLength="10" />
+          <Property Name="Diem_tich_luy" Type="int" />
         </EntityType>
         <EntityType Name="Ma_loai">
           <Key>
@@ -80,7 +81,7 @@
           </Key>
           <Property Name="Ma_SP" Type="int" Nullable="false" />
           <Property Name="Ten_SP" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Don_gia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Don_gia" Type="float" Nullable="false" />
           <Property Name="Ma_loai" Type="int" Nullable="false" />
           <Property Name="Trang_thai" Type="bit" />
           <Property Name="Hinh_anh" Type="varbinary(max)" />
@@ -244,8 +245,7 @@
             <End Role="Tai_khoan" EntitySet="Tai_khoan" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PBL_3Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -269,7 +269,7 @@
           <Property Name="Ma_SP" Type="Int32" Nullable="false" />
           <Property Name="Kich_thuoc" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
           <Property Name="Soluong_SP" Type="Int32" />
-          <Property Name="Gia" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Gia" Type="Double" />
           <NavigationProperty Name="Hoa_don" Relationship="Self.FK_Chi_tiet_hoa_don_Hoa_don" FromRole="Chi_tiet_hoa_don" ToRole="Hoa_don" />
           <NavigationProperty Name="San_pham" Relationship="Self.FK_Chi_tiet_hoa_don_San_pham" FromRole="Chi_tiet_hoa_don" ToRole="San_pham" />
         </EntityType>
@@ -282,7 +282,7 @@
           <Property Name="Ma_KH" Type="Int32" Nullable="false" />
           <Property Name="Trang_thai" Type="Boolean" />
           <Property Name="Ngay_mua" Type="DateTime" Precision="3" />
-          <Property Name="Tong_tien" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Tong_tien" Type="Double" />
           <NavigationProperty Name="Chi_tiet_hoa_don" Relationship="Self.FK_Chi_tiet_hoa_don_Hoa_don" FromRole="Hoa_don" ToRole="Chi_tiet_hoa_don" />
           <NavigationProperty Name="Khach_hang" Relationship="Self.FK_Hoa_don_Khach_hang" FromRole="Hoa_don" ToRole="Khach_hang" />
           <NavigationProperty Name="Tai_khoan" Relationship="Self.FK_Hoa_don_Tai_khoan" FromRole="Hoa_don" ToRole="Tai_khoan" />
@@ -292,9 +292,10 @@
             <PropertyRef Name="Ma_KH" />
           </Key>
           <Property Name="Ma_KH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ten_KH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ten_KH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Hoa_don" Relationship="Self.FK_Hoa_don_Khach_hang" FromRole="Khach_hang" ToRole="Hoa_don" />
+          <Property Name="Diem_tich_luy" Type="Int32" />
         </EntityType>
         <EntityType Name="Ma_loai">
           <Key>
@@ -335,7 +336,7 @@
           </Key>
           <Property Name="Ma_SP" Type="Int32" Nullable="false" />
           <Property Name="Ten_SP" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Don_gia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Don_gia" Type="Double" Nullable="false" />
           <Property Name="Ma_loai" Type="Int32" Nullable="false" />
           <Property Name="Trang_thai" Type="Boolean" />
           <Property Name="Hinh_anh" Type="Binary" MaxLength="Max" FixedLength="false" />
@@ -546,6 +547,7 @@
           <EntitySetMapping Name="Khach_hang">
             <EntityTypeMapping TypeName="PBL_3Model.Khach_hang">
               <MappingFragment StoreEntitySet="Khach_hang">
+                <ScalarProperty Name="Diem_tich_luy" ColumnName="Diem_tich_luy" />
                 <ScalarProperty Name="Ma_KH" ColumnName="Ma_KH" />
                 <ScalarProperty Name="Ten_KH" ColumnName="Ten_KH" />
                 <ScalarProperty Name="SDT" ColumnName="SDT" />

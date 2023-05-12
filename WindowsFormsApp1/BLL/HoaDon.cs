@@ -10,9 +10,10 @@ namespace WindowsFormsApp1.BLL
 {
     internal class HoaDon
     {
+        PBL_3Entities cnn = new PBL_3Entities();
         public Hashtable GetAllMaKH(int nam, int thang)
         {
-            PBL_3Entities cnn = new PBL_3Entities();
+            
             int demLap;
             Hashtable htMaKH = new Hashtable();
             var MaKHInTime = cnn.Hoa_don.Where(p => p.Ngay_mua.Year == nam && p.Ngay_mua.Month == thang).Select(p => new { p.Ma_KH }).ToList();
@@ -36,10 +37,10 @@ namespace WindowsFormsApp1.BLL
             }
             return htMaKH;
         }
-        public decimal GetTotalMoney(int thang, int nam)
+        public double GetTotalMoney(int thang, int nam)
         {
-            decimal total = 0;
-            PBL_3Entities cnn = new PBL_3Entities();
+            double total = 0;
+            
             var list = cnn.Hoa_don.Where(p => p.Ngay_mua.Year == nam && p.Ngay_mua.Month == thang);
             foreach(var i in list) 
             { 
@@ -50,7 +51,7 @@ namespace WindowsFormsApp1.BLL
         public List<int> GetIDBill(int thang, int nam)
         {
             List<int> listIDBill = new List<int>();
-            PBL_3Entities cnn = new PBL_3Entities();
+            
             var listBill = cnn.Hoa_don.Where(p => p.Ngay_mua.Year == nam && p.Ngay_mua.Month == thang).ToList();
             foreach(var i in listBill)
             {

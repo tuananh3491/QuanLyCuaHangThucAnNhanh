@@ -14,33 +14,58 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class fTrangChu : Form
     {
-        public static Hoa_don hoa_Don;
+        Hoa_don hoa_Don;
         List<Chi_tiet_hoa_don> ct;
+        San_phamBLL bll = new San_phamBLL();
         double tongtien = 0;
         public fTrangChu()
         {
             InitializeComponent();
-            Tao_Hoa_Don();
+            
             ct =  new List<Chi_tiet_hoa_don>();
         }
-        public void Tao_Hoa_Don()
-        {
-            hoa_Don = new Hoa_don();
-        }
+        
         private void AddList(Chi_tiet_hoa_don t)
+        {
+            Edit("add", t);
+            TinhTongTien();
+            flpnOrder.Controls.Clear();
+            foreach (var i in ct)
+            {
+                panelOrder pn = new panelOrder(bll.FindSp(i.Ma_SP), i);
+                flpnOrder.Controls.Add(pn);
+                pn.callback += new panelOrder.update(this.UpdateList);
+            }
+        }
+
+        private void UpdateList(Chi_tiet_hoa_don t)
+        {
+            Edit("update", t);
+            TinhTongTien();
+        }
+
+        private void Edit(string st, Chi_tiet_hoa_don t) //thêm sửa xóa đều ở đây
         {
             tongtien = 0;
             var s = ct.FirstOrDefault(x => x.Ma_SP == t.Ma_SP && x.Kich_thuoc == t.Kich_thuoc);
-            if (s == null) { ct.Add(t); }
-            else
+            if (s == null) { ct.Add(t); } //thêm t
+            else //sửa s
             {
-                s.Soluong_SP = t.Soluong_SP;
-                s.Gia = t.Gia;
+                if (st == "update") 
+                { 
+                    s.Soluong_SP = t.Soluong_SP;
+                    s.Gia = t.Gia;
+                }
+                if (st == "add")
+                {
+                    s.Soluong_SP += 1;
+                    s.Gia += t.Gia;
+                }
             }
-            var r = ct.SingleOrDefault(x => x.Soluong_SP == 0);
+            var r = ct.SingleOrDefault(x => x.Soluong_SP == 0); //xóa các phần tử có điều kiện trên
             ct.Remove(r);
-            TinhTongTien();
         }
+
         private void TinhTongTien()
         {
             foreach (Chi_tiet_hoa_don i in ct)
@@ -71,13 +96,18 @@ namespace WindowsFormsApp1.View.TrangChu
         private void btnHuy_Click(object sender, EventArgs e)
         {   
             flpnOrder.Controls.Clear();
-            Button p=new Button();
-            flpnOrder.Controls.Add(p);
+            ct.Clear();
         }
 
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill(ct);
+            Hoa_don a = new Hoa_don
+            {
+                Ma_NV = Const.Matk,
+                Ngay_mua = DateTime.Now,
+                Tong_tien = double.Parse(tbTongTien.Text)
+            };
+            Bill f = new Bill(ct, a);
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
@@ -98,7 +128,8 @@ namespace WindowsFormsApp1.View.TrangChu
             {
                 panelMonAn a = new panelMonAn(i);
                 flpnThucDon.Controls.Add(a);
-                a.callbackMonAn += new panelMonAn.Add(this.AddList);
+                a.Add += new panelMonAn.Edit(this.AddList);
+                a.Update += new panelMonAn.Edit(this.UpdateList);
             }
         }
     }

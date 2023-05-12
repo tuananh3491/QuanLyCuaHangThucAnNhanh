@@ -10,5 +10,6 @@ namespace WindowsFormsApp1
     {
         public static bool loaiTaiKhoan;
         public static int Matk;
+        public static string tenNV;
     }
 }

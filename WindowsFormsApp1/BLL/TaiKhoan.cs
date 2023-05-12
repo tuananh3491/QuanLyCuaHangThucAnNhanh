@@ -24,6 +24,7 @@ namespace WindowsFormsApp1.BLL
                 {
                     Const.loaiTaiKhoan = (bool)i.Loai_TK;
                     Const.Matk = i.Ma_TK;
+                    Const.tenNV = i.Nhan_vien.Ten_NV;
                     return true;
                 }
             }

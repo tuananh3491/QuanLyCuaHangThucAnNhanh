@@ -11,10 +11,10 @@ namespace WindowsFormsApp1.BLL
 {
     internal class Chi_tiet_hoa_donBLL
     {
-        Chi_tiet_hoa_don_DAL dal;
+        PBL_3Entities et;
         public Chi_tiet_hoa_donBLL()
         {
-            dal = new Chi_tiet_hoa_don_DAL();
+            et = new PBL_3Entities();
         }
 
         // viết các hàm cần dùng ở đây
@@ -24,6 +24,38 @@ namespace WindowsFormsApp1.BLL
             dg.Columns["Ma_HD"].Visible = false;
             dg.Columns["Hoa_don"].Visible = false;
             dg.Columns["San_pham"].Visible = false;
+        }
+
+        
+        
+        public List<Chi_tiet_hoa_don> GetAllCT(int m)
+        {
+            {
+                var s = et.Chi_tiet_hoa_don.Where(p => p.Ma_HD == m).ToList();
+                return s;
+            }
+        }
+
+        public void AddCTHD(Chi_tiet_hoa_don ca)
+        {
+            {
+                et.Chi_tiet_hoa_don.Add(ca);
+                et.SaveChanges();
+            }
+        }
+        public void UpdateNV(Chi_tiet_hoa_don ca)
+        {
+            {
+                et.Chi_tiet_hoa_don.AddOrUpdate(ca);
+                et.SaveChanges();
+            }
+        }
+        public void DeleteNV(Chi_tiet_hoa_don ca)
+        {
+            {
+                et.Chi_tiet_hoa_don.Remove(ca);
+                et.SaveChanges();
+            }
         }
     }
 }

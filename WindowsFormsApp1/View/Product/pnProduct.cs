@@ -50,13 +50,13 @@ namespace WindowsFormsApp1.View.Product
         private void button2_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
-            txtPrice.Text = (sp.Don_gia* Convert.ToDecimal(1.1)).ToString();
+            txtPrice.Text = (sp.Don_gia* 1.1).ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
-            txtPrice.Text = (sp.Don_gia*Convert.ToDecimal(1.2)).ToString();
+            txtPrice.Text = (sp.Don_gia*1.2).ToString();
         }
     }
 }

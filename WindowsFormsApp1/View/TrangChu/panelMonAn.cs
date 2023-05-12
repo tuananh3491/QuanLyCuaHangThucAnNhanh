@@ -16,13 +16,16 @@ namespace WindowsFormsApp1.View.TrangChu
 {
     public partial class panelMonAn : UserControl
     {
-
+        List<panelOrder> lt = new List<panelOrder>();
         private San_pham MonAn;
-        public delegate void Add(Chi_tiet_hoa_don t);
-        public Add callbackMonAn;
-        public decimal gia;
-        decimal gia_M;
-        decimal gia_L;
+        public delegate void Edit(Chi_tiet_hoa_don t);
+        public Edit Add;
+        public Edit Update;
+       
+        string check;
+        public double gia;
+        double gia_M;
+        double gia_L;
         public panelMonAn(San_pham s)
         {
             InitializeComponent();
@@ -56,22 +59,20 @@ namespace WindowsFormsApp1.View.TrangChu
                     Soluong_SP = 1,
                     Gia = (cbbKichThuoc.Text == "S") ? gia : (cbbKichThuoc.Text == "M") ? gia_M : gia_L,
                 };
-                callbackMonAn(ct);
-                panelOrder p = new panelOrder(MonAn,cbbKichThuoc.Text);
-                if (p.Visible == true)
-                {
-                    ((fTrangChu)Application.OpenForms["fTrangChu"]).flpnOrder.Controls.Add(p);
-                    p.callback += new panelOrder.update(this.callbackMonAn);
-                    p.Show();
-                }
+                Add(ct);
+                panelOrder p = new panelOrder(MonAn, ct);
+                p.callback += new panelOrder.update(this.Update);
+               
             }
         }
+
+        
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             gia = MonAn.Don_gia;
-            gia_M = gia*Convert.ToDecimal(1.1);
-            gia_L = gia * Convert.ToDecimal(1.3);
+            gia_M = gia*1.1;
+            gia_L = gia * 1.3;
            
             
             if (cbbKichThuoc.Text == "M")

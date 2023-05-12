@@ -106,7 +106,6 @@
     <Compile Include="DAL\Ca_lam_viec.cs">
       <DependentUpon>ModelPBL3.tt</DependentUpon>
     </Compile>
-    <Compile Include="DAL\Ca_lam_viec_DAL.cs" />
     <Compile Include="DAL\Chi_tiet_hoa_don.cs">
       <DependentUpon>ModelPBL3.tt</DependentUpon>
     </Compile>

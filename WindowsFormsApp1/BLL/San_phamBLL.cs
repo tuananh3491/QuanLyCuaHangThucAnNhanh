@@ -30,5 +30,12 @@ namespace WindowsFormsApp1.BLL
             return dal.GetAllSP();
 
         }
+
+        public San_pham FindSp(int MaSP)
+        {
+            var s = new PBL_3Entities().San_pham.Find(MaSP);
+            if (s == null) return null;
+            else return s;
+        }
     }
 }
