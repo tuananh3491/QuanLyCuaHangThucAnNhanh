@@ -52,6 +52,7 @@ namespace WindowsFormsApp1.View
         {
             try
             {
+                if (dateTimePicker2.Value < DateTime.Today) throw new ArgumentException();
                 pcBLL.SavePC(new Phan_cong
                 {
                     Ma_ca = x,
@@ -63,6 +64,10 @@ namespace WindowsFormsApp1.View
             catch (FormatException)
             {
                 MessageBox.Show("NV BỊ TRỐNG", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("NGÀY LÀM VIỆC KHÔNG HỢP LỆ", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
 
