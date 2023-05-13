@@ -19,18 +19,18 @@ namespace WindowsFormsApp1.BLL
             return s;
         }
         public void AddList(List<Chi_tiet_hoa_don> list)
-        {
+        {   
             cnn.Chi_tiet_hoa_don.AddRange(list);
             cnn.SaveChanges();
         }
-        public void SaveNV(Chi_tiet_hoa_don ct)
+        public void SaveCTHD(Chi_tiet_hoa_don ct)
         {
             cnn.Chi_tiet_hoa_don.AddOrUpdate(ct);
             cnn.SaveChanges();
         }
-        public void DeleteNV(Chi_tiet_hoa_don ca)
+        public void DeleteCTHD(Chi_tiet_hoa_don ct)
         {
-            cnn.Chi_tiet_hoa_don.Remove(ca);
+            cnn.Chi_tiet_hoa_don.Remove(ct);
             cnn.SaveChanges();
         }
         public Hashtable GetNumPro(List<int> listIDBill)

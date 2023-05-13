@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.View;
@@ -72,5 +73,15 @@ namespace WindowsFormsApp1
             }
         }
 
+
+
+        private void txtPassWord_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                btLogIn_Click(sender, e);
+            }
+            
+        }
     }
 }

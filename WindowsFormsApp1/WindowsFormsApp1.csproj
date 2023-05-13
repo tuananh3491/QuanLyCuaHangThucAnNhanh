@@ -145,6 +145,18 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fAccount.Designer.cs">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fAccount_Edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fAccount_Edit.Designer.cs">
+      <DependentUpon>fAccount_Edit.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\fBill_PrePrint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -207,11 +219,11 @@
     <Compile Include="View\fShift_Detail.Designer.cs">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fStaff_Add.cs">
+    <Compile Include="View\fAccount_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fStaff_Add.Designer.cs">
-      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    <Compile Include="View\fAccount_Add.Designer.cs">
+      <DependentUpon>fAccount_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fStaff_View.cs">
       <SubType>Form</SubType>
@@ -333,6 +345,7 @@
     <Compile Include="View\TrangChu\panelOrder.Designer.cs">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\search.png" />
     <EntityDeploy Include="DAL\ModelPBL_3.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
@@ -376,6 +389,12 @@
     <None Include="Resources\nước.png" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
+    <EmbeddedResource Include="View\fAccount.resx">
+      <DependentUpon>fAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fAccount_Edit.resx">
+      <DependentUpon>fAccount_Edit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\fBill_PrePrint.resx">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
     </EmbeddedResource>
@@ -406,8 +425,8 @@
     <EmbeddedResource Include="View\fShift_Detail.resx">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fStaff_Add.resx">
-      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    <EmbeddedResource Include="View\fAccount_Add.resx">
+      <DependentUpon>fAccount_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fStaff_View.resx">
       <DependentUpon>fStaff_View.cs</DependentUpon>

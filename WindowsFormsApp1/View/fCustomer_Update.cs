@@ -38,6 +38,10 @@ namespace WindowsFormsApp1.View
             Khach_hang kh = khBLL.GetKHById(maKH);
             if (kh.SDT != txtSDT.Text)
             {
+
+                //    kh.Ten_KH = txtTenKH.Text;
+                //    kh.Ma_KH = Convert.ToInt32(txtMaKH.Text.ToString());
+                //    kh.Diem_tich_luy = Convert.ToInt32(txtDiemTL.Text.ToString());   
                 kh.SDT = txtSDT.Text.ToString();
                 khBLL.SaveKH(kh);
                 MessageBox.Show("Cập nhật thành công");
@@ -67,5 +71,6 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
+
     }
 }

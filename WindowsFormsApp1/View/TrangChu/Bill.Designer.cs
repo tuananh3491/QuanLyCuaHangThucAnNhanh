@@ -35,6 +35,10 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtIdBill = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chkSD_Diem = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtDiemTL = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -44,11 +48,8 @@
             this.txtCustomer = new System.Windows.Forms.TextBox();
             this.txtStaff = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnInHoaDon = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnThanhToan = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.txtDiemTL = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +119,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.chkSD_Diem);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtDiemTL);
             this.panel1.Controls.Add(this.label8);
@@ -141,12 +143,57 @@
             this.panel1.Size = new System.Drawing.Size(821, 455);
             this.panel1.TabIndex = 7;
             // 
+            // chkSD_Diem
+            // 
+            this.chkSD_Diem.AutoSize = true;
+            this.chkSD_Diem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkSD_Diem.Location = new System.Drawing.Point(39, 397);
+            this.chkSD_Diem.Margin = new System.Windows.Forms.Padding(4);
+            this.chkSD_Diem.Name = "chkSD_Diem";
+            this.chkSD_Diem.Size = new System.Drawing.Size(222, 27);
+            this.chkSD_Diem.TabIndex = 69;
+            this.chkSD_Diem.Text = "Sử dụng điểm tích lũy";
+            this.chkSD_Diem.UseVisualStyleBackColor = true;
+            this.chkSD_Diem.CheckedChanged += new System.EventHandler(this.chkSD_Diem_CheckedChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(771, 399);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(18, 20);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "đ";
+            // 
+            // txtDiemTL
+            // 
+            this.txtDiemTL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.txtDiemTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiemTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiemTL.Location = new System.Drawing.Point(597, 146);
+            this.txtDiemTL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtDiemTL.Multiline = true;
+            this.txtDiemTL.Name = "txtDiemTL";
+            this.txtDiemTL.Size = new System.Drawing.Size(157, 25);
+            this.txtDiemTL.TabIndex = 16;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(456, 146);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(131, 22);
+            this.label8.TabIndex = 15;
+            this.label8.Text = "Điểm tích lũy:";
+            // 
             // txtTotal
             // 
             this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(608, 384);
+            this.txtTotal.Location = new System.Drawing.Point(608, 396);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
@@ -157,7 +204,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(488, 385);
+            this.label5.Location = new System.Drawing.Point(488, 397);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(111, 22);
             this.label5.TabIndex = 13;
@@ -251,26 +298,26 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "THÔNG TIN ĐƠN HÀNG";
             // 
-            // btnInHoaDon
+            // btnThanhToan
             // 
-            this.btnInHoaDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnInHoaDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnInHoaDon.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnInHoaDon.BorderRadius = 10;
-            this.btnInHoaDon.BorderSize = 0;
-            this.btnInHoaDon.FlatAppearance.BorderSize = 0;
-            this.btnInHoaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInHoaDon.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnInHoaDon.Location = new System.Drawing.Point(683, 514);
-            this.btnInHoaDon.Margin = new System.Windows.Forms.Padding(5);
-            this.btnInHoaDon.Name = "btnInHoaDon";
-            this.btnInHoaDon.Size = new System.Drawing.Size(160, 39);
-            this.btnInHoaDon.TabIndex = 11;
-            this.btnInHoaDon.Text = "In hóa đơn";
-            this.btnInHoaDon.TextColor = System.Drawing.Color.White;
-            this.btnInHoaDon.UseVisualStyleBackColor = false;
-            this.btnInHoaDon.Click += new System.EventHandler(this.btnInHoaDon_Click);
+            this.btnThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnThanhToan.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnThanhToan.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThanhToan.BorderRadius = 10;
+            this.btnThanhToan.BorderSize = 0;
+            this.btnThanhToan.FlatAppearance.BorderSize = 0;
+            this.btnThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThanhToan.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThanhToan.ForeColor = System.Drawing.Color.White;
+            this.btnThanhToan.Location = new System.Drawing.Point(683, 514);
+            this.btnThanhToan.Margin = new System.Windows.Forms.Padding(5);
+            this.btnThanhToan.Name = "btnThanhToan";
+            this.btnThanhToan.Size = new System.Drawing.Size(160, 39);
+            this.btnThanhToan.TabIndex = 11;
+            this.btnThanhToan.Text = "Thanh toán";
+            this.btnThanhToan.TextColor = System.Drawing.Color.White;
+            this.btnThanhToan.UseVisualStyleBackColor = false;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             // 
             // btnBack
             // 
@@ -290,38 +337,6 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // txtDiemTL
-            // 
-            this.txtDiemTL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.txtDiemTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiemTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiemTL.Location = new System.Drawing.Point(597, 146);
-            this.txtDiemTL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDiemTL.Multiline = true;
-            this.txtDiemTL.Name = "txtDiemTL";
-            this.txtDiemTL.Size = new System.Drawing.Size(157, 25);
-            this.txtDiemTL.TabIndex = 16;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(456, 146);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 22);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Điểm tích lũy:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(771, 387);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 20);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "đ";
-            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -330,7 +345,7 @@
             this.ClientSize = new System.Drawing.Size(931, 560);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnInHoaDon);
+            this.Controls.Add(this.btnThanhToan);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -361,11 +376,12 @@
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private CustomControl.VBButton btnInHoaDon;
+        private CustomControl.VBButton btnThanhToan;
         private FontAwesome.Sharp.IconButton btnBack;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiemTL;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox chkSD_Diem;
     }
 }

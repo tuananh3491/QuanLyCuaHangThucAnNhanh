@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Security.Policy;
@@ -19,9 +20,9 @@ namespace WindowsFormsApp1.BLL
             var s = cnn.Phan_cong.ToList();
             return s;
         }
-        public List<Phan_cong> GetPCByNV(int Ma_NV)
+        public dynamic GetNVsByCa_Date(int maCa, DateTime date) //lấy tất cả nhân viên làm trong ca và ngày đã cho
         {
-            var s = cnn.Phan_cong.Where(p => p.Ma_NV == Ma_NV).ToList();
+            var s = cnn.Phan_cong.Where(p => p.Ma_ca == maCa && DbFunctions.TruncateTime(p.Ngay) == date.Date).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV }).ToList();
             return s;
         }
         public List<int> getMaNV(int Ma_ca)
@@ -40,12 +41,16 @@ namespace WindowsFormsApp1.BLL
             return s;
         }
 
+        public List<int> GetMaNVPC(int Ma_ca, DateTime date)//lấy tất cả mã nhân viên làm trong ca và ngày đã cho
+        {
+            var s = cnn.Phan_cong.Where(p => p.Ma_ca == Ma_ca && DbFunctions.TruncateTime(p.Ngay) == date.Date).Select(p => p.Ma_NV).ToList();
+            return s;
+        }
         public dynamic GetNVPC(DateTime ngay, int Ma_ca)
         {
             var s = cnn.Phan_cong.Where(p => p.Ngay.Value.Day == ngay.Day && p.Ngay.Value.Month == ngay.Month && p.Ngay.Value.Year == ngay.Year && p.Ma_ca == Ma_ca).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay }).ToList();
             return s;
         }
-
         public void SavePC(Phan_cong pc)
         {
             cnn.Phan_cong.AddOrUpdate(pc);

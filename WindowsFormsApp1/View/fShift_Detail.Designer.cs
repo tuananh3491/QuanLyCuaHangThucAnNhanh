@@ -36,6 +36,13 @@
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.iconDone = new FontAwesome.Sharp.IconButton();
+
+            this.lblCa = new System.Windows.Forms.Label();
+            this.txtTGBD = new System.Windows.Forms.TextBox();
+            this.txtTGKT = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+
             this.btnThem = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnXoa = new WindowsFormsApp1.CustomControl.VBButton();
             this.lbNV = new System.Windows.Forms.Label();
@@ -247,12 +254,69 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cập nhật";
             // 
+            // lblCa
+            // 
+            this.lblCa.AutoSize = true;
+            this.lblCa.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCa.Location = new System.Drawing.Point(103, 21);
+            this.lblCa.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblCa.Name = "lblCa";
+            this.lblCa.Size = new System.Drawing.Size(49, 27);
+            this.lblCa.TabIndex = 22;
+            this.lblCa.Text = "Ca:";
+            // 
+            // txtTGBD
+            // 
+            this.txtTGBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTGBD.Location = new System.Drawing.Point(254, 32);
+            this.txtTGBD.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTGBD.Name = "txtTGBD";
+            this.txtTGBD.Size = new System.Drawing.Size(123, 28);
+            this.txtTGBD.TabIndex = 23;
+            // 
+            // txtTGKT
+            // 
+            this.txtTGKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTGKT.Location = new System.Drawing.Point(427, 31);
+            this.txtTGKT.Margin = new System.Windows.Forms.Padding(5);
+            this.txtTGKT.Name = "txtTGKT";
+            this.txtTGKT.Size = new System.Drawing.Size(123, 28);
+            this.txtTGKT.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(296, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 23);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "Từ:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(465, 5);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 23);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Đến:";
+            // 
             // fShift_Detail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(684, 417);
+
+            this.ClientSize = new System.Drawing.Size(912, 513);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtTGKT);
+            this.Controls.Add(this.lblCa);
+            this.Controls.Add(this.txtTGBD);
             this.Controls.Add(this.iconDone);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnBack);
@@ -267,6 +331,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -282,6 +347,14 @@
         private CustomControl.VBButton btnThem;
         private CustomControl.VBButton btnXoa;
         private System.Windows.Forms.ComboBox cbbNV;
+        private FontAwesome.Sharp.IconButton btnBack;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private FontAwesome.Sharp.IconButton iconDone;
+        private System.Windows.Forms.Label lblCa;
+        private System.Windows.Forms.TextBox txtTGBD;
+        private System.Windows.Forms.TextBox txtTGKT;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbNV;

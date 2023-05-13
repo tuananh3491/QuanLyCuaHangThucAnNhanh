@@ -31,7 +31,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 {
                     Ten_KH = txtName.Text,
                     SDT = txtPhone.Text,
-                    Diem_tich_luy = 0
+                    Diem_tich_luy = Convert.ToInt32(txtDiemTL.Text)
                 };
                 //using (PBL_3Entities cnn = new PBL_3Entities())
                 //{
@@ -39,8 +39,8 @@ namespace WindowsFormsApp1.View.TrangChu
                 //    cnn.SaveChanges();
                 //}
                 khBLL.SaveKH(kh);
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 txtMa.Text = kh.Ma_KH.ToString();
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
         }
 
@@ -58,6 +58,7 @@ namespace WindowsFormsApp1.View.TrangChu
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
+            //this.Close();
         }
 
     }

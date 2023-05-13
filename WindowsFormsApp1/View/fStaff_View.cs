@@ -30,18 +30,23 @@ namespace WindowsFormsApp1.View
             this.x = x;
         }
 
-        private void changeForm()
-        {
-            fStaff f = new fStaff();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
-        }
+        //private void changeForm()
+        //{
+        //    fStaff f = new fStaff();
+        //    f.TopLevel = false;
+        //    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+        //    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+        //    f.Show();
+        //}
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            changeForm();
+            fStaff f = new fStaff();
+            f.TopLevel = false;
+            f.Show();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
         }
 
         private void fStaff_Add_Load(object sender, EventArgs e)
@@ -77,7 +82,7 @@ namespace WindowsFormsApp1.View
             x.Trang_thai = checkBox1.Checked;
 
             nvBLL.SaveNV(x);
-            changeForm();
+            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
