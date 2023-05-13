@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.View
 {
-    partial class fShift_AddStaff
+    partial class fShift_Add
     {
         /// <summary>
         /// Required designer variable.

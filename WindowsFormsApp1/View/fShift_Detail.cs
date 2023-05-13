@@ -34,9 +34,7 @@ namespace WindowsFormsApp1.View
         {
             if (Const.taiKhoan.Loai_TK)
             {
-                btnXoa.Visible = false;
-                btnThem.Visible = false;
-                cbbNV.Visible = false;
+                groupBox1.Visible = false;
             }
 
         }
@@ -76,17 +74,22 @@ namespace WindowsFormsApp1.View
             dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker1.Value);
             try
             {
+                if (dateTimePicker2.Value < DateTime.Today) throw new ArgumentException();
                 pcBLL.SavePC(new Phan_cong
                 {
                     Ma_ca = x,
                     Ma_NV = int.Parse(cbbNV.Text),
-                    Ngay = DateTime.Today
+                    Ngay = dateTimePicker2.Value
                 });
                 reload();
             }
             catch (FormatException)
             {
                 MessageBox.Show("NV BỊ TRỐNG", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("NGÀY LÀM VIỆC KHÔNG HỢP LỆ", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
 
@@ -129,6 +132,16 @@ namespace WindowsFormsApp1.View
         private void iconDone_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker1.Value);
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            pcBLL.ShowDGV(dataGridView1, dateTimePicker1.Value, x);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lbTenNV.Text = nvbll.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
         }
     }
 }
