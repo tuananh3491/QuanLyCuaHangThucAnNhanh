@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,26 +36,38 @@ namespace WindowsFormsApp1.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            txtLuong.Visible = false;
-            lblLuong.Visible = false;
-            int x = nvBLL.AddNV(new Nhan_vien
+            try
             {
-                SDT = txtSDT.Text,
-                Ten_NV = txtTenNV.Text,
-                Gioi_tinh = (rdoNam.Checked),
-                Ngay_sinh = dtmNgaySinh.Value,
-                Trang_thai = (check.Checked),
-                Luong = Convert.ToInt32(txtLuong.Text),
-            });
+                int.Parse(txtSDT.Text);
+                txtLuong.Visible = false;
+                lblLuong.Visible = false;
+                int x = nvBLL.AddNV(new Nhan_vien
+                {
+                    SDT = txtSDT.Text,
+                    Ten_NV = txtTenNV.Text,
+                    Gioi_tinh = (rdoNam.Checked),
+                    Ngay_sinh = dtmNgaySinh.Value,
+                    Trang_thai = (check.Checked),
+                    Luong = Convert.ToInt32(txtLuong.Text),
+                });
 
-            tkBLL.SaveTK(new Tai_khoan
+                tkBLL.SaveTK(new Tai_khoan
+                {
+                    Ma_TK = x,
+                    Ten_TK = txtTenTK.Text,
+                    Mat_khau = txtMK.Text,
+                    Loai_TK = check.Checked
+                });
+                MessageBox.Show("Thêm nhân viên thành công.");
+            }
+            catch (DbEntityValidationException)
             {
-                Ma_TK = x,
-                Ten_TK = txtTenTK.Text,
-                Mat_khau = txtMK.Text,
-                Loai_TK = check.Checked
-            });
-            MessageBox.Show("Thêm nhân viên thành công.");
+                MessageBox.Show("SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("SỐ ĐIỆN THOẠI HOẶC LƯƠNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Check_Changed(object sender, EventArgs e)
