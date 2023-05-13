@@ -36,8 +36,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.iconDone = new FontAwesome.Sharp.IconButton();
             this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
+            this.iconDone = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,7 +120,27 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(157, 30);
             this.dateTimePicker1.TabIndex = 12;
-                
+            // 
+            // btnXemChiTiet
+            // 
+            this.btnXemChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXemChiTiet.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXemChiTiet.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXemChiTiet.BorderRadius = 10;
+            this.btnXemChiTiet.BorderSize = 0;
+            this.btnXemChiTiet.FlatAppearance.BorderSize = 0;
+            this.btnXemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemChiTiet.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemChiTiet.ForeColor = System.Drawing.Color.White;
+            this.btnXemChiTiet.Location = new System.Drawing.Point(700, 506);
+            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(5);
+            this.btnXemChiTiet.Name = "btnXemChiTiet";
+            this.btnXemChiTiet.Size = new System.Drawing.Size(160, 39);
+            this.btnXemChiTiet.TabIndex = 10;
+            this.btnXemChiTiet.Text = "Xem chi tiết";
+            this.btnXemChiTiet.TextColor = System.Drawing.Color.White;
+            this.btnXemChiTiet.UseVisualStyleBackColor = false;
+            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // iconDone
             // 
@@ -135,27 +155,6 @@
             this.iconDone.TabIndex = 13;
             this.iconDone.UseVisualStyleBackColor = true;
             this.iconDone.Click += new System.EventHandler(this.iconDone_Click);
-            // 
-            // btnXemChiTiet
-            // 
-            this.btnXemChiTiet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnXemChiTiet.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnXemChiTiet.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXemChiTiet.BorderRadius = 10;
-            this.btnXemChiTiet.BorderSize = 0;
-            this.btnXemChiTiet.FlatAppearance.BorderSize = 0;
-            this.btnXemChiTiet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemChiTiet.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemChiTiet.ForeColor = System.Drawing.Color.White;
-            this.btnXemChiTiet.Location = new System.Drawing.Point(639, 506);
-            this.btnXemChiTiet.Margin = new System.Windows.Forms.Padding(5);
-            this.btnXemChiTiet.Name = "btnXemChiTiet";
-            this.btnXemChiTiet.Size = new System.Drawing.Size(160, 39);
-            this.btnXemChiTiet.TabIndex = 10;
-            this.btnXemChiTiet.Text = "Xem chi tiết";
-            this.btnXemChiTiet.TextColor = System.Drawing.Color.White;
-            this.btnXemChiTiet.UseVisualStyleBackColor = false;
-            this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
             // 
             // fBill
             // 
