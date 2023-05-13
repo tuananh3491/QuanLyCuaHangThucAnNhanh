@@ -207,11 +207,11 @@
     <Compile Include="View\fCustomer_Update.Designer.cs">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fShift_AddStaff.cs">
+    <Compile Include="View\fShift_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fShift_AddStaff.Designer.cs">
-      <DependentUpon>fShift_AddStaff.cs</DependentUpon>
+    <Compile Include="View\fShift_Add.Designer.cs">
+      <DependentUpon>fShift_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fShift_Detail.cs">
       <SubType>Form</SubType>
@@ -219,11 +219,11 @@
     <Compile Include="View\fShift_Detail.Designer.cs">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fStaff_Add.cs">
+    <Compile Include="View\fAccount_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fStaff_Add.Designer.cs">
-      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    <Compile Include="View\fAccount_Add.Designer.cs">
+      <DependentUpon>fAccount_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fStaff_View.cs">
       <SubType>Form</SubType>
@@ -345,6 +345,7 @@
     <Compile Include="View\TrangChu\panelOrder.Designer.cs">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </Compile>
+    <None Include="Resources\search.png" />
     <EntityDeploy Include="DAL\ModelPBL_3.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ModelPBL_3.Designer.cs</LastGenOutput>
@@ -418,14 +419,14 @@
     <EmbeddedResource Include="View\Report\fReport_Revenue.resx">
       <DependentUpon>fReport_Revenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fShift_AddStaff.resx">
-      <DependentUpon>fShift_AddStaff.cs</DependentUpon>
+    <EmbeddedResource Include="View\fShift_Add.resx">
+      <DependentUpon>fShift_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fShift_Detail.resx">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fStaff_Add.resx">
-      <DependentUpon>fStaff_Add.cs</DependentUpon>
+    <EmbeddedResource Include="View\fAccount_Add.resx">
+      <DependentUpon>fAccount_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fStaff_View.resx">
       <DependentUpon>fStaff_View.cs</DependentUpon>

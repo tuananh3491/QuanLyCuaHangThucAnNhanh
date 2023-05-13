@@ -34,13 +34,23 @@ namespace WindowsFormsApp1
             }
             else { WindowState = FormWindowState.Normal;}
         }
-
         private void btnMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
+        private void ShowForm()
+        {
+            this.Show();
+            Reset();
+        }
+
         private void btCancel_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Reset()
         {
             txtPassWord.Text = "";
             txtUsername.Text = "";
@@ -52,11 +62,13 @@ namespace WindowsFormsApp1
             {
                 try
                 {
+
                     Tai_khoanBLL tkBLL = new Tai_khoanBLL();
                     if (tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
                     {
                         MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         fMainform fMainform = new fMainform();
+                        fMainform.logout += new fMainform.Logout(this.ShowForm);
                         this.Hide();
                         fMainform.ShowDialog();
                     }

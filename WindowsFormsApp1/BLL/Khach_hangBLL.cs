@@ -39,6 +39,10 @@ namespace WindowsFormsApp1.BLL
             PBL_3Entities cnn = new PBL_3Entities();
             return cnn.Khach_hang.Where(p => p.SDT == phone).Select(p => p).FirstOrDefault();
         }
-        
+        public List<Khach_hang> SearchKHByPhone(string phone)
+        {
+            PBL_3Entities cnn = new PBL_3Entities();
+            return cnn.Khach_hang.Where(p => p.SDT.Contains(phone)).Select(p => p).ToList();
+        }
     }
 }

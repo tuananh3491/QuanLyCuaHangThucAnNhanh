@@ -37,14 +37,17 @@ namespace WindowsFormsApp1.View
             txtTenTK.Text=tk.Ten_TK;
             txtMatKhau.Text=tk.Mat_khau;
             txtSDT.Text=tk.Nhan_vien.SDT;
-            if (tk.Loai_TK == true) { rdNhanVien.Checked = true; }
+            if (tk.Loai_TK == true) 
+            {   rdNhanVien.Checked = true;
+                lblLuong.Visible = true;
+                txtLuong.Visible = true;
+                txtLuong.Text = tk.Nhan_vien.Luong.ToString();
+            }
             else { rdAdmin.Checked = true; }
             chkTrangThai.Checked = tk.Nhan_vien.Trang_thai;
             if (tk.Nhan_vien.Gioi_tinh == true) { rdNam.Checked = true; }
             else { rdNam.Checked=true; }
             dtpkNgaySinh.Value = tk.Nhan_vien.Ngay_sinh;
-
-            
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -56,16 +59,24 @@ namespace WindowsFormsApp1.View
             f.Show();
             this.Dispose();
         }
-
-        private void btnCapNhat_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            Tai_khoan tk=new Tai_khoan();
-            tk.Ma_TK=Convert.ToInt32(txtMaTaiKhoan.Text);
-            tk.Ten_TK=txtTenTK.Text;
-            tk.Mat_khau=txtMatKhau.Text;
-            tk.Loai_TK = rdAdmin.Checked;
-            tai_KhoanBLL.SaveTK( tk );
-            MessageBox.Show("Cập nhật thành công");
+            Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
+            x.Nhan_vien.SDT = txtSDT.Text;
+            x.Nhan_vien.Ten_NV = txtTen.Text;
+            x.Nhan_vien.Ngay_sinh = dtpkNgaySinh.Value;
+            x.Ten_TK = txtTenTK.Text;
+            x.Mat_khau = txtMatKhau.Text;
+            x.Nhan_vien.Luong = Convert.ToInt32(txtLuong.Text);
+
+            if (rdNam.Checked) x.Nhan_vien.Gioi_tinh = true;
+            else x.Nhan_vien.Gioi_tinh = false;
+            if (rdNhanVien.Checked) x.Loai_TK = true;
+            else x.Loai_TK = false;
+            x.Nhan_vien.Trang_thai = chkTrangThai.Checked;
+
+            tai_KhoanBLL.SaveTK(x);
+            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

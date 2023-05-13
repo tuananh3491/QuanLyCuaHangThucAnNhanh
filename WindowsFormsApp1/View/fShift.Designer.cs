@@ -91,7 +91,7 @@
             this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetail.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.Color.White;
-            this.btnDetail.Location = new System.Drawing.Point(375, 410);
+            this.btnDetail.Location = new System.Drawing.Point(533, 410);
             this.btnDetail.Margin = new System.Windows.Forms.Padding(4);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(120, 32);
@@ -112,11 +112,11 @@
             this.btnTaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoCa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoCa.ForeColor = System.Drawing.Color.White;
-            this.btnTaoCa.Location = new System.Drawing.Point(524, 411);
+            this.btnTaoCa.Location = new System.Drawing.Point(405, 410);
             this.btnTaoCa.Margin = new System.Windows.Forms.Padding(4);
             this.btnTaoCa.Name = "btnTaoCa";
             this.btnTaoCa.Size = new System.Drawing.Size(120, 32);
-            this.btnTaoCa.TabIndex = 7;
+            this.btnTaoCa.TabIndex = 10;
             this.btnTaoCa.Text = "Tạo ca mới";
             this.btnTaoCa.TextColor = System.Drawing.Color.White;
             this.btnTaoCa.UseVisualStyleBackColor = false;
@@ -128,9 +128,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(698, 455);
+            this.Controls.Add(this.btnTaoCa);
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnTaoCa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "fShift";
@@ -142,12 +142,12 @@
         }
 
         #endregion
-        private CustomControl.VBButton btnTaoCa;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private CustomControl.VBButton btnDetail;
+        private CustomControl.VBButton btnTaoCa;
     }
 }

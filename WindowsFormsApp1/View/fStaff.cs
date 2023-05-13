@@ -17,14 +17,34 @@ namespace WindowsFormsApp1.View
         public fStaff()
         {
             InitializeComponent();
+            //setGUI();
+            Load();
+            PhanQuyen();
         }
-
-        private void fStaff_Load(object sender, EventArgs e)
+        public void PhanQuyen()
+        {
+            if(Const.taiKhoan.Loai_TK)
+            {
+                btnXem.Visible = false;
+            }
+        }
+        public void setGUI()
         {
             dataGridView1.DataSource = null;
             nvBLL.ShowDGV(dataGridView1);
         }
 
+        //private void fStaff_Load(object sender, EventArgs e)
+        //{
+        //    dataGridView1.DataSource = null;
+        //    nvBLL.ShowDGV(dataGridView1);
+        //}
+
+        public void Load()
+        {
+            dataGridView1.DataSource = null;
+            nvBLL.ShowDGV(dataGridView1);
+        }
         private void btnXem_Click(object sender, EventArgs e)
         {
             if(dataGridView1.SelectedRows.Count == 1)
@@ -38,5 +58,12 @@ namespace WindowsFormsApp1.View
             }
         }
 
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dataGridView1.DataSource = nvBLL.SearchNV(txtSearch.Text);
+            }
+        }
     }
 }

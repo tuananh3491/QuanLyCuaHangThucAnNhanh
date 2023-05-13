@@ -47,7 +47,19 @@ namespace WindowsFormsApp1.View
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
+            fAccount_Add f = new fAccount_Add();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
 
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                DGVdsTaiKhoan.DataSource = tai_KhoanBLL.Search(txtSearch.Text.ToString());
+            }
         }
     }
 }

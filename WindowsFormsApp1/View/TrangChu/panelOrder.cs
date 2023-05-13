@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View.TrangChu
@@ -23,6 +24,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 return lbLoai.Text;
             }
         }
+        public double gia;
         public string KichCo;
 
         public static Hoa_don hoa_Don;
@@ -30,27 +32,35 @@ namespace WindowsFormsApp1.View.TrangChu
         public delegate void clear();
         public update callback;
         public Chi_tiet_hoa_don a;
-        public panelOrder(San_pham s,string kich_co)
-        {
-            InitializeComponent();
-            san_Pham = s;
-            KichCo = kich_co;
-            setGUI();
-        }
+        //public panelOrder(San_pham s,string kich_co)
+        //{
+        //    InitializeComponent();
+        //    san_Pham = s;
+        //    KichCo = kich_co;
+        //    if (KichCo == "S") gia = s.Don_gia;
+        //    else if (KichCo == "M") gia = san_Pham.Don_gia * 1.1;
+        //    else if (KichCo == "L") gia = san_Pham.Don_gia * 1.2;
+        //    setGUI();
+
+        //}
         public panelOrder(San_pham s, Chi_tiet_hoa_don ct)
         {
             InitializeComponent();
             san_Pham = s;
             KichCo = ct.Kich_thuoc;
             Soluongsp = Convert.ToInt32(ct.Soluong_SP);
+            //if (KichCo == "S") gia = ct.Gia;
+            //else if (KichCo == "M") gia = san_Pham.Don_gia * 1.1;
+            //else if (KichCo == "L") gia = san_Pham.Don_gia * 1.2;
+            gia = ct.Gia;
             setGUI();
         }
         public void setGUI()
         {
             pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(san_Pham.Hinh_anh));
             lbTenMonAn.Text = san_Pham.Ten_SP;
-            tbTien.Text = san_Pham.Don_gia.ToString() + "đ";
             lbLoai.Text = KichCo;
+            tbTien.Text = gia.ToString();
             tbSoLuong.Text = Soluongsp.ToString();
         }
 
@@ -87,7 +97,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 Ma_SP = san_Pham.Ma_SP,
                 Kich_thuoc = KichCo,
                 Soluong_SP = x,
-                Gia = san_Pham.Don_gia * x
+                Gia = gia
             };
             callback(chi_Tiet_Hoa_Don);
         }
