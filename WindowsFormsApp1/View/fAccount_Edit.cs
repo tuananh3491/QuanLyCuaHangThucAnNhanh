@@ -47,6 +47,7 @@ namespace WindowsFormsApp1.View
             chkTrangThai.Checked = tk.Nhan_vien.Trang_thai;
             if (tk.Nhan_vien.Gioi_tinh == true) { rdNam.Checked = true; }
             else { rdNam.Checked=true; }
+            dtpkNgaySinh.Value = tk.Nhan_vien.Ngay_sinh;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -58,7 +59,6 @@ namespace WindowsFormsApp1.View
             f.Show();
             this.Dispose();
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
             Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
