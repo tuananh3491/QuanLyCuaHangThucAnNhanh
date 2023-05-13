@@ -42,7 +42,7 @@ namespace WindowsFormsApp1.View
             chkTrangThai.Checked = tk.Nhan_vien.Trang_thai;
             if (tk.Nhan_vien.Gioi_tinh == true) { rdNam.Checked = true; }
             else { rdNam.Checked=true; }
-            
+            dtpkNgaySinh.Value = tk.Nhan_vien.Ngay_sinh;
 
             
         }
@@ -55,6 +55,17 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainForm"]).pnForm.Controls.Add(f);
             f.Show();
             this.Dispose();
+        }
+
+        private void btnCapNhat_Click(object sender, EventArgs e)
+        {
+            Tai_khoan tk=new Tai_khoan();
+            tk.Ma_TK=Convert.ToInt32(txtMaTaiKhoan.Text);
+            tk.Ten_TK=txtTenTK.Text;
+            tk.Mat_khau=txtMatKhau.Text;
+            tk.Loai_TK = rdAdmin.Checked;
+            tai_KhoanBLL.SaveTK( tk );
+            MessageBox.Show("Cập nhật thành công");
         }
     }
 }

@@ -17,12 +17,6 @@ namespace WindowsFormsApp1.View
         public fStaff()
         {
             InitializeComponent();
-            setGUI();
-        }
-        public void setGUI()
-        {
-            dataGridView1.DataSource = null;
-            nvBLL.ShowDGV(dataGridView1);
         }
 
         private void fStaff_Load(object sender, EventArgs e)

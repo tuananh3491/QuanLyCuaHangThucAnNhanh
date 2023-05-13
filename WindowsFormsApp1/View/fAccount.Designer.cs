@@ -117,6 +117,7 @@
             this.BtnThem.Size = new System.Drawing.Size(49, 41);
             this.BtnThem.TabIndex = 14;
             this.BtnThem.UseVisualStyleBackColor = false;
+            this.BtnThem.Click += new System.EventHandler(this.BtnThem_Click);
             // 
             // btnXemChiTiet
             // 

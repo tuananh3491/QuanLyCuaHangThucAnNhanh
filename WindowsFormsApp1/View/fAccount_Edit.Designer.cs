@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vbButton1 = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnCapNhat = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -58,25 +58,26 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // vbButton1
+            // btnCapNhat
             // 
-            this.vbButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.vbButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.vbButton1.BorderRadius = 10;
-            this.vbButton1.BorderSize = 0;
-            this.vbButton1.FlatAppearance.BorderSize = 0;
-            this.vbButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.vbButton1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vbButton1.ForeColor = System.Drawing.Color.White;
-            this.vbButton1.Location = new System.Drawing.Point(543, 502);
-            this.vbButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.vbButton1.Name = "vbButton1";
-            this.vbButton1.Size = new System.Drawing.Size(133, 39);
-            this.vbButton1.TabIndex = 26;
-            this.vbButton1.Text = "Cập nhật";
-            this.vbButton1.TextColor = System.Drawing.Color.White;
-            this.vbButton1.UseVisualStyleBackColor = false;
+            this.btnCapNhat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCapNhat.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCapNhat.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCapNhat.BorderRadius = 10;
+            this.btnCapNhat.BorderSize = 0;
+            this.btnCapNhat.FlatAppearance.BorderSize = 0;
+            this.btnCapNhat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCapNhat.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCapNhat.ForeColor = System.Drawing.Color.White;
+            this.btnCapNhat.Location = new System.Drawing.Point(543, 502);
+            this.btnCapNhat.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCapNhat.Name = "btnCapNhat";
+            this.btnCapNhat.Size = new System.Drawing.Size(133, 39);
+            this.btnCapNhat.TabIndex = 26;
+            this.btnCapNhat.Text = "Cập nhật";
+            this.btnCapNhat.TextColor = System.Drawing.Color.White;
+            this.btnCapNhat.UseVisualStyleBackColor = false;
+            this.btnCapNhat.Click += new System.EventHandler(this.btnCapNhat_Click);
             // 
             // panel1
             // 
@@ -243,6 +244,7 @@
             this.txtSDT.Location = new System.Drawing.Point(585, 112);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSDT.Name = "txtSDT";
+            this.txtSDT.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(227, 30);
             this.txtSDT.TabIndex = 35;
             // 
@@ -325,6 +327,7 @@
             this.txtTen.Location = new System.Drawing.Point(208, 65);
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen.Name = "txtTen";
+            this.txtTen.ReadOnly = true;
             this.txtTen.Size = new System.Drawing.Size(281, 30);
             this.txtTen.TabIndex = 20;
             // 
@@ -346,6 +349,7 @@
             this.txtMaTaiKhoan.Location = new System.Drawing.Point(208, 25);
             this.txtMaTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaTaiKhoan.Name = "txtMaTaiKhoan";
+            this.txtMaTaiKhoan.ReadOnly = true;
             this.txtMaTaiKhoan.Size = new System.Drawing.Size(281, 30);
             this.txtMaTaiKhoan.TabIndex = 17;
             // 
@@ -376,7 +380,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
-            this.Controls.Add(this.vbButton1);
+            this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -394,7 +398,7 @@
 
         #endregion
 
-        private CustomControl.VBButton vbButton1;
+        private CustomControl.VBButton btnCapNhat;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.CheckBox chkTrangThai;
         private System.Windows.Forms.Label label11;

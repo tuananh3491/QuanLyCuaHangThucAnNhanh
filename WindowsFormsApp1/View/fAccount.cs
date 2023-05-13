@@ -44,5 +44,10 @@ namespace WindowsFormsApp1.View
                 this.Dispose();
             }
         }
+
+        private void BtnThem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
