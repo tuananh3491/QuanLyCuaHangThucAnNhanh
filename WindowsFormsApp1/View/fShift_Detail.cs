@@ -141,7 +141,7 @@ namespace WindowsFormsApp1.View
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbTenNV.Text = nvbll.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
+            lbTenNV.Text = nvBLL.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
         }
     }
 }
