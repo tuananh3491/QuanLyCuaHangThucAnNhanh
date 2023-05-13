@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbNV = new System.Windows.Forms.ComboBox();
+            this.btnXoa = new WindowsFormsApp1.CustomControl.VBButton();
+            this.lbTenNV = new System.Windows.Forms.Label();
+            this.btnThem = new WindowsFormsApp1.CustomControl.VBButton();
+            this.lbNV = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Ma_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten_NV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -36,35 +44,134 @@
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.iconDone = new FontAwesome.Sharp.IconButton();
-
             this.lblCa = new System.Windows.Forms.Label();
             this.txtTGBD = new System.Windows.Forms.TextBox();
             this.txtTGKT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-
-            this.btnThem = new WindowsFormsApp1.CustomControl.VBButton();
-            this.btnXoa = new WindowsFormsApp1.CustomControl.VBButton();
-            this.lbNV = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.cbbNV = new System.Windows.Forms.ComboBox();
-            this.lbTenNV = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(49, 51);
+            this.panel1.Location = new System.Drawing.Point(49, 84);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 311);
+            this.panel1.Size = new System.Drawing.Size(592, 306);
             this.panel1.TabIndex = 12;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cbbNV);
+            this.groupBox1.Controls.Add(this.btnXoa);
+            this.groupBox1.Controls.Add(this.lbTenNV);
+            this.groupBox1.Controls.Add(this.btnThem);
+            this.groupBox1.Controls.Add(this.lbNV);
+            this.groupBox1.Controls.Add(this.dateTimePicker2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Location = new System.Drawing.Point(3, 182);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(586, 122);
+            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cập nhật";
+            // 
+            // cbbNV
+            // 
+            this.cbbNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbNV.FormattingEnabled = true;
+            this.cbbNV.Location = new System.Drawing.Point(54, 19);
+            this.cbbNV.Name = "cbbNV";
+            this.cbbNV.Size = new System.Drawing.Size(119, 24);
+            this.cbbNV.TabIndex = 22;
+            this.cbbNV.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXoa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXoa.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXoa.BorderRadius = 10;
+            this.btnXoa.BorderSize = 0;
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(455, 80);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(72, 32);
+            this.btnXoa.TabIndex = 23;
+            this.btnXoa.Text = "Xóa NV";
+            this.btnXoa.TextColor = System.Drawing.Color.White;
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // lbTenNV
+            // 
+            this.lbTenNV.AutoSize = true;
+            this.lbTenNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNV.Location = new System.Drawing.Point(181, 22);
+            this.lbTenNV.Name = "lbTenNV";
+            this.lbTenNV.Size = new System.Drawing.Size(28, 16);
+            this.lbTenNV.TabIndex = 24;
+            this.lbTenNV.Text = "Tên";
+            // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnThem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnThem.BorderRadius = 10;
+            this.btnThem.BorderSize = 0;
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(54, 80);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(83, 32);
+            this.btnThem.TabIndex = 22;
+            this.btnThem.Text = "Thêm NV";
+            this.btnThem.TextColor = System.Drawing.Color.White;
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
+            // 
+            // lbNV
+            // 
+            this.lbNV.AutoSize = true;
+            this.lbNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNV.Location = new System.Drawing.Point(6, 22);
+            this.lbNV.Name = "lbNV";
+            this.lbNV.Size = new System.Drawing.Size(42, 16);
+            this.lbNV.TabIndex = 1;
+            this.lbNV.Text = "N.viên";
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(54, 48);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(119, 26);
+            this.dateTimePicker2.TabIndex = 21;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 56);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Ngày";
             // 
             // dataGridView1
             // 
@@ -145,152 +252,43 @@
             this.iconDone.UseVisualStyleBackColor = true;
             this.iconDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnThem.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnThem.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnThem.BorderRadius = 10;
-            this.btnThem.BorderSize = 0;
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(54, 80);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(83, 32);
-            this.btnThem.TabIndex = 22;
-            this.btnThem.Text = "Thêm NV";
-            this.btnThem.TextColor = System.Drawing.Color.White;
-            this.btnThem.UseVisualStyleBackColor = false;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnXoa.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnXoa.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnXoa.BorderRadius = 10;
-            this.btnXoa.BorderSize = 0;
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(455, 80);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(72, 32);
-            this.btnXoa.TabIndex = 23;
-            this.btnXoa.Text = "Xóa NV";
-            this.btnXoa.TextColor = System.Drawing.Color.White;
-            this.btnXoa.UseVisualStyleBackColor = false;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // lbNV
-            // 
-            this.lbNV.AutoSize = true;
-            this.lbNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNV.Location = new System.Drawing.Point(6, 22);
-            this.lbNV.Name = "lbNV";
-            this.lbNV.Size = new System.Drawing.Size(42, 16);
-            this.lbNV.TabIndex = 1;
-            this.lbNV.Text = "N.viên";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 16);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Ngày";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(54, 48);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(119, 26);
-            this.dateTimePicker2.TabIndex = 21;
-            // 
-            // cbbNV
-            // 
-            this.cbbNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbNV.FormattingEnabled = true;
-            this.cbbNV.Location = new System.Drawing.Point(54, 19);
-            this.cbbNV.Name = "cbbNV";
-            this.cbbNV.Size = new System.Drawing.Size(119, 24);
-            this.cbbNV.TabIndex = 22;
-            this.cbbNV.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // lbTenNV
-            // 
-            this.lbTenNV.AutoSize = true;
-            this.lbTenNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenNV.Location = new System.Drawing.Point(181, 22);
-            this.lbTenNV.Name = "lbTenNV";
-            this.lbTenNV.Size = new System.Drawing.Size(28, 16);
-            this.lbTenNV.TabIndex = 24;
-            this.lbTenNV.Text = "Tên";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.cbbNV);
-            this.groupBox1.Controls.Add(this.btnXoa);
-            this.groupBox1.Controls.Add(this.lbTenNV);
-            this.groupBox1.Controls.Add(this.btnThem);
-            this.groupBox1.Controls.Add(this.lbNV);
-            this.groupBox1.Controls.Add(this.dateTimePicker2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 182);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 122);
-            this.groupBox1.TabIndex = 25;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cập nhật";
-            // 
             // lblCa
             // 
             this.lblCa.AutoSize = true;
             this.lblCa.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCa.Location = new System.Drawing.Point(103, 21);
+            this.lblCa.Location = new System.Drawing.Point(79, 14);
             this.lblCa.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblCa.Name = "lblCa";
-            this.lblCa.Size = new System.Drawing.Size(49, 27);
+            this.lblCa.Size = new System.Drawing.Size(42, 22);
             this.lblCa.TabIndex = 22;
             this.lblCa.Text = "Ca:";
             // 
             // txtTGBD
             // 
             this.txtTGBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTGBD.Location = new System.Drawing.Point(254, 32);
+            this.txtTGBD.Location = new System.Drawing.Point(166, 31);
             this.txtTGBD.Margin = new System.Windows.Forms.Padding(5);
             this.txtTGBD.Name = "txtTGBD";
-            this.txtTGBD.Size = new System.Drawing.Size(123, 28);
+            this.txtTGBD.Size = new System.Drawing.Size(123, 24);
             this.txtTGBD.TabIndex = 23;
             // 
             // txtTGKT
             // 
             this.txtTGKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTGKT.Location = new System.Drawing.Point(427, 31);
+            this.txtTGKT.Location = new System.Drawing.Point(317, 31);
             this.txtTGKT.Margin = new System.Windows.Forms.Padding(5);
             this.txtTGKT.Name = "txtTGKT";
-            this.txtTGKT.Size = new System.Drawing.Size(123, 28);
+            this.txtTGKT.Size = new System.Drawing.Size(123, 24);
             this.txtTGKT.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(296, 6);
+            this.label2.Location = new System.Drawing.Point(211, 5);
             this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 23);
+            this.label2.Size = new System.Drawing.Size(32, 18);
             this.label2.TabIndex = 25;
             this.label2.Text = "Từ:";
             // 
@@ -298,10 +296,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(465, 5);
+            this.label3.Location = new System.Drawing.Point(360, 5);
             this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 23);
+            this.label3.Size = new System.Drawing.Size(41, 18);
             this.label3.TabIndex = 26;
             this.label3.Text = "Đến:";
             // 
@@ -310,7 +308,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-
             this.ClientSize = new System.Drawing.Size(912, 513);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -327,9 +324,9 @@
             this.Text = "fShift_Create";
             this.Load += new System.EventHandler(this.fShift_Detail_Load);
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,9 +344,6 @@
         private CustomControl.VBButton btnThem;
         private CustomControl.VBButton btnXoa;
         private System.Windows.Forms.ComboBox cbbNV;
-        private FontAwesome.Sharp.IconButton btnBack;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private FontAwesome.Sharp.IconButton iconDone;
         private System.Windows.Forms.Label lblCa;
         private System.Windows.Forms.TextBox txtTGBD;
         private System.Windows.Forms.TextBox txtTGKT;
