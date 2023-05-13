@@ -136,12 +136,12 @@ namespace WindowsFormsApp1.View
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            pcBLL.ShowDGV(dataGridView1, dateTimePicker1.Value, x);
+           // pcBLL.ShowDGV(dataGridView1, dateTimePicker1.Value, x);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            lbTenNV.Text = nvbll.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
+            lbTenNV.Text = nvBLL.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
         }
     }
 }
