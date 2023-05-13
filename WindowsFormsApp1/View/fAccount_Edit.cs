@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -61,22 +62,34 @@ namespace WindowsFormsApp1.View
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
-            x.Nhan_vien.SDT = txtSDT.Text;
-            x.Nhan_vien.Ten_NV = txtTen.Text;
-            x.Nhan_vien.Ngay_sinh = dtpkNgaySinh.Value;
-            x.Ten_TK = txtTenTK.Text;
-            x.Mat_khau = txtMatKhau.Text;
-            x.Nhan_vien.Luong = Convert.ToInt32(txtLuong.Text);
+            try
+            {
+                int.Parse(txtSDT.Text);
+                Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
+                x.Nhan_vien.SDT = txtSDT.Text;
+                x.Nhan_vien.Ten_NV = txtTen.Text;
+                x.Nhan_vien.Ngay_sinh = dtpkNgaySinh.Value;
+                x.Ten_TK = txtTenTK.Text;
+                x.Mat_khau = txtMatKhau.Text;
+                x.Nhan_vien.Luong = Convert.ToInt32(txtLuong.Text);
 
-            if (rdNam.Checked) x.Nhan_vien.Gioi_tinh = true;
-            else x.Nhan_vien.Gioi_tinh = false;
-            if (rdNhanVien.Checked) x.Loai_TK = true;
-            else x.Loai_TK = false;
-            x.Nhan_vien.Trang_thai = chkTrangThai.Checked;
+                if (rdNam.Checked) x.Nhan_vien.Gioi_tinh = true;
+                else x.Nhan_vien.Gioi_tinh = false;
+                if (rdNhanVien.Checked) x.Loai_TK = true;
+                else x.Loai_TK = false;
+                x.Nhan_vien.Trang_thai = chkTrangThai.Checked;
 
-            tai_KhoanBLL.SaveTK(x);
-            MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tai_KhoanBLL.SaveTK(x);
+                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (DbEntityValidationException)
+            {
+                MessageBox.Show("SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("SỐ ĐIỆN THOẠI HOẶC LƯƠNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

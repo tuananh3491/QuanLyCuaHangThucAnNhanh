@@ -136,7 +136,7 @@ namespace WindowsFormsApp1.View
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
-            pcBLL.ShowDGV(dataGridView1, dateTimePicker1.Value, x);
+           // pcBLL.ShowDGV(dataGridView1, dateTimePicker1.Value, x);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

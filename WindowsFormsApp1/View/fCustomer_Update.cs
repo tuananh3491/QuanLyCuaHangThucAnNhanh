@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity.Validation;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,20 +36,32 @@ namespace WindowsFormsApp1.View
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            Khach_hang kh = khBLL.GetKHById(maKH);
-            if (kh.SDT != txtSDT.Text)
+            try
             {
+                int.Parse(txtSDT.Text);
+                Khach_hang kh = khBLL.GetKHById(maKH);
+                if (kh.SDT != txtSDT.Text)
+                {
 
-                //    kh.Ten_KH = txtTenKH.Text;
-                //    kh.Ma_KH = Convert.ToInt32(txtMaKH.Text.ToString());
-                //    kh.Diem_tich_luy = Convert.ToInt32(txtDiemTL.Text.ToString());   
-                kh.SDT = txtSDT.Text.ToString();
-                khBLL.SaveKH(kh);
-                MessageBox.Show("Cập nhật thành công");
+                    //    kh.Ten_KH = txtTenKH.Text;
+                    //    kh.Ma_KH = Convert.ToInt32(txtMaKH.Text.ToString());
+                    //    kh.Diem_tich_luy = Convert.ToInt32(txtDiemTL.Text.ToString());   
+                    kh.SDT = txtSDT.Text.ToString();
+                    khBLL.SaveKH(kh);
+                    MessageBox.Show("Cập nhật thành công");
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Bạn muốn giữ số điện thoại cũ?", "Hỏi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                }
             }
-            else
+            catch (DbEntityValidationException)
             {
-                DialogResult result = MessageBox.Show("Bạn muốn giữ số điện thoại cũ?", "Hỏi", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                MessageBox.Show("SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("SỐ ĐIỆN THOẠI HOẶC LƯƠNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

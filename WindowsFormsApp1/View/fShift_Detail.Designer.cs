@@ -62,6 +62,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(789, 377);
+
             this.panel1.TabIndex = 12;
             // 
             // groupBox1
@@ -166,6 +167,7 @@
             this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(157, 30);
+
             this.dateTimePicker2.TabIndex = 21;
             // 
             // label1
@@ -264,39 +266,47 @@
             // 
             this.lblCa.AutoSize = true;
             this.lblCa.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.lblCa.Location = new System.Drawing.Point(105, 17);
             this.lblCa.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+
             this.lblCa.Name = "lblCa";
-            this.lblCa.Size = new System.Drawing.Size(49, 27);
+            this.lblCa.Size = new System.Drawing.Size(42, 22);
             this.lblCa.TabIndex = 22;
             this.lblCa.Text = "Ca:";
             // 
             // txtTGBD
             // 
             this.txtTGBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtTGBD.Location = new System.Drawing.Point(221, 38);
             this.txtTGBD.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtTGBD.Name = "txtTGBD";
             this.txtTGBD.Size = new System.Drawing.Size(163, 28);
+
             this.txtTGBD.TabIndex = 23;
             // 
             // txtTGKT
             // 
             this.txtTGKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.txtTGKT.Location = new System.Drawing.Point(423, 38);
             this.txtTGKT.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtTGKT.Name = "txtTGKT";
             this.txtTGKT.Size = new System.Drawing.Size(163, 28);
+
             this.txtTGKT.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             this.label2.Location = new System.Drawing.Point(281, 6);
             this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 23);
+            this.label2.Size = new System.Drawing.Size(32, 18);
             this.label2.TabIndex = 25;
             this.label2.Text = "Từ:";
             // 
@@ -307,7 +317,7 @@
             this.label3.Location = new System.Drawing.Point(480, 6);
             this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 23);
+            this.label3.Size = new System.Drawing.Size(41, 18);
             this.label3.TabIndex = 26;
             this.label3.Text = "Đến:";
             // 
