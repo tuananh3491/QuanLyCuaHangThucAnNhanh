@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewCustomer));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtDiemTL = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.txtDiemTL = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,10 +59,33 @@
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.txtMa);
-            this.panel2.Location = new System.Drawing.Point(121, 101);
+            this.panel2.Location = new System.Drawing.Point(76, 101);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(329, 402);
+            this.panel2.Size = new System.Drawing.Size(374, 402);
             this.panel2.TabIndex = 72;
+            // 
+            // txtDiemTL
+            // 
+            this.txtDiemTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDiemTL.Enabled = false;
+            this.txtDiemTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiemTL.Location = new System.Drawing.Point(29, 295);
+            this.txtDiemTL.Multiline = true;
+            this.txtDiemTL.Name = "txtDiemTL";
+            this.txtDiemTL.Size = new System.Drawing.Size(250, 35);
+            this.txtDiemTL.TabIndex = 4;
+            this.txtDiemTL.Text = "0";
+            this.txtDiemTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(33, 270);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 22);
+            this.label4.TabIndex = 76;
+            this.label4.Text = "Điểm tích lũy";
             // 
             // label1
             // 
@@ -179,7 +202,7 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(452, 101);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(372, 402);
+            this.pictureBox1.Size = new System.Drawing.Size(392, 402);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 75;
             this.pictureBox1.TabStop = false;
@@ -200,27 +223,6 @@
             this.btnBack.TabIndex = 76;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
-            // txtDiemTL
-            // 
-            this.txtDiemTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDiemTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiemTL.Location = new System.Drawing.Point(29, 295);
-            this.txtDiemTL.Multiline = true;
-            this.txtDiemTL.Name = "txtDiemTL";
-            this.txtDiemTL.Size = new System.Drawing.Size(250, 35);
-            this.txtDiemTL.TabIndex = 4;
-            this.txtDiemTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(33, 270);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 22);
-            this.label4.TabIndex = 76;
-            this.label4.Text = "Điểm tích lũy";
             // 
             // AddNewCustomer
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Input;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.View;
@@ -59,18 +60,41 @@ namespace WindowsFormsApp1
         {
             if (txtUsername.Text != "" && txtPassWord.Text != "")
             {
-                Tai_khoanBLL tkBLL = new Tai_khoanBLL();
-                if(tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
+                try
                 {
-                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    fMainform fMainform = new fMainform();
-                    fMainform.logout += new fMainform.Logout(this.ShowForm);
-                    this.Hide();
-                    fMainform.ShowDialog();
+
+                    Tai_khoanBLL tkBLL = new Tai_khoanBLL();
+                    if (tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
+                    {
+                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        fMainform fMainform = new fMainform();
+                        fMainform.logout += new fMainform.Logout(this.ShowForm);
+                        this.Hide();
+                        fMainform.ShowDialog();
+                    }
+                    else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch (FormatException)
+                {
+                    MessageBox.Show("Tên đăng nhập không phù hợp");
+                    return;
+                }
+            }
+            if(txtUsername.Text == "")
+            {
+
             }
         }
 
+
+
+        private void txtPassWord_KeyDown(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                btLogIn_Click(sender, e);
+            }
+            
+        }
     }
 }

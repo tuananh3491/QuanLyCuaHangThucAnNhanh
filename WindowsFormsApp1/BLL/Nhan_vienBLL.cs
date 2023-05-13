@@ -19,14 +19,20 @@ namespace WindowsFormsApp1.BLL
             return s;
 
         }
+        public List<int> GetAllMaNV()//ko lấy chủ, chỉ lấy nv
+        {
+            var s = cnn.Nhan_vien.Where(p => p.Tai_khoan.Loai_TK == true).Select(p => p.Ma_NV).ToList();
+            return s;
+
+        }
         public Nhan_vien GetNVByMa(int ma)
         {
             var s = cnn.Nhan_vien.Find(ma);
             return s;
         }
-        public Nhan_vien GetNVBySDT(string sdt)
+        public List<Nhan_vien> SearchNV(string search)
         {
-            var s = cnn.Nhan_vien.Where(p => p.SDT == sdt).FirstOrDefault();
+            var s = cnn.Nhan_vien.Where(p => (p.SDT.Contains(search) || p.Ten_NV.Contains(search))).ToList();
             return s;
         }
         public int AddNV(Nhan_vien nv)
@@ -48,6 +54,7 @@ namespace WindowsFormsApp1.BLL
         public void ShowDGV(DataGridView dg)
         {
             dg.DataSource = GetAllNV();
+            dg.Columns["Luong"].Visible = false;
             dg.Columns["Tai_khoan"].Visible = false;
         }
     }

@@ -31,8 +31,8 @@ namespace WindowsFormsApp1.View.TrangChu
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.cbbKichThuoc = new System.Windows.Forms.ComboBox();
+            this.lblSize = new System.Windows.Forms.Label();
+            this.cbbSize = new System.Windows.Forms.ComboBox();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.tbTien = new System.Windows.Forms.TextBox();
             this.lbTenMonAn = new System.Windows.Forms.Label();
@@ -45,8 +45,8 @@ namespace WindowsFormsApp1.View.TrangChu
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.cbbKichThuoc);
+            this.panel4.Controls.Add(this.lblSize);
+            this.panel4.Controls.Add(this.cbbSize);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.tbTien);
             this.panel4.Controls.Add(this.lbTenMonAn);
@@ -57,27 +57,27 @@ namespace WindowsFormsApp1.View.TrangChu
             this.panel4.Size = new System.Drawing.Size(255, 110);
             this.panel4.TabIndex = 8;
             // 
-            // label1
+            // lblSize
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 16);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Kích thước:";
+            this.lblSize.AutoSize = true;
+            this.lblSize.Location = new System.Drawing.Point(106, 40);
+            this.lblSize.Name = "lblSize";
+            this.lblSize.Size = new System.Drawing.Size(70, 16);
+            this.lblSize.TabIndex = 6;
+            this.lblSize.Text = "Kích thước:";
             // 
-            // cbbKichThuoc
+            // cbbSize
             // 
-            this.cbbKichThuoc.FormattingEnabled = true;
-            this.cbbKichThuoc.Items.AddRange(new object[] {
+            this.cbbSize.FormattingEnabled = true;
+            this.cbbSize.Items.AddRange(new object[] {
             "S",
             "M",
             "L"});
-            this.cbbKichThuoc.Location = new System.Drawing.Point(203, 37);
-            this.cbbKichThuoc.Name = "cbbKichThuoc";
-            this.cbbKichThuoc.Size = new System.Drawing.Size(45, 24);
-            this.cbbKichThuoc.TabIndex = 5;
-            this.cbbKichThuoc.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbbSize.Location = new System.Drawing.Point(203, 37);
+            this.cbbSize.Name = "cbbSize";
+            this.cbbSize.Size = new System.Drawing.Size(45, 24);
+            this.cbbSize.TabIndex = 5;
+            this.cbbSize.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // btnAdd
             // 
@@ -121,13 +121,13 @@ namespace WindowsFormsApp1.View.TrangChu
             // 
             // pcbMonAn
             // 
+            this.pcbMonAn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pcbMonAn.Location = new System.Drawing.Point(3, 2);
             this.pcbMonAn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pcbMonAn.Name = "pcbMonAn";
             this.pcbMonAn.Size = new System.Drawing.Size(97, 102);
             this.pcbMonAn.TabIndex = 0;
             this.pcbMonAn.TabStop = false;
-            this.pcbMonAn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             // 
             // printDialog1
             // 
@@ -156,7 +156,7 @@ namespace WindowsFormsApp1.View.TrangChu
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.TextBox tbTien;
         private System.Windows.Forms.PrintDialog printDialog1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbbKichThuoc;
+        private System.Windows.Forms.Label lblSize;
+        private System.Windows.Forms.ComboBox cbbSize;
     }
 }

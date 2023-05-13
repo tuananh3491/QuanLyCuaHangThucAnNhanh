@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.btnViewHtr = new WindowsFormsApp1.CustomControl.VBButton();
-            this.btnUpdate = new WindowsFormsApp1.CustomControl.VBButton();
             this.column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnViewHtr = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnUpdate = new WindowsFormsApp1.CustomControl.VBButton();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +50,7 @@
             this.column2,
             this.column3,
             this.Column4});
-            this.dataGridView.Location = new System.Drawing.Point(23, 49);
+            this.dataGridView.Location = new System.Drawing.Point(23, 66);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersWidth = 51;
@@ -56,48 +58,6 @@
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView.Size = new System.Drawing.Size(884, 428);
             this.dataGridView.TabIndex = 2;
-            // 
-            // btnViewHtr
-            // 
-            this.btnViewHtr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnViewHtr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnViewHtr.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnViewHtr.BorderRadius = 10;
-            this.btnViewHtr.BorderSize = 0;
-            this.btnViewHtr.FlatAppearance.BorderSize = 0;
-            this.btnViewHtr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewHtr.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewHtr.ForeColor = System.Drawing.Color.White;
-            this.btnViewHtr.Location = new System.Drawing.Point(649, 497);
-            this.btnViewHtr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnViewHtr.Name = "btnViewHtr";
-            this.btnViewHtr.Size = new System.Drawing.Size(220, 39);
-            this.btnViewHtr.TabIndex = 3;
-            this.btnViewHtr.Text = "Lịch sử mua hàng";
-            this.btnViewHtr.TextColor = System.Drawing.Color.White;
-            this.btnViewHtr.UseVisualStyleBackColor = false;
-            this.btnViewHtr.Click += new System.EventHandler(this.btnViewHtr_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnUpdate.BorderRadius = 10;
-            this.btnUpdate.BorderSize = 0;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(397, 497);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(220, 39);
-            this.btnUpdate.TabIndex = 1;
-            this.btnUpdate.Text = "Cập nhật thông tin";
-            this.btnUpdate.TextColor = System.Drawing.Color.White;
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // column1
             // 
@@ -127,12 +87,94 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             // 
+            // btnViewHtr
+            // 
+            this.btnViewHtr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnViewHtr.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnViewHtr.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnViewHtr.BorderRadius = 10;
+            this.btnViewHtr.BorderSize = 0;
+            this.btnViewHtr.FlatAppearance.BorderSize = 0;
+            this.btnViewHtr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnViewHtr.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewHtr.ForeColor = System.Drawing.Color.White;
+            this.btnViewHtr.Location = new System.Drawing.Point(732, 511);
+            this.btnViewHtr.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnViewHtr.Name = "btnViewHtr";
+            this.btnViewHtr.Size = new System.Drawing.Size(148, 39);
+            this.btnViewHtr.TabIndex = 3;
+            this.btnViewHtr.Text = "Lịch sử mua";
+            this.btnViewHtr.TextColor = System.Drawing.Color.White;
+            this.btnViewHtr.UseVisualStyleBackColor = false;
+            this.btnViewHtr.Click += new System.EventHandler(this.btnViewHtr_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnUpdate.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnUpdate.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnUpdate.BorderRadius = 10;
+            this.btnUpdate.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.Location = new System.Drawing.Point(565, 511);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(142, 39);
+            this.btnUpdate.TabIndex = 1;
+            this.btnUpdate.Text = "Cập nhật ";
+            this.btnUpdate.TextColor = System.Drawing.Color.White;
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::WindowsFormsApp1.Properties.Resources.search;
+            this.txtSearch.IconLeftOffset = new System.Drawing.Point(4, 0);
+            this.txtSearch.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtSearch.Location = new System.Drawing.Point(59, 511);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Tìm kiếm";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(205, 36);
+            this.txtSearch.TabIndex = 4;
+
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(278, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(391, 32);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "DANH SÁCH KHÁCH HÀNG";
+            // 
             // fCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnViewHtr);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnUpdate);
@@ -143,6 +185,7 @@
             this.Load += new System.EventHandler(this.fCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -154,5 +197,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -13,6 +13,7 @@ namespace WindowsFormsApp1.View
 {
     public partial class fCustomer : Form
     {
+        Khach_hangBLL khBLL = new Khach_hangBLL();
         public fCustomer()
         {
             InitializeComponent();
@@ -54,11 +55,18 @@ namespace WindowsFormsApp1.View
         }
         private void fCustomer_Load(object sender, EventArgs e)
         {
-            Khach_hangBLL khBLL = new Khach_hangBLL();
             khBLL.ShowDGV(dataGridView);    
         }
 
-       
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dataGridView.DataSource = khBLL.SearchKHByPhone(txtSearch.Text);
+            }
+        }
+
+      
     }
  }
 
