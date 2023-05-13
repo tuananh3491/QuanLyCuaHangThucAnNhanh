@@ -23,7 +23,6 @@ namespace WindowsFormsApp1.View
         {
             txtName.Text = "";
         }
-
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             Ca_lam_viec clv = new Ca_lam_viec()
@@ -40,7 +39,6 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             fShift f = new fShift();

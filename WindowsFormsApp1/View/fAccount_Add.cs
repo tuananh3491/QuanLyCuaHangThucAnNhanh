@@ -39,8 +39,6 @@ namespace WindowsFormsApp1.View
             try
             {
                 int.Parse(txtSDT.Text);
-                txtLuong.Visible = false;
-                lblLuong.Visible = false;
                 int x = nvBLL.AddNV(new Nhan_vien
                 {
                     SDT = txtSDT.Text,
@@ -50,7 +48,8 @@ namespace WindowsFormsApp1.View
                     Trang_thai = (check.Checked),
                     Luong = Convert.ToInt32(txtLuong.Text),
                 });
-
+                txtLuong.Visible = false;
+                lblLuong.Visible = false;
                 tkBLL.SaveTK(new Tai_khoan
                 {
                     Ma_TK = x,
