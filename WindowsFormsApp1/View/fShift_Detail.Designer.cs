@@ -58,10 +58,11 @@
             // 
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(49, 84);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(65, 103);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(592, 306);
+            this.panel1.Size = new System.Drawing.Size(789, 377);
+
             this.panel1.TabIndex = 12;
             // 
             // groupBox1
@@ -73,9 +74,11 @@
             this.groupBox1.Controls.Add(this.lbNV);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 182);
+            this.groupBox1.Location = new System.Drawing.Point(4, 224);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(586, 122);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(781, 150);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cập nhật";
@@ -84,9 +87,10 @@
             // 
             this.cbbNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNV.FormattingEnabled = true;
-            this.cbbNV.Location = new System.Drawing.Point(54, 19);
+            this.cbbNV.Location = new System.Drawing.Point(72, 23);
+            this.cbbNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbbNV.Name = "cbbNV";
-            this.cbbNV.Size = new System.Drawing.Size(119, 24);
+            this.cbbNV.Size = new System.Drawing.Size(157, 26);
             this.cbbNV.TabIndex = 22;
             this.cbbNV.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
@@ -101,10 +105,10 @@
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(455, 80);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(607, 98);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(72, 32);
+            this.btnXoa.Size = new System.Drawing.Size(96, 39);
             this.btnXoa.TabIndex = 23;
             this.btnXoa.Text = "Xóa NV";
             this.btnXoa.TextColor = System.Drawing.Color.White;
@@ -115,9 +119,10 @@
             // 
             this.lbTenNV.AutoSize = true;
             this.lbTenNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenNV.Location = new System.Drawing.Point(181, 22);
+            this.lbTenNV.Location = new System.Drawing.Point(241, 27);
+            this.lbTenNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTenNV.Name = "lbTenNV";
-            this.lbTenNV.Size = new System.Drawing.Size(28, 16);
+            this.lbTenNV.Size = new System.Drawing.Size(36, 19);
             this.lbTenNV.TabIndex = 24;
             this.lbTenNV.Text = "Tên";
             // 
@@ -132,10 +137,10 @@
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(54, 80);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThem.Location = new System.Drawing.Point(72, 98);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(83, 32);
+            this.btnThem.Size = new System.Drawing.Size(111, 39);
             this.btnThem.TabIndex = 22;
             this.btnThem.Text = "Thêm NV";
             this.btnThem.TextColor = System.Drawing.Color.White;
@@ -146,9 +151,10 @@
             // 
             this.lbNV.AutoSize = true;
             this.lbNV.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNV.Location = new System.Drawing.Point(6, 22);
+            this.lbNV.Location = new System.Drawing.Point(8, 27);
+            this.lbNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbNV.Name = "lbNV";
-            this.lbNV.Size = new System.Drawing.Size(42, 16);
+            this.lbNV.Size = new System.Drawing.Size(54, 19);
             this.lbNV.TabIndex = 1;
             this.lbNV.Text = "N.viên";
             // 
@@ -157,19 +163,21 @@
             this.dateTimePicker2.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(54, 48);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker2.Location = new System.Drawing.Point(72, 59);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(119, 26);
+            this.dateTimePicker2.Size = new System.Drawing.Size(157, 30);
+
             this.dateTimePicker2.TabIndex = 21;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 56);
+            this.label1.Location = new System.Drawing.Point(8, 69);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 16);
+            this.label1.Size = new System.Drawing.Size(47, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ngày";
             // 
@@ -182,10 +190,11 @@
             this.Ma_NV,
             this.Ten_NV,
             this.Ngay});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 14);
+            this.dataGridView1.Location = new System.Drawing.Point(4, 17);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(586, 162);
+            this.dataGridView1.Size = new System.Drawing.Size(781, 199);
             this.dataGridView1.TabIndex = 0;
             // 
             // Ma_NV
@@ -206,6 +215,7 @@
             // 
             this.Ngay.DataPropertyName = "Ngay";
             this.Ngay.HeaderText = "Ngày";
+            this.Ngay.MinimumWidth = 6;
             this.Ngay.Name = "Ngay";
             // 
             // btnBack
@@ -217,11 +227,11 @@
             this.btnBack.IconColor = System.Drawing.Color.Black;
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBack.IconSize = 30;
-            this.btnBack.Location = new System.Drawing.Point(9, 10);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBack.Name = "btnBack";
             this.btnBack.Rotation = 90D;
-            this.btnBack.Size = new System.Drawing.Size(46, 32);
+            this.btnBack.Size = new System.Drawing.Size(61, 39);
             this.btnBack.TabIndex = 19;
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -231,10 +241,10 @@
             this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
             this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(478, 24);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(637, 30);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(119, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(157, 30);
             this.dateTimePicker1.TabIndex = 20;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -244,10 +254,10 @@
             this.iconDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
             this.iconDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconDone.IconSize = 40;
-            this.iconDone.Location = new System.Drawing.Point(610, 16);
-            this.iconDone.Margin = new System.Windows.Forms.Padding(2);
+            this.iconDone.Location = new System.Drawing.Point(813, 20);
+            this.iconDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconDone.Name = "iconDone";
-            this.iconDone.Size = new System.Drawing.Size(30, 37);
+            this.iconDone.Size = new System.Drawing.Size(40, 46);
             this.iconDone.TabIndex = 21;
             this.iconDone.UseVisualStyleBackColor = true;
             this.iconDone.Click += new System.EventHandler(this.iconDone_Click);
@@ -256,8 +266,10 @@
             // 
             this.lblCa.AutoSize = true;
             this.lblCa.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCa.Location = new System.Drawing.Point(79, 14);
-            this.lblCa.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+
+            this.lblCa.Location = new System.Drawing.Point(105, 17);
+            this.lblCa.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+
             this.lblCa.Name = "lblCa";
             this.lblCa.Size = new System.Drawing.Size(42, 22);
             this.lblCa.TabIndex = 22;
@@ -266,27 +278,33 @@
             // txtTGBD
             // 
             this.txtTGBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTGBD.Location = new System.Drawing.Point(166, 31);
-            this.txtTGBD.Margin = new System.Windows.Forms.Padding(5);
+
+            this.txtTGBD.Location = new System.Drawing.Point(221, 38);
+            this.txtTGBD.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtTGBD.Name = "txtTGBD";
-            this.txtTGBD.Size = new System.Drawing.Size(123, 24);
+            this.txtTGBD.Size = new System.Drawing.Size(163, 28);
+
             this.txtTGBD.TabIndex = 23;
             // 
             // txtTGKT
             // 
             this.txtTGKT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTGKT.Location = new System.Drawing.Point(317, 31);
-            this.txtTGKT.Margin = new System.Windows.Forms.Padding(5);
+
+            this.txtTGKT.Location = new System.Drawing.Point(423, 38);
+            this.txtTGKT.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.txtTGKT.Name = "txtTGKT";
-            this.txtTGKT.Size = new System.Drawing.Size(123, 24);
+            this.txtTGKT.Size = new System.Drawing.Size(163, 28);
+
             this.txtTGKT.TabIndex = 24;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(211, 5);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+
+            this.label2.Location = new System.Drawing.Point(281, 6);
+            this.label2.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
+
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(32, 18);
             this.label2.TabIndex = 25;
@@ -296,8 +314,8 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(360, 5);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(480, 6);
+            this.label3.Margin = new System.Windows.Forms.Padding(7, 0, 7, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 18);
             this.label3.TabIndex = 26;
@@ -305,7 +323,7 @@
             // 
             // fShift_Detail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(912, 513);
@@ -319,7 +337,7 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fShift_Detail";
             this.Text = "fShift_Create";
             this.Load += new System.EventHandler(this.fShift_Detail_Load);

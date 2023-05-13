@@ -77,12 +77,13 @@ namespace WindowsFormsApp1
                 catch (FormatException)
                 {
                     MessageBox.Show("Tên đăng nhập không phù hợp");
+                    errorProvider1.SetError(txtUsername, "Tên đăng nhập không phù hợp");
                     return;
                 }
             }
             if(txtUsername.Text == "")
             {
-
+                errorProvider1.SetError(txtUsername, "Tên đăng nhập không phù hợp");
             }
         }
 
