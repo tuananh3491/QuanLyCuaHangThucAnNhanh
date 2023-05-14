@@ -70,8 +70,8 @@ namespace WindowsFormsApp1.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            dateTimePicker1.Value = DateTime.Today;
-            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker1.Value);
+//            dateTimePicker2.Value = DateTime.Today;
+            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker2.Value);
             try
             {
                 if (dateTimePicker2.Value < DateTime.Today) throw new ArgumentException();
@@ -85,7 +85,7 @@ namespace WindowsFormsApp1.View
             }
             catch (FormatException)
             {
-                MessageBox.Show("NV BỊ TRỐNG", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("NV KHÔNG HỢP LỆ", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             catch (ArgumentException)
             {
