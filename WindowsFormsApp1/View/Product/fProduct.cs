@@ -31,8 +31,6 @@ namespace WindowsFormsApp1.View
             {
                 btnAddCategory.Visible = false;
                 btnAddPro.Visible = false;
-                //btnAddCategory.Enabled = false;
-                //btnAddPro.Enabled = false;
             }
         }
         private void btnAddCate_Click(object sender, EventArgs e)
@@ -58,11 +56,6 @@ namespace WindowsFormsApp1.View
                 pnProduct p = new pnProduct(sp.Ma_SP);
                 flpnMonAn.Controls.Add(p);
             }
-            //for (int i = 0; i < listSP.Count; i++)
-            //{
-            //    pnProduct p = new pnProduct(listSP[i].Ma_SP);
-            //    flpnMonAn.Controls.Add(p);
-            //}
         }
 
         private void btnAddPro_Click(object sender, EventArgs e)
@@ -73,6 +66,22 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
             this.Dispose();
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                flpnMonAn.Controls.Clear();
+                string ten = txtSearch.Text;
+               
+
+                foreach (San_pham sp in sanPhamBLL.GetSPByTen(ten))
+                {
+                    pnProduct p = new pnProduct(sp.Ma_SP);
+                    flpnMonAn.Controls.Add(p);
+                }
+            }
         }
     }
 }

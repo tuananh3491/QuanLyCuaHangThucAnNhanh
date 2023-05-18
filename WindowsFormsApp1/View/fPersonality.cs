@@ -55,6 +55,7 @@ namespace WindowsFormsApp1.View
             nv.Trang_thai = !(chStatus.Checked);
             Tai_khoan tk = tkBLL.GetTK(maNV);
             nv.Tai_khoan.Ten_TK = txtTenTK.Text.ToString();
+            nv.Tai_khoan.Mat_khau = txtMK.Text.ToString();
             nv.Tai_khoan.Loai_TK = rdStaff.Checked;
             nvBLL.SaveNV(nv);
             tkBLL.SaveTK(tk);
@@ -64,6 +65,15 @@ namespace WindowsFormsApp1.View
         private void btnBack_Click(object sender, EventArgs e)
         {
             fTrangChu f = new fTrangChu();
+            f.TopLevel = false;
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
+        }
+
+        private void btnCTLuong_Click(object sender, EventArgs e)
+        {
+            fStaff_Salary f = new fStaff_Salary(maNV);
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);

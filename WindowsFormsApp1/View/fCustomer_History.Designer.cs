@@ -131,10 +131,10 @@
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtPhone.Enabled = false;
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(702, 69);
+            this.txtPhone.Location = new System.Drawing.Point(709, 66);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(157, 25);
+            this.txtPhone.Size = new System.Drawing.Size(178, 25);
             this.txtPhone.TabIndex = 28;
             // 
             // txtName
@@ -146,7 +146,7 @@
             this.txtName.Location = new System.Drawing.Point(260, 66);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(157, 25);
+            this.txtName.Size = new System.Drawing.Size(211, 25);
             this.txtName.TabIndex = 27;
             // 
             // label3

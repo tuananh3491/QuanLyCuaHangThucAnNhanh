@@ -28,23 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnSoLieu = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bieuDoKH = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ccbLoc = new System.Windows.Forms.ComboBox();
-            this.bieuDoKH = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnDone = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bieuDoKH)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSoLieu
@@ -76,11 +75,36 @@
             this.panel1.Size = new System.Drawing.Size(885, 412);
             this.panel1.TabIndex = 21;
             // 
+            // bieuDoKH
+            // 
+            legend3.Name = "Legend1";
+            this.bieuDoKH.Legends.Add(legend3);
+            this.bieuDoKH.Location = new System.Drawing.Point(0, 0);
+            this.bieuDoKH.Name = "bieuDoKH";
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(119)))));
+            series5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.Legend = "Legend1";
+            series5.LegendText = "Khách hàng quay trở lại quán";
+            series5.Name = "series1";
+            series6.Color = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(227)))), ((int)(((byte)(98)))));
+            series6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.Legend = "Legend1";
+            series6.LegendText = "Khách hàng mua lần đầu";
+            series6.Name = "series2";
+            this.bieuDoKH.Series.Add(series5);
+            this.bieuDoKH.Series.Add(series6);
+            this.bieuDoKH.Size = new System.Drawing.Size(885, 412);
+            this.bieuDoKH.TabIndex = 0;
+            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title3.Name = "Title1";
+            title3.Text = "BIỂU ĐỒ THỐNG KÊ VỀ KHÁCH HÀNG";
+            this.bieuDoKH.Titles.Add(title3);
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnDone);
             this.panel2.Controls.Add(this.cbbNam);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.iconPictureBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.ccbLoc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -108,21 +132,6 @@
             this.label4.TabIndex = 73;
             this.label4.Text = "Năm";
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 38;
-            this.iconPictureBox1.Location = new System.Drawing.Point(830, 16);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(50, 38);
-            this.iconPictureBox1.TabIndex = 64;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconPictureBox1_Click_1);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -132,6 +141,7 @@
             this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 59;
             this.label1.Text = "Lọc";
+            this.label1.Visible = false;
             // 
             // ccbLoc
             // 
@@ -146,31 +156,21 @@
             this.ccbLoc.Name = "ccbLoc";
             this.ccbLoc.Size = new System.Drawing.Size(87, 31);
             this.ccbLoc.TabIndex = 58;
+            this.ccbLoc.Visible = false;
             // 
-            // bieuDoKH
+            // btnDone
             // 
-            legend2.Name = "Legend1";
-            this.bieuDoKH.Legends.Add(legend2);
-            this.bieuDoKH.Location = new System.Drawing.Point(0, 0);
-            this.bieuDoKH.Name = "bieuDoKH";
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(119)))));
-            series3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.Legend = "Legend1";
-            series3.LegendText = "Khách hàng quay trở lại quán";
-            series3.Name = "series1";
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(227)))), ((int)(((byte)(98)))));
-            series4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.Legend = "Legend1";
-            series4.LegendText = "Khách hàng mua lần đầu";
-            series4.Name = "series2";
-            this.bieuDoKH.Series.Add(series3);
-            this.bieuDoKH.Series.Add(series4);
-            this.bieuDoKH.Size = new System.Drawing.Size(885, 412);
-            this.bieuDoKH.TabIndex = 0;
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "BIỂU ĐỒ THỐNG KÊ VỀ KHÁCH HÀNG";
-            this.bieuDoKH.Titles.Add(title2);
+            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDone.IconSize = 40;
+            this.btnDone.Location = new System.Drawing.Point(837, 12);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(40, 46);
+            this.btnDone.TabIndex = 21;
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // fReport_CustomerChart
             // 
@@ -185,10 +185,9 @@
             this.Name = "fReport_CustomerChart";
             this.Text = "fReport_CustomerChart";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bieuDoKH)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bieuDoKH)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -198,11 +197,11 @@
         private CustomControl.VBButton btnSoLieu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ccbLoc;
         private System.Windows.Forms.ComboBox cbbNam;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataVisualization.Charting.Chart bieuDoKH;
+        private FontAwesome.Sharp.IconButton btnDone;
     }
 }

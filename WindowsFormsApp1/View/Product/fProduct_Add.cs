@@ -57,11 +57,7 @@ namespace WindowsFormsApp1.View.Product
                     Hinh_anh = bytes
                 };
                 san_PhamBLL.SaveSP(sp);
-                //using (PBL_3Entities cnn = new PBL_3Entities())
-                //{
-                //    cnn.San_pham.Add(sp);
-                //    cnn.SaveChanges();
-                //}
+                
 
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             }
@@ -98,7 +94,6 @@ namespace WindowsFormsApp1.View.Product
                 picture.Image = new Bitmap(ofd.FileName);
             }
             txtLink.Text = ofd.FileName;
-            //ofd.ShowDialog();
         }
     }
 }

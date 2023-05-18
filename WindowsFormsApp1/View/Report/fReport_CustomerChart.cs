@@ -22,7 +22,6 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
             setCbbNam();
             cbbNam.SelectedIndex = cbbNam.Items.Count - 1;
-            //cbbNam.SelectedIndex = 0;
             Load(int.Parse(cbbNam.SelectedItem.ToString()));
         }
 
@@ -36,9 +35,6 @@ namespace WindowsFormsApp1.View
         }
         public void setCbbNam()
         {
-            //    PBL_3Entities cnn = new PBL_3Entities();
-            //    var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
-            
             foreach (int i in hoaDonBLL.GetListNam())
             {
                 cbbNam.Items.Add(i);
@@ -167,7 +163,7 @@ namespace WindowsFormsApp1.View
         }
 
     
-        private void iconPictureBox1_Click_1(object sender, EventArgs e)
+        private void iconDone_Click(object sender, EventArgs e)
         {
             Load(int.Parse(cbbNam.SelectedItem.ToString()));
         }

@@ -22,8 +22,8 @@ namespace WindowsFormsApp1.DAL
     
         public int Ma_ca { get; set; }
         public string Ten_ca { get; set; }
-        public Nullable<System.TimeSpan> Thoigianbatdau { get; set; }
-        public Nullable<System.TimeSpan> Thoigianketthuc { get; set; }
+        public System.TimeSpan Thoigianbatdau { get; set; }
+        public System.TimeSpan Thoigianketthuc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Phan_cong> Phan_cong { get; set; }

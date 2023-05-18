@@ -42,11 +42,10 @@
             this.lbThang = new System.Windows.Forms.Label();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.iconDone = new FontAwesome.Sharp.IconPictureBox();
+            this.btnDone = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconDone)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBieuDo
@@ -80,6 +79,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -90,6 +91,7 @@
             this.Column3});
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -101,24 +103,28 @@
             this.Column1.HeaderText = "STT";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Mã sản phẩm";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Tên sản phẩm";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Số lượng";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // label1
             // 
@@ -129,6 +135,7 @@
             this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 59;
             this.label1.Text = "Lọc";
+            this.label1.Visible = false;
             // 
             // ccbLoc
             // 
@@ -143,14 +150,15 @@
             this.ccbLoc.Name = "ccbLoc";
             this.ccbLoc.Size = new System.Drawing.Size(87, 31);
             this.ccbLoc.TabIndex = 58;
+            this.ccbLoc.Visible = false;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnDone);
             this.panel2.Controls.Add(this.cbbThang);
             this.panel2.Controls.Add(this.lbThang);
             this.panel2.Controls.Add(this.cbbNam);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.iconDone);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.ccbLoc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -210,20 +218,19 @@
             this.label4.TabIndex = 73;
             this.label4.Text = "Năm";
             // 
-            // iconDone
+            // btnDone
             // 
-            this.iconDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.iconDone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.iconDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.iconDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.iconDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconDone.IconSize = 38;
-            this.iconDone.Location = new System.Drawing.Point(830, 16);
-            this.iconDone.Name = "iconDone";
-            this.iconDone.Size = new System.Drawing.Size(50, 38);
-            this.iconDone.TabIndex = 65;
-            this.iconDone.TabStop = false;
-            this.iconDone.Click += new System.EventHandler(this.iconDone_Click);
+            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDone.IconSize = 40;
+            this.btnDone.Location = new System.Drawing.Point(844, 11);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(40, 46);
+            this.btnDone.TabIndex = 76;
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // fReport_Product
             // 
@@ -241,7 +248,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconDone)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,7 +258,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ccbLoc;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconPictureBox iconDone;
         private System.Windows.Forms.ComboBox cbbThang;
         private System.Windows.Forms.Label lbThang;
         private System.Windows.Forms.ComboBox cbbNam;
@@ -262,5 +267,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private FontAwesome.Sharp.IconButton btnDone;
     }
 }
