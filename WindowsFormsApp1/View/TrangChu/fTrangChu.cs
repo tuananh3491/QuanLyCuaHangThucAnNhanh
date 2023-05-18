@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
+using WindowsFormsApp1.View.Product;
 
 namespace WindowsFormsApp1.View.TrangChu
 {
@@ -81,9 +82,9 @@ namespace WindowsFormsApp1.View.TrangChu
 
         private void btnHuy_Click(object sender, EventArgs e)
         {
+            listCTHD.Clear();
+            tbTongTien.Text = "0";
             flpnOrder.Controls.Clear();
-            Button p = new Button();
-            flpnOrder.Controls.Add(p);
         }
 
         private void btnTaoDon_Click(object sender, EventArgs e)
@@ -114,6 +115,19 @@ namespace WindowsFormsApp1.View.TrangChu
                 }
             }
         }
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                flpnThucDon.Controls.Clear();
+                string ten = txtSearch.Text;
 
+                foreach (San_pham sp in spBLL.GetSPByTen(ten))
+                {
+                    panelMonAn pnMon = new panelMonAn(sp);
+                    flpnThucDon.Controls.Add(pnMon);
+                }
+            }
+        }
     }
 }

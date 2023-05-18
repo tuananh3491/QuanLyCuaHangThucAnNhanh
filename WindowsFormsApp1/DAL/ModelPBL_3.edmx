@@ -11,8 +11,8 @@
           </Key>
           <Property Name="Ma_ca" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Ten_ca" Type="nvarchar(max)" />
-          <Property Name="Thoigianbatdau" Type="time" Precision="7" />
-          <Property Name="Thoigianketthuc" Type="time" Precision="7" />
+          <Property Name="Thoigianbatdau" Type="time" Precision="7" Nullable="false" />
+          <Property Name="Thoigianketthuc" Type="time" Precision="7" Nullable="false" />
         </EntityType>
         <EntityType Name="Chi_tiet_hoa_don">
           <Key>
@@ -244,8 +244,8 @@
           </Key>
           <Property Name="Ma_ca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Ten_ca" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Name="Thoigianbatdau" Type="Time" Precision="7" />
-          <Property Name="Thoigianketthuc" Type="Time" Precision="7" />
+          <Property Name="Thoigianbatdau" Type="Time" Precision="7" Nullable="false" />
+          <Property Name="Thoigianketthuc" Type="Time" Precision="7" Nullable="false" />
           <NavigationProperty Name="Phan_cong" Relationship="Self.FK_Phan_cong_Ca_lam_viec" FromRole="Ca_lam_viec" ToRole="Phan_cong" />
         </EntityType>
         <EntityType Name="Chi_tiet_hoa_don">

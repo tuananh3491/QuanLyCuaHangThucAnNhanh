@@ -357,7 +357,7 @@
             this.txtTen.Location = new System.Drawing.Point(199, 97);
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTen.Name = "txtTen";
-            this.txtTen.Size = new System.Drawing.Size(281, 30);
+            this.txtTen.Size = new System.Drawing.Size(227, 30);
             this.txtTen.TabIndex = 20;
             // 
             // label1

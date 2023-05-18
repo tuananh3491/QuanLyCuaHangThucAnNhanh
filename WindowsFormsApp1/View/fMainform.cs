@@ -123,9 +123,6 @@ namespace WindowsFormsApp1.View
             active.BringToFront();
             active.Show();
         }
-
-
-
         //evenclick
 
         private void btnTrangChu_Click(object sender, EventArgs e)
@@ -201,7 +198,7 @@ namespace WindowsFormsApp1.View
             if(result == DialogResult.OK)
             {
                 logout();
-                Thread.Sleep(1500);
+                /*Thread.Sleep(1500)*/;
                 this.Dispose();
             }
 

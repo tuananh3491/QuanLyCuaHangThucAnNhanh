@@ -23,9 +23,10 @@ namespace WindowsFormsApp1.View
 
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 1)
+            if (dg.SelectedRows.Count == 1)
             {
-                int maHD = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                int maHD = Convert.ToInt32(dg.SelectedRows[0].Cells[0].Value.ToString());
+                //MessageBox.Show(maHD.ToString());
                 fBill_Detail f = new fBill_Detail(maHD);
                 f.TopLevel = false;
                 ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
@@ -33,17 +34,20 @@ namespace WindowsFormsApp1.View
                 f.Show();
             }
         }
-        
+        public void ShowDGV(DataGridView dg)
+        {
+           
+        }
         private void fBill_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            hdBLL.ShowDGV(dataGridView1);
+            dg.DataSource = null;
+            dg.DataSource = hdBLL.GetHD();
         }
 
         private void iconDone_Click(object sender, EventArgs e)
         {
             DateTime date = dateTimePicker1.Value;
-            dataGridView1.DataSource = hdBLL.GetHDByDate(date);
+            dg.DataSource = hdBLL.GetHDByDate(date);
         }
     }
 }

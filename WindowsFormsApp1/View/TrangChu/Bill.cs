@@ -19,6 +19,7 @@ namespace WindowsFormsApp1.View.TrangChu
     {
         Hoa_donBLL hdBLL = new Hoa_donBLL();
         ChiTietHoaDonBLL cthdBLL = new ChiTietHoaDonBLL();
+        San_phamBLL spBLL = new San_phamBLL();
         Khach_hangBLL khBLL = new Khach_hangBLL();  
         private List<Chi_tiet_hoa_don> listCTHD;
         private double tongTien;
@@ -34,7 +35,7 @@ namespace WindowsFormsApp1.View.TrangChu
             InitializeComponent(); 
             listCTHD = list;
             tongTien = t;
-            Load(t);
+            Load();
         }
 
         private void btnThanhToan_Click(object sender, EventArgs e)
@@ -80,12 +81,6 @@ namespace WindowsFormsApp1.View.TrangChu
                     Tong_tien = thanhTien,
                 };
 
-                //using (PBL_3Entities cnn = new PBL_3Entities())
-                //{
-                //    cnn.Hoa_don.Add(hd);
-                //    cnn.Chi_tiet_hoa_don.AddRange(listCTHD);
-                //    cnn.SaveChanges();
-                //}
                 hdBLL.SaveHD(hd);
                 txtIdBill.Text = hd.Ma_KH.ToString();
                 if (hd.Tong_tien > 100000)
@@ -133,23 +128,26 @@ namespace WindowsFormsApp1.View.TrangChu
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
-            //f.ShowDialog();
-            //f = null;
-            //this.TopLevel = false;
-            ////((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(this);
-            //this.Show();
+            
         }
-        public void Load(double t)
+        public void ShowDGV(DataGridView dg, List<Chi_tiet_hoa_don> ct)
+        {
+           
+        }
+        public void Load()
         {
             txtIdBill.Enabled = false;
             txtStaff.Enabled = false;
             txtTime.Enabled = false;
             txtStaff.Text = Const.taiKhoan.Ten_TK;
             txtTime.Text = DateTime.Now.ToString();
-            cthdBLL.ShowDGV(dataGridView1, listCTHD);
+            //showdgv
+            foreach (Chi_tiet_hoa_don l in listCTHD)
+            {
+                dgv.Rows.Add(spBLL.GetPro(l.Ma_SP).Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(), l.Gia.ToString());
+            }
             txtTotal.Enabled = false;
-            txtTotal.Text = t.ToString();
+            txtTotal.Text = tongTien.ToString();
 
         }
         private void Bill_Load(object sender, EventArgs e)
@@ -162,12 +160,6 @@ namespace WindowsFormsApp1.View.TrangChu
             Khach_hang kh = khBLL.GetKHByPhone(txtPhone.Text);
             if (kh == null)
             {
-                //AddNewCustomer f = new AddNewCustomer();
-                //f.TopLevel = false;
-                //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                //f.Show();
-                //this.Dispose();
                 txtDiemTL.Text = "0";
             }
             else

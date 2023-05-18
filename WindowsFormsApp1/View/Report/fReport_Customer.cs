@@ -19,20 +19,15 @@ namespace WindowsFormsApp1.View
     public partial class fReport_Customer : Form
     {
         Hoa_donBLL hoaDonBLL = new Hoa_donBLL();
-        //CBBItem cBBItem = new CBBItem();
         public fReport_Customer()
         {
             InitializeComponent();
             setCbbNam();
             cbbNam.SelectedIndex = cbbNam.Items.Count - 1;
-            //ShowDGV(nam);
-           
             ShowDGV(int.Parse(cbbNam.SelectedItem.ToString()));
         }
         public void setCbbNam()
         {
-            //PBL_3Entities cnn = new PBL_3Entities();
-            //var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
             List<int> dsNam = hoaDonBLL.GetListNam();
             foreach (int i in dsNam)
             {
@@ -50,7 +45,6 @@ namespace WindowsFormsApp1.View
         public void ShowDGV(int nam)
         {
             int thang;
-            //nam = int.Parse(cbbNam.SelectedItem.ToString());
             for (int i = 1; i < 13; i++)
             {
                 thang = i;
@@ -102,15 +96,9 @@ namespace WindowsFormsApp1.View
 
         private void iconDone_Click(object sender, EventArgs e)
         {
-
-            //dataGridView1.SelectAll();
-            for(int i = 1; i <13; i++)
-            {
-                dataGridView1.Rows.RemoveAt(0);
-            }
-            
-            //panel1.Controls.Clear();
+            dataGridView1.Rows.Clear();
             ShowDGV(int.Parse(cbbNam.SelectedItem.ToString()));
         }
     }
 }
+ 

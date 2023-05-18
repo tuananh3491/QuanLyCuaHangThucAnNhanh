@@ -112,10 +112,7 @@ namespace WindowsFormsApp1.BLL
             cnn.Hoa_don.Remove(hd);
             cnn.SaveChanges();
         }
-        public void ShowDGV(DataGridView dg)
-        {
-            dg.DataSource = GetHD();
-        }
+       
 
         //public void ShowDGV(DataGridView dg, int maKH)
         //{

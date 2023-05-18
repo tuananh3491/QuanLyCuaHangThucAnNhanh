@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -25,19 +26,27 @@ namespace WindowsFormsApp1.View
         }
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
-            Ca_lam_viec clv = new Ca_lam_viec()
+            try
             {
-                Ten_ca = txtName.Text,
-                Thoigianbatdau = TimeSpan.Parse(dateTimePicker1.Text),
-                Thoigianketthuc = TimeSpan.Parse(dateTimePicker2.Text),
-            };
-            clvBLL.SaveCLV(clv);
-            MessageBox.Show("Tạo ca thành công");
-            fShift f = new fShift();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+                if (txtName.Text == "") throw new SqlNullValueException();
+                Ca_lam_viec clv = new Ca_lam_viec()
+                {
+                    Ten_ca = txtName.Text,
+                    Thoigianbatdau = TimeSpan.Parse(dateTimePicker1.Text),
+                    Thoigianketthuc = TimeSpan.Parse(dateTimePicker2.Text),
+                };
+                clvBLL.SaveCLV(clv);
+                MessageBox.Show("Tạo ca thành công");
+                fShift f = new fShift();
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
+            }
+            catch (SqlNullValueException)
+            {
+                MessageBox.Show("TÊN RỖNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
         private void btnBack_Click(object sender, EventArgs e)
         {

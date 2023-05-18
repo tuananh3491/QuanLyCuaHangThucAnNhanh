@@ -30,9 +30,7 @@
         {
             this.pnChinhSua = new System.Windows.Forms.Panel();
             this.flpnMonAn = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAddPro = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAddCategory = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.btnPizza = new Guna.UI2.WinForms.Guna2Button();
             this.btnGa = new Guna.UI2.WinForms.Guna2Button();
@@ -40,6 +38,9 @@
             this.btnNuoc = new Guna.UI2.WinForms.Guna2Button();
             this.btnKem = new Guna.UI2.WinForms.Guna2Button();
             this.btnKhac = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddPro = new FontAwesome.Sharp.IconButton();
+            this.btnAddCategory = new FontAwesome.Sharp.IconButton();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.SuspendLayout();
             // 
             // pnChinhSua
@@ -54,25 +55,10 @@
             // 
             this.flpnMonAn.AutoScroll = true;
             this.flpnMonAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.flpnMonAn.Location = new System.Drawing.Point(21, 74);
+            this.flpnMonAn.Location = new System.Drawing.Point(21, 126);
             this.flpnMonAn.Name = "flpnMonAn";
-            this.flpnMonAn.Size = new System.Drawing.Size(532, 474);
+            this.flpnMonAn.Size = new System.Drawing.Size(532, 422);
             this.flpnMonAn.TabIndex = 33;
-            // 
-            // btnAddPro
-            // 
-            this.btnAddPro.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAddPro.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAddPro.Image = global::WindowsFormsApp1.Properties.Resources.iconCong;
-            this.btnAddPro.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnAddPro.ImageRotate = 0F;
-            this.btnAddPro.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAddPro.Location = new System.Drawing.Point(557, 74);
-            this.btnAddPro.Name = "btnAddPro";
-            this.btnAddPro.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAddPro.Size = new System.Drawing.Size(42, 38);
-            this.btnAddPro.TabIndex = 45;
-            this.btnAddPro.Click += new System.EventHandler(this.btnAddPro_Click);
             // 
             // panel1
             // 
@@ -80,21 +66,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 452);
             this.panel1.TabIndex = 42;
-            // 
-            // btnAddCategory
-            // 
-            this.btnAddCategory.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAddCategory.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAddCategory.Image = global::WindowsFormsApp1.Properties.Resources.iconCong;
-            this.btnAddCategory.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnAddCategory.ImageRotate = 0F;
-            this.btnAddCategory.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnAddCategory.Location = new System.Drawing.Point(839, 9);
-            this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnAddCategory.Size = new System.Drawing.Size(42, 38);
-            this.btnAddCategory.TabIndex = 41;
-            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCate_Click);
             // 
             // guna2Button7
             // 
@@ -108,7 +79,7 @@
             this.guna2Button7.ForeColor = System.Drawing.Color.Black;
             this.guna2Button7.Image = global::WindowsFormsApp1.Properties.Resources.SP_Combo;
             this.guna2Button7.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button7.Location = new System.Drawing.Point(570, 12);
+            this.guna2Button7.Location = new System.Drawing.Point(563, 21);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(107, 35);
             this.guna2Button7.TabIndex = 40;
@@ -127,7 +98,7 @@
             this.btnPizza.ForeColor = System.Drawing.Color.Black;
             this.btnPizza.Image = global::WindowsFormsApp1.Properties.Resources.SP_Pizza;
             this.btnPizza.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPizza.Location = new System.Drawing.Point(73, 12);
+            this.btnPizza.Location = new System.Drawing.Point(89, 21);
             this.btnPizza.Name = "btnPizza";
             this.btnPizza.Size = new System.Drawing.Size(87, 35);
             this.btnPizza.TabIndex = 39;
@@ -146,7 +117,7 @@
             this.btnGa.ForeColor = System.Drawing.Color.Black;
             this.btnGa.Image = global::WindowsFormsApp1.Properties.Resources.SP_chicken;
             this.btnGa.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnGa.Location = new System.Drawing.Point(166, 12);
+            this.btnGa.Location = new System.Drawing.Point(182, 21);
             this.btnGa.Name = "btnGa";
             this.btnGa.Size = new System.Drawing.Size(87, 35);
             this.btnGa.TabIndex = 38;
@@ -165,7 +136,7 @@
             this.btnBurger.ForeColor = System.Drawing.Color.Black;
             this.btnBurger.Image = global::WindowsFormsApp1.Properties.Resources.SP_burger;
             this.btnBurger.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBurger.Location = new System.Drawing.Point(272, 12);
+            this.btnBurger.Location = new System.Drawing.Point(288, 21);
             this.btnBurger.Name = "btnBurger";
             this.btnBurger.Size = new System.Drawing.Size(87, 35);
             this.btnBurger.TabIndex = 37;
@@ -184,7 +155,7 @@
             this.btnNuoc.ForeColor = System.Drawing.Color.Black;
             this.btnNuoc.Image = global::WindowsFormsApp1.Properties.Resources.SP_drink;
             this.btnNuoc.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNuoc.Location = new System.Drawing.Point(371, 12);
+            this.btnNuoc.Location = new System.Drawing.Point(381, 21);
             this.btnNuoc.Name = "btnNuoc";
             this.btnNuoc.Size = new System.Drawing.Size(87, 35);
             this.btnNuoc.TabIndex = 36;
@@ -203,7 +174,7 @@
             this.btnKem.ForeColor = System.Drawing.Color.Black;
             this.btnKem.Image = global::WindowsFormsApp1.Properties.Resources.SP_Icream;
             this.btnKem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnKem.Location = new System.Drawing.Point(464, 12);
+            this.btnKem.Location = new System.Drawing.Point(474, 21);
             this.btnKem.Name = "btnKem";
             this.btnKem.Size = new System.Drawing.Size(87, 35);
             this.btnKem.TabIndex = 35;
@@ -222,12 +193,71 @@
             this.btnKhac.ForeColor = System.Drawing.Color.Black;
             this.btnKhac.Image = global::WindowsFormsApp1.Properties.Resources.iconDots;
             this.btnKhac.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnKhac.Location = new System.Drawing.Point(700, 12);
+            this.btnKhac.Location = new System.Drawing.Point(676, 21);
             this.btnKhac.Name = "btnKhac";
             this.btnKhac.Size = new System.Drawing.Size(87, 35);
             this.btnKhac.TabIndex = 34;
             this.btnKhac.Text = "Khác";
             this.btnKhac.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // btnAddPro
+            // 
+            this.btnAddPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnAddPro.FlatAppearance.BorderSize = 0;
+            this.btnAddPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPro.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddPro.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnAddPro.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPro.IconSize = 40;
+            this.btnAddPro.Location = new System.Drawing.Point(559, 78);
+            this.btnAddPro.Name = "btnAddPro";
+            this.btnAddPro.Size = new System.Drawing.Size(36, 37);
+            this.btnAddPro.TabIndex = 46;
+            this.btnAddPro.UseVisualStyleBackColor = false;
+            this.btnAddPro.Click += new System.EventHandler(this.btnAddPro_Click);
+            // 
+            // btnAddCategory
+            // 
+            this.btnAddCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnAddCategory.FlatAppearance.BorderSize = 0;
+            this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddCategory.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddCategory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnAddCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddCategory.IconSize = 40;
+            this.btnAddCategory.Location = new System.Drawing.Point(769, 21);
+            this.btnAddCategory.Name = "btnAddCategory";
+            this.btnAddCategory.Size = new System.Drawing.Size(49, 41);
+            this.btnAddCategory.TabIndex = 47;
+            this.btnAddCategory.UseVisualStyleBackColor = false;
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCate_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::WindowsFormsApp1.Properties.Resources.search;
+            this.txtSearch.IconLeftOffset = new System.Drawing.Point(4, 0);
+            this.txtSearch.IconLeftSize = new System.Drawing.Size(25, 25);
+            this.txtSearch.Location = new System.Drawing.Point(306, 74);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Tìm kiếm";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(225, 36);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // fProduct
             // 
@@ -235,9 +265,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.btnAddPro);
             this.Controls.Add(this.pnChinhSua);
-            this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.guna2Button7);
             this.Controls.Add(this.btnPizza);
             this.Controls.Add(this.btnGa);
@@ -263,8 +294,9 @@
         private Guna.UI2.WinForms.Guna2Button btnNuoc;
         private Guna.UI2.WinForms.Guna2Button btnKem;
         private Guna.UI2.WinForms.Guna2Button btnKhac;
-        private Guna.UI2.WinForms.Guna2ImageButton btnAddCategory;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2ImageButton btnAddPro;
+        private FontAwesome.Sharp.IconButton btnAddPro;
+        private FontAwesome.Sharp.IconButton btnAddCategory;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }

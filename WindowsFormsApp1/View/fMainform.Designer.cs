@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fMainform));
-            this.pnForm = new System.Windows.Forms.Panel();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelBaoCao = new System.Windows.Forms.Panel();
@@ -50,6 +49,7 @@
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panelTimKiem = new System.Windows.Forms.Panel();
+            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconLogOut = new FontAwesome.Sharp.IconPictureBox();
@@ -57,7 +57,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
+            this.pnForm = new System.Windows.Forms.Panel();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBaoCao.SuspendLayout();
@@ -69,15 +69,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pnForm
-            // 
-            this.pnForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.pnForm.Location = new System.Drawing.Point(251, 148);
-            this.pnForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pnForm.Name = "pnForm";
-            this.pnForm.Size = new System.Drawing.Size(931, 571);
-            this.pnForm.TabIndex = 7;
             // 
             // panelLogo
             // 
@@ -456,6 +447,29 @@
             this.panelTimKiem.Name = "panelTimKiem";
             this.panelTimKiem.Size = new System.Drawing.Size(251, 39);
             this.panelTimKiem.TabIndex = 0;
+            this.panelTimKiem.Visible = false;
+            // 
+            // rjTextBox1
+            // 
+            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.rjTextBox1.BorderRadius = 0;
+            this.rjTextBox1.BorderSize = 2;
+            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.Location = new System.Drawing.Point(49, 2);
+            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rjTextBox1.Multiline = true;
+            this.rjTextBox1.Name = "rjTextBox1";
+            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.rjTextBox1.PasswordChar = false;
+            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
+            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
+            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
+            this.rjTextBox1.TabIndex = 1;
+            this.rjTextBox1.Texts = "";
+            this.rjTextBox1.UnderlinedStyle = false;
+            this.rjTextBox1.Visible = false;
             // 
             // pcbTimKiem
             // 
@@ -470,6 +484,7 @@
             this.pcbTimKiem.Size = new System.Drawing.Size(32, 32);
             this.pcbTimKiem.TabIndex = 0;
             this.pcbTimKiem.TabStop = false;
+            this.pcbTimKiem.Visible = false;
             // 
             // panel2
             // 
@@ -551,26 +566,14 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Chào mừng đến với";
             // 
-            // rjTextBox1
+            // pnForm
             // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(49, 2);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.pnForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.pnForm.Location = new System.Drawing.Point(251, 148);
+            this.pnForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnForm.Name = "pnForm";
+            this.pnForm.Size = new System.Drawing.Size(931, 571);
+            this.pnForm.TabIndex = 7;
             // 
             // fMainform
             // 
@@ -629,9 +632,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.Panel pnForm;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2CircleButton btnPerson;
         private FontAwesome.Sharp.IconPictureBox iconLogOut;
+        public System.Windows.Forms.Panel pnForm;
     }
 }

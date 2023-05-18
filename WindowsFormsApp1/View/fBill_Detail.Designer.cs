@@ -156,6 +156,8 @@
             // 
             // dgvCTHD
             // 
+            this.dgvCTHD.AllowUserToAddRows = false;
+            this.dgvCTHD.AllowUserToDeleteRows = false;
             this.dgvCTHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCTHD.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.dgvCTHD.ColumnHeadersHeight = 29;
@@ -166,6 +168,7 @@
             this.Column4});
             this.dgvCTHD.Location = new System.Drawing.Point(47, 153);
             this.dgvCTHD.Name = "dgvCTHD";
+            this.dgvCTHD.ReadOnly = true;
             this.dgvCTHD.RowHeadersWidth = 51;
             this.dgvCTHD.RowTemplate.Height = 24;
             this.dgvCTHD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -177,24 +180,28 @@
             this.Column1.HeaderText = "Tên sản phẩm";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Kích thước";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Số lượng";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
             this.Column4.HeaderText = "Giá";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // label5
             // 
