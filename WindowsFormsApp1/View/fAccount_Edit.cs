@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.Entity.Validation;
 using System.Data.SqlTypes;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Drawing.Printing;
 using System.Linq;
@@ -65,8 +66,10 @@ namespace WindowsFormsApp1.View
         {
             try
             {
+                int i;
                 if (txtTen.Text == "") throw new SqlNullValueException();
-                int.Parse(txtSDT.Text);
+                if(!int.TryParse(txtSDT.Text, out i)) throw new DbEntityValidationException();
+                if (txtTen.Text.Length < 10) throw new DbEntityValidationException();
                 Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
                 x.Nhan_vien.SDT = txtSDT.Text;
                 x.Nhan_vien.Ten_NV = txtTen.Text;
@@ -86,15 +89,15 @@ namespace WindowsFormsApp1.View
             }
             catch (DbEntityValidationException)
             {
-                MessageBox.Show("SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Số điện thoại không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FormatException)
             {
-                MessageBox.Show("SỐ ĐIỆN THOẠI HOẶC LƯƠNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lương không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (SqlNullValueException)
             {
-                MessageBox.Show("TÊN RỖNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Tên rỗng không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
