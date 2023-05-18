@@ -52,6 +52,7 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
+            this.Dispose();
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
