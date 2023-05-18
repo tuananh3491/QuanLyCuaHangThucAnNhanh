@@ -32,26 +32,14 @@ namespace WindowsFormsApp1.View.TrangChu
         public delegate void clear();
         public update callback;
         public Chi_tiet_hoa_don a;
-        //public panelOrder(San_pham s,string kich_co)
-        //{
-        //    InitializeComponent();
-        //    san_Pham = s;
-        //    KichCo = kich_co;
-        //    if (KichCo == "S") gia = s.Don_gia;
-        //    else if (KichCo == "M") gia = san_Pham.Don_gia * 1.1;
-        //    else if (KichCo == "L") gia = san_Pham.Don_gia * 1.2;
-        //    setGUI();
 
-        //}
         public panelOrder(San_pham s, Chi_tiet_hoa_don ct)
         {
             InitializeComponent();
             san_Pham = s;
             KichCo = ct.Kich_thuoc;
             Soluongsp = Convert.ToInt32(ct.Soluong_SP);
-            //if (KichCo == "S") gia = ct.Gia;
-            //else if (KichCo == "M") gia = san_Pham.Don_gia * 1.1;
-            //else if (KichCo == "L") gia = san_Pham.Don_gia * 1.2;
+
             gia = ct.Gia;
             setGUI();
         }

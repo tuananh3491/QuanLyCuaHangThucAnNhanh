@@ -85,12 +85,6 @@ namespace WindowsFormsApp1.View
             else { WindowState = FormWindowState.Normal; }
         }
         //changeColor
-        private struct RGBColor
-        {
-            public static Color color1 = Color.FromArgb(255, 138, 0);
-            public static Color color2 = Color.FromArgb(255, 175, 81);
-
-        }
         private void ActivateButtonPanel(object sender)
         {
             if (sender != null)
@@ -129,9 +123,6 @@ namespace WindowsFormsApp1.View
             active.BringToFront();
             active.Show();
         }
-       
-
-
         //evenclick
 
         private void btnTrangChu_Click(object sender, EventArgs e)
@@ -222,12 +213,7 @@ namespace WindowsFormsApp1.View
 
         private void btnPerson_Click(object sender, EventArgs e)
         {
-            fPersonality f = new fPersonality();
-            //f.TopLevel = false;
-            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            //f.Show();
-            openChildForm (f, pnForm);
+            openChildForm(new fPersonality(), pnForm);
         }
     }
 }
