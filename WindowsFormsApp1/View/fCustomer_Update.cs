@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity.Validation;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -38,6 +39,7 @@ namespace WindowsFormsApp1.View
         {
             try
             {
+                if (txtTenKH.Text == "") throw new SqlNullValueException();
                 int.Parse(txtSDT.Text);
                 Khach_hang kh = khBLL.GetKHById(maKH);
                 if (kh.SDT != txtSDT.Text)
@@ -58,6 +60,10 @@ namespace WindowsFormsApp1.View
             catch (FormatException)
             {
                 MessageBox.Show("SỐ ĐIỆN THOẠI HOẶC LƯƠNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (SqlNullValueException)
+            {
+                MessageBox.Show("TÊN RỖNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

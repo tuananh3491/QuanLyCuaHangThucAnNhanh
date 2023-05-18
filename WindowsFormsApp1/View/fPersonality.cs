@@ -46,20 +46,32 @@ namespace WindowsFormsApp1.View
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            txtID.Enabled = false;
-            Nhan_vien nv = nvBLL.GetNVByMa(maNV);
-            nv.Ten_NV = txtName.Text.ToString();
-            nv.Ngay_sinh = dateTimePicker1.Value;
-            nv.Gioi_tinh = rdMale.Checked;
-            nv.SDT = txtPhone.Text.ToString();
-            nv.Trang_thai = !(chStatus.Checked);
-            Tai_khoan tk = tkBLL.GetTK(maNV);
-            nv.Tai_khoan.Ten_TK = txtTenTK.Text.ToString();
-            nv.Tai_khoan.Mat_khau = txtMK.Text.ToString();
-            nv.Tai_khoan.Loai_TK = rdStaff.Checked;
-            nvBLL.SaveNV(nv);
-            tkBLL.SaveTK(tk);
-            MessageBox.Show("Đã lưu thay đổi", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            try
+            {
+                if (txtName.Text == "" || txtTenTK.Text == "" || txtPhone.Text == "") throw new ArgumentNullException();
+                int.Parse(txtPhone.Text);
+                txtID.Enabled = false;
+                Nhan_vien nv = nvBLL.GetNVByMa(maNV);
+                nv.Ten_NV = txtName.Text.ToString();
+                nv.Ngay_sinh = dateTimePicker1.Value;
+                nv.Gioi_tinh = rdMale.Checked;
+                nv.SDT = txtPhone.Text.ToString();
+                nv.Trang_thai = !(chStatus.Checked);
+                Tai_khoan tk = tkBLL.GetTK(maNV);
+                nv.Tai_khoan.Ten_TK = txtTenTK.Text.ToString();
+                nv.Tai_khoan.Loai_TK = rdStaff.Checked;
+                nvBLL.SaveNV(nv);
+                tkBLL.SaveTK(tk);
+                MessageBox.Show("Đã lưu thay đổi", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            }
+            catch (ArgumentNullException)
+            {
+                MessageBox.Show("Tên nhân viên, tên tài khoản, SĐT không thể để trống.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("SĐT không thể để trống.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
