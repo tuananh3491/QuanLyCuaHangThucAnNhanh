@@ -68,8 +68,7 @@ namespace WindowsFormsApp1.View
             {
                 int i;
                 if (txtTen.Text == "") throw new SqlNullValueException();
-                if(int.TryParse(txtSDT.Text, out i)) { }
-                else throw new DbEntityValidationException();
+                if(!int.TryParse(txtSDT.Text, out i)) throw new DbEntityValidationException();
                 if (txtTen.Text.Length < 10) throw new DbEntityValidationException();
                 Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
                 x.Nhan_vien.SDT = txtSDT.Text;
