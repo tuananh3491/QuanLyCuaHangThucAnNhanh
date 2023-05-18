@@ -78,7 +78,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(456, 93);
+            this.label3.Location = new System.Drawing.Point(427, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(122, 22);
             this.label3.TabIndex = 2;
@@ -88,7 +88,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(456, 36);
+            this.label4.Location = new System.Drawing.Point(427, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(134, 22);
             this.label4.TabIndex = 3;
@@ -98,7 +98,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(16, 94);
+            this.label6.Location = new System.Drawing.Point(16, 90);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 22);
             this.label6.TabIndex = 5;
@@ -113,7 +113,7 @@
             this.txtIdBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdBill.Multiline = true;
             this.txtIdBill.Name = "txtIdBill";
-            this.txtIdBill.Size = new System.Drawing.Size(157, 25);
+            this.txtIdBill.Size = new System.Drawing.Size(209, 25);
             this.txtIdBill.TabIndex = 6;
             // 
             // panel1
@@ -171,18 +171,18 @@
             this.txtDiemTL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtDiemTL.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDiemTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiemTL.Location = new System.Drawing.Point(597, 146);
+            this.txtDiemTL.Location = new System.Drawing.Point(582, 146);
             this.txtDiemTL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiemTL.Multiline = true;
             this.txtDiemTL.Name = "txtDiemTL";
-            this.txtDiemTL.Size = new System.Drawing.Size(157, 25);
+            this.txtDiemTL.Size = new System.Drawing.Size(183, 25);
             this.txtDiemTL.TabIndex = 16;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(456, 146);
+            this.label8.Location = new System.Drawing.Point(427, 146);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(131, 22);
             this.label8.TabIndex = 15;
@@ -212,12 +212,15 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(21, 199);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(776, 172);
@@ -227,12 +230,13 @@
             // 
             this.txtTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTime.Enabled = false;
             this.txtTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTime.Location = new System.Drawing.Point(160, 94);
+            this.txtTime.Location = new System.Drawing.Point(160, 90);
             this.txtTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTime.Multiline = true;
             this.txtTime.Name = "txtTime";
-            this.txtTime.Size = new System.Drawing.Size(157, 25);
+            this.txtTime.Size = new System.Drawing.Size(209, 25);
             this.txtTime.TabIndex = 11;
             // 
             // btnSearch
@@ -244,7 +248,7 @@
             this.btnSearch.IconColor = System.Drawing.Color.Black;
             this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 30;
-            this.btnSearch.Location = new System.Drawing.Point(762, 36);
+            this.btnSearch.Location = new System.Drawing.Point(771, 34);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(37, 30);
@@ -257,11 +261,11 @@
             this.txtPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(597, 38);
+            this.txtPhone.Location = new System.Drawing.Point(582, 34);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(157, 25);
+            this.txtPhone.Size = new System.Drawing.Size(183, 25);
             this.txtPhone.TabIndex = 9;
             // 
             // txtCustomer
@@ -269,23 +273,24 @@
             this.txtCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCustomer.Location = new System.Drawing.Point(597, 93);
+            this.txtCustomer.Location = new System.Drawing.Point(582, 89);
             this.txtCustomer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCustomer.Multiline = true;
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(157, 25);
+            this.txtCustomer.Size = new System.Drawing.Size(183, 25);
             this.txtCustomer.TabIndex = 8;
             // 
             // txtStaff
             // 
             this.txtStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtStaff.Enabled = false;
             this.txtStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStaff.Location = new System.Drawing.Point(160, 146);
             this.txtStaff.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStaff.Multiline = true;
             this.txtStaff.Name = "txtStaff";
-            this.txtStaff.Size = new System.Drawing.Size(157, 25);
+            this.txtStaff.Size = new System.Drawing.Size(209, 25);
             this.txtStaff.TabIndex = 7;
             // 
             // label7

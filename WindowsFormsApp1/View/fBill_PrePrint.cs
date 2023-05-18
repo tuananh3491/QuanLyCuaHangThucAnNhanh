@@ -26,24 +26,6 @@ namespace WindowsFormsApp1.View
         }
         public void Load(int ma)
         {
-            //double tong = 0;
-            //Hoa_don hd = new Hoa_don();
-            //hd = hdBLL.GetHDByMaHD(maHD);
-            //txtNV.Text = hd.Tai_khoan.Nhan_vien.Ten_NV.ToString();
-            //txtMa.Text = hd.Ma_HD.ToString();
-            //txtKH.Text = hd.Khach_hang.Ten_KH.ToString();
-            //txtSDT.Text = hd.Khach_hang.SDT.ToString();
-            //txtNgay.Text = hd.Ngay_mua.ToString();
-            //List<Chi_tiet_hoa_don> list = new List<Chi_tiet_hoa_don>();
-            //list = cthdBLL.GetAllCT(maHD);
-            //txtThanhTien.Text = hd.Tong_tien.ToString();
-            //foreach (Chi_tiet_hoa_don l in list)
-            //{
-            //    dgvChitietHD.Rows.Add(l.San_pham.Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(), l.Gia.ToString());
-            //    tong += l.Soluong_SP * l.Gia;
-            //}
-            //txtTongTien.Text = tong.ToString();
-            //txtGiamGia.Text = (tong - hd.Tong_tien).ToString();
             double tong = 0;
             Hoa_don hd = new Hoa_don();
             hd = hdBLL.GetHDByMaHD(maHD);

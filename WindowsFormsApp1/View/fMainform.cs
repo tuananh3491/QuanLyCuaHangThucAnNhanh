@@ -85,12 +85,6 @@ namespace WindowsFormsApp1.View
             else { WindowState = FormWindowState.Normal; }
         }
         //changeColor
-        private struct RGBColor
-        {
-            public static Color color1 = Color.FromArgb(255, 138, 0);
-            public static Color color2 = Color.FromArgb(255, 175, 81);
-
-        }
         private void ActivateButtonPanel(object sender)
         {
             if (sender != null)
@@ -121,17 +115,6 @@ namespace WindowsFormsApp1.View
         {
             if (activeForm != null) { activeForm.Close(); }
             activeForm = active;
-            active.TopLevel = false;
-            active.FormBorderStyle = FormBorderStyle.None;
-            active.Dock = DockStyle.Fill;
-            p.Controls.Add(active);
-            p.Tag = active;
-            active.BringToFront();
-            active.Show();
-        }
-        public void openChildForm1(Form active, Panel p)
-        {
-            p.Dispose();
             active.TopLevel = false;
             active.FormBorderStyle = FormBorderStyle.None;
             active.Dock = DockStyle.Fill;
@@ -233,11 +216,7 @@ namespace WindowsFormsApp1.View
 
         private void btnPerson_Click(object sender, EventArgs e)
         {
-            fPersonality f = new fPersonality();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            openChildForm(new fPersonality(), pnForm);
         }
     }
 }
