@@ -15,9 +15,9 @@ namespace WindowsFormsApp1.BLL
     {
         PBL_3Entities cnn = new PBL_3Entities();
 
-        public List<Phan_cong> GetAllPC()
+        public List<int> GetAllNamPC()//lấy tất cả năm có nhân viên làm việc
         {
-            var s = cnn.Phan_cong.ToList();
+            var s = cnn.Phan_cong.Select(p => p.Ngay.Value.Year).Distinct().ToList();
             return s;
         }
         public dynamic GetNVsByCa_Date(int maCa, DateTime date) //lấy tất cả nhân viên làm trong ca và ngày đã cho
@@ -91,6 +91,17 @@ namespace WindowsFormsApp1.BLL
                 }
             }
             return list;
+        }
+        //để tính lương
+        public double GetAllTime(int maNV, int thang, int nam)
+        {
+            double soGio = 0;
+            var listCLV = cnn.Phan_cong.Where(p => p.Ma_NV == maNV && p.Ngay.Value.Month == thang && p.Ngay.Value.Year == nam).Select(p => p.Ca_lam_viec).ToList();//lấy ra tất cả ca làm việc của nhân viên óc maNV trong thời gian time
+            foreach(var ca in listCLV)
+            {
+                soGio += (ca.Thoigianketthuc - ca.Thoigianbatdau).TotalMinutes / 60 ;
+            }
+            return soGio;
         }
     }
 }

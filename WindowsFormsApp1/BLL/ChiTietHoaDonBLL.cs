@@ -58,12 +58,6 @@ namespace WindowsFormsApp1.BLL
             }
             return htPro;
         }
-        public void ShowDGV(DataGridView dg, List<Chi_tiet_hoa_don> ct)
-        {
-            dg.DataSource = ct;
-            dg.Columns["Ma_HD"].Visible = false;
-            dg.Columns["Hoa_don"].Visible = false;
-            dg.Columns["San_pham"].Visible = false;
-        }
+        
     }
 }

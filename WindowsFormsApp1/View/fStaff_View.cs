@@ -65,36 +65,44 @@ namespace WindowsFormsApp1.View
             checkBox1.Checked = (x.Trang_thai == true);
         }
 
-        private void btnEdit_Click(object sender, EventArgs e)
+        private void btnCTLuong_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (textBox3.Text == "" || textBox5.Text == "" || textBox6.Text == "") throw new ArgumentNullException();
-                x.Ma_NV = int.Parse(textBox1.Text);
-                x.SDT = textBox2.Text;
-                x.Ten_NV = textBox3.Text;
-                x.Ngay_sinh = dateTimePicker1.Value;
-                x.Tai_khoan.Ten_TK = textBox5.Text;
-                x.Tai_khoan.Mat_khau = textBox6.Text;
-                x.Luong = Convert.ToInt32(textBox4.Text);
 
-                if (radioButton1.Checked) x.Gioi_tinh = true;
-                else x.Gioi_tinh = false;
-                if (radioButton4.Checked) x.Tai_khoan.Loai_TK = true;
-                else x.Tai_khoan.Loai_TK = false;
-                x.Trang_thai = checkBox1.Checked;
+            fStaff_Salary f = new fStaff_Salary(x.Ma_NV);
+            f.TopLevel = false;
+            f.Show();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            f.Show();
 
-                nvBLL.SaveNV(x);
-                MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (ArgumentNullException)
-            {
-                MessageBox.Show("Dữ liệu nhập vào bị trống.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch(FormatException)
-            {
-                MessageBox.Show("Dữ liệu nhập vào không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+//             try
+//             {
+//                 if (textBox3.Text == "" || textBox5.Text == "" || textBox6.Text == "") throw new ArgumentNullException();
+//                 x.Ma_NV = int.Parse(textBox1.Text);
+//                 x.SDT = textBox2.Text;
+//                 x.Ten_NV = textBox3.Text;
+//                 x.Ngay_sinh = dateTimePicker1.Value;
+//                 x.Tai_khoan.Ten_TK = textBox5.Text;
+//                 x.Tai_khoan.Mat_khau = textBox6.Text;
+//                 x.Luong = Convert.ToInt32(textBox4.Text);
+
+//                 if (radioButton1.Checked) x.Gioi_tinh = true;
+//                 else x.Gioi_tinh = false;
+//                 if (radioButton4.Checked) x.Tai_khoan.Loai_TK = true;
+//                 else x.Tai_khoan.Loai_TK = false;
+//                 x.Trang_thai = checkBox1.Checked;
+
+//                 nvBLL.SaveNV(x);
+//                 MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+//             }
+//             catch (ArgumentNullException)
+//             {
+//                 MessageBox.Show("Dữ liệu nhập vào bị trống.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+//             }
+//             catch(FormatException)
+//             {
+//                 MessageBox.Show("Dữ liệu nhập vào không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+//             }
         }
     }
 }

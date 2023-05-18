@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
@@ -57,5 +58,6 @@ namespace WindowsFormsApp1.BLL
             dg.Columns["Luong"].Visible = false;
             dg.Columns["Tai_khoan"].Visible = false;
         }
+       
     }
 }

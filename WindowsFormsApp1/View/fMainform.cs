@@ -129,18 +129,7 @@ namespace WindowsFormsApp1.View
             active.BringToFront();
             active.Show();
         }
-        public void openChildForm1(Form active, Panel p)
-        {
-            p.Dispose();
-            active.TopLevel = false;
-            active.FormBorderStyle = FormBorderStyle.None;
-            active.Dock = DockStyle.Fill;
-            p.Controls.Add(active);
-            p.Tag = active;
-            active.BringToFront();
-            active.Show();
-        }
-
+       
 
 
         //evenclick
@@ -218,7 +207,7 @@ namespace WindowsFormsApp1.View
             if(result == DialogResult.OK)
             {
                 logout();
-                Thread.Sleep(1500);
+                /*Thread.Sleep(1500)*/;
                 this.Dispose();
             }
 
@@ -234,10 +223,11 @@ namespace WindowsFormsApp1.View
         private void btnPerson_Click(object sender, EventArgs e)
         {
             fPersonality f = new fPersonality();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            //f.TopLevel = false;
+            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+            //((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+            //f.Show();
+            openChildForm (f, pnForm);
         }
     }
 }

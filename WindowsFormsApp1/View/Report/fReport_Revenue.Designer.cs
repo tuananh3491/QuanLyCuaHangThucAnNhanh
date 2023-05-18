@@ -32,17 +32,16 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbNam = new System.Windows.Forms.ComboBox();
-            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.ccbLoc = new System.Windows.Forms.ComboBox();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnDone = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -53,12 +52,30 @@
             this.panel1.Size = new System.Drawing.Size(885, 465);
             this.panel1.TabIndex = 26;
             // 
+            // chart1
+            // 
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(3, 3);
+            this.chart1.Name = "chart1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(879, 459);
+            this.chart1.TabIndex = 0;
+            this.chart1.Text = "chart1";
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "BIỂU ĐỒ DOANH THU";
+            this.chart1.Titles.Add(title1);
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btnDone);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.cbbNam);
-            this.panel2.Controls.Add(this.iconPictureBox1);
             this.panel2.Controls.Add(this.ccbLoc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -75,6 +92,7 @@
             this.label1.Size = new System.Drawing.Size(40, 20);
             this.label1.TabIndex = 59;
             this.label1.Text = "Lọc";
+            this.label1.Visible = false;
             // 
             // label4
             // 
@@ -95,21 +113,6 @@
             this.cbbNam.Size = new System.Drawing.Size(79, 31);
             this.cbbNam.TabIndex = 57;
             // 
-            // iconPictureBox1
-            // 
-            this.iconPictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.iconPictureBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 38;
-            this.iconPictureBox1.Location = new System.Drawing.Point(830, 16);
-            this.iconPictureBox1.Name = "iconPictureBox1";
-            this.iconPictureBox1.Size = new System.Drawing.Size(50, 38);
-            this.iconPictureBox1.TabIndex = 61;
-            this.iconPictureBox1.TabStop = false;
-            this.iconPictureBox1.Click += new System.EventHandler(this.iconDone_Click);
-            // 
             // ccbLoc
             // 
             this.ccbLoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,24 +126,21 @@
             this.ccbLoc.Name = "ccbLoc";
             this.ccbLoc.Size = new System.Drawing.Size(87, 31);
             this.ccbLoc.TabIndex = 58;
+            this.ccbLoc.Visible = false;
             // 
-            // chart1
+            // btnDone
             // 
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(3, 3);
-            this.chart1.Name = "chart1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(879, 459);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.Name = "Title1";
-            title1.Text = "BIỂU ĐỒ DOANH THU";
-            this.chart1.Titles.Add(title1);
+            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDone.IconSize = 40;
+            this.btnDone.Location = new System.Drawing.Point(838, 14);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(40, 46);
+            this.btnDone.TabIndex = 63;
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // fReport_Revenue
             // 
@@ -154,10 +154,9 @@
             this.Name = "fReport_Revenue";
             this.Text = "fReport_revenue";
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -168,8 +167,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cbbNam;
-        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.ComboBox ccbLoc;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private FontAwesome.Sharp.IconButton btnDone;
     }
 }

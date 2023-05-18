@@ -24,8 +24,6 @@ namespace WindowsFormsApp1.View
         }
         private void fCustomer_History_Load(object sender, EventArgs e)
         {
-            //bll.ShowDGV(dataGridView1, Ma_KH);
-            PBL_3Entities cnn = new PBL_3Entities();
             txtName.Text = khachHangBLL.GetKHById(maKH).Ten_KH;
             txtPhone.Text = khachHangBLL.GetKHById(maKH).SDT;
             dataGridView1.DataSource = hdBLL.GetHDsByMaKH(maKH);

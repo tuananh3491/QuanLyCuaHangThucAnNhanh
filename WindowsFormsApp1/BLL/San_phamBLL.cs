@@ -32,7 +32,7 @@ namespace WindowsFormsApp1.BLL
             cnn.SaveChanges();
         }
 
-        public List<San_pham> GetSPCategory(string s)
+        public List<San_pham> GetSPCategory(string s)//lấy sp theo tên loại
         {
             List<San_pham> lt = new List<San_pham>();
             foreach (var i in GetAllSP())
@@ -55,6 +55,11 @@ namespace WindowsFormsApp1.BLL
             var l = cnn.San_pham.Where(p => p.Ma_loai == idType).ToList();
             return l;
 
+        }
+        public List<San_pham> GetSPByTen(string ten)
+        {
+            List<San_pham> listSP = cnn.San_pham.Where(p => p.Ten_SP.Contains(ten)).ToList();
+            return listSP;  
         }
     }
 }

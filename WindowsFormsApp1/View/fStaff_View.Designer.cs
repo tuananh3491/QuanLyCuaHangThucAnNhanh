@@ -54,7 +54,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnEdit = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnCTLuong = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -366,26 +366,26 @@
             this.textBox1.Size = new System.Drawing.Size(281, 30);
             this.textBox1.TabIndex = 48;
             // 
-            // btnEdit
+            // btnCTLuong
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEdit.BorderRadius = 10;
-            this.btnEdit.BorderSize = 0;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(743, 507);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(133, 39);
-            this.btnEdit.TabIndex = 20;
-            this.btnEdit.Text = "Cập nhật";
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            this.btnCTLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCTLuong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCTLuong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCTLuong.BorderRadius = 10;
+            this.btnCTLuong.BorderSize = 0;
+            this.btnCTLuong.FlatAppearance.BorderSize = 0;
+            this.btnCTLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCTLuong.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCTLuong.ForeColor = System.Drawing.Color.White;
+            this.btnCTLuong.Location = new System.Drawing.Point(725, 507);
+            this.btnCTLuong.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCTLuong.Name = "btnCTLuong";
+            this.btnCTLuong.Size = new System.Drawing.Size(151, 39);
+            this.btnCTLuong.TabIndex = 20;
+            this.btnCTLuong.Text = "Chi tiết lương";
+            this.btnCTLuong.TextColor = System.Drawing.Color.White;
+            this.btnCTLuong.UseVisualStyleBackColor = false;
+            this.btnCTLuong.Click += new System.EventHandler(this.btnCTLuong_Click);
             // 
             // btnBack
             // 
@@ -411,7 +411,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnCTLuong);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -430,7 +430,7 @@
 
         #endregion
         private System.Windows.Forms.Panel panel1;
-        private CustomControl.VBButton btnEdit;
+        private CustomControl.VBButton btnCTLuong;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
