@@ -24,7 +24,6 @@ namespace WindowsFormsApp1.BLL
         public Khach_hang getKH(string m)
         {
             return dal.GetKH(m);
-        }
-        
+        } 
     }
 }

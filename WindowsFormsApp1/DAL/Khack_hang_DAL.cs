@@ -48,7 +48,6 @@ namespace WindowsFormsApp1.DAL
                 et.Khach_hang.AddOrUpdate(ca);
                 et.SaveChanges();
             }
-        }
-        
+        }        
     }
 }
