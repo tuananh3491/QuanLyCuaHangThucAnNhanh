@@ -28,7 +28,7 @@ namespace WindowsFormsApp1.View
         {
             try
             {
-                if (txtTenKH.Text == "") throw new SqlNullValueException();
+                if (txtName.Text == "") throw new SqlNullValueException();
                 Ca_lam_viec clv = new Ca_lam_viec()
                 {
                     Ten_ca = txtName.Text,
