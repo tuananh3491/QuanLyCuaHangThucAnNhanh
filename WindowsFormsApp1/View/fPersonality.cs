@@ -91,5 +91,11 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
         }
+
+        private void btnDatLaiMK_Click(object sender, EventArgs e)
+        {
+            fChangePassword f=new fChangePassword();
+            f.ShowDialog();
+        }
     }
 }
