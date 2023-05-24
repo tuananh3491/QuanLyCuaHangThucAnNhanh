@@ -38,7 +38,6 @@ namespace WindowsFormsApp1.View
             txtMaTaiKhoan.Text = tk.Ma_TK.ToString();
             txtTen.Text=tk.Nhan_vien.Ten_NV;
             txtTenTK.Text=tk.Ten_TK;
-            txtMatKhau.Text=tk.Mat_khau;
             txtSDT.Text=tk.Nhan_vien.SDT;
             if (tk.Loai_TK == true) 
             {   rdNhanVien.Checked = true;
@@ -75,7 +74,6 @@ namespace WindowsFormsApp1.View
                 x.Nhan_vien.Ten_NV = txtTen.Text;
                 x.Nhan_vien.Ngay_sinh = dtpkNgaySinh.Value;
                 x.Ten_TK = txtTenTK.Text;
-                x.Mat_khau = txtMatKhau.Text;
                 x.Nhan_vien.Luong = Convert.ToInt32(txtLuong.Text);
 
                 if (rdNam.Checked) x.Nhan_vien.Gioi_tinh = true;
@@ -99,6 +97,16 @@ namespace WindowsFormsApp1.View
             {
                 MessageBox.Show("Tên rỗng không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnDatLaiMK_Click(object sender, EventArgs e)
+        {
+            Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
+            string salt = BCrypt.Net.BCrypt.GenerateSalt();
+            string hash = BCrypt.Net.BCrypt.HashPassword("1", salt);
+            x.Mat_khau = hash;
+            tai_KhoanBLL.SaveTK(x);
+            MessageBox.Show("Đặt lại mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

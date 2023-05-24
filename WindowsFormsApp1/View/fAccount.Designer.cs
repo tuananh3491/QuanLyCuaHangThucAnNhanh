@@ -30,13 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.DGVdsTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BtnThem = new FontAwesome.Sharp.IconButton();
             this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVdsTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +59,6 @@
             this.DGVdsTaiKhoan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
             this.Column4});
             this.DGVdsTaiKhoan.Location = new System.Drawing.Point(23, 68);
             this.DGVdsTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -71,38 +69,6 @@
             this.DGVdsTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVdsTaiKhoan.Size = new System.Drawing.Size(884, 416);
             this.DGVdsTaiKhoan.TabIndex = 11;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Ma_TK";
-            this.Column1.HeaderText = "Mã tài khoản";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Ten_TK";
-            this.Column2.HeaderText = "Tên tài khoản";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Mat_khau";
-            this.Column3.HeaderText = "Mật khẩu";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Loai_TK";
-            this.Column4.HeaderText = "Loại tài khoản";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // BtnThem
             // 
@@ -168,6 +134,30 @@
             this.txtSearch.TabIndex = 15;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Ma_TK";
+            this.Column1.HeaderText = "Mã tài khoản";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Ten_TK";
+            this.Column2.HeaderText = "Tên tài khoản";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Loai_TK";
+            this.Column4.HeaderText = "Loại tài khoản";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // fAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -194,10 +184,9 @@
         private System.Windows.Forms.Label label1;
         private CustomControl.VBButton btnXemChiTiet;
         private System.Windows.Forms.DataGridView DGVdsTaiKhoan;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
     }
 }
