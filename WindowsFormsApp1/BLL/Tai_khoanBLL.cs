@@ -43,28 +43,19 @@ namespace WindowsFormsApp1.BLL
         }
         public bool CheckLogin(int ten, string matKhau)
         {
-            byte[] temp = ASCIIEncoding.ASCII.GetBytes(matKhau);
-            byte[] hasData = new MD5CryptoServiceProvider().ComputeHash(temp);
-            //List<Tai_khoan> list = new List<Tai_khoan>();
-            var dstk = et.Tai_khoan.Select(p => p);
-            foreach (var i in dstk)
+            Tai_khoan ca = new Tai_khoan();
+            ca = et.Tai_khoan.Find(ten);
+            bool passwordMatch = BCrypt.Net.BCrypt.Verify(matKhau, ca.Mat_khau);
+            if (passwordMatch)
             {
-                if (i.Ma_TK == ten && i.Mat_khau == matKhau)
-                {
-                    if (i.Nhan_vien.Trang_thai)
-                    {
-                        Const.taiKhoan = i;
-                        Const.taiKhoan.Loai_TK = i.Loai_TK;
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("Tài khoản đã bị vô hiệu hóa", "Cảnh báo", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
-                        return false;
-                    }
-                }
+                Const.taiKhoan = ca;
+                Const.taiKhoan.Loai_TK = ca.Loai_TK;
+                return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
     }
 }

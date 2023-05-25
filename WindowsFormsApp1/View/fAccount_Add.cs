@@ -52,12 +52,14 @@ namespace WindowsFormsApp1.View
                 });
                 txtLuong.Visible = false;
                 lblLuong.Visible = false;
+                string salt = BCrypt.Net.BCrypt.GenerateSalt();
+                string hash = BCrypt.Net.BCrypt.HashPassword(txtMK.Text, salt);
                 tkBLL.SaveTK(new Tai_khoan
                 {
                     Ma_TK = x,
                     Ten_TK = txtTenTK.Text,
-                    Mat_khau = txtMK.Text,
-                    Loai_TK = check.Checked
+                    Loai_TK = check.Checked,
+                    Mat_khau=hash
                 });
                 MessageBox.Show("Thêm nhân viên thành công.");
             }

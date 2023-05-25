@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fPersonality));
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblMK = new System.Windows.Forms.Label();
-            this.txtMK = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -54,9 +52,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnEdit = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnCTLuong = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnEdit = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.btnDatLaiMK = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -76,8 +75,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lblMK);
-            this.panel1.Controls.Add(this.txtMK);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.groupBox2);
@@ -100,28 +97,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(821, 455);
             this.panel1.TabIndex = 20;
-            // 
-            // lblMK
-            // 
-            this.lblMK.AutoSize = true;
-            this.lblMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMK.Location = new System.Drawing.Point(69, 406);
-            this.lblMK.Name = "lblMK";
-            this.lblMK.Size = new System.Drawing.Size(97, 22);
-            this.lblMK.TabIndex = 79;
-            this.lblMK.Text = "Mật khẩu:";
-            // 
-            // txtMK
-            // 
-            this.txtMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.txtMK.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMK.Location = new System.Drawing.Point(167, 406);
-            this.txtMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMK.Multiline = true;
-            this.txtMK.Name = "txtMK";
-            this.txtMK.Size = new System.Drawing.Size(162, 25);
-            this.txtMK.TabIndex = 80;
             // 
             // label1
             // 
@@ -221,7 +196,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(69, 364);
+            this.label10.Location = new System.Drawing.Point(69, 360);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 22);
             this.label10.TabIndex = 73;
@@ -232,7 +207,7 @@
             this.txtTenTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtTenTK.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenTK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenTK.Location = new System.Drawing.Point(167, 364);
+            this.txtTenTK.Location = new System.Drawing.Point(167, 360);
             this.txtTenTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenTK.Multiline = true;
             this.txtTenTK.Name = "txtTenTK";
@@ -354,23 +329,26 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Số điện thoại:";
             // 
-            // btnBack
+            // btnCTLuong
             // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowDown;
-            this.btnBack.IconColor = System.Drawing.Color.Black;
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.IconSize = 30;
-            this.btnBack.Location = new System.Drawing.Point(12, 8);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Rotation = 90D;
-            this.btnBack.Size = new System.Drawing.Size(61, 39);
-            this.btnBack.TabIndex = 22;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnCTLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCTLuong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnCTLuong.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCTLuong.BorderRadius = 10;
+            this.btnCTLuong.BorderSize = 0;
+            this.btnCTLuong.FlatAppearance.BorderSize = 0;
+            this.btnCTLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCTLuong.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCTLuong.ForeColor = System.Drawing.Color.White;
+            this.btnCTLuong.Location = new System.Drawing.Point(560, 513);
+            this.btnCTLuong.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCTLuong.Name = "btnCTLuong";
+            this.btnCTLuong.Size = new System.Drawing.Size(151, 39);
+            this.btnCTLuong.TabIndex = 24;
+            this.btnCTLuong.Text = "Chi tiết lương";
+            this.btnCTLuong.TextColor = System.Drawing.Color.White;
+            this.btnCTLuong.UseVisualStyleBackColor = false;
+            this.btnCTLuong.Click += new System.EventHandler(this.btnCTLuong_Click);
             // 
             // btnEdit
             // 
@@ -393,26 +371,44 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnCTLuong
+            // btnBack
             // 
-            this.btnCTLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCTLuong.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnCTLuong.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCTLuong.BorderRadius = 10;
-            this.btnCTLuong.BorderSize = 0;
-            this.btnCTLuong.FlatAppearance.BorderSize = 0;
-            this.btnCTLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCTLuong.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCTLuong.ForeColor = System.Drawing.Color.White;
-            this.btnCTLuong.Location = new System.Drawing.Point(560, 513);
-            this.btnCTLuong.Margin = new System.Windows.Forms.Padding(5);
-            this.btnCTLuong.Name = "btnCTLuong";
-            this.btnCTLuong.Size = new System.Drawing.Size(151, 39);
-            this.btnCTLuong.TabIndex = 24;
-            this.btnCTLuong.Text = "Chi tiết lương";
-            this.btnCTLuong.TextColor = System.Drawing.Color.White;
-            this.btnCTLuong.UseVisualStyleBackColor = false;
-            this.btnCTLuong.Click += new System.EventHandler(this.btnCTLuong_Click);
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowDown;
+            this.btnBack.IconColor = System.Drawing.Color.Black;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.IconSize = 30;
+            this.btnBack.Location = new System.Drawing.Point(12, 8);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Rotation = 90D;
+            this.btnBack.Size = new System.Drawing.Size(61, 39);
+            this.btnBack.TabIndex = 22;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // btnDatLaiMK
+            // 
+            this.btnDatLaiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnDatLaiMK.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnDatLaiMK.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnDatLaiMK.BorderRadius = 10;
+            this.btnDatLaiMK.BorderSize = 0;
+            this.btnDatLaiMK.FlatAppearance.BorderSize = 0;
+            this.btnDatLaiMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDatLaiMK.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDatLaiMK.ForeColor = System.Drawing.Color.White;
+            this.btnDatLaiMK.Location = new System.Drawing.Point(25, 513);
+            this.btnDatLaiMK.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDatLaiMK.Name = "btnDatLaiMK";
+            this.btnDatLaiMK.Size = new System.Drawing.Size(190, 39);
+            this.btnDatLaiMK.TabIndex = 29;
+            this.btnDatLaiMK.Text = "Đặt lại mật khẩu";
+            this.btnDatLaiMK.TextColor = System.Drawing.Color.White;
+            this.btnDatLaiMK.UseVisualStyleBackColor = false;
+            this.btnDatLaiMK.Click += new System.EventHandler(this.btnDatLaiMK_Click);
             // 
             // fPersonality
             // 
@@ -420,6 +416,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
+            this.Controls.Add(this.btnDatLaiMK);
             this.Controls.Add(this.btnCTLuong);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnBack);
@@ -465,10 +462,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rdMale;
         private System.Windows.Forms.RadioButton rdFemale;
-        private System.Windows.Forms.Label lblMK;
-        private System.Windows.Forms.TextBox txtMK;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
         private CustomControl.VBButton btnCTLuong;
+        private CustomControl.VBButton btnDatLaiMK;
     }
 }
