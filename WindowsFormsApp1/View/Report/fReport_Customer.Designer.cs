@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDone = new FontAwesome.Sharp.IconButton();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,13 +40,14 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBieuDo = new WindowsFormsApp1.CustomControl.VBButton();
-            this.btnDone = new FontAwesome.Sharp.IconButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnDone);
             this.panel2.Controls.Add(this.cbbNam);
             this.panel2.Controls.Add(this.label4);
@@ -56,6 +58,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(930, 67);
             this.panel2.TabIndex = 19;
+            // 
+            // btnDone
+            // 
+            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDone.IconSize = 40;
+            this.btnDone.Location = new System.Drawing.Point(839, 8);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(40, 46);
+            this.btnDone.TabIndex = 20;
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // cbbNam
             // 
@@ -173,19 +189,15 @@
             this.btnBieuDo.UseVisualStyleBackColor = false;
             this.btnBieuDo.Click += new System.EventHandler(this.btnBieuDo_Click);
             // 
-            // btnDone
+            // label9
             // 
-            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
-            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDone.IconSize = 40;
-            this.btnDone.Location = new System.Drawing.Point(839, 8);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(40, 46);
-            this.btnDone.TabIndex = 20;
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(294, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(372, 32);
+            this.label9.TabIndex = 72;
+            this.label9.Text = "THỐNG KÊ KHÁCH HÀNG";
             // 
             // fReport_Customer
             // 
@@ -219,5 +231,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private FontAwesome.Sharp.IconButton btnDone;
+        private System.Windows.Forms.Label label9;
     }
 }

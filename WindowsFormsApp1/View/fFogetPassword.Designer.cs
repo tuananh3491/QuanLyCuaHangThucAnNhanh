@@ -87,6 +87,7 @@
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Gửi lại OTP?";
+
             // 
             // txtOTP
             // 
@@ -150,7 +151,7 @@
             this.btXacNhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btXacNhan.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btXacNhan.Location = new System.Drawing.Point(60, 348);
+            this.btXacNhan.Location = new System.Drawing.Point(58, 336);
             this.btXacNhan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btXacNhan.Name = "btXacNhan";
             this.btXacNhan.Size = new System.Drawing.Size(113, 41);
@@ -171,7 +172,7 @@
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancel.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btCancel.ForeColor = System.Drawing.Color.White;
-            this.btCancel.Location = new System.Drawing.Point(288, 348);
+            this.btCancel.Location = new System.Drawing.Point(288, 336);
             this.btCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(113, 41);
