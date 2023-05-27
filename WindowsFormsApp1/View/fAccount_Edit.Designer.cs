@@ -30,6 +30,8 @@
         {
             this.btnEdit = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblLuong = new System.Windows.Forms.Label();
             this.txtLuong = new System.Windows.Forms.TextBox();
             this.chkTrangThai = new System.Windows.Forms.CheckBox();
@@ -53,9 +55,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaTaiKhoan = new System.Windows.Forms.TextBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.btnDatLaiMK = new WindowsFormsApp1.CustomControl.VBButton();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -111,6 +110,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(885, 436);
             this.panel1.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(48, 391);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 24);
+            this.label5.TabIndex = 69;
+            this.label5.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Location = new System.Drawing.Point(196, 388);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(228, 30);
+            this.txtEmail.TabIndex = 68;
             // 
             // lblLuong
             // 
@@ -378,47 +397,6 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnDatLaiMK
-            // 
-            this.btnDatLaiMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnDatLaiMK.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnDatLaiMK.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnDatLaiMK.BorderRadius = 10;
-            this.btnDatLaiMK.BorderSize = 0;
-            this.btnDatLaiMK.FlatAppearance.BorderSize = 0;
-            this.btnDatLaiMK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDatLaiMK.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDatLaiMK.ForeColor = System.Drawing.Color.White;
-            this.btnDatLaiMK.Location = new System.Drawing.Point(57, 514);
-            this.btnDatLaiMK.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDatLaiMK.Name = "btnDatLaiMK";
-            this.btnDatLaiMK.Size = new System.Drawing.Size(190, 39);
-            this.btnDatLaiMK.TabIndex = 28;
-            this.btnDatLaiMK.Text = "Đặt lại mật khẩu";
-            this.btnDatLaiMK.TextColor = System.Drawing.Color.White;
-            this.btnDatLaiMK.UseVisualStyleBackColor = false;
-            this.btnDatLaiMK.Click += new System.EventHandler(this.btnDatLaiMK_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(48, 391);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(61, 24);
-            this.label5.TabIndex = 69;
-            this.label5.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.txtEmail.Location = new System.Drawing.Point(196, 388);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(228, 30);
-            this.txtEmail.TabIndex = 68;
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -436,7 +414,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnDatLaiMK);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel1);
@@ -481,7 +458,6 @@
         private System.Windows.Forms.RadioButton rdAdmin;
         private System.Windows.Forms.Label lblLuong;
         private System.Windows.Forms.TextBox txtLuong;
-        private CustomControl.VBButton btnDatLaiMK;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label9;

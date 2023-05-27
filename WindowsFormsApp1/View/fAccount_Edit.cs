@@ -101,14 +101,14 @@ namespace WindowsFormsApp1.View
             }
         }
 
-        private void btnDatLaiMK_Click(object sender, EventArgs e)
-        {
-            Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
-            string salt = BCrypt.Net.BCrypt.GenerateSalt();
-            string hash = BCrypt.Net.BCrypt.HashPassword("1", salt);
-            x.Mat_khau = hash;
-            tai_KhoanBLL.SaveTK(x);
-            MessageBox.Show("Đặt lại mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        //private void btnDatLaiMK_Click(object sender, EventArgs e)
+        //{
+        //    Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
+        //    string salt = BCrypt.Net.BCrypt.GenerateSalt();
+        //    string hash = BCrypt.Net.BCrypt.HashPassword("1", salt);
+        //    x.Mat_khau = hash;
+        //    tai_KhoanBLL.SaveTK(x);
+        //    MessageBox.Show("Đặt lại mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //}
     }
 }
