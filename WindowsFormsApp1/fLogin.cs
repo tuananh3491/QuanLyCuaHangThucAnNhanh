@@ -114,7 +114,7 @@ namespace WindowsFormsApp1
                     f.BringToFront();
                     f.Show();
                 }
-            else MessageBox.Show("Tài khoản không tồn tại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                else MessageBox.Show("Tài khoản không tồn tại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch (Exception ex)
             {

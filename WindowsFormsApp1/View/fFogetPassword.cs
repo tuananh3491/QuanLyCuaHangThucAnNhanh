@@ -30,46 +30,53 @@ namespace WindowsFormsApp1.View
         public void Load(int maTK)
         {
             txtEmail.Text = tkBLL.GetTK(maTK).Nhan_vien.Email;
+            txtEmail.Enabled = false;
         }
 
         private void btSend_Click(object sender, EventArgs e)
         {
-            try
+            if(txtEmail.Text != "")//có email để tránh nhân viên chưa có email
             {
-                //tạo mã otp random 6 số:
-                otp = randomOTP.Next(100000, 1000000);
+                try
+                {
+                    //tạo mã otp random 6 số:
+                    otp = randomOTP.Next(100000, 1000000);
 
-                var fromAddress = new MailAddress("slowlyfastfoodstore03@gmail.com"); //mail dùng để gửi mã otp
-                var toAddress = new MailAddress(txtEmail.ToString());//mail dùng để nhận otp
-                const string frompass = "wgubounrayryjfpq";//mật khẩu ứng dụng
-                const string subject = "OTP code";
-                string body = otp.ToString();
+                    var fromAddress = new MailAddress("slowlyfastfoodstore03@gmail.com"); //mail dùng để gửi mã otp
+                    var toAddress = new MailAddress(txtEmail.ToString());//mail dùng để nhận otp
+                    const string frompass = "wgubounrayryjfpq";//mật khẩu ứng dụng
+                    const string subject = "OTP code";
+                    string body = otp.ToString();
 
-                var stmp = new SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    EnableSsl = true,
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    UseDefaultCredentials = false,
-                    Credentials = new NetworkCredential(fromAddress.Address, frompass),
-                    Timeout = 200000
-                };
-                using (var message = new MailMessage(fromAddress, toAddress)
-                {
-                    Subject = subject,
-                    Body = body
-                })
-                {
-                    stmp.Send(message);
+                    var stmp = new SmtpClient
+                    {
+                        Host = "smtp.gmail.com",
+                        Port = 587,
+                        EnableSsl = true,
+                        DeliveryMethod = SmtpDeliveryMethod.Network,
+                        UseDefaultCredentials = false,
+                        Credentials = new NetworkCredential(fromAddress.Address, frompass),
+                        Timeout = 200000
+                    };
+                    using (var message = new MailMessage(fromAddress, toAddress)
+                    {
+                        Subject = subject,
+                        Body = body
+                    })
+                    {
+                        stmp.Send(message);
+                    }
+                    MessageBox.Show("OTP đã được gửi qua mail");
                 }
-                MessageBox.Show("OTP đã được gửi qua mail");
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Chưa có email. Nếu bạn muốn reset mật khẩu hãy liên hệ chủ cửa hàng!","Cảnh báo",MessageBoxButtons.OK,MessageBoxIcon.Warning);
             }
-
 
 
         }
@@ -95,6 +102,7 @@ namespace WindowsFormsApp1.View
 
 
                 MessageBox.Show("Mật khẩu đã reset = 1", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Dispose();
             }
             else
             {
