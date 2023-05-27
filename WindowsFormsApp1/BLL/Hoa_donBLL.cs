@@ -25,9 +25,9 @@ namespace WindowsFormsApp1.BLL
             var dsNam = cnn.Hoa_don.Select(p => p.Ngay_mua.Year).Distinct().ToList();
             return dsNam;
         }
-        public dynamic GetHD()
+        public List<Hoa_don> GetHD()
         {
-            var s = cnn.Hoa_don.Select(p => new { p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Khach_hang.Ten_KH, p.Ngay_mua, p.Tong_tien, p.Trang_thai }).ToList();
+            var s = cnn.Hoa_don.ToList();
             return s;
         }
         public dynamic GetHDsByMaKH(int Ma_KH)

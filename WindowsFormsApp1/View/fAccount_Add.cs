@@ -49,6 +49,7 @@ namespace WindowsFormsApp1.View
                     Ngay_sinh = dtmNgaySinh.Value,
                     Trang_thai = (check.Checked),
                     Luong = Convert.ToInt32(txtLuong.Text),
+                    Email = txtEmail.Text,
                 });
                 txtLuong.Visible = false;
                 lblLuong.Visible = false;

@@ -22,6 +22,14 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
             Load();
+            PhanQuyen();
+        }
+        public void PhanQuyen()
+        {
+            if (!(bool)Const.taiKhoan.Loai_TK)
+            {
+                btnCTLuong.Visible = false;
+            }
         }
         public void Load()
         {
@@ -29,6 +37,14 @@ namespace WindowsFormsApp1.View
             txtID.Text = nv.Ma_NV.ToString();
             txtName.Text = nv.Ten_NV.ToString();
             dateTimePicker1.Text = nv.Ngay_sinh.ToString();
+            if (nv.Email != null)
+            {
+                txtEmail.Text = nv.Email.ToString();
+            }
+            else
+            {
+                txtEmail.Text = "";
+            }
             if(nv.Gioi_tinh == true)
             {
                 rdMale.Checked = true;
@@ -57,6 +73,7 @@ namespace WindowsFormsApp1.View
                 nv.Gioi_tinh = rdMale.Checked;
                 nv.SDT = txtPhone.Text.ToString();
                 nv.Trang_thai = !(chStatus.Checked);
+                nv.Email = txtEmail.Text;
                 Tai_khoan tk = tkBLL.GetTK(maNV);
                 nv.Tai_khoan.Ten_TK = txtTenTK.Text.ToString();
                 nv.Tai_khoan.Loai_TK = rdStaff.Checked;
@@ -94,8 +111,30 @@ namespace WindowsFormsApp1.View
 
         private void btnDatLaiMK_Click(object sender, EventArgs e)
         {
-            fChangePassword f=new fChangePassword();
-            f.ShowDialog();
+            Tai_khoan tk = new Tai_khoan();
+            tk = tkBLL.GetTK(maNV);
+            if (BCrypt.Net.BCrypt.Verify(txtMKCu.Text, tk.Mat_khau))
+            {
+                if (txtMKMoi.Text == txtXacNhanMK.Text)
+                {
+                    string salt = BCrypt.Net.BCrypt.GenerateSalt();
+                    string hash = BCrypt.Net.BCrypt.HashPassword(txtMKMoi.Text, salt);
+                    tk.Mat_khau = hash;
+                    tkBLL.SaveTK(tk);
+                    MessageBox.Show("Đổi mật khẩu thành công");
+                    this.Dispose();
+                }
+                else
+                {
+                    MessageBox.Show("Xác nhận mật khẩu không khớp");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Mật khẩu cũ nhập vào không đúng!");
+            }
         }
+
     }
 }

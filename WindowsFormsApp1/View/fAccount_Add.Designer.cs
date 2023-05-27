@@ -54,6 +54,9 @@
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.btnAdd = new WindowsFormsApp1.CustomControl.VBButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,6 +66,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.panel2);
@@ -216,7 +221,7 @@
             // 
             this.lblLuong.AutoSize = true;
             this.lblLuong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLuong.Location = new System.Drawing.Point(58, 343);
+            this.lblLuong.Location = new System.Drawing.Point(56, 320);
             this.lblLuong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLuong.Name = "lblLuong";
             this.lblLuong.Size = new System.Drawing.Size(74, 24);
@@ -227,7 +232,7 @@
             // txtLuong
             // 
             this.txtLuong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.txtLuong.Location = new System.Drawing.Point(171, 340);
+            this.txtLuong.Location = new System.Drawing.Point(169, 317);
             this.txtLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLuong.Name = "txtLuong";
             this.txtLuong.Size = new System.Drawing.Size(210, 30);
@@ -277,7 +282,7 @@
             this.dtmNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dtmNgaySinh.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtmNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtmNgaySinh.Location = new System.Drawing.Point(169, 112);
+            this.dtmNgaySinh.Location = new System.Drawing.Point(167, 89);
             this.dtmNgaySinh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtmNgaySinh.Name = "dtmNgaySinh";
             this.dtmNgaySinh.Size = new System.Drawing.Size(214, 30);
@@ -287,7 +292,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(57, 269);
+            this.label7.Location = new System.Drawing.Point(55, 246);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 24);
@@ -297,7 +302,7 @@
             // txtSDT
             // 
             this.txtSDT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.txtSDT.Location = new System.Drawing.Point(171, 264);
+            this.txtSDT.Location = new System.Drawing.Point(169, 241);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(212, 30);
@@ -307,7 +312,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(57, 199);
+            this.label6.Location = new System.Drawing.Point(55, 176);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 24);
@@ -318,7 +323,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(55, 113);
+            this.label3.Location = new System.Drawing.Point(53, 90);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 24);
@@ -329,7 +334,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(55, 50);
+            this.label2.Location = new System.Drawing.Point(53, 27);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 24);
@@ -339,7 +344,7 @@
             // txtTenNV
             // 
             this.txtTenNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.txtTenNV.Location = new System.Drawing.Point(169, 44);
+            this.txtTenNV.Location = new System.Drawing.Point(167, 21);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(214, 30);
@@ -383,12 +388,43 @@
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(54, 374);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 24);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Location = new System.Drawing.Point(167, 371);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(210, 30);
+            this.txtEmail.TabIndex = 66;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(288, 19);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(342, 32);
+            this.label10.TabIndex = 22;
+            this.label10.Text = "THÔNG TIN TÀI KHOẢN";
+            // 
             // fAccount_Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
@@ -405,6 +441,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -435,5 +472,8 @@
         private System.Windows.Forms.RadioButton rdoChu;
         private System.Windows.Forms.Label label8;
         private CustomControl.VBButton btnAdd;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label10;
     }
 }

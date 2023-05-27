@@ -50,6 +50,7 @@ namespace WindowsFormsApp1.View
             if (tk.Nhan_vien.Gioi_tinh == true) { rdNam.Checked = true; }
             else { rdNam.Checked=true; }
             dtpkNgaySinh.Value = tk.Nhan_vien.Ngay_sinh;
+            txtEmail.Text = tk.Nhan_vien.Email;
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -75,6 +76,7 @@ namespace WindowsFormsApp1.View
                 x.Nhan_vien.Ngay_sinh = dtpkNgaySinh.Value;
                 x.Ten_TK = txtTenTK.Text;
                 x.Nhan_vien.Luong = Convert.ToInt32(txtLuong.Text);
+                x.Nhan_vien.Email = txtEmail.Text;
 
                 if (rdNam.Checked) x.Nhan_vien.Gioi_tinh = true;
                 else x.Nhan_vien.Gioi_tinh = false;

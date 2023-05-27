@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.DGVdsTaiKhoan = new System.Windows.Forms.DataGridView();
-            this.BtnThem = new FontAwesome.Sharp.IconButton();
-            this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnThem = new FontAwesome.Sharp.IconButton();
+            this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.DGVdsTaiKhoan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +69,30 @@
             this.DGVdsTaiKhoan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVdsTaiKhoan.Size = new System.Drawing.Size(884, 416);
             this.DGVdsTaiKhoan.TabIndex = 11;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Ma_TK";
+            this.Column1.HeaderText = "Mã tài khoản";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Ten_TK";
+            this.Column2.HeaderText = "Tên tài khoản";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Loai_TK";
+            this.Column4.HeaderText = "Loại tài khoản";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // BtnThem
             // 
@@ -133,30 +157,6 @@
             this.txtSearch.Size = new System.Drawing.Size(205, 36);
             this.txtSearch.TabIndex = 15;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Ma_TK";
-            this.Column1.HeaderText = "Mã tài khoản";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Ten_TK";
-            this.Column2.HeaderText = "Tên tài khoản";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Loai_TK";
-            this.Column4.HeaderText = "Loại tài khoản";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // fAccount
             // 

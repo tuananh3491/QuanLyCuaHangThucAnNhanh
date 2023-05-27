@@ -43,17 +43,25 @@ namespace WindowsFormsApp1.BLL
         }
         public bool CheckLogin(int ten, string matKhau)
         {
-            Tai_khoan ca = new Tai_khoan();
-            ca = et.Tai_khoan.Find(ten);
-            bool passwordMatch = BCrypt.Net.BCrypt.Verify(matKhau, ca.Mat_khau);
-            if (passwordMatch)
+            try
             {
-                Const.taiKhoan = ca;
-                Const.taiKhoan.Loai_TK = ca.Loai_TK;
-                return true;
+                Tai_khoan ca = new Tai_khoan();
+                ca = et.Tai_khoan.Find(ten);
+                bool passwordMatch = BCrypt.Net.BCrypt.Verify(matKhau, ca.Mat_khau);
+                if (passwordMatch)
+                {
+                    Const.taiKhoan = ca;
+                    Const.taiKhoan.Loai_TK = ca.Loai_TK;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }

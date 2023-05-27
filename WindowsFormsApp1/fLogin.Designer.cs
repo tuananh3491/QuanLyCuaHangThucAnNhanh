@@ -43,7 +43,9 @@ namespace WindowsFormsApp1
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnLogIn = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.btCancel = new WindowsFormsApp1.CustomControl.VBButton();
@@ -52,7 +54,7 @@ namespace WindowsFormsApp1
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.LOGIN = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pn = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -62,10 +64,10 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            this.panel2.SuspendLayout();
+            this.pnLogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.pn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -225,21 +227,46 @@ namespace WindowsFormsApp1
             this.pictureBox5.TabIndex = 16;
             this.pictureBox5.TabStop = false;
             // 
-            // panel2
+            // pnLogIn
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtPassWord);
-            this.panel2.Controls.Add(this.txtUsername);
-            this.panel2.Controls.Add(this.btCancel);
-            this.panel2.Controls.Add(this.btLogIn);
-            this.panel2.Controls.Add(this.iconPictureBox2);
-            this.panel2.Controls.Add(this.iconPictureBox1);
-            this.panel2.Controls.Add(this.LOGIN);
-            this.panel2.Location = new System.Drawing.Point(20, 151);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(451, 411);
-            this.panel2.TabIndex = 1;
+            this.pnLogIn.BackColor = System.Drawing.Color.White;
+            this.pnLogIn.Controls.Add(this.linkLabel2);
+            this.pnLogIn.Controls.Add(this.linkLabel1);
+            this.pnLogIn.Controls.Add(this.txtPassWord);
+            this.pnLogIn.Controls.Add(this.txtUsername);
+            this.pnLogIn.Controls.Add(this.btCancel);
+            this.pnLogIn.Controls.Add(this.btLogIn);
+            this.pnLogIn.Controls.Add(this.iconPictureBox2);
+            this.pnLogIn.Controls.Add(this.iconPictureBox1);
+            this.pnLogIn.Controls.Add(this.LOGIN);
+            this.pnLogIn.Location = new System.Drawing.Point(20, 151);
+            this.pnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnLogIn.Name = "pnLogIn";
+            this.pnLogIn.Size = new System.Drawing.Size(451, 411);
+            this.pnLogIn.TabIndex = 1;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(311, 254);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(92, 16);
+            this.linkLabel2.TabIndex = 9;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Hiện mật khẩu";
+            this.linkLabel2.Visible = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(61, 362);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(131, 20);
+            this.linkLabel1.TabIndex = 8;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Quên mật khẩu?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // txtPassWord
             // 
@@ -395,16 +422,16 @@ namespace WindowsFormsApp1
             this.label1.TabIndex = 20;
             this.label1.Text = "Slowly";
             // 
-            // panel4
+            // pn
             // 
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(626, 37);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(493, 618);
-            this.panel4.TabIndex = 22;
+            this.pn.Controls.Add(this.label1);
+            this.pn.Controls.Add(this.pnLogIn);
+            this.pn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pn.Location = new System.Drawing.Point(626, 37);
+            this.pn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pn.Name = "pn";
+            this.pn.Size = new System.Drawing.Size(493, 618);
+            this.pn.TabIndex = 22;
             // 
             // errorProvider1
             // 
@@ -412,12 +439,11 @@ namespace WindowsFormsApp1
             // 
             // fLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1119, 655);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.pn);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.White;
@@ -433,12 +459,12 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.pnLogIn.ResumeLayout(false);
+            this.pnLogIn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pn.ResumeLayout(false);
+            this.pn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
@@ -456,18 +482,20 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnLogIn;
         private CustomControl.VBButton btCancel;
         private CustomControl.VBButton btLogIn;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label LOGIN;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pn;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassWord;
         private PictureBox pictureBox1;
         private ErrorProvider errorProvider1;
+        private LinkLabel linkLabel1;
+        private LinkLabel linkLabel2;
     }
 }
 

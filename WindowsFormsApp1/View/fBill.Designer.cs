@@ -36,8 +36,8 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
             this.iconDone = new FontAwesome.Sharp.IconButton();
+            this.btnXemChiTiet = new WindowsFormsApp1.CustomControl.VBButton();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +45,7 @@
             // 
             this.dg.AllowUserToAddRows = false;
             this.dg.AllowUserToDeleteRows = false;
-            this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dg.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dg.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.dg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -55,7 +55,7 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dg.Location = new System.Drawing.Point(21, 78);
+            this.dg.Location = new System.Drawing.Point(22, 78);
             this.dg.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dg.Name = "dg";
             this.dg.ReadOnly = true;
@@ -72,6 +72,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 107;
             // 
             // Column2
             // 
@@ -80,6 +81,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 96;
             // 
             // Column3
             // 
@@ -88,6 +90,7 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 106;
             // 
             // Column4
             // 
@@ -96,6 +99,7 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 92;
             // 
             // Column5
             // 
@@ -104,6 +108,7 @@
             this.Column5.MinimumWidth = 6;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Width = 92;
             // 
             // Column6
             // 
@@ -112,6 +117,7 @@
             this.Column6.MinimumWidth = 6;
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
+            this.Column6.Width = 95;
             // 
             // dateTimePicker1
             // 
@@ -123,6 +129,20 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(157, 30);
             this.dateTimePicker1.TabIndex = 12;
+            // 
+            // iconDone
+            // 
+            this.iconDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.iconDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.iconDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconDone.IconSize = 40;
+            this.iconDone.Location = new System.Drawing.Point(844, 12);
+            this.iconDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.iconDone.Name = "iconDone";
+            this.iconDone.Size = new System.Drawing.Size(40, 46);
+            this.iconDone.TabIndex = 13;
+            this.iconDone.UseVisualStyleBackColor = true;
+            this.iconDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // btnXemChiTiet
             // 
@@ -144,20 +164,6 @@
             this.btnXemChiTiet.TextColor = System.Drawing.Color.White;
             this.btnXemChiTiet.UseVisualStyleBackColor = false;
             this.btnXemChiTiet.Click += new System.EventHandler(this.btnXemChiTiet_Click);
-            // 
-            // iconDone
-            // 
-            this.iconDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.iconDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
-            this.iconDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconDone.IconSize = 40;
-            this.iconDone.Location = new System.Drawing.Point(844, 12);
-            this.iconDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.iconDone.Name = "iconDone";
-            this.iconDone.Size = new System.Drawing.Size(40, 46);
-            this.iconDone.TabIndex = 13;
-            this.iconDone.UseVisualStyleBackColor = true;
-            this.iconDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // fBill
             // 

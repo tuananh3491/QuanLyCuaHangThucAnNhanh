@@ -171,6 +171,18 @@
     <Compile Include="View\fBill_PrePrint.Designer.cs">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fEnterOTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fEnterOTP.Designer.cs">
+      <DependentUpon>fEnterOTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fFogetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fFogetPassword.Designer.cs">
+      <DependentUpon>fFogetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\fPersonality.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -402,6 +414,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fBill_PrePrint.resx">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fEnterOTP.resx">
+      <DependentUpon>fEnterOTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fFogetPassword.resx">
+      <DependentUpon>fFogetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fPersonality.resx">
       <DependentUpon>fPersonality.cs</DependentUpon>

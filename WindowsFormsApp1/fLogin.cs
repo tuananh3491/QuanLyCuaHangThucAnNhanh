@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
 {
     public partial class fLogin : Form
     {
+        private int maTK;
+        Tai_khoanBLL tkBLL = new Tai_khoanBLL();
         public fLogin()
         {
             InitializeComponent();
@@ -96,6 +98,31 @@ namespace WindowsFormsApp1
                 btLogIn_Click(sender, e);
             }
             
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            try
+            {
+                maTK = Convert.ToInt32(txtUsername.Text);
+                if (tkBLL.GetTK(maTK) != null)
+                {
+                    fFogetPassword f = new fFogetPassword(maTK);
+                    f.TopLevel = false;
+                    this.pnLogIn.Controls.Add(f);
+                    f.BringToFront();
+                    f.Show();
+                }
+            else MessageBox.Show("Tài khoản không tồn tại", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Chưa nhập tên đăng nhập", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            
+            
+
         }
     }
 }

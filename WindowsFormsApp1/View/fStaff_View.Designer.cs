@@ -45,8 +45,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,6 +54,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnCTLuong = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -64,6 +65,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label10);
@@ -76,8 +79,6 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label3);
@@ -95,7 +96,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(190, 334);
+            this.checkBox1.Location = new System.Drawing.Point(190, 327);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(160, 27);
@@ -107,7 +108,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(37, 334);
+            this.label11.Location = new System.Drawing.Point(37, 330);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(106, 24);
@@ -118,7 +119,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(807, 292);
+            this.label10.Location = new System.Drawing.Point(801, 328);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(22, 24);
@@ -129,7 +130,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(501, 292);
+            this.label9.Location = new System.Drawing.Point(495, 328);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(74, 24);
@@ -139,7 +140,7 @@
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(617, 288);
+            this.textBox4.Location = new System.Drawing.Point(611, 324);
             this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(183, 30);
@@ -161,7 +162,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton4.Location = new System.Drawing.Point(35, 8);
+            this.radioButton4.Location = new System.Drawing.Point(30, 20);
             this.radioButton4.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(115, 27);
@@ -174,7 +175,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton3.Location = new System.Drawing.Point(168, 8);
+            this.radioButton3.Location = new System.Drawing.Point(163, 20);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(85, 27);
@@ -187,7 +188,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(617, 53);
+            this.groupBox1.Location = new System.Drawing.Point(621, 20);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -225,7 +226,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(506, 253);
+            this.label8.Location = new System.Drawing.Point(503, 262);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 24);
@@ -247,7 +248,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(503, 134);
+            this.label7.Location = new System.Drawing.Point(507, 101);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(42, 24);
@@ -257,7 +258,7 @@
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(617, 127);
+            this.textBox2.Location = new System.Drawing.Point(621, 94);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(227, 30);
@@ -267,38 +268,18 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(503, 79);
+            this.label6.Location = new System.Drawing.Point(507, 46);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 24);
             this.label6.TabIndex = 57;
             this.label6.Text = "Giới tính";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(37, 289);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 24);
-            this.label5.TabIndex = 56;
-            this.label5.Text = "Mật khẩu";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox6.Location = new System.Drawing.Point(190, 286);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(185, 30);
-            this.textBox6.TabIndex = 55;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(37, 247);
+            this.label4.Location = new System.Drawing.Point(37, 266);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(139, 24);
@@ -308,7 +289,7 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(190, 240);
+            this.textBox5.Location = new System.Drawing.Point(190, 259);
             this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(185, 30);
@@ -404,12 +385,43 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(332, 31);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(301, 29);
+            this.label5.TabIndex = 70;
+            this.label5.Text = "THÔNG TIN NHÂN VIÊN";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(505, 141);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(61, 24);
+            this.label14.TabIndex = 83;
+            this.label14.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Location = new System.Drawing.Point(621, 141);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(227, 30);
+            this.txtEmail.TabIndex = 84;
+            // 
             // fStaff_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnCTLuong);
             this.Controls.Add(this.panel1);
@@ -425,6 +437,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -447,8 +460,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label3;
@@ -457,5 +468,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private FontAwesome.Sharp.IconButton btnBack;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label14;
     }
 }

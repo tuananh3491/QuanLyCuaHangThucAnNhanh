@@ -57,7 +57,15 @@ namespace WindowsFormsApp1.View
             textBox4.Text = x.Luong.ToString();
             dateTimePicker1.Value = x.Ngay_sinh;
             textBox5.Text = x.Tai_khoan.Ten_TK;
-            textBox6.Text = x.Tai_khoan.Mat_khau;
+            if (x.Email != null)
+            {
+                txtEmail.Text = x.Email.ToString();
+            }
+            else
+            {
+                txtEmail.Text = "";
+            }
+            
             if(x.Gioi_tinh == true) radioButton1.Checked = true;
             else radioButton2.Checked = true;
             if (x.Tai_khoan.Loai_TK == true) radioButton4.Checked = true;

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View
 {
@@ -28,22 +29,16 @@ namespace WindowsFormsApp1.View
                 btnXem.Visible = false;
             }
         }
-        public void setGUI()
-        {
-            dataGridView1.DataSource = null;
-            nvBLL.ShowDGV(dataGridView1);
-        }
 
-        //private void fStaff_Load(object sender, EventArgs e)
-        //{
-        //    dataGridView1.DataSource = null;
-        //    nvBLL.ShowDGV(dataGridView1);
-        //}
 
         public void Load()
         {
-            dataGridView1.DataSource = null;
-            nvBLL.ShowDGV(dataGridView1);
+            List<Nhan_vien> l=new List<Nhan_vien>();
+            l = nvBLL.GetAllNV();
+            foreach(Nhan_vien v in l)
+            {
+                dataGridView1.Rows.Add(v.Ma_NV, v.Ten_NV, v.Ngay_sinh, v.Gioi_tinh == true ? "Nam" : "Nữ", v.SDT, v.Trang_thai == true ? "Còn làm" : "Nghỉ việc ",v.Email);
+            }
         }
         private void btnXem_Click(object sender, EventArgs e)
         {

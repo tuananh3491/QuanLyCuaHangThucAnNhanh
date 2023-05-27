@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DAL;
 using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1.View
@@ -40,8 +41,12 @@ namespace WindowsFormsApp1.View
         }
         private void fBill_Load(object sender, EventArgs e)
         {
-            dg.DataSource = null;
-            dg.DataSource = hdBLL.GetHD();
+            List<Hoa_don> l=new List<Hoa_don>();
+            l = hdBLL.GetHD();
+            foreach(Hoa_don p in l)
+            {
+                dg.Rows.Add(p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Khach_hang.Ten_KH, p.Ngay_mua, p.Tong_tien, p.Trang_thai == true ? "Đã thanh toán" : "Chưa thanh toán");
+            }
         }
 
         private void iconDone_Click(object sender, EventArgs e)
