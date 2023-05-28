@@ -42,9 +42,9 @@
             <PropertyRef Name="Ma_KH" />
           </Key>
           <Property Name="Ma_KH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ten_KH" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Diem_tich_luy" Type="int" Nullable="false" />
+          <Property Name="Ten_KH" Type="nvarchar(max)" />
+          <Property Name="SDT" Type="nchar" MaxLength="10" />
+          <Property Name="Diem_tich_luy" Type="int" />
         </EntityType>
         <EntityType Name="Ma_loai">
           <Key>
@@ -282,10 +282,10 @@
             <PropertyRef Name="Ma_KH" />
           </Key>
           <Property Name="Ma_KH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ten_KH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Ten_KH" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Hoa_don" Relationship="Self.FK_Hoa_don_Khach_hang" FromRole="Khach_hang" ToRole="Hoa_don" />
-          <Property Name="Diem_tich_luy" Type="Int32" Nullable="false" />
+          <Property Name="Diem_tich_luy" Type="Int32" />
         </EntityType>
         <EntityType Name="Ma_loai">
           <Key>

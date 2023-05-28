@@ -41,6 +41,7 @@
             this.btnAddPro = new FontAwesome.Sharp.IconButton();
             this.btnAddCategory = new FontAwesome.Sharp.IconButton();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbbLoai = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // pnChinhSua
@@ -79,7 +80,7 @@
             this.guna2Button7.ForeColor = System.Drawing.Color.Black;
             this.guna2Button7.Image = global::WindowsFormsApp1.Properties.Resources.SP_Combo;
             this.guna2Button7.ImageSize = new System.Drawing.Size(25, 25);
-            this.guna2Button7.Location = new System.Drawing.Point(563, 21);
+            this.guna2Button7.Location = new System.Drawing.Point(510, 21);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(107, 35);
             this.guna2Button7.TabIndex = 40;
@@ -98,7 +99,7 @@
             this.btnPizza.ForeColor = System.Drawing.Color.Black;
             this.btnPizza.Image = global::WindowsFormsApp1.Properties.Resources.SP_Pizza;
             this.btnPizza.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnPizza.Location = new System.Drawing.Point(89, 21);
+            this.btnPizza.Location = new System.Drawing.Point(36, 21);
             this.btnPizza.Name = "btnPizza";
             this.btnPizza.Size = new System.Drawing.Size(87, 35);
             this.btnPizza.TabIndex = 39;
@@ -117,7 +118,7 @@
             this.btnGa.ForeColor = System.Drawing.Color.Black;
             this.btnGa.Image = global::WindowsFormsApp1.Properties.Resources.SP_chicken;
             this.btnGa.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnGa.Location = new System.Drawing.Point(182, 21);
+            this.btnGa.Location = new System.Drawing.Point(129, 21);
             this.btnGa.Name = "btnGa";
             this.btnGa.Size = new System.Drawing.Size(87, 35);
             this.btnGa.TabIndex = 38;
@@ -136,7 +137,7 @@
             this.btnBurger.ForeColor = System.Drawing.Color.Black;
             this.btnBurger.Image = global::WindowsFormsApp1.Properties.Resources.SP_burger;
             this.btnBurger.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnBurger.Location = new System.Drawing.Point(288, 21);
+            this.btnBurger.Location = new System.Drawing.Point(235, 21);
             this.btnBurger.Name = "btnBurger";
             this.btnBurger.Size = new System.Drawing.Size(87, 35);
             this.btnBurger.TabIndex = 37;
@@ -155,7 +156,7 @@
             this.btnNuoc.ForeColor = System.Drawing.Color.Black;
             this.btnNuoc.Image = global::WindowsFormsApp1.Properties.Resources.SP_drink;
             this.btnNuoc.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnNuoc.Location = new System.Drawing.Point(381, 21);
+            this.btnNuoc.Location = new System.Drawing.Point(328, 21);
             this.btnNuoc.Name = "btnNuoc";
             this.btnNuoc.Size = new System.Drawing.Size(87, 35);
             this.btnNuoc.TabIndex = 36;
@@ -174,7 +175,7 @@
             this.btnKem.ForeColor = System.Drawing.Color.Black;
             this.btnKem.Image = global::WindowsFormsApp1.Properties.Resources.SP_Icream;
             this.btnKem.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnKem.Location = new System.Drawing.Point(474, 21);
+            this.btnKem.Location = new System.Drawing.Point(421, 21);
             this.btnKem.Name = "btnKem";
             this.btnKem.Size = new System.Drawing.Size(87, 35);
             this.btnKem.TabIndex = 35;
@@ -193,7 +194,7 @@
             this.btnKhac.ForeColor = System.Drawing.Color.Black;
             this.btnKhac.Image = global::WindowsFormsApp1.Properties.Resources.iconDots;
             this.btnKhac.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnKhac.Location = new System.Drawing.Point(676, 21);
+            this.btnKhac.Location = new System.Drawing.Point(623, 21);
             this.btnKhac.Name = "btnKhac";
             this.btnKhac.Size = new System.Drawing.Size(87, 35);
             this.btnKhac.TabIndex = 34;
@@ -225,7 +226,7 @@
             this.btnAddCategory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnAddCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddCategory.IconSize = 40;
-            this.btnAddCategory.Location = new System.Drawing.Point(769, 21);
+            this.btnAddCategory.Location = new System.Drawing.Point(864, 15);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(49, 41);
             this.btnAddCategory.TabIndex = 47;
@@ -259,12 +260,24 @@
             this.txtSearch.TabIndex = 5;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
+            // cbbLoai
+            // 
+            this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoai.FormattingEnabled = true;
+            this.cbbLoai.Location = new System.Drawing.Point(728, 26);
+            this.cbbLoai.Name = "cbbLoai";
+            this.cbbLoai.Size = new System.Drawing.Size(112, 30);
+            this.cbbLoai.TabIndex = 50;
+            this.cbbLoai.Text = "Xem tất cả";
+            this.cbbLoai.SelectedIndexChanged += new System.EventHandler(this.cbbLoai_SelectedIndexChanged);
+            // 
             // fProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
+            this.Controls.Add(this.cbbLoai);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnAddCategory);
             this.Controls.Add(this.btnAddPro);
@@ -298,5 +311,6 @@
         private FontAwesome.Sharp.IconButton btnAddPro;
         private FontAwesome.Sharp.IconButton btnAddCategory;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.ComboBox cbbLoai;
     }
 }

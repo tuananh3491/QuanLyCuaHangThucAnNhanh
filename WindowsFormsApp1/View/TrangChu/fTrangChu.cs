@@ -18,12 +18,27 @@ namespace WindowsFormsApp1.View.TrangChu
     {
 
         List<Chi_tiet_hoa_don> listCTHD = new List<Chi_tiet_hoa_don>();
-
+        Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();
         San_phamBLL spBLL = new San_phamBLL();
         double tongtien = 0;
         public fTrangChu()
         {
             InitializeComponent();
+            setCbb();
+        }
+        public void setCbb()
+        {
+            List<Ma_loai> list = maLoaiBLL.GetAllML();
+            foreach (Ma_loai item in list)
+            {
+                cbbLoai.Items.Add(item.Ten);
+            }
+        }
+        private void cbbLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maLoai;
+            maLoai = maLoaiBLL.GetIdCategory(((ComboBox)sender).Text);
+            openPanel(maLoaiBLL.GetML(maLoai).Ten);
         }
         private void AddList(Chi_tiet_hoa_don t)
         {
@@ -129,5 +144,6 @@ namespace WindowsFormsApp1.View.TrangChu
                 }
             }
         }
+
     }
 }

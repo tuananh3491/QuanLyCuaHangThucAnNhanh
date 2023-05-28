@@ -95,7 +95,7 @@ namespace WindowsFormsApp1.View.TrangChu
             // 
             // tbTien
             // 
-            this.tbTien.BackColor = System.Drawing.Color.White;
+            this.tbTien.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.tbTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbTien.Cursor = System.Windows.Forms.Cursors.Default;
             this.tbTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -137,10 +137,11 @@ namespace WindowsFormsApp1.View.TrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel4);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "panelMonAn";
-            this.Size = new System.Drawing.Size(261, 117);
+            this.Size = new System.Drawing.Size(259, 115);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMonAn)).EndInit();

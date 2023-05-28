@@ -32,11 +32,12 @@
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgvLuong = new System.Windows.Forms.DataGridView();
-            this.btnBack = new FontAwesome.Sharp.IconButton();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).BeginInit();
             this.SuspendLayout();
@@ -62,9 +63,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.txtMaNV);
-            this.panel1.Location = new System.Drawing.Point(21, 47);
+            this.panel1.Location = new System.Drawing.Point(21, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(885, 82);
+            this.panel1.Size = new System.Drawing.Size(885, 80);
             this.panel1.TabIndex = 19;
             // 
             // dgvLuong
@@ -79,31 +80,14 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvLuong.Location = new System.Drawing.Point(21, 123);
+            this.dgvLuong.Location = new System.Drawing.Point(21, 131);
             this.dgvLuong.Name = "dgvLuong";
             this.dgvLuong.ReadOnly = true;
             this.dgvLuong.RowHeadersWidth = 51;
             this.dgvLuong.RowTemplate.Height = 24;
             this.dgvLuong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLuong.Size = new System.Drawing.Size(885, 412);
+            this.dgvLuong.Size = new System.Drawing.Size(885, 404);
             this.dgvLuong.TabIndex = 20;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.btnBack.FlatAppearance.BorderSize = 0;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowDown;
-            this.btnBack.IconColor = System.Drawing.Color.Black;
-            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.IconSize = 30;
-            this.btnBack.Location = new System.Drawing.Point(12, 7);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Rotation = 90D;
-            this.btnBack.Size = new System.Drawing.Size(61, 39);
-            this.btnBack.TabIndex = 21;
-            this.btnBack.UseVisualStyleBackColor = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // Column1
             // 
@@ -133,12 +117,40 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.ArrowDown;
+            this.btnBack.IconColor = System.Drawing.Color.Black;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.IconSize = 30;
+            this.btnBack.Location = new System.Drawing.Point(12, 7);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Rotation = 90D;
+            this.btnBack.Size = new System.Drawing.Size(61, 39);
+            this.btnBack.TabIndex = 21;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(268, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(417, 32);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "CHI TIẾT LƯƠNG NHÂN VIÊN";
+            // 
             // fStaff_Salary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(930, 560);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dgvLuong);
             this.Controls.Add(this.panel1);
@@ -149,6 +161,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLuong)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -162,5 +175,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -112,5 +112,7 @@ namespace WindowsFormsApp1.View
 //                 MessageBox.Show("Dữ liệu nhập vào không hợp lệ.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 //             }
         }
+
+      
     }
 }

@@ -38,11 +38,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.ccbLoc = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDone = new FontAwesome.Sharp.IconButton();
             this.cbbThang = new System.Windows.Forms.ComboBox();
             this.lbThang = new System.Windows.Forms.Label();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnDone = new FontAwesome.Sharp.IconButton();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -154,6 +155,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.btnDone);
             this.panel2.Controls.Add(this.cbbThang);
             this.panel2.Controls.Add(this.lbThang);
@@ -166,6 +168,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(930, 67);
             this.panel2.TabIndex = 0;
+            // 
+            // btnDone
+            // 
+            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDone.IconSize = 40;
+            this.btnDone.Location = new System.Drawing.Point(844, 11);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(40, 46);
+            this.btnDone.TabIndex = 76;
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // cbbThang
             // 
@@ -218,19 +234,15 @@
             this.label4.TabIndex = 73;
             this.label4.Text = "Năm";
             // 
-            // btnDone
+            // label9
             // 
-            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
-            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDone.IconSize = 40;
-            this.btnDone.Location = new System.Drawing.Point(844, 11);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(40, 46);
-            this.btnDone.TabIndex = 76;
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(201, 19);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(330, 32);
+            this.label9.TabIndex = 77;
+            this.label9.Text = "THỐNG KÊ SẢN PHẨM";
             // 
             // fReport_Product
             // 
@@ -268,5 +280,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private FontAwesome.Sharp.IconButton btnDone;
+        private System.Windows.Forms.Label label9;
     }
 }
