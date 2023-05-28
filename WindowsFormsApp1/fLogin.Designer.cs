@@ -45,7 +45,7 @@ namespace WindowsFormsApp1
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnLogIn = new System.Windows.Forms.Panel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkQMK = new System.Windows.Forms.LinkLabel();
             this.txtPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.btCancel = new WindowsFormsApp1.CustomControl.VBButton();
@@ -231,7 +231,7 @@ namespace WindowsFormsApp1
             // 
             this.pnLogIn.BackColor = System.Drawing.Color.White;
             this.pnLogIn.Controls.Add(this.linkLabel2);
-            this.pnLogIn.Controls.Add(this.linkLabel1);
+            this.pnLogIn.Controls.Add(this.linkQMK);
             this.pnLogIn.Controls.Add(this.txtPassWord);
             this.pnLogIn.Controls.Add(this.txtUsername);
             this.pnLogIn.Controls.Add(this.btCancel);
@@ -256,17 +256,17 @@ namespace WindowsFormsApp1
             this.linkLabel2.Text = "Hiện mật khẩu";
             this.linkLabel2.Visible = false;
             // 
-            // linkLabel1
+            // linkQMK
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(61, 362);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(131, 20);
-            this.linkLabel1.TabIndex = 8;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Quên mật khẩu?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkQMK.AutoSize = true;
+            this.linkQMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkQMK.Location = new System.Drawing.Point(61, 362);
+            this.linkQMK.Name = "linkQMK";
+            this.linkQMK.Size = new System.Drawing.Size(131, 20);
+            this.linkQMK.TabIndex = 8;
+            this.linkQMK.TabStop = true;
+            this.linkQMK.Text = "Quên mật khẩu?";
+            this.linkQMK.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkQMK_LinkClicked);
             // 
             // txtPassWord
             // 
@@ -494,7 +494,7 @@ namespace WindowsFormsApp1
         private Guna.UI2.WinForms.Guna2TextBox txtPassWord;
         private PictureBox pictureBox1;
         private ErrorProvider errorProvider1;
-        private LinkLabel linkLabel1;
+        private LinkLabel linkQMK;
         private LinkLabel linkLabel2;
     }
 }

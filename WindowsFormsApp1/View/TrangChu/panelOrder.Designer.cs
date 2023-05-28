@@ -44,6 +44,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.lbLoai);
             this.panel1.Controls.Add(this.lbKichThuoc);
             this.panel1.Controls.Add(this.btnDelete);
@@ -180,10 +181,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "panelOrder";
-            this.Size = new System.Drawing.Size(348, 100);
+            this.Size = new System.Drawing.Size(346, 98);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbMonAn)).EndInit();

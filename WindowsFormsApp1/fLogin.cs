@@ -64,7 +64,6 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-
                     Tai_khoanBLL tkBLL = new Tai_khoanBLL();
                     if (tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
                     {
@@ -76,7 +75,7 @@ namespace WindowsFormsApp1
                     }
                     else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                catch (FormatException)
+                catch (FormatException)//chữ là không được
                 {
                     MessageBox.Show("Tên đăng nhập không phù hợp");
                     errorProvider1.SetError(txtUsername, "Tên đăng nhập không phù hợp");
@@ -100,9 +99,8 @@ namespace WindowsFormsApp1
             
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void linkQMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            
             try
             {
                 maTK = Convert.ToInt32(txtUsername.Text);

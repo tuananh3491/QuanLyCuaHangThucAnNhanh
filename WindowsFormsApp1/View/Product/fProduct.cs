@@ -24,6 +24,7 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
             PhanQuyen();
+            setCbb();
         }
         public void PhanQuyen()
         {
@@ -32,6 +33,21 @@ namespace WindowsFormsApp1.View
                 btnAddCategory.Visible = false;
                 btnAddPro.Visible = false;
             }
+        }
+        public void setCbb()
+        {
+            List<Ma_loai> list = maLoaiBLL.GetAllML();
+            foreach (Ma_loai item in list)
+            {
+                cbbLoai.Items.Add(item.Ten);
+            }
+        }
+        private void cbbLoai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int maLoai;
+            flpnMonAn.Controls.Clear();
+            maLoai = maLoaiBLL.GetIdCategory(((ComboBox)sender).Text);
+            ShowMonAn(maLoai);
         }
         private void btnAddCate_Click(object sender, EventArgs e)
         {
@@ -46,16 +62,35 @@ namespace WindowsFormsApp1.View
 
         private void btn_Click(object sender, EventArgs e)
         {
+            //flpnMonAn.Controls.Clear();
+            //int idType;
+            //idType = maLoaiBLL.GetIdCategory(((Guna2Button)sender).Text);
+            //List<San_pham> listSP = sanPhamBLL.GetProOfType(idType);
+
+            //foreach (San_pham sp in listSP)
+            //{
+            //    pnProduct p = new pnProduct(sp.Ma_SP);
+            //    flpnMonAn.Controls.Add(p);
+            //}
+            cbbLoai.SelectedItem = null;
+            int maLoai;
             flpnMonAn.Controls.Clear();
-            int idType;
-            idType = maLoaiBLL.GetIdCategory(((Guna2Button)sender).Text);
-            List<San_pham> listSP = sanPhamBLL.GetProOfType(idType);
+            maLoai = maLoaiBLL.GetIdCategory(((Guna2Button)sender).Text);
+            ShowMonAn(maLoai);
+        }
+        public void ShowMonAn(int maLoai)
+        {
+            List<San_pham> listSP = sanPhamBLL.GetProOfType(maLoai);
 
             foreach (San_pham sp in listSP)
             {
                 pnProduct p = new pnProduct(sp.Ma_SP);
                 flpnMonAn.Controls.Add(p);
             }
+
+            //pnCategory_Update p1 = new pnCategory_Update(idType);
+            //((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Clear();
+            //((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Add(p1);
         }
 
         private void btnAddPro_Click(object sender, EventArgs e)
@@ -66,6 +101,7 @@ namespace WindowsFormsApp1.View
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
             f.Show();
             this.Dispose();
+            setCbb();
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)

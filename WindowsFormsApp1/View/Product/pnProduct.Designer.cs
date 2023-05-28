@@ -43,7 +43,7 @@
             // 
             // pnPro
             // 
-            this.pnPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.pnPro.BackColor = System.Drawing.Color.Transparent;
             this.pnPro.Controls.Add(this.checkCon);
             this.pnPro.Controls.Add(this.btnEdit);
             this.pnPro.Controls.Add(this.txtName);
@@ -66,10 +66,11 @@
             this.checkCon.Size = new System.Drawing.Size(18, 17);
             this.checkCon.TabIndex = 25;
             this.checkCon.UseVisualStyleBackColor = true;
+            this.checkCon.Visible = false;
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.White;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.Pen;
             this.btnEdit.IconColor = System.Drawing.Color.Black;
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
@@ -83,6 +84,7 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(46, 126);
@@ -149,9 +151,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.pnPro);
             this.Name = "pnProduct";
-            this.Size = new System.Drawing.Size(237, 265);
+            this.Size = new System.Drawing.Size(235, 263);
             this.pnPro.ResumeLayout(false);
             this.pnPro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();

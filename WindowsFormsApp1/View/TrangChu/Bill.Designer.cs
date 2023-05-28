@@ -30,18 +30,22 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblKH = new System.Windows.Forms.Label();
+            this.lblSDT = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtIdBill = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkSD_Diem = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtDiemTL = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblDTL = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTime = new System.Windows.Forms.TextBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
             this.txtPhone = new System.Windows.Forms.TextBox();
@@ -50,10 +54,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.btnThanhToan = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
@@ -78,25 +78,25 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Nhân viên:";
             // 
-            // label3
+            // lblKH
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(427, 89);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 22);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Khách hàng:";
+            this.lblKH.AutoSize = true;
+            this.lblKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblKH.Location = new System.Drawing.Point(427, 89);
+            this.lblKH.Name = "lblKH";
+            this.lblKH.Size = new System.Drawing.Size(122, 22);
+            this.lblKH.TabIndex = 2;
+            this.lblKH.Text = "Khách hàng:";
             // 
-            // label4
+            // lblSDT
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(427, 33);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 22);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Số điện thoại:";
+            this.lblSDT.AutoSize = true;
+            this.lblSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSDT.Location = new System.Drawing.Point(427, 33);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(134, 22);
+            this.lblSDT.TabIndex = 3;
+            this.lblSDT.Text = "Số điện thoại:";
             // 
             // label6
             // 
@@ -126,7 +126,7 @@
             this.panel1.Controls.Add(this.chkSD_Diem);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtDiemTL);
-            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.lblDTL);
             this.panel1.Controls.Add(this.txtTotal);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dgv);
@@ -139,8 +139,8 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtIdBill);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblKH);
+            this.panel1.Controls.Add(this.lblSDT);
             this.panel1.Location = new System.Drawing.Point(53, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -182,15 +182,15 @@
             this.txtDiemTL.Size = new System.Drawing.Size(183, 25);
             this.txtDiemTL.TabIndex = 16;
             // 
-            // label8
+            // lblDTL
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(427, 146);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(131, 22);
-            this.label8.TabIndex = 15;
-            this.label8.Text = "Điểm tích lũy:";
+            this.lblDTL.AutoSize = true;
+            this.lblDTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDTL.Location = new System.Drawing.Point(427, 146);
+            this.lblDTL.Name = "lblDTL";
+            this.lblDTL.Size = new System.Drawing.Size(131, 22);
+            this.lblDTL.TabIndex = 15;
+            this.lblDTL.Text = "Điểm tích lũy:";
             // 
             // txtTotal
             // 
@@ -234,6 +234,34 @@
             this.dgv.RowTemplate.Height = 24;
             this.dgv.Size = new System.Drawing.Size(776, 172);
             this.dgv.TabIndex = 12;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Tên sản phẩm";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Kích cỡ";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Số lượng ";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Đơn giá";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // txtTime
             // 
@@ -351,34 +379,6 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Tên sản phẩm";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Kích cỡ";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Số lượng ";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Đơn giá";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -405,8 +405,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblKH;
+        private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtIdBill;
         private System.Windows.Forms.Panel panel1;
@@ -422,7 +422,7 @@
         private FontAwesome.Sharp.IconButton btnBack;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiemTL;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblDTL;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox chkSD_Diem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
