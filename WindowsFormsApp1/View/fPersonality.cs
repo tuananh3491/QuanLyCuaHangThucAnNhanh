@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
@@ -29,6 +30,21 @@ namespace WindowsFormsApp1.View
             if (!(bool)Const.taiKhoan.Loai_TK)
             {
                 btnCTLuong.Visible = false;
+            }
+        }
+        public bool CheckEmail()
+        {
+            string email = txtEmail.Text;
+            Regex regex = new Regex(@"^[a-zA-Z0-9._%+-]+@gmail\.com$");
+
+            if (regex.IsMatch(email))
+            {
+                return true;
+            }
+            else
+            {
+                MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
             }
         }
         public void Load()
@@ -62,32 +78,35 @@ namespace WindowsFormsApp1.View
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            try
+            if (CheckEmail())
             {
-                if (txtName.Text == "" || txtTenTK.Text == "" || txtPhone.Text == "") throw new ArgumentNullException();
-                int.Parse(txtPhone.Text);
-                txtID.Enabled = false;
-                Nhan_vien nv = nvBLL.GetNVByMa(maNV);
-                nv.Ten_NV = txtName.Text.ToString();
-                nv.Ngay_sinh = dateTimePicker1.Value;
-                nv.Gioi_tinh = rdMale.Checked;
-                nv.SDT = txtPhone.Text.ToString();
-                nv.Trang_thai = !(chStatus.Checked);
-                nv.Email = txtEmail.Text;
-                Tai_khoan tk = tkBLL.GetTK(maNV);
-                nv.Tai_khoan.Ten_TK = txtTenTK.Text.ToString();
-                nv.Tai_khoan.Loai_TK = rdStaff.Checked;
-                nvBLL.SaveNV(nv);
-                tkBLL.SaveTK(tk);
-                MessageBox.Show("Đã lưu thay đổi", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-            }
-            catch (ArgumentNullException)
-            {
-                MessageBox.Show("Tên nhân viên, tên tài khoản, SĐT không thể để trống.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            catch (FormatException)
-            {
-                MessageBox.Show("SĐT không thể để trống.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                try
+                {
+                    if (txtName.Text == "" || txtTenTK.Text == "" || txtPhone.Text == "") throw new ArgumentNullException();
+                    int.Parse(txtPhone.Text);
+                    txtID.Enabled = false;
+                    Nhan_vien nv = nvBLL.GetNVByMa(maNV);
+                    nv.Ten_NV = txtName.Text.ToString();
+                    nv.Ngay_sinh = dateTimePicker1.Value;
+                    nv.Gioi_tinh = rdMale.Checked;
+                    nv.SDT = txtPhone.Text.ToString();
+                    nv.Trang_thai = !(chStatus.Checked);
+                    nv.Email = txtEmail.Text;
+                    Tai_khoan tk = tkBLL.GetTK(maNV);
+                    nv.Tai_khoan.Ten_TK = txtTenTK.Text.ToString();
+                    nv.Tai_khoan.Loai_TK = rdStaff.Checked;
+                    nvBLL.SaveNV(nv);
+                    tkBLL.SaveTK(tk);
+                    MessageBox.Show("Đã lưu thay đổi", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                }
+                catch (ArgumentNullException)
+                {
+                    MessageBox.Show("Tên nhân viên, tên tài khoản, SĐT không thể để trống.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("SĐT không thể để trống.", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
             }
         }
 

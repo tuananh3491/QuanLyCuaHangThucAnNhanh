@@ -56,6 +56,8 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.pn = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.hidePass = new System.Windows.Forms.PictureBox();
+            this.showPass = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -69,6 +71,8 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
             this.pn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -230,6 +234,7 @@ namespace WindowsFormsApp1
             // pnLogIn
             // 
             this.pnLogIn.BackColor = System.Drawing.Color.White;
+            this.pnLogIn.Controls.Add(this.hidePass);
             this.pnLogIn.Controls.Add(this.linkLabel2);
             this.pnLogIn.Controls.Add(this.linkQMK);
             this.pnLogIn.Controls.Add(this.txtPassWord);
@@ -239,6 +244,7 @@ namespace WindowsFormsApp1
             this.pnLogIn.Controls.Add(this.iconPictureBox2);
             this.pnLogIn.Controls.Add(this.iconPictureBox1);
             this.pnLogIn.Controls.Add(this.LOGIN);
+            this.pnLogIn.Controls.Add(this.showPass);
             this.pnLogIn.Location = new System.Drawing.Point(20, 151);
             this.pnLogIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnLogIn.Name = "pnLogIn";
@@ -285,7 +291,7 @@ namespace WindowsFormsApp1
             this.txtPassWord.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassWord.ForeColor = System.Drawing.Color.Black;
             this.txtPassWord.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassWord.Location = new System.Drawing.Point(127, 202);
+            this.txtPassWord.Location = new System.Drawing.Point(93, 201);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '*';
@@ -313,7 +319,7 @@ namespace WindowsFormsApp1
             this.txtUsername.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(127, 140);
+            this.txtUsername.Location = new System.Drawing.Point(93, 139);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -373,7 +379,7 @@ namespace WindowsFormsApp1
             this.iconPictureBox2.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox2.IconSize = 38;
-            this.iconPictureBox2.Location = new System.Drawing.Point(67, 143);
+            this.iconPictureBox2.Location = new System.Drawing.Point(33, 142);
             this.iconPictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconPictureBox2.Name = "iconPictureBox2";
             this.iconPictureBox2.Size = new System.Drawing.Size(38, 38);
@@ -390,7 +396,7 @@ namespace WindowsFormsApp1
             this.iconPictureBox1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox1.IconSize = 38;
-            this.iconPictureBox1.Location = new System.Drawing.Point(67, 206);
+            this.iconPictureBox1.Location = new System.Drawing.Point(33, 205);
             this.iconPictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.Size = new System.Drawing.Size(38, 38);
@@ -437,6 +443,30 @@ namespace WindowsFormsApp1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // hidePass
+            // 
+            this.hidePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.hidePass.Image = ((System.Drawing.Image)(resources.GetObject("hidePass.Image")));
+            this.hidePass.Location = new System.Drawing.Point(382, 213);
+            this.hidePass.Name = "hidePass";
+            this.hidePass.Size = new System.Drawing.Size(39, 30);
+            this.hidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hidePass.TabIndex = 10;
+            this.hidePass.TabStop = false;
+            this.hidePass.Click += new System.EventHandler(this.hidePass_Click);
+            // 
+            // showPass
+            // 
+            this.showPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.showPass.Image = ((System.Drawing.Image)(resources.GetObject("showPass.Image")));
+            this.showPass.Location = new System.Drawing.Point(382, 213);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(39, 30);
+            this.showPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.showPass.TabIndex = 11;
+            this.showPass.TabStop = false;
+            this.showPass.Click += new System.EventHandler(this.showPass_Click);
+            // 
             // fLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -466,6 +496,8 @@ namespace WindowsFormsApp1
             this.pn.ResumeLayout(false);
             this.pn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -496,6 +528,8 @@ namespace WindowsFormsApp1
         private ErrorProvider errorProvider1;
         private LinkLabel linkQMK;
         private LinkLabel linkLabel2;
+        private PictureBox showPass;
+        private PictureBox hidePass;
     }
 }
 

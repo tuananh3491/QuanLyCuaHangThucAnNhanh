@@ -31,8 +31,17 @@ namespace WindowsFormsApp1.View
             hd = hdBLL.GetHDByMaHD(maHD);
             txtNV.Text = hd.Tai_khoan.Nhan_vien.Ten_NV.ToString();
             txtMa.Text = hd.Ma_HD.ToString();
-            txtKH.Text = hd.Khach_hang.Ten_KH.ToString();
-            txtSDT.Text = hd.Khach_hang.SDT.ToString();
+            if(hd.Khach_hang.Ten_KH == null)
+            {
+                txtKH.Visible = false;
+                txtSDT.Visible = false;
+                lblKH.Visible = false;
+                lblSDT.Visible = false;
+            }
+            else {
+                txtKH.Text = hd.Khach_hang.Ten_KH.ToString();
+                txtSDT.Text = hd.Khach_hang.SDT.ToString();
+            }
             txtNgay.Text = hd.Ngay_mua.ToString();
             List<Chi_tiet_hoa_don> list = new List<Chi_tiet_hoa_don>();
             list = cthdBLL.GetAllCT(maHD);

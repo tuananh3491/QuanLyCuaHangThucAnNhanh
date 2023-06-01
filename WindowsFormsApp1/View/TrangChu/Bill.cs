@@ -22,7 +22,7 @@ namespace WindowsFormsApp1.View.TrangChu
         San_phamBLL spBLL = new San_phamBLL();
         Khach_hangBLL khBLL = new Khach_hangBLL();  
         private List<Chi_tiet_hoa_don> listCTHD;
-        private double tongTien;
+        private double tongTien;//tong tien o order
      
         public Bill()
         {
@@ -42,7 +42,49 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             if (txtCustomer.Text == "" || txtPhone.Text == "")
             {
-                MessageBox.Show("Lỗi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                Khach_hang kh = new Khach_hang();
+                khBLL.SaveKH(kh);
+
+                Hoa_don hd = new Hoa_don()
+                {
+                    Ma_NV = Const.taiKhoan.Ma_TK,
+                    Trang_thai = true,
+                    Ngay_mua = Convert.ToDateTime(txtTime.Text.ToString()),
+                    Ma_KH = kh.Ma_KH,
+                    Tong_tien = tongTien,
+                };
+
+                hdBLL.SaveHD(hd);
+                txtIdBill.Text = hd.Ma_KH.ToString();
+
+                foreach (Chi_tiet_hoa_don ct in listCTHD)
+                {
+                    Chi_tiet_hoa_don cthd = new Chi_tiet_hoa_don()
+                    {
+                        Ma_HD = hd.Ma_HD,
+                        Ma_SP = ct.Ma_SP,
+                        Kich_thuoc = ct.Kich_thuoc,
+                        Soluong_SP = ct.Soluong_SP,
+                        Gia = ct.Gia,
+                    };
+                    cthdBLL.SaveCTHD(cthd);
+                }
+                //if (listCTHD.Count > 1)
+                //{
+                //    cthdBLL.AddList(listCTHD);
+                //}
+                //else if(listCTHD.Count == 1)
+                //{
+                //    cthdBLL.SaveCTHD(listCTHD.FirstOrDefault());
+                //}
+
+
+                MessageBox.Show("Đã thanh toán", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD);
+                f.TopLevel = false;
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
+                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
+                f.Show();
             }
             else
             {

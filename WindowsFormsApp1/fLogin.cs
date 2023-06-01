@@ -122,5 +122,23 @@ namespace WindowsFormsApp1
             
 
         }
+
+        private void hidePass_Click(object sender, EventArgs e)
+        {
+            if(txtPassWord.PasswordChar == '*')
+            {
+                showPass.BringToFront();
+                txtPassWord.PasswordChar = '\0';//doi ve ki tu thuong
+            }
+        }
+
+        private void showPass_Click(object sender, EventArgs e)
+        {
+            if (txtPassWord.PasswordChar == '\0')
+            {
+                hidePass.BringToFront();
+                txtPassWord.PasswordChar = '*';
+            }
+        }
     }
 }

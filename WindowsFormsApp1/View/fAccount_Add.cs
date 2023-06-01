@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.CustomControl;
 using WindowsFormsApp1.DAL;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApp1.View
 {
@@ -25,7 +26,20 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
             
         }
+        public bool CheckEmail()
+        {
+            string email = txtEmail.Text; 
+            Regex regex = new Regex(@"^[a-zA-Z0-9._%+-]+@gmail\.com$");
 
+            if (regex.IsMatch(email))
+            {
+                return true;
+            }
+            else {
+                MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+        }
         private void btnBack_Click(object sender, EventArgs e)
         {
             fAccount f = new fAccount();
@@ -37,45 +51,49 @@ namespace WindowsFormsApp1.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            if(CheckEmail())
             {
-                if (txtTenNV.Text == "") throw new SqlNullValueException();
-                int.Parse(txtSDT.Text);
-                int x = nvBLL.AddNV(new Nhan_vien
+                try
                 {
-                    SDT = txtSDT.Text,
-                    Ten_NV = txtTenNV.Text,
-                    Gioi_tinh = (rdoNam.Checked),
-                    Ngay_sinh = dtmNgaySinh.Value,
-                    Trang_thai = (check.Checked),
-                    Luong = Convert.ToInt32(txtLuong.Text),
-                    Email = txtEmail.Text,
-                });
-                txtLuong.Visible = false;
-                lblLuong.Visible = false;
-                string salt = BCrypt.Net.BCrypt.GenerateSalt();
-                string hash = BCrypt.Net.BCrypt.HashPassword(txtMK.Text, salt);
-                tkBLL.SaveTK(new Tai_khoan
+                    if (txtTenNV.Text == "") throw new SqlNullValueException();
+                    int.Parse(txtSDT.Text);
+                    int x = nvBLL.AddNV(new Nhan_vien
+                    {
+                        SDT = txtSDT.Text,
+                        Ten_NV = txtTenNV.Text,
+                        Gioi_tinh = (rdoNam.Checked),
+                        Ngay_sinh = dtmNgaySinh.Value,
+                        Trang_thai = (check.Checked),
+                        Luong = Convert.ToInt32(txtLuong.Text),
+                        Email = txtEmail.Text,
+                    });
+                    txtLuong.Visible = false;
+                    lblLuong.Visible = false;
+                    string salt = BCrypt.Net.BCrypt.GenerateSalt();
+                    string hash = BCrypt.Net.BCrypt.HashPassword(txtMK.Text, salt);
+                    tkBLL.SaveTK(new Tai_khoan
+                    {
+                        Ma_TK = x,
+                        Ten_TK = txtTenTK.Text,
+                        Loai_TK = check.Checked,
+                        Mat_khau = hash
+                    });
+                    MessageBox.Show("Thêm nhân viên thành công.");
+                }
+                catch (DbEntityValidationException)
                 {
-                    Ma_TK = x,
-                    Ten_TK = txtTenTK.Text,
-                    Loai_TK = check.Checked,
-                    Mat_khau=hash
-                });
-                MessageBox.Show("Thêm nhân viên thành công.");
+                    MessageBox.Show("SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("SỐ ĐIỆN THOẠI HOẶC LƯƠNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (SqlNullValueException)
+                {
+                    MessageBox.Show("TÊN RỖNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch (DbEntityValidationException)
-            {
-                MessageBox.Show("SỐ ĐIỆN THOẠI KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch(FormatException)
-            {
-                MessageBox.Show("SỐ ĐIỆN THOẠI HOẶC LƯƠNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (SqlNullValueException)
-            {
-                MessageBox.Show("TÊN RỖNG KHÔNG HỢP LỆ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+           
         }
 
         private void Check_Changed(object sender, EventArgs e)
@@ -91,5 +109,6 @@ namespace WindowsFormsApp1.View
                 txtLuong.Visible = false;
             }
         }
+
     }   
 }
