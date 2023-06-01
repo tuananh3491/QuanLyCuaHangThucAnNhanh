@@ -43,9 +43,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblKH = new System.Windows.Forms.Label();
             this.txtKH = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblSDT = new System.Windows.Forms.Label();
             this.txtNV = new System.Windows.Forms.TextBox();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
@@ -87,9 +87,9 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtSDT);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblKH);
             this.panel1.Controls.Add(this.txtKH);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblSDT);
             this.panel1.Controls.Add(this.txtNV);
             this.panel1.Controls.Add(this.txtMa);
             this.panel1.Location = new System.Drawing.Point(12, 47);
@@ -238,16 +238,16 @@
             this.txtSDT.Size = new System.Drawing.Size(213, 25);
             this.txtSDT.TabIndex = 10;
             // 
-            // label2
+            // lblKH
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(462, 113);
-            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Khách hàng:";
+            this.lblKH.AutoSize = true;
+            this.lblKH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblKH.Location = new System.Drawing.Point(462, 113);
+            this.lblKH.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblKH.Name = "lblKH";
+            this.lblKH.Size = new System.Drawing.Size(130, 24);
+            this.lblKH.TabIndex = 2;
+            this.lblKH.Text = "Khách hàng:";
             // 
             // txtKH
             // 
@@ -262,16 +262,16 @@
             this.txtKH.Size = new System.Drawing.Size(213, 25);
             this.txtKH.TabIndex = 9;
             // 
-            // label3
+            // lblSDT
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(462, 71);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 24);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Số điện thoại:";
+            this.lblSDT.AutoSize = true;
+            this.lblSDT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSDT.Location = new System.Drawing.Point(462, 71);
+            this.lblSDT.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(141, 24);
+            this.lblSDT.TabIndex = 3;
+            this.lblSDT.Text = "Số điện thoại:";
             // 
             // txtNV
             // 
@@ -353,9 +353,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtSDT;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblKH;
         private System.Windows.Forms.TextBox txtKH;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.TextBox txtNV;
         private System.Windows.Forms.TextBox txtMa;
         private System.Windows.Forms.Label label5;

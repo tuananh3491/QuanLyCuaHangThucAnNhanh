@@ -38,8 +38,8 @@
             this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblKH = new System.Windows.Forms.Label();
+            this.lblSDT = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -152,23 +152,23 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Xin chào tạm biệt và hẹn gặp lại !";
             // 
-            // label8
+            // lblKH
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(20, 188);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 16);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Khách hàng:";
+            this.lblKH.AutoSize = true;
+            this.lblKH.Location = new System.Drawing.Point(20, 188);
+            this.lblKH.Name = "lblKH";
+            this.lblKH.Size = new System.Drawing.Size(80, 16);
+            this.lblKH.TabIndex = 7;
+            this.lblKH.Text = "Khách hàng:";
             // 
-            // label9
+            // lblSDT
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(304, 188);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 16);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "SĐT:";
+            this.lblSDT.AutoSize = true;
+            this.lblSDT.Location = new System.Drawing.Point(304, 188);
+            this.lblSDT.Name = "lblSDT";
+            this.lblSDT.Size = new System.Drawing.Size(37, 16);
+            this.lblSDT.TabIndex = 8;
+            this.lblSDT.Text = "SĐT:";
             // 
             // label12
             // 
@@ -278,8 +278,8 @@
             this.panel1.Controls.Add(this.txtTongTien);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.lblKH);
+            this.panel1.Controls.Add(this.lblSDT);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label13);
@@ -407,8 +407,8 @@
         private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblKH;
+        private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label13;
