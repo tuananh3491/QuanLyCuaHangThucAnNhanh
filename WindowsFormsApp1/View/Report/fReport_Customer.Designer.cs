@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnDone = new FontAwesome.Sharp.IconButton();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnBieuDo = new WindowsFormsApp1.CustomControl.VBButton();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(930, 67);
             this.panel2.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(294, 17);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(372, 32);
+            this.label9.TabIndex = 72;
+            this.label9.Text = "THỐNG KÊ KHÁCH HÀNG";
             // 
             // btnDone
             // 
@@ -77,7 +87,7 @@
             // 
             this.cbbNam.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbNam.FormattingEnabled = true;
-            this.cbbNam.Location = new System.Drawing.Point(729, 15);
+            this.cbbNam.Location = new System.Drawing.Point(751, 19);
             this.cbbNam.Name = "cbbNam";
             this.cbbNam.Size = new System.Drawing.Size(79, 31);
             this.cbbNam.TabIndex = 70;
@@ -86,7 +96,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(663, 20);
+            this.label4.Location = new System.Drawing.Point(698, 24);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 71;
@@ -188,16 +198,6 @@
             this.btnBieuDo.TextColor = System.Drawing.Color.White;
             this.btnBieuDo.UseVisualStyleBackColor = false;
             this.btnBieuDo.Click += new System.EventHandler(this.btnBieuDo_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(294, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(372, 32);
-            this.label9.TabIndex = 72;
-            this.label9.Text = "THỐNG KÊ KHÁCH HÀNG";
             // 
             // fReport_Customer
             // 

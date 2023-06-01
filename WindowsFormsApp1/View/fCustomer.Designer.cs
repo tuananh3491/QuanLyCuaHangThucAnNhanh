@@ -42,6 +42,8 @@
             // 
             // dataGridView
             // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
             this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -53,6 +55,7 @@
             this.dataGridView.Location = new System.Drawing.Point(23, 66);
             this.dataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 24;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -65,6 +68,7 @@
             this.column1.HeaderText = "Mã khách hàng";
             this.column1.MinimumWidth = 6;
             this.column1.Name = "column1";
+            this.column1.ReadOnly = true;
             // 
             // column2
             // 
@@ -72,6 +76,7 @@
             this.column2.HeaderText = "Tên khách hàng";
             this.column2.MinimumWidth = 6;
             this.column2.Name = "column2";
+            this.column2.ReadOnly = true;
             // 
             // column3
             // 
@@ -79,6 +84,7 @@
             this.column3.HeaderText = "Số điện thoại";
             this.column3.MinimumWidth = 6;
             this.column3.Name = "column3";
+            this.column3.ReadOnly = true;
             // 
             // Column4
             // 
@@ -86,6 +92,7 @@
             this.Column4.HeaderText = "Điểm tích lũy";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // btnViewHtr
             // 
@@ -154,7 +161,6 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(205, 36);
             this.txtSearch.TabIndex = 4;
-
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // label1

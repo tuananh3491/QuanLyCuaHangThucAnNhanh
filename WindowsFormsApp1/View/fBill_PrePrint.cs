@@ -46,13 +46,14 @@ namespace WindowsFormsApp1.View
             List<Chi_tiet_hoa_don> list = new List<Chi_tiet_hoa_don>();
             list = cthdBLL.GetAllCT(maHD);
             txtThanhTien.Text = hd.Tong_tien.ToString();
+            txtThanhTien.Text = string.Format("{0:#,##0} đ", hd.Tong_tien).Replace(",", ".");
             foreach (Chi_tiet_hoa_don l in list)
             {
-                dgvChitietHD.Rows.Add(l.San_pham.Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(), l.Gia.ToString());
+                dgvChitietHD.Rows.Add(l.San_pham.Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(), l.Gia.ToString("#,##0 đ").Replace(",", "."));
                 tong += l.Soluong_SP * l.Gia;
             }
-            txtTongTien.Text = tong.ToString();
-            txtGiamGia.Text = (tong - hd.Tong_tien).ToString();
+            txtTongTien.Text = string.Format("{0:#,##0} đ", tong).Replace(",", ".");
+            txtGiamGia.Text = string.Format("{0:#,##0} đ", (tong - hd.Tong_tien)).Replace(",", ".");
 
         }
 

@@ -30,15 +30,17 @@ namespace WindowsFormsApp1.View
             //showDGV
             dgvLuong.Rows.Clear();
             DateTime time = DateTime.Now;
+            int luong;
             
             foreach (int nam in phanCongBLL.GetAllNamPC())
             {
                 for (int thang = 1; thang < 13; thang++)
                 {
                     double soGio = phanCongBLL.GetAllTime(maNV, thang, nam);
-                    if (soGio > 0)
+                    if (soGio > 0 && nvBLL.GetNVByMa(maNV).Luong != null)
                     {
-                        dgvLuong.Rows.Add(thang + " - " + nam, soGio, nvBLL.GetNVByMa(maNV).Luong, soGio * nvBLL.GetNVByMa(maNV).Luong);
+                        luong = (int)nvBLL.GetNVByMa(maNV).Luong;
+                        dgvLuong.Rows.Add(thang + " - " + nam, soGio, luong.ToString("#,##0 đ").Replace(",", "."), (soGio*luong).ToString("#,##0 đ").Replace(",", "."));
                     }
                 }
             }

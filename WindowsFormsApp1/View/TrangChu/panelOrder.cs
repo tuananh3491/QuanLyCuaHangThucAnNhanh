@@ -48,7 +48,7 @@ namespace WindowsFormsApp1.View.TrangChu
             pcbMonAn.BackgroundImage = Image.FromStream(new MemoryStream(san_Pham.Hinh_anh));
             lbTenMonAn.Text = san_Pham.Ten_SP;
             lbLoai.Text = KichCo;
-            tbTien.Text = gia.ToString();
+            txtTien.Text = string.Format("{0:#,##0} đ", gia).Replace(",", ".");
             tbSoLuong.Text = Soluongsp.ToString();
         }
 

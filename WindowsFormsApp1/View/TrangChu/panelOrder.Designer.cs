@@ -35,7 +35,7 @@
             this.tbSoLuong = new System.Windows.Forms.TextBox();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.btnSub = new FontAwesome.Sharp.IconButton();
-            this.tbTien = new System.Windows.Forms.TextBox();
+            this.txtTien = new System.Windows.Forms.TextBox();
             this.lbTenMonAn = new System.Windows.Forms.Label();
             this.pcbMonAn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
@@ -51,7 +51,7 @@
             this.panel1.Controls.Add(this.tbSoLuong);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnSub);
-            this.panel1.Controls.Add(this.tbTien);
+            this.panel1.Controls.Add(this.txtTien);
             this.panel1.Controls.Add(this.lbTenMonAn);
             this.panel1.Controls.Add(this.pcbMonAn);
             this.panel1.Location = new System.Drawing.Point(2, 4);
@@ -141,23 +141,23 @@
             this.btnSub.UseVisualStyleBackColor = true;
             this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
-            // tbTien
+            // txtTien
             // 
-            this.tbTien.BackColor = System.Drawing.Color.White;
-            this.tbTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTien.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
-            this.tbTien.Location = new System.Drawing.Point(99, 60);
-            this.tbTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbTien.Multiline = true;
-            this.tbTien.Name = "tbTien";
-            this.tbTien.ReadOnly = true;
-            this.tbTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbTien.Size = new System.Drawing.Size(93, 22);
-            this.tbTien.TabIndex = 4;
-            this.tbTien.Text = "0đ";
-            this.tbTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTien.BackColor = System.Drawing.Color.White;
+            this.txtTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTien.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
+            this.txtTien.Location = new System.Drawing.Point(99, 60);
+            this.txtTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTien.Multiline = true;
+            this.txtTien.Name = "txtTien";
+            this.txtTien.ReadOnly = true;
+            this.txtTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTien.Size = new System.Drawing.Size(93, 22);
+            this.txtTien.TabIndex = 4;
+            this.txtTien.Text = "0đ";
+            this.txtTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // lbTenMonAn
             // 
@@ -199,7 +199,7 @@
         private System.Windows.Forms.PictureBox pcbMonAn;
         private System.Windows.Forms.Label lbTenMonAn;
         private FontAwesome.Sharp.IconButton btnSub;
-        private System.Windows.Forms.TextBox tbTien;
+        private System.Windows.Forms.TextBox txtTien;
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.TextBox tbSoLuong;
         private FontAwesome.Sharp.IconButton btnDelete;

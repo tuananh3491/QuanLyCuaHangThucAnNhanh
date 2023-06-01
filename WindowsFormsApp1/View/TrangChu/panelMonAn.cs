@@ -36,7 +36,7 @@ namespace WindowsFormsApp1.View.TrangChu
             pcbMonAn.BackgroundImageLayout = ImageLayout.Stretch;
             cbbSize.SelectedIndex = 0;
             lbTenMonAn.Text = sp.Ten_SP;
-            tbTien.Text = sp.Don_gia.ToString() + "đ";
+            txtTien.Text = string.Format("{0:#,##0} đ", sp.Don_gia).Replace(",", ".");
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -71,18 +71,18 @@ namespace WindowsFormsApp1.View.TrangChu
 
             if (cbbSize.Text == "M")
             {
-                tbTien.Text = gia_M.ToString() + "đ";
+                txtTien.Text = string.Format("{0:#,##0} đ", gia_M).Replace(",", ".");
                 gia = gia_M;
 
             }
             else if (cbbSize.Text == "L")
             {
-                tbTien.Text = gia_L.ToString() + "đ";
+                txtTien.Text = string.Format("{0:#,##0} đ", gia_L).Replace(",", ".");
                 gia = gia_L;
             }
             else
             {
-                tbTien.Text = gia.ToString() + "đ";
+                txtTien.Text = string.Format("{0:#,##0} đ", gia).Replace(",", ".");
             }
         }
 

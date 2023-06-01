@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pnLogIn = new System.Windows.Forms.Panel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.hidePass = new System.Windows.Forms.PictureBox();
             this.linkQMK = new System.Windows.Forms.LinkLabel();
             this.txtPassWord = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
@@ -53,11 +53,10 @@ namespace WindowsFormsApp1
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.LOGIN = new System.Windows.Forms.Label();
+            this.showPass = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pn = new System.Windows.Forms.Panel();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.hidePass = new System.Windows.Forms.PictureBox();
-            this.showPass = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -67,12 +66,12 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.pnLogIn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).BeginInit();
             this.pn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showPass)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -235,7 +234,6 @@ namespace WindowsFormsApp1
             // 
             this.pnLogIn.BackColor = System.Drawing.Color.White;
             this.pnLogIn.Controls.Add(this.hidePass);
-            this.pnLogIn.Controls.Add(this.linkLabel2);
             this.pnLogIn.Controls.Add(this.linkQMK);
             this.pnLogIn.Controls.Add(this.txtPassWord);
             this.pnLogIn.Controls.Add(this.txtUsername);
@@ -251,16 +249,17 @@ namespace WindowsFormsApp1
             this.pnLogIn.Size = new System.Drawing.Size(451, 411);
             this.pnLogIn.TabIndex = 1;
             // 
-            // linkLabel2
+            // hidePass
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(311, 254);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(92, 16);
-            this.linkLabel2.TabIndex = 9;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Hiện mật khẩu";
-            this.linkLabel2.Visible = false;
+            this.hidePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.hidePass.Image = ((System.Drawing.Image)(resources.GetObject("hidePass.Image")));
+            this.hidePass.Location = new System.Drawing.Point(382, 213);
+            this.hidePass.Name = "hidePass";
+            this.hidePass.Size = new System.Drawing.Size(35, 30);
+            this.hidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.hidePass.TabIndex = 10;
+            this.hidePass.TabStop = false;
+            this.hidePass.Click += new System.EventHandler(this.hidePass_Click);
             // 
             // linkQMK
             // 
@@ -416,6 +415,18 @@ namespace WindowsFormsApp1
             this.LOGIN.TabIndex = 1;
             this.LOGIN.Text = "Đăng nhập";
             // 
+            // showPass
+            // 
+            this.showPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
+            this.showPass.Image = ((System.Drawing.Image)(resources.GetObject("showPass.Image")));
+            this.showPass.Location = new System.Drawing.Point(382, 213);
+            this.showPass.Name = "showPass";
+            this.showPass.Size = new System.Drawing.Size(35, 30);
+            this.showPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.showPass.TabIndex = 11;
+            this.showPass.TabStop = false;
+            this.showPass.Click += new System.EventHandler(this.showPass_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -443,30 +454,6 @@ namespace WindowsFormsApp1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // hidePass
-            // 
-            this.hidePass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.hidePass.Image = ((System.Drawing.Image)(resources.GetObject("hidePass.Image")));
-            this.hidePass.Location = new System.Drawing.Point(382, 213);
-            this.hidePass.Name = "hidePass";
-            this.hidePass.Size = new System.Drawing.Size(39, 30);
-            this.hidePass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.hidePass.TabIndex = 10;
-            this.hidePass.TabStop = false;
-            this.hidePass.Click += new System.EventHandler(this.hidePass_Click);
-            // 
-            // showPass
-            // 
-            this.showPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.showPass.Image = ((System.Drawing.Image)(resources.GetObject("showPass.Image")));
-            this.showPass.Location = new System.Drawing.Point(382, 213);
-            this.showPass.Name = "showPass";
-            this.showPass.Size = new System.Drawing.Size(39, 30);
-            this.showPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.showPass.TabIndex = 11;
-            this.showPass.TabStop = false;
-            this.showPass.Click += new System.EventHandler(this.showPass_Click);
-            // 
             // fLogin
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -491,13 +478,13 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.pnLogIn.ResumeLayout(false);
             this.pnLogIn.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.showPass)).EndInit();
             this.pn.ResumeLayout(false);
             this.pn.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.hidePass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.showPass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -527,7 +514,6 @@ namespace WindowsFormsApp1
         private PictureBox pictureBox1;
         private ErrorProvider errorProvider1;
         private LinkLabel linkQMK;
-        private LinkLabel linkLabel2;
         private PictureBox showPass;
         private PictureBox hidePass;
     }

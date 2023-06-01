@@ -50,9 +50,6 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.txtMa = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.txtKH = new System.Windows.Forms.TextBox();
@@ -95,7 +92,7 @@
             // 
             this.txtGiamGia.Location = new System.Drawing.Point(308, 422);
             this.txtGiamGia.Name = "txtGiamGia";
-            this.txtGiamGia.Size = new System.Drawing.Size(140, 22);
+            this.txtGiamGia.Size = new System.Drawing.Size(166, 22);
             this.txtGiamGia.TabIndex = 21;
             this.txtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -112,7 +109,7 @@
             // 
             this.txtThanhTien.Location = new System.Drawing.Point(308, 453);
             this.txtThanhTien.Name = "txtThanhTien";
-            this.txtThanhTien.Size = new System.Drawing.Size(140, 22);
+            this.txtThanhTien.Size = new System.Drawing.Size(166, 22);
             this.txtThanhTien.TabIndex = 20;
             this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -129,7 +126,7 @@
             // 
             this.txtTongTien.Location = new System.Drawing.Point(308, 388);
             this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(140, 22);
+            this.txtTongTien.Size = new System.Drawing.Size(166, 22);
             this.txtTongTien.TabIndex = 19;
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -260,9 +257,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.label18);
-            this.panel1.Controls.Add(this.label17);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.txtMa);
             this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Controls.Add(this.txtKH);
@@ -289,36 +283,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 546);
             this.panel1.TabIndex = 27;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(449, 455);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(16, 18);
-            this.label18.TabIndex = 33;
-            this.label18.Text = "đ";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(449, 426);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(16, 18);
-            this.label17.TabIndex = 32;
-            this.label17.Text = "đ";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(449, 390);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(16, 18);
-            this.label6.TabIndex = 31;
-            this.label6.Text = "đ";
             // 
             // txtMa
             // 
@@ -421,9 +385,6 @@
         private System.Windows.Forms.TextBox txtKH;
         private System.Windows.Forms.TextBox txtNV;
         private System.Windows.Forms.TextBox txtNgay;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

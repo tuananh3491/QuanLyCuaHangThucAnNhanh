@@ -17,6 +17,7 @@ namespace WindowsFormsApp1.View
         private int maHD;
         Hoa_donBLL hdBLL = new Hoa_donBLL();
         ChiTietHoaDonBLL cthdBLL = new ChiTietHoaDonBLL();
+        Ma_loaiBLL loaiBLL = new Ma_loaiBLL();  
         public fBill_Detail(int s)
         {
             InitializeComponent();
@@ -48,10 +49,10 @@ namespace WindowsFormsApp1.View
             
             foreach (Chi_tiet_hoa_don l in list)
             {
-                dgvCTHD.Rows.Add(l.San_pham.Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(),l.Gia.ToString());
+                dgvCTHD.Rows.Add(l.San_pham.Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(), l.Gia.ToString("#,##0 đ").Replace(",", "."));
                 tong += l.Gia * l.Soluong_SP;
             }
-            txtTongTien.Text = tong.ToString();
+            txtTongTien.Text = string.Format("{0:#,##0} đ", tong).Replace(",", ".");
         }
 
         private void btnBack_Click(object sender, EventArgs e)

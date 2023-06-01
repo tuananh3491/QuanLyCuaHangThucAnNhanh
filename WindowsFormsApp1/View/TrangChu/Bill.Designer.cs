@@ -36,7 +36,6 @@
             this.txtIdBill = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.chkSD_Diem = new System.Windows.Forms.CheckBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtDiemTL = new System.Windows.Forms.TextBox();
             this.lblDTL = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
@@ -124,7 +123,6 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.chkSD_Diem);
-            this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txtDiemTL);
             this.panel1.Controls.Add(this.lblDTL);
             this.panel1.Controls.Add(this.txtTotal);
@@ -159,16 +157,6 @@
             this.chkSD_Diem.Text = "Sử dụng điểm tích lũy";
             this.chkSD_Diem.UseVisualStyleBackColor = true;
             this.chkSD_Diem.CheckedChanged += new System.EventHandler(this.chkSD_Diem_CheckedChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(771, 399);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(18, 20);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "đ";
             // 
             // txtDiemTL
             // 
@@ -423,7 +411,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDiemTL;
         private System.Windows.Forms.Label lblDTL;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox chkSD_Diem;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

@@ -40,18 +40,29 @@ namespace WindowsFormsApp1.View.Product
             picture.BackgroundImageLayout = ImageLayout.Stretch;
             txtName.Text = sp.Ten_SP.ToString();
             txtName.Enabled = false;
-            txtPrice.Text = sp.Don_gia.ToString();
+            txtPrice.Text = string.Format("{0:#,##0} đ", sp.Don_gia).Replace(",", ".");
             checkCo.Checked = (bool)sp.Trang_thai;
+            if (sp.Trang_thai == false) btnDel.Enabled = false;
+            else btnDel.Enabled = true;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            San_pham sp = sanPhamBLL.GetPro(maSP);
-            sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
-            sp.Trang_thai = checkCo.Checked;
-            sanPhamBLL.SaveSP(sp);
+            try
+            {
+                San_pham sp = sanPhamBLL.GetPro(maSP);
+                sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
+                sp.Trang_thai = checkCo.Checked;
+                sanPhamBLL.SaveSP(sp);
 
-            MessageBox.Show("Đã lưu","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Information);
-            fProduct fProduct = new fProduct();
+                MessageBox.Show("Đã lưu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                fProduct fProduct = new fProduct();
+                Load(maSP);
+            }
+            catch (FormatException)// format của đơn giá
+            {
+                MessageBox.Show("Đơn giá không phù hợp");
+                return;
+            }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -66,7 +77,10 @@ namespace WindowsFormsApp1.View.Product
                 San_pham sp = sanPhamBLL.GetPro(maSP);
                 sp.Trang_thai = false;
                 sanPhamBLL.SaveSP(sp);
+                btnDel.Enabled = false;
+                checkCo.Checked = false;
             }
         }
+
     }
 }

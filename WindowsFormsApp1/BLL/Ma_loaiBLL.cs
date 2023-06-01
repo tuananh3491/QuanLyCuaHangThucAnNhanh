@@ -34,10 +34,10 @@ namespace WindowsFormsApp1.BLL
         }
         public int GetIdCategory(string name)
         {
-            PBL_3Entities cnn = new PBL_3Entities();
             var x = cnn.Ma_loai.Where(p => p.Ten.Contains(name)).FirstOrDefault();
             return x.Ma_loai1;
         }
-     
+       
+
     }
 }

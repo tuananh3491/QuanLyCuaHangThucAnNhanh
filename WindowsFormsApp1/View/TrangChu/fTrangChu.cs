@@ -21,10 +21,13 @@ namespace WindowsFormsApp1.View.TrangChu
         Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();
         San_phamBLL spBLL = new San_phamBLL();
         double tongtien = 0;
+
+        
         public fTrangChu()
         {
             InitializeComponent();
             setCbb();
+            //txtTongTien.Text = string.Format("{0:#,##0} đ", 200000);
         }
         public void setCbb()
         {
@@ -87,7 +90,8 @@ namespace WindowsFormsApp1.View.TrangChu
             {
                 tongtien += Convert.ToDouble(i.Gia*i.Soluong_SP);
             }
-            tbTongTien.Text = tongtien.ToString();
+            //txtTongTien.Text = tongtien.ToString();
+            txtTongTien.Text = string.Format("{0:#,##0} đ", tongtien).Replace(",", ".");
         }
         private void btn_Click(object sender, EventArgs e)
         {
@@ -98,13 +102,13 @@ namespace WindowsFormsApp1.View.TrangChu
         private void btnHuy_Click(object sender, EventArgs e)
         {
             listCTHD.Clear();
-            tbTongTien.Text = "0";
+            txtTongTien.Text = "0 đ";
             flpnOrder.Controls.Clear();
         }
 
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill(listCTHD, Convert.ToDouble(tbTongTien.Text));
+            Bill f = new Bill(listCTHD, tongtien);
             f.TopLevel = false;
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
             ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);

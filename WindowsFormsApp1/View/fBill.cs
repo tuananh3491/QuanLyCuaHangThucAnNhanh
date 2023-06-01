@@ -45,7 +45,7 @@ namespace WindowsFormsApp1.View
             l = hdBLL.GetHD();
             foreach(Hoa_don p in l)
             {
-                dg.Rows.Add(p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Khach_hang.Ten_KH, p.Ngay_mua, p.Tong_tien, p.Trang_thai == true ? "Đã thanh toán" : "Chưa thanh toán");
+                dg.Rows.Add(p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Khach_hang.Ten_KH, p.Ngay_mua, p.Tong_tien.ToString("#,##0 đ").Replace(",", "."), p.Trang_thai == true ? "Đã thanh toán" : "Chưa thanh toán");
             }
         }
 

@@ -30,12 +30,17 @@ namespace WindowsFormsApp1.BLL
             var s = cnn.Hoa_don.ToList();
             return s;
         }
-        public dynamic GetHDsByMaKH(int Ma_KH)
+        //public dynamic GetHDsByMaKH(int Ma_KH)
+        //{
+        //    var s = cnn.Hoa_don.Where(p => p.Ma_KH == Ma_KH).Select(p => new { p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay_mua, p.Tong_tien, p.Trang_thai }).ToList();
+        //    return s;
+        //}
+        public List<Hoa_don> GetHDsByMaKH(int Ma_KH)
         {
-            var s = cnn.Hoa_don.Where(p => p.Ma_KH == Ma_KH).Select(p => new { p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay_mua, p.Tong_tien, p.Trang_thai }).ToList();
+            var s = cnn.Hoa_don.Where(p => p.Ma_KH == Ma_KH).ToList();
             return s;
         }
-        
+
         public dynamic GetHDByDate(DateTime date)
         {
             var s = cnn.Hoa_don.Where(p => DbFunctions.TruncateTime(p.Ngay_mua) == date.Date).Select(p => new { p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Khach_hang.Ten_KH, p.Ngay_mua, p.Tong_tien, p.Trang_thai }).ToList();

@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +26,11 @@ namespace WindowsFormsApp1.View
         {
             txtName.Text = khachHangBLL.GetKHById(maKH).Ten_KH;
             txtPhone.Text = khachHangBLL.GetKHById(maKH).SDT;
-            dataGridView1.DataSource = hdBLL.GetHDsByMaKH(maKH);
+            List<Hoa_don> listHD = hdBLL.GetHDsByMaKH(maKH);
+            foreach(Hoa_don hd in listHD)
+            {
+                dataGridView1.Rows.Add(hd.Ma_HD, hd.Tai_khoan.Nhan_vien.Ten_NV, hd.Ngay_mua, hd.Tong_tien.ToString("#,##0 đ").Replace(",", "."), hd.Trang_thai == true ? "Đã thanh toán" : "Chưa thanh toán");
+            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)

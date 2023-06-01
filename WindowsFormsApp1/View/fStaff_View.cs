@@ -51,12 +51,12 @@ namespace WindowsFormsApp1.View
 
         private void fStaff_Add_Load(object sender, EventArgs e)
         {
-            textBox1.Text = x.Ma_NV.ToString();
-            textBox2.Text = x.SDT;
-            textBox3.Text = x.Ten_NV;
-            textBox4.Text = x.Luong.ToString();
+            txtMaNV.Text = x.Ma_NV.ToString();
+            txtSDT.Text = x.SDT;
+            txtTen.Text = x.Ten_NV;
+            txtLuong.Text = string.Format("{0:#,##0} đ", x.Luong).Replace(",", ".");
             dateTimePicker1.Value = x.Ngay_sinh;
-            textBox5.Text = x.Tai_khoan.Ten_TK;
+            txtTenTK.Text = x.Tai_khoan.Ten_TK;
             if (x.Email != null)
             {
                 txtEmail.Text = x.Email.ToString();

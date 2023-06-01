@@ -33,9 +33,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLuong = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -45,15 +44,15 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtTenTK = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtTen = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.btnCTLuong = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -69,23 +68,22 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.textBox4);
+            this.panel1.Controls.Add(this.txtLuong);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtSDT);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtTenTK);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.txtTen);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtMaNV);
             this.panel1.Location = new System.Drawing.Point(21, 81);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -135,17 +133,6 @@
             this.label11.TabIndex = 67;
             this.label11.Text = "Trạng thái";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(801, 328);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(22, 24);
-            this.label10.TabIndex = 66;
-            this.label10.Text = "đ";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -157,14 +144,14 @@
             this.label9.TabIndex = 65;
             this.label9.Text = "Lương";
             // 
-            // textBox4
+            // txtLuong
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox4.Location = new System.Drawing.Point(611, 324);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(183, 30);
-            this.textBox4.TabIndex = 64;
+            this.txtLuong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtLuong.Location = new System.Drawing.Point(611, 324);
+            this.txtLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLuong.Name = "txtLuong";
+            this.txtLuong.Size = new System.Drawing.Size(183, 30);
+            this.txtLuong.TabIndex = 64;
             // 
             // groupBox2
             // 
@@ -261,7 +248,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(190, 165);
             this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(281, 30);
+            this.dateTimePicker1.Size = new System.Drawing.Size(208, 30);
             this.dateTimePicker1.TabIndex = 60;
             // 
             // label7
@@ -275,14 +262,14 @@
             this.label7.TabIndex = 59;
             this.label7.Text = "Sđt";
             // 
-            // textBox2
+            // txtSDT
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox2.Location = new System.Drawing.Point(621, 103);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(227, 30);
-            this.textBox2.TabIndex = 58;
+            this.txtSDT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSDT.Location = new System.Drawing.Point(621, 103);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(227, 30);
+            this.txtSDT.TabIndex = 58;
             // 
             // label6
             // 
@@ -306,14 +293,14 @@
             this.label4.TabIndex = 54;
             this.label4.Text = "Tên tài khoản";
             // 
-            // textBox5
+            // txtTenTK
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox5.Location = new System.Drawing.Point(190, 259);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(185, 30);
-            this.textBox5.TabIndex = 53;
+            this.txtTenTK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTenTK.Location = new System.Drawing.Point(190, 259);
+            this.txtTenTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenTK.Name = "txtTenTK";
+            this.txtTenTK.Size = new System.Drawing.Size(208, 30);
+            this.txtTenTK.TabIndex = 53;
             // 
             // label3
             // 
@@ -337,14 +324,14 @@
             this.label2.TabIndex = 51;
             this.label2.Text = "Tên";
             // 
-            // textBox3
+            // txtTen
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox3.Location = new System.Drawing.Point(190, 107);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(281, 30);
-            this.textBox3.TabIndex = 50;
+            this.txtTen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtTen.Location = new System.Drawing.Point(190, 107);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTen.Name = "txtTen";
+            this.txtTen.Size = new System.Drawing.Size(208, 30);
+            this.txtTen.TabIndex = 50;
             // 
             // label1
             // 
@@ -357,15 +344,15 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "Mã nhân viên";
             // 
-            // textBox1
+            // txtMaNV
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.textBox1.Location = new System.Drawing.Point(190, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 30);
-            this.textBox1.TabIndex = 48;
+            this.txtMaNV.Enabled = false;
+            this.txtMaNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtMaNV.Location = new System.Drawing.Point(190, 46);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(208, 30);
+            this.txtMaNV.TabIndex = 48;
             // 
             // btnCTLuong
             // 
@@ -446,9 +433,8 @@
         private CustomControl.VBButton btnCTLuong;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtLuong;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -458,15 +444,15 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtTenTK;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtTen;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtMaNV;
         private FontAwesome.Sharp.IconButton btnBack;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtEmail;

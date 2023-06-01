@@ -34,11 +34,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDone = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.ccbLoc = new System.Windows.Forms.ComboBox();
-            this.btnDone = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,6 +69,7 @@
             title1.Name = "Title1";
             title1.Text = "BIỂU ĐỒ DOANH THU";
             this.chart1.Titles.Add(title1);
+            
             // 
             // panel2
             // 
@@ -82,6 +83,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(930, 67);
             this.panel2.TabIndex = 1;
+            // 
+            // btnDone
+            // 
+            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
+            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
+            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDone.IconSize = 40;
+            this.btnDone.Location = new System.Drawing.Point(838, 14);
+            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDone.Name = "btnDone";
+            this.btnDone.Size = new System.Drawing.Size(40, 46);
+            this.btnDone.TabIndex = 63;
+            this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // label1
             // 
@@ -127,20 +142,6 @@
             this.ccbLoc.Size = new System.Drawing.Size(87, 31);
             this.ccbLoc.TabIndex = 58;
             this.ccbLoc.Visible = false;
-            // 
-            // btnDone
-            // 
-            this.btnDone.IconChar = FontAwesome.Sharp.IconChar.CalendarDays;
-            this.btnDone.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(168)))), ((int)(((byte)(67)))));
-            this.btnDone.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDone.IconSize = 40;
-            this.btnDone.Location = new System.Drawing.Point(838, 14);
-            this.btnDone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDone.Name = "btnDone";
-            this.btnDone.Size = new System.Drawing.Size(40, 46);
-            this.btnDone.TabIndex = 63;
-            this.btnDone.UseVisualStyleBackColor = true;
-            this.btnDone.Click += new System.EventHandler(this.iconDone_Click);
             // 
             // fReport_Revenue
             // 

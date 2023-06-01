@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.pnChonMon = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.flpnOrder = new System.Windows.Forms.FlowLayoutPanel();
             this.btnTaoDon = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnHuy = new WindowsFormsApp1.CustomControl.VBButton();
-            this.tbTongTien = new System.Windows.Forms.TextBox();
+            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -57,11 +56,10 @@
             // pnChonMon
             // 
             this.pnChonMon.BackColor = System.Drawing.SystemColors.Window;
-            this.pnChonMon.Controls.Add(this.textBox1);
             this.pnChonMon.Controls.Add(this.flpnOrder);
             this.pnChonMon.Controls.Add(this.btnTaoDon);
             this.pnChonMon.Controls.Add(this.btnHuy);
-            this.pnChonMon.Controls.Add(this.tbTongTien);
+            this.pnChonMon.Controls.Add(this.txtTongTien);
             this.pnChonMon.Controls.Add(this.label2);
             this.pnChonMon.Controls.Add(this.label1);
             this.pnChonMon.Dock = System.Windows.Forms.DockStyle.Right;
@@ -70,24 +68,6 @@
             this.pnChonMon.Name = "pnChonMon";
             this.pnChonMon.Size = new System.Drawing.Size(375, 572);
             this.pnChonMon.TabIndex = 1;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
-            this.textBox1.Location = new System.Drawing.Point(325, 454);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.textBox1.Size = new System.Drawing.Size(13, 22);
-            this.textBox1.TabIndex = 6;
-            this.textBox1.Text = "đ";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // flpnOrder
             // 
@@ -141,23 +121,23 @@
             this.btnHuy.UseVisualStyleBackColor = false;
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // tbTongTien
+            // txtTongTien
             // 
-            this.tbTongTien.BackColor = System.Drawing.Color.White;
-            this.tbTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbTongTien.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
-            this.tbTongTien.Location = new System.Drawing.Point(211, 455);
-            this.tbTongTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbTongTien.Multiline = true;
-            this.tbTongTien.Name = "tbTongTien";
-            this.tbTongTien.ReadOnly = true;
-            this.tbTongTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.tbTongTien.Size = new System.Drawing.Size(109, 22);
-            this.tbTongTien.TabIndex = 2;
-            this.tbTongTien.Text = "0";
-            this.tbTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtTongTien.BackColor = System.Drawing.Color.White;
+            this.txtTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTongTien.Cursor = System.Windows.Forms.Cursors.Default;
+            this.txtTongTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(197)))), ((int)(((byte)(80)))));
+            this.txtTongTien.Location = new System.Drawing.Point(211, 455);
+            this.txtTongTien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTongTien.Multiline = true;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.ReadOnly = true;
+            this.txtTongTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTongTien.Size = new System.Drawing.Size(109, 22);
+            this.txtTongTien.TabIndex = 2;
+            this.txtTongTien.Text = "0";
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
             // 
@@ -434,7 +414,7 @@
 
         #endregion
         private System.Windows.Forms.Panel pnChonMon;
-        private System.Windows.Forms.TextBox tbTongTien;
+        private System.Windows.Forms.TextBox txtTongTien;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private CustomControl.VBButton btnHuy;
@@ -451,7 +431,6 @@
         private Guna.UI2.WinForms.Guna2Button btnNuoc;
         private Guna.UI2.WinForms.Guna2Button btnKem;
         public System.Windows.Forms.FlowLayoutPanel flpnThucDon;
-        private System.Windows.Forms.TextBox textBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.ComboBox cbbLoai;
     }

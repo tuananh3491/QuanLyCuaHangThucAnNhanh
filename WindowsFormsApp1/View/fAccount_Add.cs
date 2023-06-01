@@ -67,6 +67,7 @@ namespace WindowsFormsApp1.View
                         Luong = Convert.ToInt32(txtLuong.Text),
                         Email = txtEmail.Text,
                     });
+                    txtLuong.Text = string.Format("{0:#,##0} đ", Convert.ToInt32(txtLuong.Text)).Replace(",", ".");
                     txtLuong.Visible = false;
                     lblLuong.Visible = false;
                     string salt = BCrypt.Net.BCrypt.GenerateSalt();

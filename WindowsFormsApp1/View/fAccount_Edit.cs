@@ -43,8 +43,15 @@ namespace WindowsFormsApp1.View
             }
             else
             {
-                MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                if(email != "")
+                {
+                    MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
         }
         public void setGUI(int maTK)
@@ -59,7 +66,7 @@ namespace WindowsFormsApp1.View
             {   rdNhanVien.Checked = true;
                 lblLuong.Visible = true;
                 txtLuong.Visible = true;
-                txtLuong.Text = tk.Nhan_vien.Luong.ToString();
+                txtLuong.Text = string.Format("{0:#,##0} đ", tk.Nhan_vien.Luong).Replace(",", ".");
             }
             else { rdAdmin.Checked = true; }
             chkTrangThai.Checked = tk.Nhan_vien.Trang_thai;
@@ -87,7 +94,7 @@ namespace WindowsFormsApp1.View
                     int i;
                     if (txtTen.Text == "") throw new SqlNullValueException();
                     if (!int.TryParse(txtSDT.Text, out i)) throw new DbEntityValidationException();
-                    if (txtTen.Text.Length < 10) throw new DbEntityValidationException();
+                    if (txtSDT.Text.Length < 10) throw new DbEntityValidationException();
                     Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
                     x.Nhan_vien.SDT = txtSDT.Text;
                     x.Nhan_vien.Ten_NV = txtTen.Text;
@@ -103,6 +110,7 @@ namespace WindowsFormsApp1.View
                     x.Nhan_vien.Trang_thai = chkTrangThai.Checked;
 
                     tai_KhoanBLL.SaveTK(x);
+                    txtLuong.Text = string.Format("{0:#,##0} đ", x.Nhan_vien.Luong).Replace(",", ".");
                     MessageBox.Show("Cập nhật thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (DbEntityValidationException)
@@ -111,7 +119,7 @@ namespace WindowsFormsApp1.View
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("Lương không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lương không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);//?
                 }
                 catch (SqlNullValueException)
                 {

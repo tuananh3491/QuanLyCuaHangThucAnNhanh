@@ -28,8 +28,8 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             InitializeComponent();
         }
+        
 
-       
         public Bill(List<Chi_tiet_hoa_don> list, double t)
         {
             InitializeComponent(); 
@@ -172,12 +172,35 @@ namespace WindowsFormsApp1.View.TrangChu
             f.Show();
             
         }
-        public void ShowDGV(DataGridView dg, List<Chi_tiet_hoa_don> ct)
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-           
+            // Kiểm tra xem cột đang hiển thị có tên "Giá" và hàng đang hiển thị không phải là dòng tiêu đề
+            if (dgv.Columns[e.ColumnIndex].Name == "Đơn giá" && e.RowIndex >= 0)
+            {
+                // Lấy giá trị hiện tại của ô
+                decimal value = (decimal)e.Value;
+                // Định dạng giá trị bằng dấu chấm
+                string formattedValue = string.Format("{0:#,##0}", value).Replace(",", ".");
+                // Thiết lập giá trị định dạng cho ô
+                e.Value = formattedValue + " đ";
+            }
+        }
+        private void ddv_CellFormatting(DataGridViewCellFormattingEventArgs e)
+        {
+            // Kiểm tra xem cột đang hiển thị có tên "Giá" và hàng đang hiển thị không phải là dòng tiêu đề
+            if (dgv.Columns[e.ColumnIndex].Name == "Đơn giá" && e.RowIndex >= 0)
+            {
+                // Lấy giá trị hiện tại của ô
+                decimal value = (decimal)e.Value;
+                // Định dạng giá trị bằng dấu chấm
+                string formattedValue = string.Format("{0:#,##0}", value).Replace(",", ".");
+                // Thiết lập giá trị định dạng cho ô
+                e.Value = formattedValue + " đ";
+            }
         }
         public void Load()
         {
+            DataGridViewCellFormattingEventArgs e;
             txtIdBill.Enabled = false;
             txtStaff.Enabled = false;
             txtTime.Enabled = false;
@@ -186,11 +209,11 @@ namespace WindowsFormsApp1.View.TrangChu
             //showdgv
             foreach (Chi_tiet_hoa_don l in listCTHD)
             {
-                dgv.Rows.Add(spBLL.GetPro(l.Ma_SP).Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(), l.Gia.ToString());
+                dgv.Rows.Add(spBLL.GetPro(l.Ma_SP).Ten_SP.ToString(), l.Kich_thuoc.ToString(), l.Soluong_SP.ToString(), l.Gia.ToString("#,##0 đ").Replace(",", "."));
             }
+            
             txtTotal.Enabled = false;
-            txtTotal.Text = tongTien.ToString();
-
+            txtTotal.Text = string.Format("{0:#,##0} đ", tongTien).Replace(",", ".");
         }
         private void Bill_Load(object sender, EventArgs e)
         {
