@@ -86,11 +86,14 @@ namespace WindowsFormsApp1.View
             {
                 pnProduct p = new pnProduct(sp.Ma_SP);
                 flpnMonAn.Controls.Add(p);
+                p.add += new pnProduct.AddPanel(ShowChinhSua);
             }
+        }
 
-            //pnCategory_Update p1 = new pnCategory_Update(idType);
-            //((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Clear();
-            //((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Add(p1);
+        public void ShowChinhSua(UserControl p)
+        {
+            pnChinhSua.Controls.Clear();
+            pnChinhSua.Controls.Add(p);
         }
 
         private void btnAddPro_Click(object sender, EventArgs e)
