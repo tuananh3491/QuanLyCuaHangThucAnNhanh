@@ -43,8 +43,15 @@ namespace WindowsFormsApp1.View
             }
             else
             {
-                MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                if (email != "")
+                {
+                    MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
         }
         public void Load()
