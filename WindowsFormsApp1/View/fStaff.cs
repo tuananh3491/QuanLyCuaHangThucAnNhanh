@@ -45,10 +45,7 @@ namespace WindowsFormsApp1.View
             if(dataGridView1.SelectedRows.Count == 1)
             {
                 fStaff_View f = new fStaff_View(nvBLL.GetNVByMa(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString())));
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
                 this.Dispose();
             }
         }

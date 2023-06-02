@@ -109,11 +109,7 @@ namespace WindowsFormsApp1.View.TrangChu
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
             Bill f = new Bill(listCTHD, tongtien);
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
-            this.Dispose();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
         private void fTrangChu_Load(object sender, EventArgs e)
         {

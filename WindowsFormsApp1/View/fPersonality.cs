@@ -113,19 +113,14 @@ namespace WindowsFormsApp1.View
         private void btnBack_Click(object sender, EventArgs e)
         {
             fTrangChu f = new fTrangChu();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
+            Const.mainform.ActivateButton(Const.mainform.btnTrangChu);
         }
 
         private void btnCTLuong_Click(object sender, EventArgs e)
         {
             fStaff_Salary f = new fStaff_Salary(maNV);
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
 
         private void btnDatLaiMK_Click(object sender, EventArgs e)

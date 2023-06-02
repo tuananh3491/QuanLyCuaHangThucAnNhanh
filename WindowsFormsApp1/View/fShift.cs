@@ -27,10 +27,7 @@ namespace WindowsFormsApp1.View
         private void btnTaoCa_Click(object sender, EventArgs e)
         {
             fShift_Create f = new fShift_Create();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
 
         private void fShift_Load(object sender, EventArgs e)
@@ -44,10 +41,7 @@ namespace WindowsFormsApp1.View
             if (dataGridView1.SelectedRows.Count == 1)
             {
                 fShift_Detail f = new fShift_Detail(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()));
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
         }
 

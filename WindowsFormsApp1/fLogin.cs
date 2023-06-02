@@ -68,10 +68,10 @@ namespace WindowsFormsApp1
                     if (tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
                     {
                         MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        fMainform fMainform = new fMainform();
-                        fMainform.logout += new fMainform.Logout(this.ShowForm);
+                        Const.mainform = new fMainform();
+                        Const.mainform.logout += new fMainform.Logout(this.ShowForm);
                         this.Hide();
-                        fMainform.ShowDialog();
+                        Const.mainform.ShowDialog();
                     }
                     else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

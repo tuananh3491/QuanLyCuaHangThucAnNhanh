@@ -94,7 +94,7 @@ namespace WindowsFormsApp1.View
                 BtnChild.BackColor = Color.FromArgb(255, 175, 81);
             }
         }
-        private void ActivateButton(object sender)
+        internal void ActivateButton(object sender)
         {
             if (sender != null)
             {

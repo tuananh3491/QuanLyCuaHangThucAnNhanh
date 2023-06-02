@@ -608,7 +608,6 @@
 
         #endregion
         private System.Windows.Forms.Panel panelLogo;
-        private FontAwesome.Sharp.IconButton btnTrangChu;
         private FontAwesome.Sharp.IconButton btnNhanVien;
         private FontAwesome.Sharp.IconButton btnCaLamViec;
         private FontAwesome.Sharp.IconButton btnKhachHang;
@@ -636,5 +635,6 @@
         private Guna.UI2.WinForms.Guna2CircleButton btnPerson;
         private FontAwesome.Sharp.IconPictureBox iconLogOut;
         public System.Windows.Forms.Panel pnForm;
+        internal FontAwesome.Sharp.IconButton btnTrangChu;
     }
 }

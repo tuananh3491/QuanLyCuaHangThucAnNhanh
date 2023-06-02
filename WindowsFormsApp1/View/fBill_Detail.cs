@@ -57,22 +57,15 @@ namespace WindowsFormsApp1.View
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            fBill f=new fBill();
-            f.TopLevel = false;
-            f.Show();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show(); 
+            fBill f = new fBill();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
 
 
         private void btInHD_Click(object sender, EventArgs e)
         {
-            fBill_PrePrint f = new fBill_PrePrint(maHD);
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            fBill_PrePrint f = new fBill_PrePrint(maHD,0);
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
     }
 }

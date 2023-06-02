@@ -28,10 +28,7 @@ namespace WindowsFormsApp1.View
         private void btnSoLieu_Click(object sender, EventArgs e)
         {
             fReport_Customer f = new fReport_Customer();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
         public void setCbbNam()
         {

@@ -96,11 +96,7 @@ namespace WindowsFormsApp1.View
         private void btnAddPro_Click(object sender, EventArgs e)
         {
             fProduct_Add f = new fProduct_Add();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
-            this.Dispose();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
             setCbb();
         }
 

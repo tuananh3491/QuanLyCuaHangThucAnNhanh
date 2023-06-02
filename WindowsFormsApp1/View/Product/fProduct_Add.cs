@@ -78,10 +78,7 @@ namespace WindowsFormsApp1.View.Product
         private void btnBack_Click(object sender, EventArgs e)
         {
             fProduct f = new fProduct();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
 
         private void btnLink_Click(object sender, EventArgs e)

@@ -10,19 +10,22 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
+using WindowsFormsApp1.View.TrangChu;
 
 namespace WindowsFormsApp1.View
 {
     public partial class fBill_PrePrint : Form
     {
         private int maHD;
+        private int m;
         Hoa_donBLL hdBLL = new Hoa_donBLL();
         ChiTietHoaDonBLL cthdBLL = new ChiTietHoaDonBLL();
-        public fBill_PrePrint(int ma)
+        public fBill_PrePrint(int ma,int i)
         {
             InitializeComponent();
             maHD = ma;
             Load(maHD);
+            m = i;
         }
         public void Load(int ma)
         {
@@ -59,11 +62,16 @@ namespace WindowsFormsApp1.View
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            fBill f = new fBill();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            if (m == 1) //trở về form Trang chủ
+            {
+                fTrangChu f=new fTrangChu();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
+            }
+            else //trở về form hóa đơn
+            {
+                fBill f = new fBill();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
+            }
         }
 
     }

@@ -37,22 +37,14 @@ namespace WindowsFormsApp1.View
             {
                 int ma_tk = Convert.ToInt32(DGVdsTaiKhoan.SelectedRows[0].Cells[0].Value.ToString());
                 fAccount_Edit f=new fAccount_Edit(ma_tk);
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainForm"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainForm"]).pnForm.Controls.Add(f);
-                f.Show();
-                this.Dispose();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
         }
 
         private void BtnThem_Click(object sender, EventArgs e)
         {
             fAccount_Add f = new fAccount_Add();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
-            this.Dispose();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)

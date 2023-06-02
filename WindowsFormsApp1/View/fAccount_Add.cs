@@ -42,11 +42,8 @@ namespace WindowsFormsApp1.View
         }
         private void btnBack_Click(object sender, EventArgs e)
         {
-            fAccount f = new fAccount();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+           fAccount f=new fAccount();
+           Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

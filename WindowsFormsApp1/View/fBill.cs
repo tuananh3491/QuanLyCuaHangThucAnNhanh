@@ -29,10 +29,7 @@ namespace WindowsFormsApp1.View
                 int maHD = Convert.ToInt32(dg.SelectedRows[0].Cells[0].Value.ToString());
                 //MessageBox.Show(maHD.ToString());
                 fBill_Detail f = new fBill_Detail(maHD);
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
         }
         public void ShowDGV(DataGridView dg)

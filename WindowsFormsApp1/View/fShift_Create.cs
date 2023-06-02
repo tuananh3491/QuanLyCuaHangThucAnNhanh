@@ -38,10 +38,7 @@ namespace WindowsFormsApp1.View
                 clvBLL.SaveCLV(clv);
                 MessageBox.Show("Tạo ca thành công");
                 fShift f = new fShift();
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
             catch (SqlNullValueException)
             {
@@ -51,10 +48,7 @@ namespace WindowsFormsApp1.View
         private void btnBack_Click(object sender, EventArgs e)
         {
             fShift f = new fShift();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
     }
 }

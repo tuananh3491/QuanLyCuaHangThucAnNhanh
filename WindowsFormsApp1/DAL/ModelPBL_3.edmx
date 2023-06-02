@@ -59,10 +59,10 @@
             <PropertyRef Name="Ma_NV" />
           </Key>
           <Property Name="Ma_NV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ten_NV" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Ten_NV" Type="nvarchar(max)" />
           <Property Name="Ngay_sinh" Type="date" Nullable="false" />
-          <Property Name="Gioi_tinh" Type="bit" Nullable="false" />
-          <Property Name="SDT" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="Gioi_tinh" Type="bit" />
+          <Property Name="SDT" Type="nchar" MaxLength="10" />
           <Property Name="Luong" Type="int" />
           <Property Name="Trang_thai" Type="bit" Nullable="false" />
           <Property Name="Email" Type="varchar(max)" />
@@ -92,8 +92,8 @@
             <PropertyRef Name="Ma_TK" />
           </Key>
           <Property Name="Ma_TK" Type="int" Nullable="false" />
-          <Property Name="Ten_TK" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Mat_khau" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Ten_TK" Type="nvarchar(max)" />
+          <Property Name="Mat_khau" Type="nvarchar(max)" />
           <Property Name="Loai_TK" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK_Chi_tiet_hoa_don_Hoa_don">
@@ -301,10 +301,10 @@
             <PropertyRef Name="Ma_NV" />
           </Key>
           <Property Name="Ma_NV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ten_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ten_NV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Ngay_sinh" Type="DateTime" Precision="0" Nullable="false" />
-          <Property Name="Gioi_tinh" Type="Boolean" Nullable="false" />
-          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Gioi_tinh" Type="Boolean" />
+          <Property Name="SDT" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="Luong" Type="Int32" />
           <Property Name="Trang_thai" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Tai_khoan" Relationship="Self.FK_Tai_khoan_Nhan_vien" FromRole="Nhan_vien" ToRole="Tai_khoan" />
@@ -339,8 +339,8 @@
             <PropertyRef Name="Ma_TK" />
           </Key>
           <Property Name="Ma_TK" Type="Int32" Nullable="false" />
-          <Property Name="Ten_TK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Mat_khau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ten_TK" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mat_khau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Loai_TK" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="Hoa_don" Relationship="Self.FK_Hoa_don_Tai_khoan" FromRole="Tai_khoan" ToRole="Hoa_don" />
           <NavigationProperty Name="Nhan_vien" Relationship="Self.FK_Tai_khoan_Nhan_vien" FromRole="Tai_khoan" ToRole="Nhan_vien" />

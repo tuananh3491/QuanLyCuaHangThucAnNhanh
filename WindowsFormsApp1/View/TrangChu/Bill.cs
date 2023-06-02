@@ -80,11 +80,8 @@ namespace WindowsFormsApp1.View.TrangChu
 
 
                 MessageBox.Show("Đã thanh toán", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD);
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
+                fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD,1);
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
             else
             {
@@ -154,11 +151,8 @@ namespace WindowsFormsApp1.View.TrangChu
                 
                
                 MessageBox.Show("Đã thanh toán", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
-                fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD);
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
+                fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD, 1);
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
 
             }
         }

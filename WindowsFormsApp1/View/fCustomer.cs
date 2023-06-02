@@ -26,10 +26,7 @@ namespace WindowsFormsApp1.View
                 {
                     int m = int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString());
                     fCustomer_Update f = new fCustomer_Update(m);
-                    f.TopLevel = false;
-                    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                    f.Show();
+                    Const.mainform.openChildForm(f, Const.mainform.pnForm);
                 }
                 else MessageBox.Show("Khách hàng này chưa xác minh", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
@@ -50,10 +47,7 @@ namespace WindowsFormsApp1.View
             {
                 int m = int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString());
                 fCustomer_History f = new fCustomer_History(m);
-                f.TopLevel = false;
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-                ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-                f.Show();
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
             else MessageBox.Show("Lỗi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
         }
