@@ -26,6 +26,7 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
             
         }
+
         public bool CheckEmail()
         {
             string email = txtEmail.Text; 
@@ -36,8 +37,15 @@ namespace WindowsFormsApp1.View
                 return true;
             }
             else {
-                MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return false;
+                if (email != "")
+                {
+                    MessageBox.Show("Email không đúng định dạng", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
         }
         private void btnBack_Click(object sender, EventArgs e)
@@ -45,15 +53,30 @@ namespace WindowsFormsApp1.View
            fAccount f=new fAccount();
            Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
+        public int ChangeFormatCurrency(string tien)
+        {
+            // Xóa ký tự đơn vị tiền tệ
+            tien = tien.Replace(" đ", "");
 
+            // Xóa dấu phân cách hàng nghìn
+            tien = tien.Replace(".", "");
+
+            // Chuyển đổi chuỗi tiền thành kiểu integer
+            int giatriTien = int.Parse(tien);
+
+            // giá trị tiền kiểu integer
+            return giatriTien;
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            int luong;
             if(CheckEmail())
             {
                 try
                 {
                     if (txtTenNV.Text == "") throw new SqlNullValueException();
                     int.Parse(txtSDT.Text);
+                    luong = ChangeFormatCurrency(txtLuong.Text);
                     int x = nvBLL.AddNV(new Nhan_vien
                     {
                         SDT = txtSDT.Text,
@@ -61,12 +84,12 @@ namespace WindowsFormsApp1.View
                         Gioi_tinh = (rdoNam.Checked),
                         Ngay_sinh = dtmNgaySinh.Value,
                         Trang_thai = (check.Checked),
-                        Luong = Convert.ToInt32(txtLuong.Text),
+                        Luong = luong,
                         Email = txtEmail.Text,
                     });
-                    txtLuong.Text = string.Format("{0:#,##0} đ", Convert.ToInt32(txtLuong.Text)).Replace(",", ".");
-                    txtLuong.Visible = false;
-                    lblLuong.Visible = false;
+                    txtLuong.Text = string.Format("{0:#,##0} đ", luong).Replace(",", ".");
+                    //txtLuong.Visible = false;
+                    //lblLuong.Visible = false;
                     string salt = BCrypt.Net.BCrypt.GenerateSalt();
                     string hash = BCrypt.Net.BCrypt.HashPassword(txtMK.Text, salt);
                     tkBLL.SaveTK(new Tai_khoan

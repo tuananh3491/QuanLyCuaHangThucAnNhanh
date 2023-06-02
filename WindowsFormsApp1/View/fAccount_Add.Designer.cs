@@ -257,6 +257,8 @@
             this.txtLuong.Name = "txtLuong";
             this.txtLuong.Size = new System.Drawing.Size(210, 30);
             this.txtLuong.TabIndex = 43;
+            this.txtLuong.Text = "0 đ";
+            this.txtLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtLuong.Visible = false;
             // 
             // groupBox1
