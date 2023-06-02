@@ -67,6 +67,7 @@ namespace WindowsFormsApp1.View.Product
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            
         }
 
         private void btnDel_Click(object sender, EventArgs e)
