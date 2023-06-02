@@ -12,6 +12,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Imaging;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
 
@@ -85,13 +86,27 @@ namespace WindowsFormsApp1.View
             f.Show();
             this.Dispose();
         }
+        public int ChangeFormatCurrency(string tien)
+        {
+            // Xóa ký tự đơn vị tiền tệ
+            tien = tien.Replace(" đ", "");
+
+            // Xóa dấu phân cách hàng nghìn
+            tien = tien.Replace(".", "");
+
+            // Chuyển đổi chuỗi tiền thành kiểu integer
+            int giatriTien = int.Parse(tien);
+
+            // giá trị tiền kiểu integer
+            return giatriTien;
+        }
         private void btnEdit_Click(object sender, EventArgs e)
         {
             if (CheckEmail())
             {
                 try
                 {
-                    int i;
+                    int i;int luong;
                     if (txtTen.Text == "") throw new SqlNullValueException();
                     if (!int.TryParse(txtSDT.Text, out i)) throw new DbEntityValidationException();
                     if (txtSDT.Text.Length < 10) throw new DbEntityValidationException();
@@ -100,7 +115,8 @@ namespace WindowsFormsApp1.View
                     x.Nhan_vien.Ten_NV = txtTen.Text;
                     x.Nhan_vien.Ngay_sinh = dtpkNgaySinh.Value;
                     x.Ten_TK = txtTenTK.Text;
-                    x.Nhan_vien.Luong = Convert.ToInt32(txtLuong.Text);
+                    luong = ChangeFormatCurrency(txtLuong.Text);
+                    x.Nhan_vien.Luong = luong;
                     x.Nhan_vien.Email = txtEmail.Text;
 
                     if (rdNam.Checked) x.Nhan_vien.Gioi_tinh = true;
@@ -120,6 +136,7 @@ namespace WindowsFormsApp1.View
                 catch (FormatException)
                 {
                     MessageBox.Show("Lương không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);//?
+
                 }
                 catch (SqlNullValueException)
                 {
