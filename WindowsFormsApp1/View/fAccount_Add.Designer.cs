@@ -65,6 +65,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtEmail);
@@ -111,7 +114,7 @@
             // 
             this.groupBox2.Controls.Add(this.rdoNV);
             this.groupBox2.Controls.Add(this.rdoChu);
-            this.groupBox2.Location = new System.Drawing.Point(554, 328);
+            this.groupBox2.Location = new System.Drawing.Point(554, 321);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -151,7 +154,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(479, 341);
+            this.label8.Location = new System.Drawing.Point(479, 334);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 24);
@@ -167,7 +170,7 @@
             this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.txtMK);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Location = new System.Drawing.Point(458, 44);
+            this.panel2.Location = new System.Drawing.Point(458, 21);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(382, 261);
             this.panel2.TabIndex = 47;
@@ -265,11 +268,11 @@
             // 
             this.groupBox1.Controls.Add(this.rdoNam);
             this.groupBox1.Controls.Add(this.rdoNu);
-            this.groupBox1.Location = new System.Drawing.Point(169, 166);
+            this.groupBox1.Location = new System.Drawing.Point(169, 149);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(212, 68);
+            this.groupBox1.Size = new System.Drawing.Size(212, 62);
             this.groupBox1.TabIndex = 41;
             this.groupBox1.TabStop = false;
             // 
@@ -391,6 +394,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnAdd.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnAdd.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -412,9 +416,11 @@
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(288, 19);
+            this.label10.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(342, 32);
             this.label10.TabIndex = 22;
