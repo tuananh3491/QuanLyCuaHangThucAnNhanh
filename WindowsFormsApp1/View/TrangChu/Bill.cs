@@ -237,5 +237,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 MessageBox.Show("Điểm tích lũy = 0", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
             }
         }
+
+
     }
 }

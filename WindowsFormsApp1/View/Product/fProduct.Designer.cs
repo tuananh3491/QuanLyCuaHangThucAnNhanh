@@ -46,6 +46,8 @@
             // 
             // pnChinhSua
             // 
+            this.pnChinhSua.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnChinhSua.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnChinhSua.Location = new System.Drawing.Point(601, 74);
             this.pnChinhSua.Name = "pnChinhSua";
@@ -54,6 +56,9 @@
             // 
             // flpnMonAn
             // 
+            this.flpnMonAn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpnMonAn.AutoScroll = true;
             this.flpnMonAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.flpnMonAn.Location = new System.Drawing.Point(21, 126);
@@ -101,7 +106,7 @@
             this.btnPizza.ImageSize = new System.Drawing.Size(25, 25);
             this.btnPizza.Location = new System.Drawing.Point(36, 21);
             this.btnPizza.Name = "btnPizza";
-            this.btnPizza.Size = new System.Drawing.Size(87, 35);
+            this.btnPizza.Size = new System.Drawing.Size(98, 34);
             this.btnPizza.TabIndex = 39;
             this.btnPizza.Text = "Pizza";
             this.btnPizza.Click += new System.EventHandler(this.btn_Click);
@@ -203,6 +208,7 @@
             // 
             // btnAddPro
             // 
+            this.btnAddPro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddPro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.btnAddPro.FlatAppearance.BorderSize = 0;
             this.btnAddPro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -219,6 +225,7 @@
             // 
             // btnAddCategory
             // 
+            this.btnAddCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.btnAddCategory.FlatAppearance.BorderSize = 0;
             this.btnAddCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -226,7 +233,7 @@
             this.btnAddCategory.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnAddCategory.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddCategory.IconSize = 40;
-            this.btnAddCategory.Location = new System.Drawing.Point(864, 15);
+            this.btnAddCategory.Location = new System.Drawing.Point(864, 18);
             this.btnAddCategory.Name = "btnAddCategory";
             this.btnAddCategory.Size = new System.Drawing.Size(49, 41);
             this.btnAddCategory.TabIndex = 47;
@@ -235,6 +242,7 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.txtSearch.BorderRadius = 10;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -262,9 +270,10 @@
             // 
             // cbbLoai
             // 
+            this.cbbLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoai.FormattingEnabled = true;
-            this.cbbLoai.Location = new System.Drawing.Point(728, 26);
+            this.cbbLoai.Location = new System.Drawing.Point(728, 22);
             this.cbbLoai.Name = "cbbLoai";
             this.cbbLoai.Size = new System.Drawing.Size(112, 30);
             this.cbbLoai.TabIndex = 50;

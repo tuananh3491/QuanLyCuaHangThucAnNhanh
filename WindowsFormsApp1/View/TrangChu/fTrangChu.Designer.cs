@@ -71,6 +71,7 @@
             // 
             // flpnOrder
             // 
+            this.flpnOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flpnOrder.AutoScroll = true;
             this.flpnOrder.BackColor = System.Drawing.Color.Transparent;
             this.flpnOrder.Location = new System.Drawing.Point(7, 54);
@@ -81,6 +82,7 @@
             // 
             // btnTaoDon
             // 
+            this.btnTaoDon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnTaoDon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnTaoDon.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnTaoDon.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -102,6 +104,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnHuy.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.btnHuy.BorderColor = System.Drawing.Color.PaleVioletRed;
@@ -123,6 +126,7 @@
             // 
             // txtTongTien
             // 
+            this.txtTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTongTien.BackColor = System.Drawing.Color.White;
             this.txtTongTien.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTongTien.Cursor = System.Windows.Forms.Cursors.Default;
@@ -141,6 +145,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.Location = new System.Drawing.Point(3, 455);
@@ -161,6 +166,9 @@
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.cbbLoai);
             this.panel2.Controls.Add(this.txtSearch);
@@ -174,7 +182,6 @@
             this.panel2.Controls.Add(this.flpnThucDon);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
@@ -361,6 +368,9 @@
             // 
             // flpnThucDon
             // 
+            this.flpnThucDon.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpnThucDon.AutoScroll = true;
             this.flpnThucDon.Location = new System.Drawing.Point(0, 179);
             this.flpnThucDon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);

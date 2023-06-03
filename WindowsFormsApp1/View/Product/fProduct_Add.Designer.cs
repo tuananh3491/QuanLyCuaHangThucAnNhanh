@@ -40,6 +40,7 @@
             this.cbL = new System.Windows.Forms.CheckBox();
             this.cbM = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtLink = new System.Windows.Forms.TextBox();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
@@ -48,7 +49,6 @@
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.btnLuu = new Guna.UI2.WinForms.Guna2Button();
             this.btnBack = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
@@ -159,6 +159,7 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.txtLink);
@@ -176,9 +177,20 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.guna2ImageButton1);
             this.panel1.Location = new System.Drawing.Point(47, 76);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 391);
             this.panel1.TabIndex = 63;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(750, 221);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(23, 25);
+            this.label1.TabIndex = 67;
+            this.label1.Text = "đ";
             // 
             // guna2Button1
             // 
@@ -242,6 +254,7 @@
             // 
             // btnHuy
             // 
+            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnHuy.BorderRadius = 10;
             this.btnHuy.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHuy.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -253,6 +266,7 @@
             this.btnHuy.Image = global::WindowsFormsApp1.Properties.Resources.iconCancel;
             this.btnHuy.ImageSize = new System.Drawing.Size(30, 30);
             this.btnHuy.Location = new System.Drawing.Point(548, 491);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(135, 45);
             this.btnHuy.TabIndex = 65;
@@ -261,6 +275,7 @@
             // 
             // btnLuu
             // 
+            this.btnLuu.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLuu.BorderRadius = 10;
             this.btnLuu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLuu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -272,6 +287,7 @@
             this.btnLuu.Image = global::WindowsFormsApp1.Properties.Resources.iconSave;
             this.btnLuu.ImageSize = new System.Drawing.Size(30, 30);
             this.btnLuu.Location = new System.Drawing.Point(220, 491);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(135, 45);
             this.btnLuu.TabIndex = 64;
@@ -295,21 +311,13 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(750, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 25);
-            this.label1.TabIndex = 67;
-            this.label1.Text = "đ";
-            // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(296, 19);
+            this.label9.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(322, 32);
             this.label9.TabIndex = 73;
