@@ -177,11 +177,11 @@
     <Compile Include="View\fEnterOTP.Designer.cs">
       <DependentUpon>fEnterOTP.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fFogetPassword.cs">
+    <Compile Include="View\fForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fFogetPassword.Designer.cs">
-      <DependentUpon>fFogetPassword.cs</DependentUpon>
+    <Compile Include="View\fForgetPassword.Designer.cs">
+      <DependentUpon>fForgetPassword.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fPersonality.cs">
       <SubType>Form</SubType>
@@ -418,8 +418,8 @@
     <EmbeddedResource Include="View\fEnterOTP.resx">
       <DependentUpon>fEnterOTP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fFogetPassword.resx">
-      <DependentUpon>fFogetPassword.cs</DependentUpon>
+    <EmbeddedResource Include="View\fForgetPassword.resx">
+      <DependentUpon>fForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fPersonality.resx">
       <DependentUpon>fPersonality.cs</DependentUpon>

@@ -111,6 +111,10 @@ namespace WindowsFormsApp1.View.Product
             {
                 MessageBox.Show("Không phải file hình ảnh.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Không thể tìm thấy file.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
     }
 }

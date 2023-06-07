@@ -14,14 +14,14 @@ using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View
 {
-    public partial class fFogetPassword : Form
+    public partial class fForgetPassword : Form
     {
         private int maTK;
         Tai_khoanBLL tkBLL = new Tai_khoanBLL();
         Random randomOTP = new Random();
         int otp;
        
-        public fFogetPassword(int ma)
+        public fForgetPassword(int ma)
         {
             InitializeComponent();
             maTK = ma;

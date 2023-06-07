@@ -21,26 +21,29 @@ namespace WindowsFormsApp1.View.TrangChu
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (txtName.Text == "" || txtPhone.Text == "")
+            try
             {
-                MessageBox.Show("Lỗi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            else
-            {
-                Khach_hang kh = new Khach_hang()
+                if (txtName.Text == "" || txtPhone.Text == "")
                 {
-                    Ten_KH = txtName.Text,
-                    SDT = txtPhone.Text,
-                    Diem_tich_luy = Convert.ToInt32(txtDiemTL.Text)
-                };
-                //using (PBL_3Entities cnn = new PBL_3Entities())
-                //{
-                //    cnn.Khach_hang.Add(kh);
-                //    cnn.SaveChanges();
-                //}
-                khBLL.SaveKH(kh);
-                txtMa.Text = kh.Ma_KH.ToString();
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                    MessageBox.Show("Lỗi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
+                else if (int.TryParse(txtPhone.Text, out int i)) throw new FormatException();
+                else
+                {
+                    Khach_hang kh = new Khach_hang()
+                    {
+                        Ten_KH = txtName.Text,
+                        SDT = txtPhone.Text,
+                        Diem_tich_luy = Convert.ToInt32(txtDiemTL.Text)
+                    };
+                    khBLL.SaveKH(kh);
+                    txtMa.Text = kh.Ma_KH.ToString();
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("SDT hoặc điểm tích lũy không hợp lệ.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
 

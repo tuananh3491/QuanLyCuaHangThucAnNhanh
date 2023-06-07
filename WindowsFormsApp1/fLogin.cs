@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
                 maTK = Convert.ToInt32(txtUsername.Text);
                 if (tkBLL.GetTK(maTK) != null)
                 {
-                    fFogetPassword f = new fFogetPassword(maTK);
+                    fForgetPassword f = new fForgetPassword(maTK);
                     f.TopLevel = false;
                     this.pnLogIn.Controls.Add(f);
                     f.BringToFront();

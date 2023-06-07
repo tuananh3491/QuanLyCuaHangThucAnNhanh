@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.View
 {
-    partial class fFogetPassword
+    partial class fForgetPassword
     {
         /// <summary>
         /// Required designer variable.
