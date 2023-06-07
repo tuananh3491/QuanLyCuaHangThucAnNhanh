@@ -185,14 +185,16 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(545, 572);
+            this.panel2.Size = new System.Drawing.Size(554, 572);
             this.panel2.TabIndex = 6;
             // 
             // cbbLoai
             // 
+            this.cbbLoai.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoai.FormattingEnabled = true;
             this.cbbLoai.Location = new System.Drawing.Point(433, 85);
+            this.cbbLoai.Margin = new System.Windows.Forms.Padding(0);
             this.cbbLoai.Name = "cbbLoai";
             this.cbbLoai.Size = new System.Drawing.Size(112, 30);
             this.cbbLoai.TabIndex = 51;
@@ -228,6 +230,7 @@
             // 
             // btnCombo
             // 
+            this.btnCombo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnCombo.BorderRadius = 10;
             this.btnCombo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCombo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -239,7 +242,7 @@
             this.btnCombo.Image = global::WindowsFormsApp1.Properties.Resources.SP_Combo;
             this.btnCombo.ImageSize = new System.Drawing.Size(25, 25);
             this.btnCombo.Location = new System.Drawing.Point(325, 81);
-            this.btnCombo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCombo.Margin = new System.Windows.Forms.Padding(0);
             this.btnCombo.Name = "btnCombo";
             this.btnCombo.Size = new System.Drawing.Size(107, 34);
             this.btnCombo.TabIndex = 23;
@@ -308,6 +311,7 @@
             // 
             // btnNuoc
             // 
+            this.btnNuoc.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnNuoc.BorderRadius = 10;
             this.btnNuoc.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNuoc.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -319,7 +323,7 @@
             this.btnNuoc.Image = global::WindowsFormsApp1.Properties.Resources.SP_drink;
             this.btnNuoc.ImageSize = new System.Drawing.Size(25, 25);
             this.btnNuoc.Location = new System.Drawing.Point(140, 81);
-            this.btnNuoc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNuoc.Margin = new System.Windows.Forms.Padding(0);
             this.btnNuoc.Name = "btnNuoc";
             this.btnNuoc.Size = new System.Drawing.Size(87, 34);
             this.btnNuoc.TabIndex = 19;
@@ -328,6 +332,7 @@
             // 
             // btnKem
             // 
+            this.btnKem.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnKem.BorderRadius = 10;
             this.btnKem.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnKem.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -339,7 +344,7 @@
             this.btnKem.Image = global::WindowsFormsApp1.Properties.Resources.SP_Icream;
             this.btnKem.ImageSize = new System.Drawing.Size(25, 25);
             this.btnKem.Location = new System.Drawing.Point(232, 81);
-            this.btnKem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnKem.Margin = new System.Windows.Forms.Padding(0);
             this.btnKem.Name = "btnKem";
             this.btnKem.Size = new System.Drawing.Size(87, 34);
             this.btnKem.TabIndex = 18;
@@ -375,7 +380,7 @@
             this.flpnThucDon.Location = new System.Drawing.Point(0, 179);
             this.flpnThucDon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.flpnThucDon.Name = "flpnThucDon";
-            this.flpnThucDon.Size = new System.Drawing.Size(545, 394);
+            this.flpnThucDon.Size = new System.Drawing.Size(554, 394);
             this.flpnThucDon.TabIndex = 16;
             // 
             // label4

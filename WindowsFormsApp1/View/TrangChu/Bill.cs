@@ -160,10 +160,7 @@ namespace WindowsFormsApp1.View.TrangChu
         private void btnBack_Click(object sender, EventArgs e)
         {
             fTrangChu f = new fTrangChu();
-            f.TopLevel = false;
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            f.Show();
+            Const.mainform.openChildForm(f,Const.mainform.pnForm);
             
         }
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
