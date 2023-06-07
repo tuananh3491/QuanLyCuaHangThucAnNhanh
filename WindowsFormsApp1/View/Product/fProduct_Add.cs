@@ -33,35 +33,47 @@ namespace WindowsFormsApp1.View.Product
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if(txtLink.Text == "" || txtName.Text == "" || txtPrice.Text == "")
+            try
             {
-                MessageBox.Show("Lỗi","Cảnh báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
-            }
-            else
-            {
-                //Tạo 1 đối tượng image từ file
-                Image image = Image.FromFile(txtLink.Text.ToString());
-                //tạo 1 memorystream
-                var ms = new MemoryStream();//this is where we are going to deposit the bytes 
-                                            //lưu bytes to ms
-                image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-                //to get the bytes we type
-                var bytes = ms.ToArray();
-                //
-                var sp = new San_pham()
+                if (txtLink.Text == "" || txtName.Text == "" || txtPrice.Text == "")
                 {
-                    Ten_SP = txtName.Text.ToString(),
-                    Don_gia = Convert.ToDouble(txtPrice.Text.ToString()),
-                    Ma_loai = maLoaiBLL.GetIdCategory(cbbCategory.SelectedItem.ToString()),
-                    Trang_thai = true,
-                    Hinh_anh = bytes
-                };
-                san_PhamBLL.SaveSP(sp);
-                
+                    MessageBox.Show("Lỗi", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    //tạo 1 memorystream
+                    var ms = new MemoryStream();//this is where we are going to deposit the bytes 
+                                                //lưu bytes to ms
+                    picture.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
+                    //to get the bytes we type
+                    var bytes = ms.ToArray();
+                    //
+                    var sp = new San_pham()
+                    {
+                        Ten_SP = txtName.Text.ToString(),
+                        Don_gia = Convert.ToDouble(txtPrice.Text.ToString()),
+                        Ma_loai = maLoaiBLL.GetIdCategory(cbbCategory.SelectedItem.ToString()),
+                        Trang_thai = true,
+                        Hinh_anh = bytes
+                    };
+                    san_PhamBLL.SaveSP(sp);
 
-                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+
+                    MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+                }
             }
-            
+            catch (FormatException)
+            {
+                MessageBox.Show("Không thể chuyển đổi giá tiền.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            catch (FileNotFoundException)
+            {
+                MessageBox.Show("Không thể tìm thấy file.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Không phải file hình ảnh.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -83,14 +95,22 @@ namespace WindowsFormsApp1.View.Product
 
         private void btnLink_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Title = "Select Image";
-            ofd.Filter = "All file (*.*)|*.*";
-            if(ofd.ShowDialog() == DialogResult.OK)
+            try
             {
-                picture.Image = new Bitmap(ofd.FileName);
+                picture.Image.Dispose();
+                OpenFileDialog ofd = new OpenFileDialog();
+                ofd.Title = "Select Image";
+                ofd.Filter = "Image file|*.jpg; *.png|All files|*.*";
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    picture.Image = new Bitmap(ofd.FileName);
+                }
+                txtLink.Text = ofd.FileName;
             }
-            txtLink.Text = ofd.FileName;
+            catch (ArgumentException)
+            {
+                MessageBox.Show("Không phải file hình ảnh.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
     }
 }
