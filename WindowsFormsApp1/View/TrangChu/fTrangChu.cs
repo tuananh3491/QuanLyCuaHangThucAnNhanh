@@ -103,6 +103,7 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             listCTHD.Clear();
             txtTongTien.Text = "0 đ";
+            tongtien = 0;
             flpnOrder.Controls.Clear();
         }
 

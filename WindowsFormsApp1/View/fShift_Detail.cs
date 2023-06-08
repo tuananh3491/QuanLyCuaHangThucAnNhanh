@@ -41,7 +41,7 @@ namespace WindowsFormsApp1.View
         public void SetCBBNV()
         {
             cbbNV.Items.Clear();
-            List<int> maLam = pcBLL.GetMaNVPC(x, DateTime.Today);
+            List<int> maLam = pcBLL.GetMaNVPC(x, dateTimePicker2.Value);
             List<int> maAll = nvBLL.GetAllMaNV();
             foreach (int ma in maLam)
             {
@@ -128,7 +128,8 @@ namespace WindowsFormsApp1.View
 
         private void iconDone_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker1.Value);
+            if(txtSearch.Text == null || txtSearch.Text == "") dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker1.Value);
+            else dataGridView1.DataSource = pcBLL.SearchNV_Date(txtSearch.Text, x, dateTimePicker1.Value);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -139,6 +140,19 @@ namespace WindowsFormsApp1.View
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbTenNV.Text = nvBLL.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Enter)
+            {
+                dataGridView1.DataSource = pcBLL.SearchNV(txtSearch.Text, x);
+            }
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            SetCBBNV();
         }
     }
 }

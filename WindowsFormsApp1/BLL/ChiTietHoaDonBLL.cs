@@ -25,7 +25,7 @@ namespace WindowsFormsApp1.BLL
         }
         public void SaveCTHD(Chi_tiet_hoa_don ct)
         {
-            cnn.Chi_tiet_hoa_don.AddOrUpdate(ct);
+            cnn.Chi_tiet_hoa_don.Add(ct);
             cnn.SaveChanges();
         }
         public void DeleteCTHD(Chi_tiet_hoa_don ct)

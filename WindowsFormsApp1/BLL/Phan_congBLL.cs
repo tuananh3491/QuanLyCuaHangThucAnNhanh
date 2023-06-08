@@ -51,9 +51,37 @@ namespace WindowsFormsApp1.BLL
             var s = cnn.Phan_cong.Where(p => p.Ngay.Value.Day == ngay.Day && p.Ngay.Value.Month == ngay.Month && p.Ngay.Value.Year == ngay.Year && p.Ma_ca == Ma_ca).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay }).ToList();
             return s;
         }
+        public dynamic SearchNV(string search, int Ma_ca)
+        {
+            try
+            {
+                int Ma_nv = Convert.ToInt32(search);
+                var s = cnn.Phan_cong.Where(p => p.Ma_NV == Ma_nv && p.Ma_ca == Ma_ca).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay }).ToList();
+                return s;
+            }
+            catch (FormatException)
+            {
+                var s = cnn.Phan_cong.Where(p => p.Tai_khoan.Nhan_vien.Ten_NV.Contains(search) && p.Ma_ca == Ma_ca).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay}).ToList();
+                return s;
+            }
+        }
+        public dynamic SearchNV_Date(string search, int Ma_ca, DateTime ngay)
+        {
+            try
+            {
+                int Ma_nv = Convert.ToInt32(search);
+                var s = cnn.Phan_cong.Where(p => p.Ma_NV == Ma_nv && p.Ma_ca == Ma_ca && p.Ngay.Value.Day == ngay.Day && p.Ngay.Value.Month == ngay.Month && p.Ngay.Value.Year == ngay.Year).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay }).ToList();
+                return s;
+            }
+            catch (FormatException)
+            {
+                var s = cnn.Phan_cong.Where(p => p.Tai_khoan.Nhan_vien.Ten_NV.Contains(search) && p.Ma_ca == Ma_ca && p.Ngay.Value.Day == ngay.Day && p.Ngay.Value.Month == ngay.Month && p.Ngay.Value.Year == ngay.Year).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay }).ToList();
+                return s;
+            }
+        }
         public void SavePC(Phan_cong pc)
         {
-            cnn.Phan_cong.AddOrUpdate(pc);
+            cnn.Phan_cong.Add(pc);
             cnn.SaveChanges();
         }
         public void DeletePC(Phan_cong pc)
