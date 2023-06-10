@@ -47,7 +47,6 @@ namespace WindowsFormsApp1.BLL
             {
                 Tai_khoan ca = new Tai_khoan();
                 ca = et.Tai_khoan.Find(ten);
-                if (ca != null)//có mã tài khoản đó
                 {
                     bool passwordMatch = BCrypt.Net.BCrypt.Verify(matKhau, ca.Mat_khau);
                     if (passwordMatch)
@@ -58,17 +57,14 @@ namespace WindowsFormsApp1.BLL
                     }
                     else
                     {
+                        MessageBox.Show("Mật khẩu không dúng.", "Thông báo", MessageBoxButton.OK);
                         return false;
                     }
                 }
-                else//ko có mã tk đã nhập
-                {
-                    return false;
-                }
             }
-            catch (Exception ex)
+            catch (NullReferenceException)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Tài khoản không tồn tại.", "Thông báo", MessageBoxButton.OK);
                 return false;
             }
             
