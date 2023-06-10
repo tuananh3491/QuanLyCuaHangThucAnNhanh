@@ -87,7 +87,8 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(210, 32);
             this.txtPrice.TabIndex = 20;
-            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPrice.Text = "0 đ";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnSave
             // 

@@ -31,7 +31,20 @@ namespace WindowsFormsApp1.View
             customizeDesig();
             ActivateButton(btnTrangChu);
             openChildForm(new fTrangChu(),pnForm);
+            Load();
             PhanQuyen();
+        }
+        public void Load()
+        {
+            if(Const.taiKhoan.Nhan_vien.Gioi_tinh == true)
+            {
+                btnPerson.Image = Image.FromFile(@"D:\Đồ án PBL3\code\PBL3_chung\luu (thu gui email)\capnhatnua\WindowsFormsApp1\Resources\nam1.png");
+            }
+            else
+            {
+                btnPerson.Image = Image.FromFile(@"D:\Đồ án PBL3\code\PBL3_chung\luu (thu gui email)\capnhatnua\WindowsFormsApp1\Resources\nữ.png");
+            }
+            lblName.Text = Const.taiKhoan.Nhan_vien.Ten_NV;
         }
         public void PhanQuyen()
         {

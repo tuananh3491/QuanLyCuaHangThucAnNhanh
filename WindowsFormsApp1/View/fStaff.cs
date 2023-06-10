@@ -47,6 +47,7 @@ namespace WindowsFormsApp1.View
                 fStaff_View f = new fStaff_View(nvBLL.GetNVByMa(int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString())));
                 Const.mainform.openChildForm(f, Const.mainform.pnForm);
                 this.Dispose();
+
             }
         }
 

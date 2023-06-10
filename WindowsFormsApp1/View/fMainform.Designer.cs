@@ -57,6 +57,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnForm = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
             this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -467,6 +468,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.iconLogOut);
             this.panel2.Controls.Add(this.btnPerson);
             this.panel2.Controls.Add(this.panelTimKiem);
@@ -475,7 +477,7 @@
             this.panel2.Location = new System.Drawing.Point(236, 32);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(960, 100);
+            this.panel2.Size = new System.Drawing.Size(960, 112);
             this.panel2.TabIndex = 6;
             // 
             // iconLogOut
@@ -487,7 +489,7 @@
             this.iconLogOut.IconColor = System.Drawing.Color.Black;
             this.iconLogOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconLogOut.IconSize = 34;
-            this.iconLogOut.Location = new System.Drawing.Point(882, 35);
+            this.iconLogOut.Location = new System.Drawing.Point(882, 41);
             this.iconLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.iconLogOut.Name = "iconLogOut";
             this.iconLogOut.Size = new System.Drawing.Size(38, 34);
@@ -507,7 +509,7 @@
             this.btnPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnPerson.Image")));
             this.btnPerson.ImageSize = new System.Drawing.Size(70, 70);
-            this.btnPerson.Location = new System.Drawing.Point(765, 7);
+            this.btnPerson.Location = new System.Drawing.Point(765, 6);
             this.btnPerson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPerson.Name = "btnPerson";
             this.btnPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -558,6 +560,16 @@
             this.pnForm.Size = new System.Drawing.Size(931, 571);
             this.pnForm.TabIndex = 7;
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(762, 90);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(98, 16);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "Tên đăng nhập";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // rjTextBox1
             // 
             this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
@@ -604,6 +616,7 @@
             this.panelTimKiem.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -641,5 +654,6 @@
         private FontAwesome.Sharp.IconPictureBox iconLogOut;
         public System.Windows.Forms.Panel pnForm;
         internal FontAwesome.Sharp.IconButton btnTrangChu;
+        private System.Windows.Forms.Label lblName;
     }
 }

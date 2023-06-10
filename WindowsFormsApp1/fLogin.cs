@@ -67,11 +67,17 @@ namespace WindowsFormsApp1
                     Tai_khoanBLL tkBLL = new Tai_khoanBLL();
                     if (tkBLL.CheckLogin(int.Parse(txtUsername.Text), txtPassWord.Text))
                     {
-                        MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Const.mainform = new fMainform();
-                        Const.mainform.logout += new fMainform.Logout(this.ShowForm);
-                        this.Hide();
-                        Const.mainform.ShowDialog();
+                        if (Const.taiKhoan.Nhan_vien.Trang_thai)
+                        {
+                            MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Const.mainform = new fMainform();
+                            Const.mainform.logout += new fMainform.Logout(this.ShowForm);
+                            this.Hide();
+                            Const.mainform.ShowDialog();
+                        }
+                        else {
+                            MessageBox.Show("Tài khoản đã bị vô hiệu hóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else MessageBox.Show("Đăng nhập không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

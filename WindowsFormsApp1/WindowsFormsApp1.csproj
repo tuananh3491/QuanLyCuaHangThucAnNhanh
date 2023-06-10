@@ -189,6 +189,18 @@
     <Compile Include="View\fPersonality.Designer.cs">
       <DependentUpon>fPersonality.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\fShift_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fShift_Staff.Designer.cs">
+      <DependentUpon>fShift_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\fStaff_SalaryDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\fStaff_SalaryDetail.Designer.cs">
+      <DependentUpon>fStaff_SalaryDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Product\fAddCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -423,6 +435,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\fPersonality.resx">
       <DependentUpon>fPersonality.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fShift_Staff.resx">
+      <DependentUpon>fShift_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\fStaff_SalaryDetail.resx">
+      <DependentUpon>fStaff_SalaryDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fAddCategory.resx">
       <DependentUpon>fAddCategory.cs</DependentUpon>

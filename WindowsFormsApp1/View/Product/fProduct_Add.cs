@@ -30,7 +30,20 @@ namespace WindowsFormsApp1.View.Product
                 cbbCategory.Items.Add(item.Ten);
             }
         }
+        public double ChangeFormatCurrency(string tien)
+        {
+            // Xóa ký tự đơn vị tiền tệ
+            tien = tien.Replace(" đ", "");
 
+            // Xóa dấu phân cách hàng nghìn
+            tien = tien.Replace(".", "");
+
+            // Chuyển đổi chuỗi tiền thành kiểu integer
+            double giatriTien = double.Parse(tien);
+
+            // giá trị tiền kiểu integer
+            return giatriTien;
+        }
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try
@@ -48,10 +61,12 @@ namespace WindowsFormsApp1.View.Product
                     //to get the bytes we type
                     var bytes = ms.ToArray();
                     //
+                    double gia;
+                    gia = ChangeFormatCurrency(txtPrice.Text.ToString());
                     var sp = new San_pham()
                     {
                         Ten_SP = txtName.Text.ToString(),
-                        Don_gia = Convert.ToDouble(txtPrice.Text.ToString()),
+                        Don_gia = gia,
                         Ma_loai = maLoaiBLL.GetIdCategory(cbbCategory.SelectedItem.ToString()),
                         Trang_thai = true,
                         Hinh_anh = bytes

@@ -40,7 +40,6 @@
             this.cbL = new System.Windows.Forms.CheckBox();
             this.cbM = new System.Windows.Forms.CheckBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtLink = new System.Windows.Forms.TextBox();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
@@ -111,7 +110,7 @@
             this.txtName.Location = new System.Drawing.Point(566, 71);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 25);
+            this.txtName.Size = new System.Drawing.Size(221, 25);
             this.txtName.TabIndex = 55;
             // 
             // txtPrice
@@ -121,8 +120,10 @@
             this.txtPrice.Location = new System.Drawing.Point(566, 221);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(175, 25);
+            this.txtPrice.Size = new System.Drawing.Size(200, 25);
             this.txtPrice.TabIndex = 57;
+            this.txtPrice.Text = "0 đ";
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // cbS
             // 
@@ -160,7 +161,6 @@
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.txtLink);
             this.panel1.Controls.Add(this.cbbCategory);
@@ -181,16 +181,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(835, 391);
             this.panel1.TabIndex = 63;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(750, 221);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(23, 25);
-            this.label1.TabIndex = 67;
-            this.label1.Text = "đ";
             // 
             // guna2Button1
             // 
@@ -215,9 +205,8 @@
             this.txtLink.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLink.Font = new System.Drawing.Font("Arial", 12F);
             this.txtLink.Location = new System.Drawing.Point(75, 293);
-            this.txtLink.Multiline = true;
             this.txtLink.Name = "txtLink";
-            this.txtLink.Size = new System.Drawing.Size(200, 25);
+            this.txtLink.Size = new System.Drawing.Size(200, 23);
             this.txtLink.TabIndex = 64;
             // 
             // cbbCategory
@@ -366,7 +355,6 @@
         private System.Windows.Forms.ComboBox cbbCategory;
         private System.Windows.Forms.TextBox txtLink;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
     }
 }

@@ -68,7 +68,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.groupBox2);
@@ -103,6 +103,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtEmail.Location = new System.Drawing.Point(167, 312);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -202,6 +203,7 @@
             // 
             // txtTenTK
             // 
+            this.txtTenTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtTenTK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtTenTK.Location = new System.Drawing.Point(176, 53);
             this.txtTenTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -222,6 +224,7 @@
             // 
             // txtMK
             // 
+            this.txtMK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtMK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtMK.Location = new System.Drawing.Point(176, 120);
             this.txtMK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -254,6 +257,7 @@
             // 
             // txtLuong
             // 
+            this.txtLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtLuong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtLuong.Location = new System.Drawing.Point(167, 375);
             this.txtLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -326,6 +330,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtSDT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtSDT.Location = new System.Drawing.Point(169, 241);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -368,6 +373,7 @@
             // 
             // txtTenNV
             // 
+            this.txtTenNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtTenNV.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtTenNV.Location = new System.Drawing.Point(167, 21);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

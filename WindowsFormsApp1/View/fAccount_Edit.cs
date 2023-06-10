@@ -72,7 +72,7 @@ namespace WindowsFormsApp1.View
             else { rdAdmin.Checked = true; }
             chkTrangThai.Checked = tk.Nhan_vien.Trang_thai;
             if (tk.Nhan_vien.Gioi_tinh == true) { rdNam.Checked = true; }
-            else { rdNam.Checked=true; }
+            else { rdNu.Checked=true; }
             dtpkNgaySinh.Value = tk.Nhan_vien.Ngay_sinh;
             txtEmail.Text = tk.Nhan_vien.Email;
         }

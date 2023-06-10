@@ -19,10 +19,7 @@ namespace WindowsFormsApp1.View
     {
         private Nhan_vien x;
         Nhan_vienBLL nvBLL = new Nhan_vienBLL();
-        public fStaff_View()
-        {
-            InitializeComponent();
-        }
+      
 
         public fStaff_View(Nhan_vien x)
         {
@@ -72,7 +69,7 @@ namespace WindowsFormsApp1.View
         private void btnCTLuong_Click(object sender, EventArgs e)
         {
 
-            fStaff_Salary f = new fStaff_Salary(x.Ma_NV);
+            fStaff_SalaryDetail f = new fStaff_SalaryDetail(x.Ma_NV);
             Const.mainform.openChildForm(f, Const.mainform.pnForm);
 
             //             try

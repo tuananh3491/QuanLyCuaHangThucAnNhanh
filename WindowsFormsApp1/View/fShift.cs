@@ -50,5 +50,13 @@ namespace WindowsFormsApp1.View
             if (dataGridView1.SelectedRows.Count == 1) btnDetail.Enabled = true;
             else btnDetail.Enabled = false;
         }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dataGridView1.DataSource = clvBLL.GetCLV(Convert.ToInt32(txtSearch.Text));
+            }
+        }
     }
 }

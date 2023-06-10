@@ -66,6 +66,7 @@
             this.btnEdit = new WindowsFormsApp1.CustomControl.VBButton();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.btnDatLaiMK = new WindowsFormsApp1.CustomControl.VBButton();
+            this.btnXemLich = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -463,12 +464,12 @@
             this.btnCTLuong.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCTLuong.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCTLuong.ForeColor = System.Drawing.Color.White;
-            this.btnCTLuong.Location = new System.Drawing.Point(577, 513);
+            this.btnCTLuong.Location = new System.Drawing.Point(643, 513);
             this.btnCTLuong.Margin = new System.Windows.Forms.Padding(5);
             this.btnCTLuong.Name = "btnCTLuong";
-            this.btnCTLuong.Size = new System.Drawing.Size(151, 39);
+            this.btnCTLuong.Size = new System.Drawing.Size(106, 39);
             this.btnCTLuong.TabIndex = 24;
-            this.btnCTLuong.Text = "Chi tiết lương";
+            this.btnCTLuong.Text = "Lương";
             this.btnCTLuong.TextColor = System.Drawing.Color.White;
             this.btnCTLuong.UseVisualStyleBackColor = false;
             this.btnCTLuong.Click += new System.EventHandler(this.btnCTLuong_Click);
@@ -485,10 +486,10 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(746, 513);
+            this.btnEdit.Location = new System.Drawing.Point(764, 513);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(129, 39);
+            this.btnEdit.Size = new System.Drawing.Size(111, 39);
             this.btnEdit.TabIndex = 21;
             this.btnEdit.Text = "Thay đổi ";
             this.btnEdit.TextColor = System.Drawing.Color.White;
@@ -535,12 +536,36 @@
             this.btnDatLaiMK.UseVisualStyleBackColor = false;
             this.btnDatLaiMK.Click += new System.EventHandler(this.btnDatLaiMK_Click);
             // 
+            // btnXemLich
+            // 
+            this.btnXemLich.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXemLich.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXemLich.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnXemLich.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnXemLich.BorderRadius = 10;
+            this.btnXemLich.BorderSize = 0;
+            this.btnXemLich.FlatAppearance.BorderSize = 0;
+            this.btnXemLich.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemLich.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemLich.ForeColor = System.Drawing.Color.White;
+            this.btnXemLich.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnXemLich.Location = new System.Drawing.Point(276, 513);
+            this.btnXemLich.Margin = new System.Windows.Forms.Padding(5);
+            this.btnXemLich.Name = "btnXemLich";
+            this.btnXemLich.Size = new System.Drawing.Size(187, 39);
+            this.btnXemLich.TabIndex = 30;
+            this.btnXemLich.Text = "Lịch làm việc";
+            this.btnXemLich.TextColor = System.Drawing.Color.White;
+            this.btnXemLich.UseVisualStyleBackColor = false;
+            this.btnXemLich.Click += new System.EventHandler(this.btnXemLich_Click);
+            // 
             // fPersonality
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.ClientSize = new System.Drawing.Size(931, 560);
+            this.Controls.Add(this.btnXemLich);
             this.Controls.Add(this.btnDatLaiMK);
             this.Controls.Add(this.btnCTLuong);
             this.Controls.Add(this.label7);
@@ -603,5 +628,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtEmail;
+        private CustomControl.VBButton btnXemLich;
     }
 }

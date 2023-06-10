@@ -271,11 +271,11 @@
             // cbbLoai
             // 
             this.cbbLoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoai.FormattingEnabled = true;
-            this.cbbLoai.Location = new System.Drawing.Point(728, 22);
+            this.cbbLoai.Location = new System.Drawing.Point(728, 24);
             this.cbbLoai.Name = "cbbLoai";
-            this.cbbLoai.Size = new System.Drawing.Size(112, 30);
+            this.cbbLoai.Size = new System.Drawing.Size(111, 32);
             this.cbbLoai.TabIndex = 50;
             this.cbbLoai.Text = "Xem tất cả";
             this.cbbLoai.SelectedIndexChanged += new System.EventHandler(this.cbbLoai_SelectedIndexChanged);

@@ -30,6 +30,7 @@ namespace WindowsFormsApp1.View
             if (!(bool)Const.taiKhoan.Loai_TK)
             {
                 btnCTLuong.Visible = false;
+                btnXemLich.Visible = false;
             }
         }
         public bool CheckEmail()
@@ -126,7 +127,7 @@ namespace WindowsFormsApp1.View
 
         private void btnCTLuong_Click(object sender, EventArgs e)
         {
-            fStaff_Salary f = new fStaff_Salary(maNV);
+            fStaff_SalaryDetail f = new fStaff_SalaryDetail(maNV);
             Const.mainform.openChildForm(f, Const.mainform.pnForm);
         }
 
@@ -157,5 +158,10 @@ namespace WindowsFormsApp1.View
             }
         }
 
+        private void btnXemLich_Click(object sender, EventArgs e)
+        {
+            fShift_Staff form = new fShift_Staff();
+            Const.mainform.openChildForm(form, Const.mainform.pnForm);
+        }
     }
 }

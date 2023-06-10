@@ -16,7 +16,9 @@ namespace WindowsFormsApp1.DAL
     {
         public int Ma_NV { get; set; }
         public int Ma_ca { get; set; }
-        public Nullable<System.DateTime> Ngay { get; set; }
+        public System.DateTime Ngay { get; set; }
+        public Nullable<int> luongGio { get; set; }
+        public Nullable<double> soGio { get; set; }
     
         public virtual Ca_lam_viec Ca_lam_viec { get; set; }
         public virtual Tai_khoan Tai_khoan { get; set; }

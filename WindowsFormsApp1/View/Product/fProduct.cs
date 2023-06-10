@@ -24,17 +24,17 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
             PhanQuyen();
-            setCbb();
+            SetCBB();
         }
         public void PhanQuyen()
         {
-            if ((bool)Const.taiKhoan.Loai_TK)
+            if (Const.taiKhoan.Loai_TK)
             {
                 btnAddCategory.Visible = false;
                 btnAddPro.Visible = false;
             }
         }
-        public void setCbb()
+        public void SetCBB()
         {
             List<Ma_loai> list = maLoaiBLL.GetAllML();
             foreach (Ma_loai item in list)
@@ -62,16 +62,6 @@ namespace WindowsFormsApp1.View
 
         private void btn_Click(object sender, EventArgs e)
         {
-            //flpnMonAn.Controls.Clear();
-            //int idType;
-            //idType = maLoaiBLL.GetIdCategory(((Guna2Button)sender).Text);
-            //List<San_pham> listSP = sanPhamBLL.GetProOfType(idType);
-
-            //foreach (San_pham sp in listSP)
-            //{
-            //    pnProduct p = new pnProduct(sp.Ma_SP);
-            //    flpnMonAn.Controls.Add(p);
-            //}
             cbbLoai.SelectedItem = null;
             int maLoai;
             flpnMonAn.Controls.Clear();
@@ -100,7 +90,7 @@ namespace WindowsFormsApp1.View
         {
             fProduct_Add f = new fProduct_Add();
             Const.mainform.openChildForm(f, Const.mainform.pnForm);
-            setCbb();
+            SetCBB();
         }
 
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)

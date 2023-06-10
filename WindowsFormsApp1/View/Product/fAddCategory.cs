@@ -32,11 +32,6 @@ namespace WindowsFormsApp1.View.Product
                     Ten = txtName.Text,
                     DVT = txtUnit.Text,
                 };
-                //using(PBL_3Entities cnn = new PBL_3Entities())
-                //{
-                //    cnn.Ma_loai.Add(loai);
-                //    cnn.SaveChanges();
-                //}
                 maLoaiBLL.SaveML(loai);
                 MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 txtMa.Text = loai.Ma_loai1.ToString();

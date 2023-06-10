@@ -91,6 +91,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(136, 23);
             this.txtName.TabIndex = 13;
+            this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnL
             // 

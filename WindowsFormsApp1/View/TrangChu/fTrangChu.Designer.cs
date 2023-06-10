@@ -55,7 +55,7 @@
             // 
             // pnChonMon
             // 
-            this.pnChonMon.BackColor = System.Drawing.SystemColors.Window;
+            this.pnChonMon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.pnChonMon.Controls.Add(this.flpnOrder);
             this.pnChonMon.Controls.Add(this.btnTaoDon);
             this.pnChonMon.Controls.Add(this.btnHuy);
@@ -73,7 +73,7 @@
             // 
             this.flpnOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.flpnOrder.AutoScroll = true;
-            this.flpnOrder.BackColor = System.Drawing.Color.Transparent;
+            this.flpnOrder.BackColor = System.Drawing.Color.White;
             this.flpnOrder.Location = new System.Drawing.Point(7, 54);
             this.flpnOrder.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.flpnOrder.Name = "flpnOrder";
@@ -140,7 +140,7 @@
             this.txtTongTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTongTien.Size = new System.Drawing.Size(109, 22);
             this.txtTongTien.TabIndex = 2;
-            this.txtTongTien.Text = "0";
+            this.txtTongTien.Text = "0 đ";
             this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label2
@@ -191,12 +191,12 @@
             // cbbLoai
             // 
             this.cbbLoai.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbbLoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbLoai.FormattingEnabled = true;
-            this.cbbLoai.Location = new System.Drawing.Point(433, 85);
+            this.cbbLoai.Location = new System.Drawing.Point(437, 85);
             this.cbbLoai.Margin = new System.Windows.Forms.Padding(0);
             this.cbbLoai.Name = "cbbLoai";
-            this.cbbLoai.Size = new System.Drawing.Size(112, 30);
+            this.cbbLoai.Size = new System.Drawing.Size(109, 32);
             this.cbbLoai.TabIndex = 51;
             this.cbbLoai.Text = "Xem tất cả";
             this.cbbLoai.SelectedIndexChanged += new System.EventHandler(this.cbbLoai_SelectedIndexChanged);

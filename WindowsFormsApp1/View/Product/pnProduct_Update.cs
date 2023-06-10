@@ -45,12 +45,27 @@ namespace WindowsFormsApp1.View.Product
             if (sp.Trang_thai == false) btnDel.Enabled = false;
             else btnDel.Enabled = true;
         }
+        public double ChangeFormatCurrency(string tien)
+        {
+            // Xóa ký tự đơn vị tiền tệ
+            tien = tien.Replace(" đ", "");
+
+            // Xóa dấu phân cách hàng nghìn
+            tien = tien.Replace(".", "");
+
+            // Chuyển đổi chuỗi tiền thành kiểu integer
+            double giatriTien = double.Parse(tien);
+
+            // giá trị tiền kiểu integer
+            return giatriTien;
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             try
             {
+                double gia; gia = ChangeFormatCurrency(txtPrice.Text.ToString());
                 San_pham sp = sanPhamBLL.GetPro(maSP);
-                sp.Don_gia = Convert.ToDouble(txtPrice.Text.ToString());
+                sp.Don_gia = gia;
                 sp.Trang_thai = checkCo.Checked;
                 sanPhamBLL.SaveSP(sp);
 

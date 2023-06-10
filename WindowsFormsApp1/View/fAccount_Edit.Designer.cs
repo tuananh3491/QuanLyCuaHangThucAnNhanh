@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnEdit = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -56,39 +55,18 @@
             this.txtMaTaiKhoan = new System.Windows.Forms.TextBox();
             this.btnBack = new FontAwesome.Sharp.IconButton();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnEdit = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
-            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEdit.BorderRadius = 10;
-            this.btnEdit.BorderSize = 0;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(759, 514);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(133, 39);
-            this.btnEdit.TabIndex = 26;
-            this.btnEdit.Text = "Cập nhật";
-            this.btnEdit.TextColor = System.Drawing.Color.White;
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // panel1
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(217)))), ((int)(((byte)(217)))));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.lblLuong);
@@ -128,6 +106,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtEmail.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtEmail.Location = new System.Drawing.Point(196, 388);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -149,6 +128,7 @@
             // 
             // txtLuong
             // 
+            this.txtLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtLuong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtLuong.Location = new System.Drawing.Point(643, 180);
             this.txtLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -293,6 +273,7 @@
             // 
             // txtSDT
             // 
+            this.txtSDT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtSDT.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtSDT.Location = new System.Drawing.Point(197, 327);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -325,6 +306,7 @@
             // 
             // txtTenTK
             // 
+            this.txtTenTK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtTenTK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtTenTK.Location = new System.Drawing.Point(643, 49);
             this.txtTenTK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -356,6 +338,7 @@
             // 
             // txtTen
             // 
+            this.txtTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtTen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtTen.Location = new System.Drawing.Point(199, 115);
             this.txtTen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -376,6 +359,7 @@
             // 
             // txtMaTaiKhoan
             // 
+            this.txtMaTaiKhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.txtMaTaiKhoan.Enabled = false;
             this.txtMaTaiKhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.txtMaTaiKhoan.Location = new System.Drawing.Point(199, 45);
@@ -412,6 +396,28 @@
             this.label9.Size = new System.Drawing.Size(342, 32);
             this.label9.TabIndex = 29;
             this.label9.Text = "THÔNG TIN TÀI KHOẢN";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnEdit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
+            this.btnEdit.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEdit.BorderRadius = 10;
+            this.btnEdit.BorderSize = 0;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(759, 514);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(133, 39);
+            this.btnEdit.TabIndex = 26;
+            this.btnEdit.Text = "Cập nhật";
+            this.btnEdit.TextColor = System.Drawing.Color.White;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // fAccount_Edit
             // 

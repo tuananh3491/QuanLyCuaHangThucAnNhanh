@@ -5,7 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
@@ -17,10 +19,13 @@ namespace WindowsFormsApp1.View
         Phan_congBLL pcBLL = new Phan_congBLL(); 
         Ca_lam_viecBLL caBLL = new Ca_lam_viecBLL();
         Nhan_vienBLL nvBLL = new Nhan_vienBLL();  
-        int x;
+        int x;// mã ca
+        TimeSpan ketThucCa; TimeSpan batDauca;
         public fShift_Detail()
         {
             InitializeComponent();
+            batDauca = caBLL.GetCLV(x).Thoigianbatdau;
+            ketThucCa = caBLL.GetCLV(x).Thoigianketthuc;
         }
         public fShift_Detail(int x)
         {
@@ -38,12 +43,12 @@ namespace WindowsFormsApp1.View
             }
 
         }
-        public void SetCBBNV()
+        public void SetCBBNV(DateTime ngay)
         {
             cbbNV.Items.Clear();
-            List<int> maLam = pcBLL.GetMaNVPC(x, DateTime.Today);
+            List<int> maNVLam = pcBLL.GetMaNVPC(x, ngay);
             List<int> maAll = nvBLL.GetAllMaNV();
-            foreach (int ma in maLam)
+            foreach (int ma in maNVLam)
             {
                 maAll.Remove(ma);
             }
@@ -54,32 +59,47 @@ namespace WindowsFormsApp1.View
         }
         private void fShift_Detail_Load(object sender, EventArgs e)
         {
-            reload();
-        }
-        private void reload()
-        {
             lblCa.Text = caBLL.GetCLV(x).Ten_ca;
             txtTGBD.Text = caBLL.GetCLV(x).Thoigianbatdau.ToString();
             txtTGKT.Text = caBLL.GetCLV(x).Thoigianketthuc.ToString();
+        }
+        private void reload()
+        {
             //pcBLL.ShowDGV(dataGridView1, x);
-            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker1.Value);
+            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dtpLich.Value);
             //cbbNV.Items.Clear();
             //cbbNV.Items.AddRange(pcBLL.GetMaNV(x).ToArray());
-            SetCBBNV();
+            SetCBBNV(dtpLich.Value);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-//            dateTimePicker2.Value = DateTime.Today;
-            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker2.Value);
+            ////            dateTimePicker2.Value = DateTime.Today;
+            //dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker2.Value);
+            //try
+            //{
+            //    if (dateTimePicker2.Value < DateTime.Today) throw new ArgumentException();
+            //    pcBLL.SavePC(new Phan_cong
+            //    {
+            //        Ma_ca = x,
+            //        Ma_NV = int.Parse(cbbNV.Text),
+            //        Ngay = dateTimePicker2.Value,
+            //        luongGio = nvBLL.GetNVByMa(int.Parse(cbbNV.Text)).Luong,
+            //        soGio = (caBLL.GetCLV(x).Thoigianketthuc - caBLL.GetCLV(x).Thoigianbatdau).TotalMinutes / 60,
+            //    });
+            //    reload();
+            //}
+            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dtpLich.Value);
             try
             {
-                if (dateTimePicker2.Value < DateTime.Today) throw new ArgumentException();
+                if (dtpLich.Value < DateTime.Today) throw new ArgumentException();
                 pcBLL.SavePC(new Phan_cong
                 {
                     Ma_ca = x,
                     Ma_NV = int.Parse(cbbNV.Text),
-                    Ngay = dateTimePicker2.Value
+                    Ngay = dtpLich.Value,
+                    luongGio = nvBLL.GetNVByMa(int.Parse(cbbNV.Text)).Luong,
+                    soGio = (ketThucCa - batDauca).TotalMinutes / 60,
                 });
                 reload();
             }
@@ -95,17 +115,15 @@ namespace WindowsFormsApp1.View
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if(dateTimePicker1.Value >= DateTime.Today)
+            if(dtpLich.Value >= DateTime.Today)
             {
                 if (dataGridView1.SelectedRows.Count == 1)
                 {
                     try
                     {
-                        pcBLL.DeletePC(new Phan_cong
-                        {
-                            Ma_ca = x,
-                            Ma_NV = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString()),
-                        });
+                        int maNV = int.Parse(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                        DateTime ngay = pcBLL.GetPhanCong(x, maNV, dtpLich.Value.Date);
+                        pcBLL.DeletePC(x, maNV, ngay);
                         reload();
                     }
                     catch (FormatException)
@@ -128,17 +146,52 @@ namespace WindowsFormsApp1.View
 
         private void iconDone_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker1.Value);
+            reload();
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-           // pcBLL.ShowDGV(dataGridView1, dateTimePicker1.Value, x);
-        }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             lbTenNV.Text = nvBLL.GetNVByMa(int.Parse(cbbNV.Text)).Ten_NV;
         }
+
+        private void btnDuyet_Click(object sender, EventArgs e)
+        {
+            if (dtpLich.Value >= DateTime.Today)
+            {
+                TimeSpan tgBatDau = TimeSpan.Parse(dtpBatDau.Text);
+                TimeSpan tgKetThuc = TimeSpan.Parse(dtpKetThuc.Text);
+                //if (batDauca <= tgBatDau && tgBatDau < ketThucCa && batDauca < tgKetThuc && tgKetThuc <= ketThucCa)
+                //{
+
+                if (dataGridView1.SelectedRows.Count == 1)
+                {
+                    int maNV = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                    Phan_cong pc = pcBLL.GetPhanCong(x, maNV, dtpLich.Value);
+                    pc.soGio -= (tgKetThuc - tgBatDau).TotalMinutes / 60;
+                    pcBLL.SavePC(pc);
+                    MessageBox.Show("Duyệt thành công", "Thông báo");
+                }
+                else
+                {
+                    MessageBox.Show("Chọn nhân viên cần phê duyệt", "Lỗi");
+                }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Thời gian không phù hợp", "Lỗi");
+                //}
+            }
+            MessageBox.Show("Ngày không phù hợp", "Lỗi");
+        }
+       
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                dataGridView1.DataSource = pcBLL.ShowSearch(x, Convert.ToInt32(txtSearch.Text.ToString()), dtpLich.Value);
+            }
+        }
+
     }
 }

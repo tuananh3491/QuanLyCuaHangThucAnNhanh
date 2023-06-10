@@ -47,14 +47,21 @@ namespace WindowsFormsApp1.BLL
             {
                 Tai_khoan ca = new Tai_khoan();
                 ca = et.Tai_khoan.Find(ten);
-                bool passwordMatch = BCrypt.Net.BCrypt.Verify(matKhau, ca.Mat_khau);
-                if (passwordMatch)
+                if (ca != null)//có mã tài khoản đó
                 {
-                    Const.taiKhoan = ca;
-                    Const.taiKhoan.Loai_TK = ca.Loai_TK;
-                    return true;
+                    bool passwordMatch = BCrypt.Net.BCrypt.Verify(matKhau, ca.Mat_khau);
+                    if (passwordMatch)
+                    {
+                        Const.taiKhoan = ca;
+                        Const.taiKhoan.Loai_TK = ca.Loai_TK;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
                 }
-                else
+                else//ko có mã tk đã nhập
                 {
                     return false;
                 }
