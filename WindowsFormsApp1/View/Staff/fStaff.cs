@@ -18,7 +18,6 @@ namespace WindowsFormsApp1.View
         public fStaff()
         {
             InitializeComponent();
-            //setGUI();
             Load();
             PhanQuyen();
         }

@@ -21,12 +21,7 @@ namespace WindowsFormsApp1.View
         Nhan_vienBLL nvBLL = new Nhan_vienBLL();  
         int x;// mã ca
         TimeSpan ketThucCa; TimeSpan batDauca;
-        public fShift_Detail()
-        {
-            InitializeComponent();
-            batDauca = caBLL.GetCLV(x).Thoigianbatdau;
-            ketThucCa = caBLL.GetCLV(x).Thoigianketthuc;
-        }
+       
         public fShift_Detail(int x)
         {
             InitializeComponent();
@@ -65,30 +60,12 @@ namespace WindowsFormsApp1.View
         }
         private void reload()
         {
-            //pcBLL.ShowDGV(dataGridView1, x);
             dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dtpLich.Value);
-            //cbbNV.Items.Clear();
-            //cbbNV.Items.AddRange(pcBLL.GetMaNV(x).ToArray());
             SetCBBNV(dtpLich.Value);
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ////            dateTimePicker2.Value = DateTime.Today;
-            //dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dateTimePicker2.Value);
-            //try
-            //{
-            //    if (dateTimePicker2.Value < DateTime.Today) throw new ArgumentException();
-            //    pcBLL.SavePC(new Phan_cong
-            //    {
-            //        Ma_ca = x,
-            //        Ma_NV = int.Parse(cbbNV.Text),
-            //        Ngay = dateTimePicker2.Value,
-            //        luongGio = nvBLL.GetNVByMa(int.Parse(cbbNV.Text)).Luong,
-            //        soGio = (caBLL.GetCLV(x).Thoigianketthuc - caBLL.GetCLV(x).Thoigianbatdau).TotalMinutes / 60,
-            //    });
-            //    reload();
-            //}
             dataGridView1.DataSource = pcBLL.GetNVsByCa_Date(x, dtpLich.Value);
             try
             {
@@ -182,11 +159,6 @@ namespace WindowsFormsApp1.View
                 {
                     MessageBox.Show("Chọn nhân viên cần phê duyệt", "Lỗi");
                 }
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Thời gian không phù hợp", "Lỗi");
-                //}
             }
             else MessageBox.Show("Ngày không phù hợp", "Lỗi");
         }

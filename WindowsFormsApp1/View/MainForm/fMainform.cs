@@ -30,7 +30,7 @@ namespace WindowsFormsApp1.View
             this.DoubleBuffered = true;
             customizeDesig();
             ActivateButton(btnTrangChu);
-            openChildForm(new fTrangChu(),pnForm);
+            openChildForm(new fHomePage(),pnForm);
             Load();
             PhanQuyen();
         }
@@ -139,7 +139,7 @@ namespace WindowsFormsApp1.View
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
-            openChildForm(new TrangChu.fTrangChu(), pnForm);
+            openChildForm(new TrangChu.fHomePage(), pnForm);
             panelBaoCao.Visible = false;
         }
 

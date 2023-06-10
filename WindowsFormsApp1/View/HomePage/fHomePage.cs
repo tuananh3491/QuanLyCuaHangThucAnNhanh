@@ -14,14 +14,14 @@ using WindowsFormsApp1.View.Product;
 
 namespace WindowsFormsApp1.View.TrangChu
 {
-    public partial class fTrangChu : Form
+    public partial class fHomePage : Form
     {
 
         List<Chi_tiet_hoa_don> listCTHD = new List<Chi_tiet_hoa_don>();
         Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();
         San_phamBLL spBLL = new San_phamBLL();
         double tongtien = 0;
-        public fTrangChu()
+        public fHomePage()
         {
             InitializeComponent();
             setCbb();

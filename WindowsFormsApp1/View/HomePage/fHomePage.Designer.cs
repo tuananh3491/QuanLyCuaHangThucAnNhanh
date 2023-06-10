@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1.View.TrangChu
 {
-    partial class fTrangChu
+    partial class fHomePage
     {
         /// <summary>
         /// Required designer variable.

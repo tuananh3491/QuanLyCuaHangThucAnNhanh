@@ -120,7 +120,7 @@ namespace WindowsFormsApp1.View
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            fTrangChu f = new fTrangChu();
+            fHomePage f = new fHomePage();
             Const.mainform.openChildForm(f, Const.mainform.pnForm);
             Const.mainform.ActivateButton(Const.mainform.btnTrangChu);
         }

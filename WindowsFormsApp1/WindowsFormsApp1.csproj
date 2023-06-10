@@ -141,10 +141,10 @@
     <Compile Include="DAL\Tai_khoan.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\fLogin.cs">
+    <Compile Include="View\Login\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fLogin.Designer.cs">
+    <Compile Include="View\Login\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Account\fAccount.cs">
@@ -165,28 +165,28 @@
     <Compile Include="View\Bill\fBill_PrePrint.Designer.cs">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fForgetPassword.cs">
+    <Compile Include="View\Login\fForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fForgetPassword.Designer.cs">
+    <Compile Include="View\Login\fForgetPassword.Designer.cs">
       <DependentUpon>fForgetPassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fPersonality.cs">
+    <Compile Include="View\MainForm\fPersonality.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fPersonality.Designer.cs">
+    <Compile Include="View\MainForm\fPersonality.Designer.cs">
       <DependentUpon>fPersonality.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fShift_Staff.cs">
+    <Compile Include="View\Shift\fShift_Staff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fShift_Staff.Designer.cs">
+    <Compile Include="View\Shift\fShift_Staff.Designer.cs">
       <DependentUpon>fShift_Staff.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fStaff_SalaryDetail.cs">
+    <Compile Include="View\Staff\fStaff_SalaryDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fStaff_SalaryDetail.Designer.cs">
+    <Compile Include="View\Staff\fStaff_SalaryDetail.Designer.cs">
       <DependentUpon>fStaff_SalaryDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Product\fAddCategory.cs">
@@ -227,10 +227,10 @@
     <Compile Include="View\Customer\fCustomer_Update.Designer.cs">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fShift_Detail.cs">
+    <Compile Include="View\Shift\fShift_Detail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fShift_Detail.Designer.cs">
+    <Compile Include="View\Shift\fShift_Detail.Designer.cs">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Account\fAccount_Add.cs">
@@ -239,10 +239,10 @@
     <Compile Include="View\Account\fAccount_Add.Designer.cs">
       <DependentUpon>fAccount_Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fStaff_View.cs">
+    <Compile Include="View\Staff\fStaff_View.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fStaff_View.Designer.cs">
+    <Compile Include="View\Staff\fStaff_View.Designer.cs">
       <DependentUpon>fStaff_View.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Product\fProduct.cs">
@@ -251,10 +251,10 @@
     <Compile Include="View\Product\fProduct.Designer.cs">
       <DependentUpon>fProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fMainform.cs">
+    <Compile Include="View\MainForm\fMainform.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fMainform.Designer.cs">
+    <Compile Include="View\MainForm\fMainform.Designer.cs">
       <DependentUpon>fMainform.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Report\fReport_Customer.cs">
@@ -287,29 +287,23 @@
     <Compile Include="View\Report\fReport_Revenue.Designer.cs">
       <DependentUpon>fReport_Revenue.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fShift.cs">
+    <Compile Include="View\Shift\fShift.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fShift.Designer.cs">
+    <Compile Include="View\Shift\fShift.Designer.cs">
       <DependentUpon>fShift.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fShift_Create.cs">
+    <Compile Include="View\Shift\fShift_Create.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fShift_Create.Designer.cs">
+    <Compile Include="View\Shift\fShift_Create.Designer.cs">
       <DependentUpon>fShift_Create.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fStaff.cs">
+    <Compile Include="View\Staff\fStaff.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fStaff.Designer.cs">
+    <Compile Include="View\Staff\fStaff.Designer.cs">
       <DependentUpon>fStaff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\fStaff_Salary.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\fStaff_Salary.Designer.cs">
-      <DependentUpon>fStaff_Salary.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Product\fProduct_Add.cs">
       <SubType>Form</SubType>
@@ -329,28 +323,28 @@
     <Compile Include="View\Product\pnProduct_Update.Designer.cs">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TrangChu\Bill.cs">
+    <Compile Include="View\HomePage\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TrangChu\Bill.Designer.cs">
+    <Compile Include="View\HomePage\Bill.Designer.cs">
       <DependentUpon>Bill.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TrangChu\fTrangChu.cs">
+    <Compile Include="View\HomePage\fHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\TrangChu\fTrangChu.Designer.cs">
-      <DependentUpon>fTrangChu.cs</DependentUpon>
+    <Compile Include="View\HomePage\fHomePage.Designer.cs">
+      <DependentUpon>fHomePage.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TrangChu\panelMonAn.cs">
+    <Compile Include="View\HomePage\panelMonAn.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\TrangChu\panelMonAn.Designer.cs">
+    <Compile Include="View\HomePage\panelMonAn.Designer.cs">
       <DependentUpon>panelMonAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TrangChu\panelOrder.cs">
+    <Compile Include="View\HomePage\panelOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\TrangChu\panelOrder.Designer.cs">
+    <Compile Include="View\HomePage\panelOrder.Designer.cs">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </Compile>
     <None Include="Resources\search.png" />
@@ -406,16 +400,16 @@
     <EmbeddedResource Include="View\Bill\fBill_PrePrint.resx">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fForgetPassword.resx">
+    <EmbeddedResource Include="View\Login\fForgetPassword.resx">
       <DependentUpon>fForgetPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fPersonality.resx">
+    <EmbeddedResource Include="View\MainForm\fPersonality.resx">
       <DependentUpon>fPersonality.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fShift_Staff.resx">
+    <EmbeddedResource Include="View\Shift\fShift_Staff.resx">
       <DependentUpon>fShift_Staff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fStaff_SalaryDetail.resx">
+    <EmbeddedResource Include="View\Staff\fStaff_SalaryDetail.resx">
       <DependentUpon>fStaff_SalaryDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fAddCategory.resx">
@@ -436,13 +430,13 @@
     <EmbeddedResource Include="View\Report\fReport_Revenue.resx">
       <DependentUpon>fReport_Revenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fShift_Detail.resx">
+    <EmbeddedResource Include="View\Shift\fShift_Detail.resx">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Account\fAccount_Add.resx">
       <DependentUpon>fAccount_Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fStaff_View.resx">
+    <EmbeddedResource Include="View\Staff\fStaff_View.resx">
       <DependentUpon>fStaff_View.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fProduct_Add.resx">
@@ -454,13 +448,13 @@
     <EmbeddedResource Include="View\Product\pnProduct_Update.resx">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TrangChu\Bill.resx">
+    <EmbeddedResource Include="View\HomePage\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TrangChu\panelMonAn.resx">
+    <EmbeddedResource Include="View\HomePage\panelMonAn.resx">
       <DependentUpon>panelMonAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\TrangChu\panelOrder.resx">
+    <EmbeddedResource Include="View\HomePage\panelOrder.resx">
       <DependentUpon>panelOrder.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Resources\imageThucDon.png" />
@@ -468,8 +462,8 @@
     <None Include="Resources\iconPizza.png" />
     <None Include="Resources\32b417e287516369937846dc960cca86.jpg" />
     <None Include="Resources\185102_receipt_shopping_icon1.png" />
-    <EmbeddedResource Include="View\TrangChu\fTrangChu.resx">
-      <DependentUpon>fTrangChu.cs</DependentUpon>
+    <EmbeddedResource Include="View\HomePage\fHomePage.resx">
+      <DependentUpon>fHomePage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Bill\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
@@ -489,20 +483,17 @@
     <EmbeddedResource Include="View\Product\fProduct.resx">
       <DependentUpon>fProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fShift.resx">
+    <EmbeddedResource Include="View\Shift\fShift.resx">
       <DependentUpon>fShift.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fShift_Create.resx">
+    <EmbeddedResource Include="View\Shift\fShift_Create.resx">
       <DependentUpon>fShift_Create.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fStaff.resx">
+    <EmbeddedResource Include="View\Staff\fStaff.resx">
       <DependentUpon>fStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fStaff_Salary.resx">
-      <DependentUpon>fStaff_Salary.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Resources\185102_receipt_shopping_icon.png" />
-    <EmbeddedResource Include="View\fMainform.resx">
+    <EmbeddedResource Include="View\MainForm\fMainform.resx">
       <DependentUpon>fMainform.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Resources\Logo.jpg" />
@@ -510,7 +501,7 @@
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fLogin.resx">
+    <EmbeddedResource Include="View\Login\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
