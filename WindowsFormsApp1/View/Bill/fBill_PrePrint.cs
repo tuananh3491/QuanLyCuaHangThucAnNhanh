@@ -64,7 +64,7 @@ namespace WindowsFormsApp1.View
         {
             if (m == 1) //trở về form Trang chủ
             {
-                fTrangChu f=new fTrangChu();
+                fHomePage f=new fHomePage();
                 Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
             else //trở về form hóa đơn

@@ -30,7 +30,6 @@
         {
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.lbl = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.txtOTP = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -56,14 +55,14 @@
             this.txtEmail.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold);
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(118, 123);
+            this.txtEmail.Location = new System.Drawing.Point(135, 123);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(219, 48);
+            this.txtEmail.Size = new System.Drawing.Size(266, 48);
             this.txtEmail.TabIndex = 4;
             // 
             // lbl
@@ -76,17 +75,6 @@
             this.lbl.Size = new System.Drawing.Size(230, 35);
             this.lbl.TabIndex = 6;
             this.lbl.Text = "Quên mật khẩu";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(284, 286);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(114, 22);
-            this.linkLabel1.TabIndex = 15;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Gửi lại OTP?";
             // 
             // txtOTP
             // 
@@ -105,14 +93,14 @@
             this.txtOTP.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOTP.ForeColor = System.Drawing.Color.Black;
             this.txtOTP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtOTP.Location = new System.Drawing.Point(135, 206);
+            this.txtOTP.Location = new System.Drawing.Point(135, 257);
             this.txtOTP.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtOTP.Name = "txtOTP";
             this.txtOTP.PasswordChar = '\0';
             this.txtOTP.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(138)))), ((int)(((byte)(0)))));
             this.txtOTP.PlaceholderText = "";
             this.txtOTP.SelectedText = "";
-            this.txtOTP.Size = new System.Drawing.Size(202, 48);
+            this.txtOTP.Size = new System.Drawing.Size(266, 48);
             this.txtOTP.TabIndex = 14;
             // 
             // label1
@@ -121,7 +109,7 @@
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(23, 138);
+            this.label1.Location = new System.Drawing.Point(54, 138);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 22);
             this.label1.TabIndex = 16;
@@ -133,7 +121,7 @@
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(19, 220);
+            this.label2.Location = new System.Drawing.Point(19, 271);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(110, 22);
             this.label2.TabIndex = 17;
@@ -192,7 +180,7 @@
             this.btSend.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSend.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btSend.ForeColor = System.Drawing.Color.White;
-            this.btSend.Location = new System.Drawing.Point(347, 127);
+            this.btSend.Location = new System.Drawing.Point(310, 192);
             this.btSend.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btSend.Name = "btSend";
             this.btSend.Size = new System.Drawing.Size(91, 41);
@@ -211,7 +199,6 @@
             this.Controls.Add(this.btXacNhan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.txtOTP);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.btCancel);
@@ -231,7 +218,6 @@
         private CustomControl.VBButton btCancel;
         private CustomControl.VBButton btSend;
         private System.Windows.Forms.Label lbl;
-        private System.Windows.Forms.LinkLabel linkLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtOTP;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

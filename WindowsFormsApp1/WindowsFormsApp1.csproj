@@ -209,22 +209,22 @@
     <Compile Include="View\Bill\fBill_Detail.Designer.cs">
       <DependentUpon>fBill_Detail.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fCustomer.cs">
+    <Compile Include="View\Customer\fCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fCustomer.Designer.cs">
+    <Compile Include="View\Customer\fCustomer.Designer.cs">
       <DependentUpon>fCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fCustomer_History.cs">
+    <Compile Include="View\Customer\fCustomer_History.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fCustomer_History.Designer.cs">
+    <Compile Include="View\Customer\fCustomer_History.Designer.cs">
       <DependentUpon>fCustomer_History.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fCustomer_Update.cs">
+    <Compile Include="View\Customer\fCustomer_Update.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fCustomer_Update.Designer.cs">
+    <Compile Include="View\Customer\fCustomer_Update.Designer.cs">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fShift_Detail.cs">
@@ -477,13 +477,13 @@
     <EmbeddedResource Include="View\Bill\fBill_Detail.resx">
       <DependentUpon>fBill_Detail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fCustomer.resx">
+    <EmbeddedResource Include="View\Customer\fCustomer.resx">
       <DependentUpon>fCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fCustomer_History.resx">
+    <EmbeddedResource Include="View\Customer\fCustomer_History.resx">
       <DependentUpon>fCustomer_History.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fCustomer_Update.resx">
+    <EmbeddedResource Include="View\Customer\fCustomer_Update.resx">
       <DependentUpon>fCustomer_Update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\fProduct.resx">

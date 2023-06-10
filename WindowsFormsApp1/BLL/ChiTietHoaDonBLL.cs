@@ -18,11 +18,6 @@ namespace WindowsFormsApp1.BLL
             var s = cnn.Chi_tiet_hoa_don.Where(p => p.Ma_HD == m).ToList();
             return s;
         }
-        public void AddList(List<Chi_tiet_hoa_don> list)
-        {   
-            cnn.Chi_tiet_hoa_don.AddRange(list);
-            cnn.SaveChanges();
-        }
         public void SaveCTHD(Chi_tiet_hoa_don ct)
         {
             cnn.Chi_tiet_hoa_don.AddOrUpdate(ct);

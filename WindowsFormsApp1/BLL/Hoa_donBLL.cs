@@ -14,11 +14,6 @@ namespace WindowsFormsApp1.BLL
     internal class Hoa_donBLL
     {
         PBL_3Entities cnn = new PBL_3Entities();
-        //public List<Hoa_don> GetAllHD()
-        //{
-        //    var s = cnn.Hoa_don.ToList();
-        //    return s;
-        //}
         public List<int> GetListNam()
         {
             PBL_3Entities cnn = new PBL_3Entities();
@@ -30,11 +25,6 @@ namespace WindowsFormsApp1.BLL
             var s = cnn.Hoa_don.ToList();
             return s;
         }
-        //public dynamic GetHDsByMaKH(int Ma_KH)
-        //{
-        //    var s = cnn.Hoa_don.Where(p => p.Ma_KH == Ma_KH).Select(p => new { p.Ma_HD, p.Tai_khoan.Nhan_vien.Ten_NV, p.Ngay_mua, p.Tong_tien, p.Trang_thai }).ToList();
-        //    return s;
-        //}
         public List<Hoa_don> GetHDsByMaKH(int Ma_KH)
         {
             var s = cnn.Hoa_don.Where(p => p.Ma_KH == Ma_KH).ToList();
@@ -97,16 +87,6 @@ namespace WindowsFormsApp1.BLL
             }
             return listIDBill;
         }
-        //public int Add_HD(Hoa_don ca)// trả về mã hóa đơn sau khi add hóa đơn vào
-        //{
-        //    {
-        //        cnn.Hoa_don.Add(ca);
-        //        cnn.SaveChanges();
-        //        int i = ca.Ma_HD;
-        //        return i;
-        //    }
-        //}
-
         public void SaveHD(Hoa_don hd)
         {
             cnn.Hoa_don.AddOrUpdate(hd);
@@ -117,14 +97,5 @@ namespace WindowsFormsApp1.BLL
             cnn.Hoa_don.Remove(hd);
             cnn.SaveChanges();
         }
-       
-
-        //public void ShowDGV(DataGridView dg, int maKH)
-        //{
-        //    dg.DataSource = GetHDsByMaKH(maKH);
-        //    dg.Columns["Chi_tiet_hoa_don"].Visible = false;
-        //    dg.Columns["Khach_hang"].Visible = false;
-        //    dg.Columns["Tai_khoan"].Visible = false;
-        //}
     }
 }

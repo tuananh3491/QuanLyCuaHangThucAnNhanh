@@ -49,13 +49,13 @@
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblName = new System.Windows.Forms.Label();
             this.iconLogOut = new FontAwesome.Sharp.IconPictureBox();
             this.btnPerson = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnForm = new System.Windows.Forms.Panel();
+            this.txtTenDN = new System.Windows.Forms.TextBox();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBaoCao.SuspendLayout();
@@ -436,7 +436,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.lblName);
+            this.panel2.Controls.Add(this.txtTenDN);
             this.panel2.Controls.Add(this.iconLogOut);
             this.panel2.Controls.Add(this.btnPerson);
             this.panel2.Controls.Add(this.panel3);
@@ -446,16 +446,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 112);
             this.panel2.TabIndex = 6;
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(762, 90);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(98, 16);
-            this.lblName.TabIndex = 5;
-            this.lblName.Text = "Tên đăng nhập";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconLogOut
             // 
@@ -486,7 +476,7 @@
             this.btnPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnPerson.Image")));
             this.btnPerson.ImageSize = new System.Drawing.Size(70, 70);
-            this.btnPerson.Location = new System.Drawing.Point(765, 6);
+            this.btnPerson.Location = new System.Drawing.Point(765, 4);
             this.btnPerson.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPerson.Name = "btnPerson";
             this.btnPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
@@ -536,6 +526,20 @@
             this.pnForm.Name = "pnForm";
             this.pnForm.Size = new System.Drawing.Size(931, 571);
             this.pnForm.TabIndex = 7;
+            // 
+            // txtTenDN
+            // 
+            this.txtTenDN.BackColor = System.Drawing.Color.White;
+            this.txtTenDN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTenDN.Enabled = false;
+            this.txtTenDN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenDN.Location = new System.Drawing.Point(718, 84);
+            this.txtTenDN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenDN.Multiline = true;
+            this.txtTenDN.Name = "txtTenDN";
+            this.txtTenDN.Size = new System.Drawing.Size(183, 23);
+            this.txtTenDN.TabIndex = 10;
+            this.txtTenDN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // fMainform
             // 
@@ -594,6 +598,6 @@
         private FontAwesome.Sharp.IconPictureBox iconLogOut;
         public System.Windows.Forms.Panel pnForm;
         internal FontAwesome.Sharp.IconButton btnTrangChu;
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtTenDN;
     }
 }

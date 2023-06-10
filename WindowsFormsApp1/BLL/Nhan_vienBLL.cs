@@ -52,12 +52,6 @@ namespace WindowsFormsApp1.BLL
             cnn.Nhan_vien.Remove(ca);
             cnn.SaveChanges();
         }
-        public void ShowDGV(DataGridView dg)
-        {
-            dg.DataSource = GetAllNV();
-            dg.Columns["Luong"].Visible = false;
-            dg.Columns["Tai_khoan"].Visible = false;
-        }
        
     }
 }

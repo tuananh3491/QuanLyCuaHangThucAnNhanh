@@ -20,7 +20,6 @@ namespace WindowsFormsApp1.View
         Tai_khoanBLL tkBLL = new Tai_khoanBLL();
         Random randomOTP = new Random();
         int otp;
-       
         public fForgetPassword(int ma)
         {
             InitializeComponent();
@@ -41,7 +40,6 @@ namespace WindowsFormsApp1.View
                 {
                     //tạo mã otp random 6 số:
                     otp = randomOTP.Next(100000, 1000000);
-
                     var fromAddress = new MailAddress("slowlyfastfoodstore03@gmail.com"); //mail dùng để gửi mã otp
                     var toAddress = new MailAddress(txtEmail.ToString());//mail dùng để nhận otp
                     const string frompass = "wgubounrayryjfpq";//mật khẩu ứng dụng
@@ -80,9 +78,6 @@ namespace WindowsFormsApp1.View
 
 
         }
-
-
-
         private void btCancel_Click(object sender, EventArgs e)
         {
             this.Dispose();
@@ -92,15 +87,11 @@ namespace WindowsFormsApp1.View
         {
             if (otp.ToString().Equals(txtOTP.Text))
             {
-                //resset lại mật khẩu
                 Tai_khoan x = tkBLL.GetTK(maTK);
                 string salt = BCrypt.Net.BCrypt.GenerateSalt();
                 string hash = BCrypt.Net.BCrypt.HashPassword("1", salt);
                 x.Mat_khau = hash;
                 tkBLL.SaveTK(x);
-                //MessageBox.Show("Đặt lại mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
                 MessageBox.Show("Mật khẩu đã reset = 1", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
             }

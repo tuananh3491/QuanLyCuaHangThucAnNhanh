@@ -44,18 +44,16 @@ namespace WindowsFormsApp1.View
             {
                 btnPerson.Image = Image.FromFile(@"D:\Đồ án PBL3\code\PBL3_chung\luu (thu gui email)\capnhatnua\WindowsFormsApp1\Resources\nữ.png");
             }
-            lblName.Text = Const.taiKhoan.Nhan_vien.Ten_NV;
+            txtTenDN.Text = Const.taiKhoan.Nhan_vien.Ten_NV;
         }
         public void PhanQuyen()
         {
             if ((bool)Const.taiKhoan.Loai_TK)
             {
-                //btnBaoCao.Enabled = false;
                 btnBaoCao.Visible = false;
                 btnTaiKhoan.Visible = false;
             }
         }
-        //custom panelBaoCao
         private void customizeDesig()
         {
             panelBaoCao.Visible = false;
