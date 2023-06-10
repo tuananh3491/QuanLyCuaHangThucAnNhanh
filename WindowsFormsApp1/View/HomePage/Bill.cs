@@ -35,6 +35,7 @@ namespace WindowsFormsApp1.View.TrangChu
         {
             if (txtCustomer.Text == "" || txtPhone.Text == "")
             {
+                chkSD_Diem.Visible = false;
                 Khach_hang kh = new Khach_hang();
                 khBLL.SaveKH(kh);
 
@@ -83,6 +84,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 {
                     kh = khBLL.GetKHByPhone(txtPhone.Text);
                 }
+
                 double thanhTien;
                 if (chkSD_Diem.Checked)
                 {
@@ -94,6 +96,7 @@ namespace WindowsFormsApp1.View.TrangChu
                 {
                     thanhTien = tongTien;
                 }
+
                 Hoa_don hd = new Hoa_don()
                 {
                     Ma_NV = Const.taiKhoan.Ma_TK,

@@ -129,12 +129,14 @@
             // txtLuong
             // 
             this.txtLuong.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.txtLuong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.txtLuong.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLuong.Location = new System.Drawing.Point(643, 180);
             this.txtLuong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLuong.Name = "txtLuong";
-            this.txtLuong.Size = new System.Drawing.Size(205, 30);
+            this.txtLuong.Size = new System.Drawing.Size(193, 30);
             this.txtLuong.TabIndex = 49;
+            this.txtLuong.Text = "0 đ";
+            this.txtLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtLuong.Visible = false;
             // 
             // chkTrangThai
@@ -186,6 +188,7 @@
             this.rdNhanVien.TabStop = true;
             this.rdNhanVien.Text = "Nhân viên";
             this.rdNhanVien.UseVisualStyleBackColor = true;
+            this.rdNhanVien.CheckedChanged += new System.EventHandler(this.Check_Changed);
             // 
             // rdAdmin
             // 
@@ -199,6 +202,7 @@
             this.rdAdmin.TabStop = true;
             this.rdAdmin.Text = "Admin";
             this.rdAdmin.UseVisualStyleBackColor = true;
+            this.rdAdmin.CheckedChanged += new System.EventHandler(this.Check_Changed);
             // 
             // groupBox1
             // 
@@ -278,7 +282,6 @@
             this.txtSDT.Location = new System.Drawing.Point(197, 327);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSDT.Name = "txtSDT";
-            this.txtSDT.ReadOnly = true;
             this.txtSDT.Size = new System.Drawing.Size(227, 30);
             this.txtSDT.TabIndex = 35;
             // 

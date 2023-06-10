@@ -144,7 +144,6 @@ namespace WindowsFormsApp1.View
                     tk.Mat_khau = hash;
                     tkBLL.SaveTK(tk);
                     MessageBox.Show("Đổi mật khẩu thành công");
-                    this.Dispose();
                 }
                 else
                 {

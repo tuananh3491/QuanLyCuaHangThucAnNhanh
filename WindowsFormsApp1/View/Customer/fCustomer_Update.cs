@@ -44,9 +44,16 @@ namespace WindowsFormsApp1.View
                 Khach_hang kh = khBLL.GetKHById(maKH);
                 if (kh.SDT != txtSDT.Text)
                 {
-                    kh.SDT = txtSDT.Text.ToString();
-                    khBLL.SaveKH(kh);
-                    MessageBox.Show("Cập nhật thành công");
+                    if (khBLL.SearchKHByPhone(txtSDT.Text).Count == 0)
+                    {
+                        kh.SDT = txtSDT.Text.ToString();
+                        khBLL.SaveKH(kh);
+                        MessageBox.Show("Cập nhật thành công","Thông báo",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số điện thoại này đã được lưu là của một khách hàng khác ", "Cánh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning); ;
+                    }
                 }
                 else
                 {

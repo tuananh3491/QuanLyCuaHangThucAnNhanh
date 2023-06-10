@@ -71,18 +71,36 @@ namespace WindowsFormsApp1.View
                 try
                 {
                     if (txtTenNV.Text == "") throw new SqlNullValueException();
-                    int.Parse(txtSDT.Text);
+                    if (txtSDT.Text.Length < 10 || txtSDT.Text.Length > 10) throw new DbEntityValidationException();
                     luong = ChangeFormatCurrency(txtLuong.Text);
-                    int x = nvBLL.AddNV(new Nhan_vien
+                    int x ;
+
+                    if (txtLuong.Visible)
                     {
-                        SDT = txtSDT.Text,
-                        Ten_NV = txtTenNV.Text,
-                        Gioi_tinh = (rdoNam.Checked),
-                        Ngay_sinh = dtmNgaySinh.Value,
-                        Trang_thai = (check.Checked),
-                        Luong = luong,
-                        Email = txtEmail.Text,
-                    });
+                        x = nvBLL.AddNV(new Nhan_vien
+                        {
+                            SDT = txtSDT.Text,
+                            Ten_NV = txtTenNV.Text,
+                            Gioi_tinh = (rdoNam.Checked),
+                            Ngay_sinh = dtmNgaySinh.Value,
+                            Trang_thai = (check.Checked),
+                            Luong = luong,
+                            Email = txtEmail.Text,
+                        });
+                    }
+                    else
+                    {
+                        x = nvBLL.AddNV(new Nhan_vien
+                        {
+                            SDT = txtSDT.Text,
+                            Ten_NV = txtTenNV.Text,
+                            Gioi_tinh = (rdoNam.Checked),
+                            Ngay_sinh = dtmNgaySinh.Value,
+                            Trang_thai = (check.Checked),
+                            Luong = null,
+                            Email = txtEmail.Text,
+                        });
+                    }
                     txtLuong.Text = string.Format("{0:#,##0} đ", luong).Replace(",", ".");
                     string salt = BCrypt.Net.BCrypt.GenerateSalt();
                     string hash = BCrypt.Net.BCrypt.HashPassword(txtMK.Text, salt);
@@ -90,7 +108,7 @@ namespace WindowsFormsApp1.View
                     {
                         Ma_TK = x,
                         Ten_TK = txtTenTK.Text,
-                        Loai_TK = check.Checked,
+                        Loai_TK = rdoNV.Checked,
                         Mat_khau = hash
                     });
                     MessageBox.Show("Thêm nhân viên thành công.");

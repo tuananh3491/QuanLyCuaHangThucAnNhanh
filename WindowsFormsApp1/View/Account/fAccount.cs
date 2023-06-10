@@ -27,7 +27,7 @@ namespace WindowsFormsApp1.View
             list = tai_KhoanBLL.GetAllTK();
             foreach(Tai_khoan t in list)
             {
-                DGVdsTaiKhoan.Rows.Add(t.Ma_TK,t.Ten_TK,(t.Loai_TK==true?"Nhân viên":"Admin"));
+                DGVdsTaiKhoan.Rows.Add(t.Ma_TK, t.Ten_TK, (t.Loai_TK == true ? "Nhân viên" : "Admin"));
             }
         }
 

@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media.Imaging;
+using TheArtOfDevHtmlRenderer.Adapters;
 using WindowsFormsApp1.BLL;
 using WindowsFormsApp1.DAL;
 
@@ -105,7 +106,8 @@ namespace WindowsFormsApp1.View
                     x.Nhan_vien.Ngay_sinh = dtpkNgaySinh.Value;
                     x.Ten_TK = txtTenTK.Text;
                     luong = ChangeFormatCurrency(txtLuong.Text);
-                    x.Nhan_vien.Luong = luong;
+                    if (txtLuong.Visible) { x.Nhan_vien.Luong = luong; }
+                    else { x.Nhan_vien.Luong = null; }
                     x.Nhan_vien.Email = txtEmail.Text;
 
                     if (rdNam.Checked) x.Nhan_vien.Gioi_tinh = true;
@@ -130,6 +132,19 @@ namespace WindowsFormsApp1.View
                 {
                     MessageBox.Show("Tên rỗng không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+        private void Check_Changed(object sender, EventArgs e)
+        {
+            if (rdNhanVien.Checked)
+            {
+                lblLuong.Visible = true;
+                txtLuong.Visible = true;
+            }
+            else
+            {
+                lblLuong.Visible = false;
+                txtLuong.Visible = false;
             }
         }
     }
