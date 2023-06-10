@@ -34,7 +34,6 @@ namespace WindowsFormsApp1.View
                 cbbNam.Items.Add(i);
             }
         }
-
         private void btnBieuDo_Click(object sender, EventArgs e)
         {
             fReport_ProductChart f = new fReport_ProductChart();
@@ -45,11 +44,9 @@ namespace WindowsFormsApp1.View
             List<int> listIDBill = hoaDonBLL.GetIDBill(thang,nam);
             Hashtable htPro = chiTietHDBLL.GetNumPro(listIDBill);
             
-            int i = 1;
             foreach (DictionaryEntry x in htPro)
             {
-                dataGridView1.Rows.Add(i, x.Key, sanPhamBLL.GetPro(Convert.ToInt32(x.Key)).Ten_SP, x.Value);
-                i++;
+                dataGridView1.Rows.Add( x.Key, sanPhamBLL.GetPro(Convert.ToInt32(x.Key)).Ten_SP, x.Value);
             }
         }
 

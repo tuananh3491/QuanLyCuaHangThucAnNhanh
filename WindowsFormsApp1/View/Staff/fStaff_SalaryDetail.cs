@@ -41,7 +41,7 @@ namespace WindowsFormsApp1.View
                     }
                 }
             }
-            txtTongLuong.Text = tongLuong.ToString();   
+            txtTongLuong.Text = tongLuong.ToString("#,##0 đ").Replace(",", ".");   
         }
 
         private void btnBack_Click(object sender, EventArgs e)

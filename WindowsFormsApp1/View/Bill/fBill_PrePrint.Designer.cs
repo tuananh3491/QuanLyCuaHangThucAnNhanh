@@ -232,6 +232,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChitietHD.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvChitietHD.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvChitietHD.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvChitietHD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvChitietHD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -324,7 +325,8 @@
             // txtMa
             // 
             this.txtMa.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtMa.Location = new System.Drawing.Point(401, 125);
+            this.txtMa.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMa.Location = new System.Drawing.Point(401, 131);
             this.txtMa.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.txtMa.Multiline = true;
             this.txtMa.Name = "txtMa";
@@ -334,7 +336,8 @@
             // txtSDT
             // 
             this.txtSDT.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSDT.Location = new System.Drawing.Point(356, 185);
+            this.txtSDT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSDT.Location = new System.Drawing.Point(356, 191);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
@@ -344,7 +347,8 @@
             // txtKH
             // 
             this.txtKH.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtKH.Location = new System.Drawing.Point(114, 185);
+            this.txtKH.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtKH.Location = new System.Drawing.Point(114, 191);
             this.txtKH.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.txtKH.Multiline = true;
             this.txtKH.Name = "txtKH";
@@ -354,17 +358,19 @@
             // txtNV
             // 
             this.txtNV.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNV.Location = new System.Drawing.Point(114, 154);
+            this.txtNV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNV.Location = new System.Drawing.Point(114, 160);
             this.txtNV.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.txtNV.Multiline = true;
             this.txtNV.Name = "txtNV";
-            this.txtNV.Size = new System.Drawing.Size(164, 22);
+            this.txtNV.Size = new System.Drawing.Size(183, 22);
             this.txtNV.TabIndex = 27;
             // 
             // txtNgay
             // 
             this.txtNgay.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtNgay.Location = new System.Drawing.Point(114, 122);
+            this.txtNgay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNgay.Location = new System.Drawing.Point(114, 128);
             this.txtNgay.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
             this.txtNgay.Multiline = true;
             this.txtNgay.Name = "txtNgay";

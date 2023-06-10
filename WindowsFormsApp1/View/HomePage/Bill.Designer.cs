@@ -215,7 +215,7 @@
             this.dgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -238,6 +238,7 @@
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
+            this.Column1.Width = 181;
             // 
             // Column2
             // 
@@ -245,6 +246,7 @@
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
+            this.Column2.Width = 181;
             // 
             // Column3
             // 
@@ -252,6 +254,7 @@
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
+            this.Column3.Width = 180;
             // 
             // Column4
             // 
@@ -259,6 +262,7 @@
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Width = 181;
             // 
             // txtTime
             // 

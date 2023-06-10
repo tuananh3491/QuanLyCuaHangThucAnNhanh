@@ -33,7 +33,6 @@
             this.checkCo = new System.Windows.Forms.CheckBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.btnExit = new FontAwesome.Sharp.IconButton();
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnDel = new FontAwesome.Sharp.IconButton();
             this.picture = new System.Windows.Forms.PictureBox();
@@ -48,7 +47,6 @@
             this.panel1.Controls.Add(this.checkCo);
             this.panel1.Controls.Add(this.txtPrice);
             this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.btnDel);
             this.panel1.Controls.Add(this.picture);
@@ -88,7 +86,7 @@
             this.txtPrice.Size = new System.Drawing.Size(210, 32);
             this.txtPrice.TabIndex = 20;
             this.txtPrice.Text = "0 đ";
-            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSave
             // 
@@ -97,26 +95,12 @@
             this.btnSave.IconColor = System.Drawing.Color.Black;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 38;
-            this.btnSave.Location = new System.Drawing.Point(139, 388);
+            this.btnSave.Location = new System.Drawing.Point(186, 388);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(45, 43);
             this.btnSave.TabIndex = 19;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.btnExit.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.btnExit.IconColor = System.Drawing.Color.Black;
-            this.btnExit.IconFont = FontAwesome.Sharp.IconFont.Solid;
-            this.btnExit.IconSize = 34;
-            this.btnExit.Location = new System.Drawing.Point(234, 388);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(45, 43);
-            this.btnExit.TabIndex = 18;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // txtName
             // 
@@ -136,7 +120,7 @@
             this.btnDel.IconColor = System.Drawing.Color.Black;
             this.btnDel.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDel.IconSize = 34;
-            this.btnDel.Location = new System.Drawing.Point(34, 388);
+            this.btnDel.Location = new System.Drawing.Point(85, 388);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(45, 43);
             this.btnDel.TabIndex = 12;
@@ -169,7 +153,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnSave;
-        private FontAwesome.Sharp.IconButton btnExit;
         private System.Windows.Forms.TextBox txtName;
         private FontAwesome.Sharp.IconButton btnDel;
         private System.Windows.Forms.PictureBox picture;

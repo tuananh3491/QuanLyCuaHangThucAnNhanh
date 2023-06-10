@@ -30,7 +30,6 @@ namespace WindowsFormsApp1.BLL
         }
         public Hashtable GetNumPro(List<int> listIDBill)
         {
-            PBL_3Entities cnn = new PBL_3Entities();
             int demLap;
             Hashtable htPro = new Hashtable();
             foreach (int id in listIDBill)

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
 
@@ -21,6 +22,11 @@ namespace WindowsFormsApp1.BLL
         public Ca_lam_viec GetCLV(int ma)
         {
             var s = cnn.Ca_lam_viec.Find(ma);
+            return s;
+        }
+        public List<Ca_lam_viec> Search(int maCa)
+        {
+            var s = cnn.Ca_lam_viec.Where(p => p.Ma_ca == maCa).ToList();
             return s;
         }
         public void SaveCLV(Ca_lam_viec ca)

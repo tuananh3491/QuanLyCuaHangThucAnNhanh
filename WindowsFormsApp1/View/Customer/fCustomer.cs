@@ -22,13 +22,9 @@ namespace WindowsFormsApp1.View
         {
             if(dataGridView.SelectedRows.Count == 1 )//chọn 1 ô 
             {
-                if (dataGridView.SelectedRows[0].Cells[2].Value != null) //và sđt ko null(nếu null thì ko cho cập nhật thông tin)
-                {
                     int m = int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString());
                     fCustomer_Update f = new fCustomer_Update(m);
                     Const.mainform.openChildForm(f, Const.mainform.pnForm);
-                }
-                else MessageBox.Show("Khách hàng này chưa xác minh", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             else MessageBox.Show("Chỉ được chọn 1 khách hàng","Cảnh báo",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
         }

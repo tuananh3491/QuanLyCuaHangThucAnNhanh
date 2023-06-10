@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.BLL;
+using WindowsFormsApp1.DAL;
 
 namespace WindowsFormsApp1.View
 {
@@ -55,7 +56,8 @@ namespace WindowsFormsApp1.View
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dataGridView1.DataSource = clvBLL.GetCLV(Convert.ToInt32(txtSearch.Text));
+                dataGridView1.DataSource = clvBLL.Search(Convert.ToInt32(txtSearch.Text));
+                //dataGridView1.Columns["Phan_cong"].Visible = false;
             }
         }
     }

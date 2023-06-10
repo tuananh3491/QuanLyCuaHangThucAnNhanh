@@ -187,13 +187,13 @@ namespace WindowsFormsApp1.View
 
         private void btnBCKhachHang_Click(object sender, EventArgs e)
         {
-            openChildForm(new fReport_Customer(), pnForm);
+            openChildForm(new fReport_CustomerChart(), pnForm);
             ActivateButtonPanel(sender);
         }
 
         private void btnBCSanPham_Click(object sender, EventArgs e)
         {
-            openChildForm(new fReport_Product(), pnForm);
+            openChildForm(new fReport_ProductChart(), pnForm);
             ActivateButtonPanel(sender);
         }
 

@@ -6,7 +6,9 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Forms;
 using WindowsFormsApp1.DAL;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace WindowsFormsApp1.BLL
 {
@@ -26,7 +28,6 @@ namespace WindowsFormsApp1.BLL
         }
         public dynamic Search(string search)
         {
-            
             var tk = et.Tai_khoan.Where(p => (p.Ten_TK.Contains(search))).Select(p => new { p.Ma_TK, p.Ten_TK, p.Mat_khau, p.Loai_TK }).ToList();
             return tk;
         }
@@ -57,14 +58,14 @@ namespace WindowsFormsApp1.BLL
                     }
                     else
                     {
-                        MessageBox.Show("Mật khẩu không dúng.", "Thông báo", MessageBoxButton.OK);
+                        MessageBox.Show("Mật khẩu không dúng.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return false;
                     }
                 }
             }
             catch (NullReferenceException)
             {
-                MessageBox.Show("Tài khoản không tồn tại.", "Thông báo", MessageBoxButton.OK);
+                MessageBox.Show("Tài khoản không tồn tại.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             

@@ -57,8 +57,9 @@
             this.Column3,
             this.Column4});
             this.dataGridView1.Location = new System.Drawing.Point(47, 66);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(824, 430);
@@ -71,6 +72,7 @@
             this.Column1.HeaderText = "Mã ca";
             this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column2
             // 
@@ -78,6 +80,7 @@
             this.Column2.HeaderText = "Tên ca";
             this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Column3
             // 
@@ -85,6 +88,7 @@
             this.Column3.HeaderText = "Thời gian bắt đầu";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // Column4
             // 
@@ -92,6 +96,7 @@
             this.Column4.HeaderText = "Thời gian kết thúc";
             this.Column4.MinimumWidth = 6;
             this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // btnDetail
             // 
@@ -107,7 +112,7 @@
             this.btnDetail.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.Color.White;
             this.btnDetail.Location = new System.Drawing.Point(711, 505);
-            this.btnDetail.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnDetail.Margin = new System.Windows.Forms.Padding(5);
             this.btnDetail.Name = "btnDetail";
             this.btnDetail.Size = new System.Drawing.Size(160, 39);
             this.btnDetail.TabIndex = 9;
@@ -129,7 +134,7 @@
             this.btnTaoCa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoCa.ForeColor = System.Drawing.Color.White;
             this.btnTaoCa.Location = new System.Drawing.Point(540, 505);
-            this.btnTaoCa.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnTaoCa.Margin = new System.Windows.Forms.Padding(5);
             this.btnTaoCa.Name = "btnTaoCa";
             this.btnTaoCa.Size = new System.Drawing.Size(160, 39);
             this.btnTaoCa.TabIndex = 10;

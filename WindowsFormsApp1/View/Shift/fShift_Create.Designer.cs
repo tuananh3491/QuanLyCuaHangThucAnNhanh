@@ -177,7 +177,7 @@
             this.btnBack.IconColor = System.Drawing.Color.Black;
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBack.IconSize = 30;
-            this.btnBack.Location = new System.Drawing.Point(22, 12);
+            this.btnBack.Location = new System.Drawing.Point(12, 26);
             this.btnBack.Name = "btnBack";
             this.btnBack.Rotation = 90D;
             this.btnBack.Size = new System.Drawing.Size(61, 39);

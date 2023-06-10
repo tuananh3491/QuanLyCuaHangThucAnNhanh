@@ -29,6 +29,8 @@ namespace WindowsFormsApp1.View
             this.x = x;
             reload();
             PhanQuyen();
+            ketThucCa = TimeSpan.Parse(caBLL.GetCLV(x).Thoigianketthuc.ToString());
+            batDauca = TimeSpan.Parse(caBLL.GetCLV(x).Thoigianbatdau.ToString());
         }
         public void PhanQuyen()
         {
@@ -55,8 +57,8 @@ namespace WindowsFormsApp1.View
         private void fShift_Detail_Load(object sender, EventArgs e)
         {
             lblCa.Text = caBLL.GetCLV(x).Ten_ca;
-            txtTGBD.Text = caBLL.GetCLV(x).Thoigianbatdau.ToString();
-            txtTGKT.Text = caBLL.GetCLV(x).Thoigianketthuc.ToString();
+            txtTGBD.Text = batDauca.ToString();
+            txtTGKT.Text = ketThucCa.ToString();
         }
         private void reload()
         {
@@ -82,11 +84,11 @@ namespace WindowsFormsApp1.View
             }
             catch (FormatException)
             {
-                MessageBox.Show("NV KHÔNG HỢP LỆ", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Nhân viên không hợp lệ", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             catch (ArgumentException)
             {
-                MessageBox.Show("NGÀY LÀM VIỆC KHÔNG HỢP LỆ", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                MessageBox.Show("Ngày làm việc không hợp lệ", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
 
@@ -138,14 +140,13 @@ namespace WindowsFormsApp1.View
             {
                 TimeSpan tgBatDau = TimeSpan.Parse(dtpBatDau.Text);
                 TimeSpan tgKetThuc = TimeSpan.Parse(dtpKetThuc.Text);
-                double thoiGianDuyTri = tgKetThuc.TotalSeconds - tgBatDau.TotalSeconds;
-                double ssBatDau = tgBatDau.TotalSeconds - TimeSpan.Parse(txtTGBD.Text).TotalSeconds;
-                double ssKetThuc = TimeSpan.Parse(txtTGKT.Text).TotalSeconds - tgKetThuc.TotalSeconds;
-
+                double thoiGianNghi = tgKetThuc.TotalSeconds - tgBatDau.TotalSeconds;
+                double ssBatDau = tgBatDau.TotalSeconds - batDauca.TotalSeconds;
+                double ssKetThuc = ketThucCa.TotalSeconds - tgKetThuc.TotalSeconds;
 
                 if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    if (thoiGianDuyTri > 0 && ssBatDau > 0 && ssKetThuc > 0)
+                    if (thoiGianNghi > 0 && ssBatDau > 0 && ssKetThuc > 0)
                     {
                         int maNV = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
                         Phan_cong pc = pcBLL.GetPhanCong(x, maNV, dtpLich.Value);
@@ -157,10 +158,10 @@ namespace WindowsFormsApp1.View
                 }
                 else
                 {
-                    MessageBox.Show("Chọn nhân viên cần phê duyệt", "Lỗi");
+                    MessageBox.Show("Chọn nhân viên cần phê duyệt", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else MessageBox.Show("Ngày không phù hợp", "Lỗi");
+            else MessageBox.Show("Ngày không phù hợp", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
        
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)

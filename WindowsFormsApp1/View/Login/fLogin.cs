@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
                 }
                 catch (FormatException)//chữ là không được
                 {
-                    MessageBox.Show("Tên đăng nhập không phù hợp");
+                    MessageBox.Show("Tên đăng nhập không phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     errorProvider1.SetError(txtUsername, "Tên đăng nhập không phù hợp");
                     return;
                 }
