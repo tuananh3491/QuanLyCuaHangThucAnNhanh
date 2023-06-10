@@ -28,17 +28,23 @@ namespace WindowsFormsApp1.View
         {
             try
             {
+                TimeSpan batdau = TimeSpan.Parse(dateTimePicker1.Text);
+                TimeSpan ketthuc = TimeSpan.Parse(dateTimePicker2.Text);
                 if (txtName.Text == "") throw new SqlNullValueException();
-                Ca_lam_viec clv = new Ca_lam_viec()
+                if (ketthuc.TotalSeconds - batdau.TotalSeconds > 0)
                 {
-                    Ten_ca = txtName.Text,
-                    Thoigianbatdau = TimeSpan.Parse(dateTimePicker1.Text),
-                    Thoigianketthuc = TimeSpan.Parse(dateTimePicker2.Text),
-                };
-                clvBLL.SaveCLV(clv);
-                MessageBox.Show("Tạo ca thành công");
-                fShift f = new fShift();
-                Const.mainform.openChildForm(f, Const.mainform.pnForm);
+                    Ca_lam_viec clv = new Ca_lam_viec()
+                    {
+                        Ten_ca = txtName.Text,
+                        Thoigianbatdau = batdau,
+                        Thoigianketthuc = ketthuc,
+                    };
+                    clvBLL.SaveCLV(clv);
+                    MessageBox.Show("Tạo ca thành công");
+                    fShift f = new fShift();
+                    Const.mainform.openChildForm(f, Const.mainform.pnForm);
+                }
+                else MessageBox.Show("Thời gian không phù hợp.", "Thông báo", MessageBoxButtons.OK);
             }
             catch (SqlNullValueException)
             {

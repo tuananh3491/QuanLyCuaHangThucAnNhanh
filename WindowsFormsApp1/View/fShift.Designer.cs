@@ -42,6 +42,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -54,12 +56,11 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(47, 66);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(35, 54);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(824, 430);
+            this.dataGridView1.Size = new System.Drawing.Size(618, 349);
             this.dataGridView1.TabIndex = 8;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.datagridview1_RowHeaderMouseClicked);
             // 
@@ -104,10 +105,10 @@
             this.btnDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetail.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetail.ForeColor = System.Drawing.Color.White;
-            this.btnDetail.Location = new System.Drawing.Point(711, 505);
-            this.btnDetail.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDetail.Location = new System.Drawing.Point(533, 410);
+            this.btnDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetail.Name = "btnDetail";
-            this.btnDetail.Size = new System.Drawing.Size(160, 39);
+            this.btnDetail.Size = new System.Drawing.Size(120, 32);
             this.btnDetail.TabIndex = 9;
             this.btnDetail.Text = "Xem chi tiết";
             this.btnDetail.TextColor = System.Drawing.Color.White;
@@ -126,10 +127,10 @@
             this.btnTaoCa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTaoCa.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTaoCa.ForeColor = System.Drawing.Color.White;
-            this.btnTaoCa.Location = new System.Drawing.Point(540, 505);
-            this.btnTaoCa.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTaoCa.Location = new System.Drawing.Point(405, 410);
+            this.btnTaoCa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTaoCa.Name = "btnTaoCa";
-            this.btnTaoCa.Size = new System.Drawing.Size(160, 39);
+            this.btnTaoCa.Size = new System.Drawing.Size(120, 32);
             this.btnTaoCa.TabIndex = 10;
             this.btnTaoCa.Text = "Tạo ca mới";
             this.btnTaoCa.TextColor = System.Drawing.Color.White;
@@ -141,10 +142,10 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(199, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(10, 0, 3, 0);
+            this.label1.Location = new System.Drawing.Point(149, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 32);
+            this.label1.Size = new System.Drawing.Size(310, 26);
             this.label1.TabIndex = 25;
             this.label1.Text = "DANH SÁCH CA LÀM VIỆC";
             // 
@@ -166,29 +167,29 @@
             this.txtSearch.IconLeft = global::WindowsFormsApp1.Properties.Resources.search;
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(4, 0);
             this.txtSearch.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.txtSearch.Location = new System.Drawing.Point(637, 18);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Location = new System.Drawing.Point(478, 15);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Tìm kiếm";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(205, 36);
+            this.txtSearch.Size = new System.Drawing.Size(154, 29);
             this.txtSearch.TabIndex = 29;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // fShift
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.ClientSize = new System.Drawing.Size(931, 560);
+            this.ClientSize = new System.Drawing.Size(698, 455);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTaoCa);
             this.Controls.Add(this.btnDetail);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "fShift";
             this.Text = "fShift";
             this.Load += new System.EventHandler(this.fShift_Load);

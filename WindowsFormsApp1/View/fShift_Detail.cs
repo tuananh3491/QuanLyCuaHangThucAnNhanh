@@ -161,16 +161,22 @@ namespace WindowsFormsApp1.View
             {
                 TimeSpan tgBatDau = TimeSpan.Parse(dtpBatDau.Text);
                 TimeSpan tgKetThuc = TimeSpan.Parse(dtpKetThuc.Text);
-                //if (batDauca <= tgBatDau && tgBatDau < ketThucCa && batDauca < tgKetThuc && tgKetThuc <= ketThucCa)
-                //{
+                double thoiGianDuyTri = tgKetThuc.TotalSeconds - tgBatDau.TotalSeconds;
+                double ssBatDau = tgBatDau.TotalSeconds - TimeSpan.Parse(txtTGBD.Text).TotalSeconds;
+                double ssKetThuc = TimeSpan.Parse(txtTGKT.Text).TotalSeconds - tgKetThuc.TotalSeconds;
+
 
                 if (dataGridView1.SelectedRows.Count == 1)
                 {
-                    int maNV = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
-                    Phan_cong pc = pcBLL.GetPhanCong(x, maNV, dtpLich.Value);
-                    pc.soGio -= (tgKetThuc - tgBatDau).TotalMinutes / 60;
-                    pcBLL.SavePC(pc);
-                    MessageBox.Show("Duyệt thành công", "Thông báo");
+                    if (thoiGianDuyTri > 0 && ssBatDau > 0 && ssKetThuc > 0)
+                    {
+                        int maNV = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value);
+                        Phan_cong pc = pcBLL.GetPhanCong(x, maNV, dtpLich.Value);
+                        pc.soGio -= (tgKetThuc - tgBatDau).TotalMinutes / 60;
+                        pcBLL.SavePC(pc);
+                        MessageBox.Show("Duyệt thành công", "Thông báo");
+                    }
+                    else MessageBox.Show("Khoảng thời gian bạn chọn không phù hợp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -182,16 +188,20 @@ namespace WindowsFormsApp1.View
                 //    MessageBox.Show("Thời gian không phù hợp", "Lỗi");
                 //}
             }
-            MessageBox.Show("Ngày không phù hợp", "Lỗi");
+            else MessageBox.Show("Ngày không phù hợp", "Lỗi");
         }
        
         private void txtSearch_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                dataGridView1.DataSource = pcBLL.ShowSearch(x, Convert.ToInt32(txtSearch.Text.ToString()), dtpLich.Value);
+                dataGridView1.DataSource = pcBLL.ShowSearch(x, txtSearch.Text, dtpLich.Value);
             }
         }
 
+        private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            label10.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+        }
     }
 }

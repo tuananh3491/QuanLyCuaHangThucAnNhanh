@@ -58,7 +58,7 @@ namespace WindowsFormsApp1.BLL
         }
         public void DeletePC(int maCa, int maNV, DateTime ngay )
         {
-            var p = cnn.Phan_cong.Find();
+            var p = cnn.Phan_cong.Find(maNV, maCa, ngay);
             cnn.Phan_cong.Remove(p);
             cnn.SaveChanges();
         }
@@ -129,11 +129,19 @@ namespace WindowsFormsApp1.BLL
             //}
             return maPhanCong;
         }
-        public dynamic ShowSearch(int maCa, int maNV, DateTime ngay)
+        public dynamic ShowSearch(int maCa, string NV, DateTime ngay)
         {
-            var s = cnn.Phan_cong.Where(p => p.Ma_ca == maCa && p.Ngay.Day == ngay.Day && p.Ngay.Month == ngay.Month && p.Ngay.Year == ngay.Year && p.Ma_NV == maNV).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV }).ToList();
-            return s;
-
+            try
+            {
+                int maNV = Convert.ToInt32(NV);
+                var s = cnn.Phan_cong.Where(p => p.Ma_ca == maCa && p.Ngay.Day == ngay.Day && p.Ngay.Month == ngay.Month && p.Ngay.Year == ngay.Year && p.Ma_NV == maNV).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV }).ToList();
+                return s;
+            }
+            catch (FormatException)
+            {
+                var s = cnn.Phan_cong.Where(p => p.Ma_ca == maCa && p.Ngay.Day == ngay.Day && p.Ngay.Month == ngay.Month && p.Ngay.Year == ngay.Year && p.Tai_khoan.Nhan_vien.Ten_NV.Contains(NV)).Select(p => new { p.Ma_NV, p.Tai_khoan.Nhan_vien.Ten_NV }).ToList();
+                return s;
+            }
         }
     }
 }
