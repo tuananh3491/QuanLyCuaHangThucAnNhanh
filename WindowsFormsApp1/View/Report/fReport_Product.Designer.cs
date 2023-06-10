@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.btnBieuDo = new WindowsFormsApp1.CustomControl.VBButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ccbLoc = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.btnDone = new FontAwesome.Sharp.IconButton();
@@ -39,10 +37,10 @@
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -71,32 +69,6 @@
             this.btnBieuDo.UseVisualStyleBackColor = false;
             this.btnBieuDo.Click += new System.EventHandler(this.btnBieuDo_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Lọc";
-            this.label1.Visible = false;
-            // 
-            // ccbLoc
-            // 
-            this.ccbLoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ccbLoc.FormattingEnabled = true;
-            this.ccbLoc.Items.AddRange(new object[] {
-            "Ngày",
-            "Tháng",
-            "Quý",
-            "Năm"});
-            this.ccbLoc.Location = new System.Drawing.Point(90, 19);
-            this.ccbLoc.Name = "ccbLoc";
-            this.ccbLoc.Size = new System.Drawing.Size(87, 31);
-            this.ccbLoc.TabIndex = 58;
-            this.ccbLoc.Visible = false;
-            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label9);
@@ -105,8 +77,6 @@
             this.panel2.Controls.Add(this.lbThang);
             this.panel2.Controls.Add(this.cbbNam);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.ccbLoc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -220,19 +190,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(885, 409);
             this.dataGridView1.TabIndex = 0;
             // 
-            // Column3
+            // Column1
             // 
-            this.Column3.HeaderText = "Số lượng";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tên sản phẩm";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
+            this.Column1.HeaderText = "STT";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Column4
             // 
@@ -241,12 +204,19 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // Column1
+            // Column2
             // 
-            this.Column1.HeaderText = "STT";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.Column2.HeaderText = "Tên sản phẩm";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Số lượng";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // panel1
             // 
@@ -281,8 +251,6 @@
 
         #endregion
         private CustomControl.VBButton btnBieuDo;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ccbLoc;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.ComboBox cbbThang;
         private System.Windows.Forms.Label lbThang;

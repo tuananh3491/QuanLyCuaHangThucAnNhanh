@@ -48,24 +48,19 @@
             this.btnMinimize = new FontAwesome.Sharp.IconButton();
             this.btnMaximize = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
-            this.panelTimKiem = new System.Windows.Forms.Panel();
-            this.pcbTimKiem = new FontAwesome.Sharp.IconPictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblName = new System.Windows.Forms.Label();
             this.iconLogOut = new FontAwesome.Sharp.IconPictureBox();
             this.btnPerson = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnForm = new System.Windows.Forms.Panel();
-            this.lblName = new System.Windows.Forms.Label();
-            this.rjTextBox1 = new WindowsFormsApp1.CustomControl.RJTextBox();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelBaoCao.SuspendLayout();
             this.panelbutton.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelTimKiem.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).BeginInit();
             this.panel3.SuspendLayout();
@@ -438,40 +433,12 @@
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // panelTimKiem
-            // 
-            this.panelTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.panelTimKiem.Controls.Add(this.rjTextBox1);
-            this.panelTimKiem.Controls.Add(this.pcbTimKiem);
-            this.panelTimKiem.Location = new System.Drawing.Point(485, 21);
-            this.panelTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelTimKiem.Name = "panelTimKiem";
-            this.panelTimKiem.Size = new System.Drawing.Size(251, 39);
-            this.panelTimKiem.TabIndex = 0;
-            this.panelTimKiem.Visible = false;
-            // 
-            // pcbTimKiem
-            // 
-            this.pcbTimKiem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.pcbTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.pcbTimKiem.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.pcbTimKiem.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.pcbTimKiem.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.pcbTimKiem.Location = new System.Drawing.Point(11, 5);
-            this.pcbTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pcbTimKiem.Name = "pcbTimKiem";
-            this.pcbTimKiem.Size = new System.Drawing.Size(32, 32);
-            this.pcbTimKiem.TabIndex = 0;
-            this.pcbTimKiem.TabStop = false;
-            this.pcbTimKiem.Visible = false;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.lblName);
             this.panel2.Controls.Add(this.iconLogOut);
             this.panel2.Controls.Add(this.btnPerson);
-            this.panel2.Controls.Add(this.panelTimKiem);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(236, 32);
@@ -479,6 +446,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(960, 112);
             this.panel2.TabIndex = 6;
+            // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(762, 90);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(98, 16);
+            this.lblName.TabIndex = 5;
+            this.lblName.Text = "Tên đăng nhập";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // iconLogOut
             // 
@@ -560,38 +537,6 @@
             this.pnForm.Size = new System.Drawing.Size(931, 571);
             this.pnForm.TabIndex = 7;
             // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(762, 90);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(98, 16);
-            this.lblName.TabIndex = 5;
-            this.lblName.Text = "Tên đăng nhập";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rjTextBox1
-            // 
-            this.rjTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(242)))));
-            this.rjTextBox1.BorderRadius = 0;
-            this.rjTextBox1.BorderSize = 2;
-            this.rjTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.Location = new System.Drawing.Point(49, 2);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rjTextBox1.Multiline = true;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.PlaceholderColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(101)))), ((int)(((byte)(111)))));
-            this.rjTextBox1.PlaceholderText = "Tìm kiếm";
-            this.rjTextBox1.Size = new System.Drawing.Size(175, 34);
-            this.rjTextBox1.TabIndex = 1;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
-            this.rjTextBox1.Visible = false;
-            // 
             // fMainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -613,8 +558,6 @@
             this.panelBaoCao.ResumeLayout(false);
             this.panelbutton.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.panelTimKiem.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbTimKiem)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconLogOut)).EndInit();
@@ -642,9 +585,6 @@
         private FontAwesome.Sharp.IconButton btnMaximize;
         private FontAwesome.Sharp.IconButton btnMinimize;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelTimKiem;
-        private CustomControl.RJTextBox rjTextBox1;
-        private FontAwesome.Sharp.IconPictureBox pcbTimKiem;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label2;

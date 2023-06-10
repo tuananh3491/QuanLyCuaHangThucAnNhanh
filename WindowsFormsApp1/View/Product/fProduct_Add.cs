@@ -32,16 +32,9 @@ namespace WindowsFormsApp1.View.Product
         }
         public double ChangeFormatCurrency(string tien)
         {
-            // Xóa ký tự đơn vị tiền tệ
             tien = tien.Replace(" đ", "");
-
-            // Xóa dấu phân cách hàng nghìn
             tien = tien.Replace(".", "");
-
-            // Chuyển đổi chuỗi tiền thành kiểu integer
             double giatriTien = double.Parse(tien);
-
-            // giá trị tiền kiểu integer
             return giatriTien;
         }
         private void btnLuu_Click(object sender, EventArgs e)
@@ -54,13 +47,9 @@ namespace WindowsFormsApp1.View.Product
                 }
                 else
                 {
-                    //tạo 1 memorystream
-                    var ms = new MemoryStream();//this is where we are going to deposit the bytes 
-                                                //lưu bytes to ms
+                    var ms = new MemoryStream();
                     picture.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Bmp);
-                    //to get the bytes we type
                     var bytes = ms.ToArray();
-                    //
                     double gia;
                     gia = ChangeFormatCurrency(txtPrice.Text.ToString());
                     var sp = new San_pham()
@@ -72,8 +61,6 @@ namespace WindowsFormsApp1.View.Product
                         Hinh_anh = bytes
                     };
                     san_PhamBLL.SaveSP(sp);
-
-
                     MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 }
             }
@@ -125,10 +112,6 @@ namespace WindowsFormsApp1.View.Product
             catch (ArgumentException)
             {
                 MessageBox.Show("Không phải file hình ảnh.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            catch (FileNotFoundException)
-            {
-                MessageBox.Show("Không thể tìm thấy file.", "Cảnh báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
     }

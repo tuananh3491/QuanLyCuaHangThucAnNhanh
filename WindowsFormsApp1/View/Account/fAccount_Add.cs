@@ -26,7 +26,6 @@ namespace WindowsFormsApp1.View
             InitializeComponent();
             
         }
-
         public bool CheckEmail()
         {
             string email = txtEmail.Text; 
@@ -57,13 +56,10 @@ namespace WindowsFormsApp1.View
         {
             // Xóa ký tự đơn vị tiền tệ
             tien = tien.Replace(" đ", "");
-
             // Xóa dấu phân cách hàng nghìn
             tien = tien.Replace(".", "");
-
             // Chuyển đổi chuỗi tiền thành kiểu integer
             int giatriTien = int.Parse(tien);
-
             // giá trị tiền kiểu integer
             return giatriTien;
         }
@@ -88,8 +84,6 @@ namespace WindowsFormsApp1.View
                         Email = txtEmail.Text,
                     });
                     txtLuong.Text = string.Format("{0:#,##0} đ", luong).Replace(",", ".");
-                    //txtLuong.Visible = false;
-                    //lblLuong.Visible = false;
                     string salt = BCrypt.Net.BCrypt.GenerateSalt();
                     string hash = BCrypt.Net.BCrypt.HashPassword(txtMK.Text, salt);
                     tkBLL.SaveTK(new Tai_khoan

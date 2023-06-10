@@ -23,13 +23,6 @@ namespace WindowsFormsApp1.View.TrangChu
         Khach_hangBLL khBLL = new Khach_hangBLL();  
         private List<Chi_tiet_hoa_don> listCTHD;
         private double tongTien;//tong tien o order
-     
-        public Bill()
-        {
-            InitializeComponent();
-        }
-        
-
         public Bill(List<Chi_tiet_hoa_don> list, double t)
         {
             InitializeComponent(); 
@@ -69,16 +62,6 @@ namespace WindowsFormsApp1.View.TrangChu
                     };
                     cthdBLL.SaveCTHD(cthd);
                 }
-                //if (listCTHD.Count > 1)
-                //{
-                //    cthdBLL.AddList(listCTHD);
-                //}
-                //else if(listCTHD.Count == 1)
-                //{
-                //    cthdBLL.SaveCTHD(listCTHD.FirstOrDefault());
-                //}
-
-
                 MessageBox.Show("Đã thanh toán", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD,1);
                 Const.mainform.openChildForm(f, Const.mainform.pnForm);
@@ -140,16 +123,6 @@ namespace WindowsFormsApp1.View.TrangChu
                     };
                     cthdBLL.SaveCTHD(cthd);
                 }
-                //if (listCTHD.Count > 1)
-                //{
-                //    cthdBLL.AddList(listCTHD);
-                //}
-                //else if(listCTHD.Count == 1)
-                //{
-                //    cthdBLL.SaveCTHD(listCTHD.FirstOrDefault());
-                //}
-                
-               
                 MessageBox.Show("Đã thanh toán", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
                 fBill_PrePrint f = new fBill_PrePrint(hd.Ma_HD, 1);
                 Const.mainform.openChildForm(f, Const.mainform.pnForm);
@@ -162,32 +135,6 @@ namespace WindowsFormsApp1.View.TrangChu
             fTrangChu f = new fTrangChu();
             Const.mainform.openChildForm(f,Const.mainform.pnForm);
             
-        }
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            // Kiểm tra xem cột đang hiển thị có tên "Giá" và hàng đang hiển thị không phải là dòng tiêu đề
-            if (dgv.Columns[e.ColumnIndex].Name == "Đơn giá" && e.RowIndex >= 0)
-            {
-                // Lấy giá trị hiện tại của ô
-                decimal value = (decimal)e.Value;
-                // Định dạng giá trị bằng dấu chấm
-                string formattedValue = string.Format("{0:#,##0}", value).Replace(",", ".");
-                // Thiết lập giá trị định dạng cho ô
-                e.Value = formattedValue + " đ";
-            }
-        }
-        private void ddv_CellFormatting(DataGridViewCellFormattingEventArgs e)
-        {
-            // Kiểm tra xem cột đang hiển thị có tên "Giá" và hàng đang hiển thị không phải là dòng tiêu đề
-            if (dgv.Columns[e.ColumnIndex].Name == "Đơn giá" && e.RowIndex >= 0)
-            {
-                // Lấy giá trị hiện tại của ô
-                decimal value = (decimal)e.Value;
-                // Định dạng giá trị bằng dấu chấm
-                string formattedValue = string.Format("{0:#,##0}", value).Replace(",", ".");
-                // Thiết lập giá trị định dạng cho ô
-                e.Value = formattedValue + " đ";
-            }
         }
         public void Load()
         {
@@ -205,10 +152,6 @@ namespace WindowsFormsApp1.View.TrangChu
             
             txtTotal.Enabled = false;
             txtTotal.Text = string.Format("{0:#,##0} đ", tongTien).Replace(",", ".");
-        }
-        private void Bill_Load(object sender, EventArgs e)
-        {
-           
         }
 
         private void btnSearch_Click(object sender, EventArgs e)

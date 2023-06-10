@@ -33,8 +33,6 @@
             this.btnDone = new FontAwesome.Sharp.IconButton();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ccbLoc = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,8 +49,6 @@
             this.panel2.Controls.Add(this.btnDone);
             this.panel2.Controls.Add(this.cbbNam);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.ccbLoc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -106,33 +102,6 @@
             this.label4.Size = new System.Drawing.Size(47, 20);
             this.label4.TabIndex = 71;
             this.label4.Text = "Năm";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Lọc";
-            this.label1.Visible = false;
-            // 
-            // ccbLoc
-            // 
-            this.ccbLoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ccbLoc.FormattingEnabled = true;
-            this.ccbLoc.Items.AddRange(new object[] {
-            "Ngày",
-            "Tháng",
-            "Quý",
-            "Năm"});
-            this.ccbLoc.Location = new System.Drawing.Point(90, 19);
-            this.ccbLoc.Name = "ccbLoc";
-            this.ccbLoc.Size = new System.Drawing.Size(87, 31);
-            this.ccbLoc.TabIndex = 58;
-            this.ccbLoc.Visible = false;
-            this.ccbLoc.SelectedIndexChanged += new System.EventHandler(this.ccbLoc_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -230,8 +199,6 @@
         #endregion
         private CustomControl.VBButton btnBieuDo;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ccbLoc;
         private System.Windows.Forms.ComboBox cbbNam;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dataGridView1;

@@ -27,7 +27,6 @@ namespace WindowsFormsApp1.View
             ShowDGV(int.Parse(cbbThang.SelectedItem.ToString()),int.Parse(cbbNam.SelectedItem.ToString()));
             dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Ascending);
         }
-       
         public void setCbbNam()
         {
             foreach (int i in hoaDonBLL.GetListNam())
@@ -57,7 +56,6 @@ namespace WindowsFormsApp1.View
         private void iconDone_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();
-
             ShowDGV(int.Parse(cbbThang.SelectedItem.ToString()), int.Parse(cbbNam.SelectedItem.ToString()));
             dataGridView1.Sort(dataGridView1.Columns[3], ListSortDirection.Descending);
         }

@@ -22,10 +22,6 @@ namespace WindowsFormsApp1.View
     {
         private int ma_tk;
         private Tai_khoanBLL tai_KhoanBLL;
-        public fAccount_Edit()
-        {
-            InitializeComponent();
-        }
         public fAccount_Edit(int s)
         {
             InitializeComponent();
@@ -86,13 +82,10 @@ namespace WindowsFormsApp1.View
         {
             // Xóa ký tự đơn vị tiền tệ
             tien = tien.Replace(" đ", "");
-
             // Xóa dấu phân cách hàng nghìn
             tien = tien.Replace(".", "");
-
             // Chuyển đổi chuỗi tiền thành kiểu integer
             int giatriTien = int.Parse(tien);
-
             // giá trị tiền kiểu integer
             return giatriTien;
         }
@@ -131,8 +124,7 @@ namespace WindowsFormsApp1.View
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("Lương không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);//?
-
+                    MessageBox.Show("Lương không hợp lệ.", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (SqlNullValueException)
                 {
@@ -140,15 +132,5 @@ namespace WindowsFormsApp1.View
                 }
             }
         }
-
-        //private void btnDatLaiMK_Click(object sender, EventArgs e)
-        //{
-        //    Tai_khoan x = tai_KhoanBLL.GetTK(ma_tk);
-        //    string salt = BCrypt.Net.BCrypt.GenerateSalt();
-        //    string hash = BCrypt.Net.BCrypt.HashPassword("1", salt);
-        //    x.Mat_khau = hash;
-        //    tai_KhoanBLL.SaveTK(x);
-        //    MessageBox.Show("Đặt lại mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //}
     }
 }

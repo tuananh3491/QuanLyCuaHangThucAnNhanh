@@ -21,13 +21,10 @@ namespace WindowsFormsApp1.View.TrangChu
         Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();
         San_phamBLL spBLL = new San_phamBLL();
         double tongtien = 0;
-
-        
         public fTrangChu()
         {
             InitializeComponent();
             setCbb();
-            //txtTongTien.Text = string.Format("{0:#,##0} đ", 200000);
         }
         public void setCbb()
         {
@@ -90,7 +87,6 @@ namespace WindowsFormsApp1.View.TrangChu
             {
                 tongtien += Convert.ToDouble(i.Gia*i.Soluong_SP);
             }
-            //txtTongTien.Text = tongtien.ToString();
             txtTongTien.Text = string.Format("{0:#,##0} đ", tongtien).Replace(",", ".");
         }
         private void btn_Click(object sender, EventArgs e)
@@ -102,18 +98,22 @@ namespace WindowsFormsApp1.View.TrangChu
         private void btnHuy_Click(object sender, EventArgs e)
         {
             listCTHD.Clear();
+            tongtien = 0;
             txtTongTien.Text = "0 đ";
             flpnOrder.Controls.Clear();
         }
 
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
-            Bill f = new Bill(listCTHD, tongtien);
-            Const.mainform.openChildForm(f, Const.mainform.pnForm);
-        }
-        private void fTrangChu_Load(object sender, EventArgs e)
-        {
-
+            if (listCTHD.Count >0)
+            {
+                Bill f = new Bill(listCTHD, tongtien);
+                Const.mainform.openChildForm(f, Const.mainform.pnForm);
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn món ăn", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void openPanel(string loai)
         {
@@ -144,7 +144,5 @@ namespace WindowsFormsApp1.View.TrangChu
                 }
             }
         }
-
-        }
-    
+    }
 }

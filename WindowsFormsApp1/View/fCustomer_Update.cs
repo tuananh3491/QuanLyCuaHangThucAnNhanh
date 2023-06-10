@@ -70,7 +70,6 @@ namespace WindowsFormsApp1.View
         private void btnHuy_Click(object sender, EventArgs e)
         {
             txtSDT.Text = "";
-           
         }
 
         private void btnBack_Click(object sender, EventArgs e)

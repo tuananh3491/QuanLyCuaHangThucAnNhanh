@@ -33,11 +33,8 @@ namespace WindowsFormsApp1.View
         }
         public void Load(int nam)
         {
-            // Tạo các loại dữ liệu trên biểu đồ
             Series series1 = new Series();
             series1.Name = "Doanh thu";
-
-            // Thêm dữ liệu vào biểu đồ
             int thang;
             for (int i = 1; i < 13; i++)
             {
@@ -54,15 +51,11 @@ namespace WindowsFormsApp1.View
             chart1.Series[0].ChartType = SeriesChartType.Line;
             chart1.Series[0].BorderWidth = 3;
             chart1.Series[0].Color = Color.Goldenrod;
-
             // Thiết lập các thuộc tính
-           // chart1.Titles.Add("Doanh số bán hàng theo từng quý trong năm");
             chart1.ChartAreas[0].AxisX.Title = "Tháng";
             chart1.ChartAreas[0].AxisY.Title = "Doanh thu (đồng)";
             // Định dạng hiển thị cho trục Y là tiền tệ
             chart1.ChartAreas[0].AxisY.LabelStyle.Format = "{0:N0}".Replace(",",".");
-
-            //
         }
 
         private void iconDone_Click(object sender, EventArgs e)

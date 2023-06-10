@@ -15,7 +15,7 @@ namespace WindowsFormsApp1.BLL
 
         public List<Khach_hang> GetAllKH()
         {
-            var s = cnn.Khach_hang.ToList();
+            var s = cnn.Khach_hang.Where(p => p.Ten_KH != null || p.SDT != null).ToList();
             return s;
         }
         public void SaveKH(Khach_hang kh)
@@ -30,8 +30,6 @@ namespace WindowsFormsApp1.BLL
         }
         public Khach_hang GetKHById(int m)
         {
-            PBL_3Entities cnn = new PBL_3Entities();
-            //return cnn.Khach_hang.Where(p => p.Ma_KH == m).Select(p => p).FirstOrDefault();
             return cnn.Khach_hang.Find(m);
         }
         public Khach_hang GetKHByPhone(string phone)

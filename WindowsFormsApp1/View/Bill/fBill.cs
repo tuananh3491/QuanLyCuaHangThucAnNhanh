@@ -20,21 +20,14 @@ namespace WindowsFormsApp1.View
         {
             InitializeComponent();
         }
-
-
         private void btnXemChiTiet_Click(object sender, EventArgs e)
         {
             if (dg.SelectedRows.Count == 1)
             {
                 int maHD = Convert.ToInt32(dg.SelectedRows[0].Cells[0].Value.ToString());
-                //MessageBox.Show(maHD.ToString());
                 fBill_Detail f = new fBill_Detail(maHD);
                 Const.mainform.openChildForm(f, Const.mainform.pnForm);
             }
-        }
-        public void ShowDGV(DataGridView dg)
-        {
-           
         }
         private void fBill_Load(object sender, EventArgs e)
         {

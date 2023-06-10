@@ -35,14 +35,6 @@ namespace WindowsFormsApp1.View
 
         private void btnViewHtr_Click(object sender, EventArgs e)
         {
-            //if(dataGridView.SelectedRows.Count == 1)
-            //{
-            //    fCustomer_History f = new fCustomer_History(int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString()));
-            //    f.TopLevel = false;
-            //    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Clear();
-            //    ((fMainform)Application.OpenForms["fMainform"]).pnForm.Controls.Add(f);
-            //    f.Show();
-            //}
             if (dataGridView.SelectedRows.Count == 1)
             {
                 int m = int.Parse(dataGridView.SelectedRows[0].Cells[0].Value.ToString());

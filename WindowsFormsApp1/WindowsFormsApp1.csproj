@@ -141,41 +141,29 @@
     <Compile Include="DAL\Tai_khoan.cs">
       <DependentUpon>ModelPBL_3.tt</DependentUpon>
     </Compile>
-    <Compile Include="View\fChangePassword.cs">
+    <Compile Include="View\fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fChangePassword.Designer.cs">
-      <DependentUpon>fChangePassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="fLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fLogin.Designer.cs">
+    <Compile Include="View\fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fAccount.cs">
+    <Compile Include="View\Account\fAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fAccount.Designer.cs">
+    <Compile Include="View\Account\fAccount.Designer.cs">
       <DependentUpon>fAccount.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fAccount_Edit.cs">
+    <Compile Include="View\Account\fAccount_Edit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fAccount_Edit.Designer.cs">
+    <Compile Include="View\Account\fAccount_Edit.Designer.cs">
       <DependentUpon>fAccount_Edit.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fBill_PrePrint.cs">
+    <Compile Include="View\Bill\fBill_PrePrint.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fBill_PrePrint.Designer.cs">
+    <Compile Include="View\Bill\fBill_PrePrint.Designer.cs">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\fEnterOTP.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\fEnterOTP.Designer.cs">
-      <DependentUpon>fEnterOTP.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fForgetPassword.cs">
       <SubType>Form</SubType>
@@ -209,16 +197,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\fBill.cs">
+    <Compile Include="View\Bill\fBill.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fBill.Designer.cs">
+    <Compile Include="View\Bill\fBill.Designer.cs">
       <DependentUpon>fBill.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fBill_Detail.cs">
+    <Compile Include="View\Bill\fBill_Detail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fBill_Detail.Designer.cs">
+    <Compile Include="View\Bill\fBill_Detail.Designer.cs">
       <DependentUpon>fBill_Detail.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fCustomer.cs">
@@ -245,10 +233,10 @@
     <Compile Include="View\fShift_Detail.Designer.cs">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\fAccount_Add.cs">
+    <Compile Include="View\Account\fAccount_Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\fAccount_Add.Designer.cs">
+    <Compile Include="View\Account\fAccount_Add.Designer.cs">
       <DependentUpon>fAccount_Add.cs</DependentUpon>
     </Compile>
     <Compile Include="View\fStaff_View.cs">
@@ -341,12 +329,6 @@
     <Compile Include="View\Product\pnProduct_Update.Designer.cs">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\TrangChu\AddNewCustomer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\TrangChu\AddNewCustomer.Designer.cs">
-      <DependentUpon>AddNewCustomer.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\TrangChu\Bill.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -415,20 +397,14 @@
     <None Include="Resources\nước.png" />
     <Content Include="Resources\pizza xúc xích.jpg" />
     <Content Include="Resources\pizzanam.jpg" />
-    <EmbeddedResource Include="View\fChangePassword.resx">
-      <DependentUpon>fChangePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\fAccount.resx">
+    <EmbeddedResource Include="View\Account\fAccount.resx">
       <DependentUpon>fAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fAccount_Edit.resx">
+    <EmbeddedResource Include="View\Account\fAccount_Edit.resx">
       <DependentUpon>fAccount_Edit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fBill_PrePrint.resx">
+    <EmbeddedResource Include="View\Bill\fBill_PrePrint.resx">
       <DependentUpon>fBill_PrePrint.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\fEnterOTP.resx">
-      <DependentUpon>fEnterOTP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fForgetPassword.resx">
       <DependentUpon>fForgetPassword.cs</DependentUpon>
@@ -463,7 +439,7 @@
     <EmbeddedResource Include="View\fShift_Detail.resx">
       <DependentUpon>fShift_Detail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fAccount_Add.resx">
+    <EmbeddedResource Include="View\Account\fAccount_Add.resx">
       <DependentUpon>fAccount_Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fStaff_View.resx">
@@ -477,9 +453,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Product\pnProduct_Update.resx">
       <DependentUpon>pnProduct_Update.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\TrangChu\AddNewCustomer.resx">
-      <DependentUpon>AddNewCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TrangChu\Bill.resx">
       <DependentUpon>Bill.cs</DependentUpon>
@@ -498,10 +471,10 @@
     <EmbeddedResource Include="View\TrangChu\fTrangChu.resx">
       <DependentUpon>fTrangChu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fBill.resx">
+    <EmbeddedResource Include="View\Bill\fBill.resx">
       <DependentUpon>fBill.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\fBill_Detail.resx">
+    <EmbeddedResource Include="View\Bill\fBill_Detail.resx">
       <DependentUpon>fBill_Detail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\fCustomer.resx">
@@ -537,7 +510,7 @@
     <EmbeddedResource Include="CustomControl\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fLogin.resx">
+    <EmbeddedResource Include="View\fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

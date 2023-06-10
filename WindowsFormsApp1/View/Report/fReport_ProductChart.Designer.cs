@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnSoLieu = new WindowsFormsApp1.CustomControl.VBButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bieuDoSP = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -40,8 +40,6 @@
             this.lbThang = new System.Windows.Forms.Label();
             this.cbbNam = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ccbLoc = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bieuDoSP)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,21 +83,21 @@
             this.bieuDoSP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            legend2.Name = "Legend1";
-            this.bieuDoSP.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.bieuDoSP.Legends.Add(legend1);
             this.bieuDoSP.Location = new System.Drawing.Point(0, 4);
             this.bieuDoSP.Name = "bieuDoSP";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.bieuDoSP.Series.Add(series2);
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.bieuDoSP.Series.Add(series1);
             this.bieuDoSP.Size = new System.Drawing.Size(882, 405);
             this.bieuDoSP.TabIndex = 0;
             this.bieuDoSP.Text = "chart1";
-            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.Name = "Title1";
-            title2.Text = "BIỂU ĐỒ TỈ TRỌNG SẢN PHẨM ĐÃ BÁN";
-            this.bieuDoSP.Titles.Add(title2);
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title1.Name = "Title1";
+            title1.Text = "BIỂU ĐỒ TỈ TRỌNG SẢN PHẨM ĐÃ BÁN";
+            this.bieuDoSP.Titles.Add(title1);
             // 
             // panel2
             // 
@@ -108,8 +106,6 @@
             this.panel2.Controls.Add(this.lbThang);
             this.panel2.Controls.Add(this.cbbNam);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.ccbLoc);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -186,32 +182,6 @@
             this.label4.TabIndex = 78;
             this.label4.Text = "Năm";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(44, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 20);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Lọc";
-            this.label1.Visible = false;
-            // 
-            // ccbLoc
-            // 
-            this.ccbLoc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ccbLoc.FormattingEnabled = true;
-            this.ccbLoc.Items.AddRange(new object[] {
-            "Ngày",
-            "Tháng",
-            "Quý",
-            "Năm"});
-            this.ccbLoc.Location = new System.Drawing.Point(90, 19);
-            this.ccbLoc.Name = "ccbLoc";
-            this.ccbLoc.Size = new System.Drawing.Size(87, 31);
-            this.ccbLoc.TabIndex = 58;
-            this.ccbLoc.Visible = false;
-            // 
             // fReport_ProductChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,8 +207,6 @@
         private CustomControl.VBButton btnSoLieu;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox ccbLoc;
         private System.Windows.Forms.DataVisualization.Charting.Chart bieuDoSP;
         private System.Windows.Forms.ComboBox cbbThang;
         private System.Windows.Forms.Label lbThang;

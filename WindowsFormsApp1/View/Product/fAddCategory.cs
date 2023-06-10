@@ -14,10 +14,11 @@ namespace WindowsFormsApp1.View.Product
 {
     public partial class fAddCategory : Form
     {
-        Ma_loaiBLL maLoaiBLL = new Ma_loaiBLL();    
+        Ma_loaiBLL maLoaiBLL;    
         public fAddCategory()
         {
             InitializeComponent();
+            maLoaiBLL = new Ma_loaiBLL();
         }
         private void btnSave_Click(object sender, EventArgs e)
         {

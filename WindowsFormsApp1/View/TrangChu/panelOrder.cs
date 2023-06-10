@@ -26,7 +26,6 @@ namespace WindowsFormsApp1.View.TrangChu
         }
         public double gia;
         public string KichCo;
-
         public static Hoa_don hoa_Don;
         public delegate void update(Chi_tiet_hoa_don chitiet);
         public delegate void clear();
@@ -39,7 +38,6 @@ namespace WindowsFormsApp1.View.TrangChu
             san_Pham = s;
             KichCo = ct.Kich_thuoc;
             Soluongsp = Convert.ToInt32(ct.Soluong_SP);
-
             gia = ct.Gia;
             setGUI();
         }
@@ -55,7 +53,6 @@ namespace WindowsFormsApp1.View.TrangChu
         private void btnSub_Click(object sender, EventArgs e)
         {
             Edit("sub");
-
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {

@@ -63,34 +63,6 @@ namespace WindowsFormsApp1.View
             }
 
         }
-
-     
-
-        private void ccbLoc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            switch (ccbLoc.SelectedIndex)
-            {
-                //case 0://ngày
-                //    pnTGian.Controls.Clear();
-                //    pnThangNam p = new pnThangNam();
-                //    pnTGian.Controls.Add(p);
-                //    thang = p.getThang();
-                //    nam = p.getNam();
-                //    break;
-                //case 1://tháng
-                //case 2://quý
-                    //pnTGian.Controls.Clear();
-                    //pnNam p2 = new pnNam();
-                    //pnTGian.Controls.Add(p2);
-                    //p2.d += new pnNam.MyDel(ShowDGV);
-                    //break;
-                //case 3://năm
-                //    pnTGian.Controls.Clear();
-                //    break;
-            }
-             
-        }
-
         private void iconDone_Click(object sender, EventArgs e)
         {
             dataGridView1.Rows.Clear();

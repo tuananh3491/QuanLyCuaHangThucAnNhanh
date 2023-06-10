@@ -57,7 +57,6 @@ namespace WindowsFormsApp1.View
             ((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Clear();
             ((fProduct)Application.OpenForms["fProduct"]).pnChinhSua.Controls.Add(f);
             f.Show();
-         
         }
 
         private void btn_Click(object sender, EventArgs e)
@@ -99,8 +98,6 @@ namespace WindowsFormsApp1.View
             {
                 flpnMonAn.Controls.Clear();
                 string ten = txtSearch.Text;
-               
-
                 foreach (San_pham sp in sanPhamBLL.GetSPByTen(ten))
                 {
                     pnProduct p = new pnProduct(sp.Ma_SP);

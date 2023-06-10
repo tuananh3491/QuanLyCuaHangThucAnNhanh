@@ -417,7 +417,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "fTrangChu";
             this.Text = "fTrangChu";
-            this.Load += new System.EventHandler(this.fTrangChu_Load);
+            
             this.pnChonMon.ResumeLayout(false);
             this.pnChonMon.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -45,7 +45,6 @@ namespace WindowsFormsApp1.View
             bieuDoSP.Series.Clear();
             bieuDoSP.ChartAreas.Clear();
             bieuDoSP.ChartAreas.Add(new ChartArea());
-            // Khởi tạo một đối tượng Series
             Series series = new Series();
             series.Name = "bdSanPham";
             series.ChartType = SeriesChartType.Pie;
@@ -56,28 +55,19 @@ namespace WindowsFormsApp1.View
             int i = 0;
             foreach (DictionaryEntry entry in htPro)
             {
-                //series.Points.AddXY(sanPhamBLL.GetNamePro(Convert.ToInt32(entry.Key)), entry.Value);
-                //// Thêm các giá trị và tỉ lệ vào biểu đồ
+                // Thêm các giá trị và tỉ lệ vào biểu đồ
                 series.Points.Add(Convert.ToDouble(entry.Value));
-                //// Đặt tên cho các phần trên biểu đồ
+                // Đặt tên cho các phần trên biểu đồ
                 series.Points[i].LegendText = sanPhamBLL.GetNamePro(Convert.ToInt32(entry.Key));
                 i++;
-
             }
-            series.Label = "#PERCENT{P0}";// Định dạng để hiển thị phần trăm
-
-            // Thêm Series vào Chart
+            series.Label = "#PERCENT{P0}";
             bieuDoSP.Series.Add(series);
-            
-            // Hiển thị Chart trên form
-            //this.Controls.Add(this.bieuDoSP);
-
         }
 
         private void iconDone_Click(object sender, EventArgs e)
         {
             Load(int.Parse(cbbThang.SelectedItem.ToString()), int.Parse(cbbNam.SelectedItem.ToString()));
-            
         }
 
        

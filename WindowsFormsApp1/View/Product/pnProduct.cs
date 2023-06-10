@@ -29,9 +29,7 @@ namespace WindowsFormsApp1.View.Product
         private void btnEdit_Click(object sender, EventArgs e)
         {
             pnProduct_Update p = new pnProduct_Update(maSP);
-
             add(p);
-         
         }
         public void Load(int m)
         {
@@ -39,28 +37,24 @@ namespace WindowsFormsApp1.View.Product
             pic.BackgroundImage = Image.FromStream(new MemoryStream(sp.Hinh_anh));
             pic.BackgroundImageLayout = ImageLayout.Stretch;
             txtName.Text = sp.Ten_SP.ToString();
-            //txtPrice.Text = sp.Don_gia.ToString();
             txtPrice.Text = string.Format("{0:#,##0} đ", sp.Don_gia).Replace(",", ".");
         }
 
         private void btnS_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
-            //txtPrice.Text = sp.Don_gia.ToString();
             txtPrice.Text = string.Format("{0:#,##0} đ", sp.Don_gia).Replace(",", ".");
         }
 
         private void btnM_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
-            //txtPrice.Text = (sp.Don_gia*1.2).ToString();
             txtPrice.Text = string.Format("{0:#,##0} đ", sp.Don_gia*1.2).Replace(",", ".");
         }
 
         private void btnL_Click(object sender, EventArgs e)
         {
             San_pham sp = sanPhamBLL.GetPro(maSP);
-            //txtPrice.Text = (sp.Don_gia*1.4).ToString();
             txtPrice.Text = string.Format("{0:#,##0} đ", sp.Don_gia*1.4).Replace(",", ".");
         }
     }
